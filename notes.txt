@@ -1,0 +1,13 @@
+State-state migration flows, 1940-1980, merged with travel time
+mig_UF1940.dta /SecData/Analysis_data
+Digitized from historical source, IBGE (1987)
+
+Meso-meso migration flows, 1970-2010, merged with travel time
+N_od_meso.dta /SecData/Analysis_data
+Constructed from non-public raw census files, IBGE (1970-2010)
+
+Definição de disamenity: propensão a seca, enchente, onda de calor, frente fria
+Como definir essas coisas?
+
+mesorregiões deixaram de ser usadas em 2017
+O well
