@@ -347,6 +347,7 @@ mean_ivtt = df_tt.groupby(['orig_id', 'year'])['IV_tt'].mean().reset_index()
 # climate dummy: bad if index higher than 1
 model_df['bad_climate'] = 1*(model_df[climate_index]>=1)
 
+
 # passing travel time data years to the model
 model_df['year_tt'] = model_df['year'].map(years_map)
 
@@ -391,7 +392,7 @@ reg1 = pf.feols(
 )
 reg1 = pf.feols(
     "dlog_pop_ann ~ IV_tt + ivtt_good_mkt + "  # movement + mkt access
-    "bad_climate:IV_tt + bad_climate:ivtt_good_mkt + bad_climate |" # climate responses
+    "bad_climate:IV_tt + log_gdppc_lag +  log_gdppc_z_lag |" # climate responses
     "CD_GEOCME + year", # fixed effects
     data=reg_df,
     vcov={"CRV1": "CD_GEOCME"}   # cluster by region
@@ -408,7 +409,7 @@ print(reg1.summary())
 mo_meso['year'] = mo_meso['year'].map(years_map)  # 1991 --> 1990
 
 # keep what we need
-mig_odt = mo_meso[['orig_id', 'dest_id', 'year', 'N_od_flow_wm', 'N_od_flow_all']]
+mig_odt = mo_meso[['orig_id', 'dest_id', 'year', 'N_od_flow_wm', 'N_od_flow_all', "log_fm_empty"]]
 
 df_odt = df_tt[['orig_id', 'dest_id', 'year', 'IV_tt']].copy()
 
@@ -460,7 +461,7 @@ reg_df_2["dest_year"]  = reg_df_2["dest_id"].astype(str) + "_" + reg_df_2["year"
 reg_df_2_nonzero = reg_df_2[reg_df_2['N_od_flow_wm']>0]
 reg_df_2_nonzero['log_migration'] = np.log(reg_df_2_nonzero['N_od_flow_all'])
 reg_df_2_nonzero['log_migration_wm'] = np.log(reg_df_2_nonzero['N_od_flow_wm'])
-
+reg_df_2_nonzero['level_iv_tt'] = np.exp(reg_df_2_nonzero['IV_tt'])
 
 # Regression: in levels and logs of working males and all population
 # weighted by migration 
@@ -486,11 +487,30 @@ reg_wm_w = pf.feols(
 
 print(reg_all_w.summary())
 print(reg_wm_w.summary())
+
+
+fml_index = (
+    "Y ~ IV_tt + orig_mean_exp:IV_tt"
+    " | orig_id^year + dest_id^year"
+    )
+
+reg_all_index = pf.feols(
+    fml_index.replace("Y", "log_migration"),
+    data=reg_df_2_nonzero,
+    weights="N_od_flow_all",
+    vcov={"CRV1": "pair_id"}
+)
+print(reg_all_index.summary())
+
 # NEAT!
+# On dummies / only extremely disadvantage: strong effect
+# but even on full index / continuous bad climate measure, good!
+# people cant leave, but if they can they DO
+
 # %% PPML version
 
 reg_ppml = pf.fepois(
-    "N_od_flow_all ~ IV_tt + orig_bad_climate:IV_tt| "
+    "N_od_flow_all ~ IV_tt + orig_bad_climate:IV_tt | "
     "orig_year + dest_year",
     data=reg_df_2,
     vcov={"CRV1": "pair_id"}
@@ -501,7 +521,201 @@ print(reg_ppml.summary())
 # WE GOOD
 # %% Now we use the estimated migration losses
 # to estimate GDP per capita differential!
+# %%
+response_df = reg_df_2_nonzero.copy()
+# Recovering absolute predicted flows
+# We must use a no-roads counterfactual baseline, which we have!
+# I use the full index regression to get fuller sample data
+coefs = reg_all_index.coef()
+beta_tt = coefs["IV_tt"]
+beta_int = coefs["orig_mean_exp:IV_tt"]
 
+bad = response_df[f"orig_{climate_index}"]
+tt_actual = response_df["IV_tt"]
+tt_cf = response_df['log_fm_empty']
 
+# fitted linear predictor under actual observed tt
+xb_full = reg_all_w.predict()
 
+# actual observed tt, but shutting down climate amplification
+xb_actual_no_climate = xb_full - beta_int * bad * tt_actual
+
+# counterfactual tt, keeping climate amplification
+xb_cf_full = (
+    xb_full
+    + beta_tt * (tt_cf - tt_actual)
+    + beta_int * bad * (tt_cf - tt_actual)
+)
+
+# counterfactual tt, no climate amplification
+xb_cf_no_climate = (
+    xb_actual_no_climate
+    + beta_tt * (tt_cf - tt_actual)
+)
+
+# predicted flows
+response_df["flow_full"] = np.exp(xb_full)
+response_df["flow_actual_no_climate"] = np.exp(xb_actual_no_climate)
+response_df["flow_cf_full"] = np.exp(xb_cf_full)
+response_df["flow_cf_no_climate"] = np.exp(xb_cf_no_climate)
+
+# decomposition
+response_df["effect_total_tt"] = (
+    response_df["flow_full"] - response_df["flow_cf_full"]
+)
+
+response_df["effect_nonclimate_tt"] = (
+    response_df["flow_actual_no_climate"] - response_df["flow_cf_no_climate"]
+)
+
+response_df["effect_climate_tt"] = (
+    response_df["effect_total_tt"] - response_df["effect_nonclimate_tt"]
+)
+print(response_df[[
+    "effect_total_tt",
+    "effect_nonclimate_tt",
+    "effect_climate_tt"
+]].describe())
+
+# climate negative --> low baselines, effect negative
+
+# %% Getting inflows and running regs
+# inflows (i -> j)
+inflows = response_df.groupby(["dest_id", "year"])["effect_total_tt"].sum()
+
+# outflows (j -> k)
+outflows = response_df.groupby(["orig_id", "year"])["effect_total_tt"].sum()
+
+net = inflows.sub(outflows, fill_value=0).reset_index()
+net.columns = ["region", "year", "net_climate_migration"]
+net['net_climate_migration'].describe()
+# positive -> place gained people due to climate
+# negative -> place lost people
+
+# pop shares:
+model_df.columns
+stage_2 = net.merge(
+    model_df[['CD_GEOCME', 'year_tt', 'pop', 'delta_gdppc_spread',
+              'log_gdppc_z', 'dlog_gdppc_ann', 'log_gdppc', 'dlog_pop_ann',
+              climate_index]],
+    how='left',
+    left_on=['region', 'year'],
+    right_on=['CD_GEOCME', 'year_tt']
+    )
+stage_2['net_climate_migration_rate'] = stage_2['net_climate_migration'] / stage_2['pop']
+stage_2['time_trend'] = stage_2['year'] - stage_2['year'].min()
+
+fml_s2 = (
+    "Y ~ net_climate_migration_rate + "
+    f"dlog_pop_ann + {climate_index} +"  # controls
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+reg_s2_lvl = pf.feols(
+    fml_s2.replace("Y", "log_gdppc_z"),
+    data=stage_2,
+    vcov={"CRV1": "region"}
+)
+
+reg_s2_dlog_gdppc = pf.feols(
+    fml_s2.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2,
+    vcov={"CRV1": "region"}
+)
+
+reg_s2_gdppc = pf.feols(
+    fml_s2.replace("Y", "log_gdppc"),
+    data=stage_2,
+    vcov={"CRV1": "region"}
+)
+
+print(reg_s2_lvl.summary())
+# not sig, but right sign!
+print(reg_s2_dlog_gdppc.summary())
+# great stuff! And the simplest one to interpret!
+print(reg_s2_gdppc.summary())
+# same as first
+
+# Nice evidence in favor of our thesis!!
+
+# %% regs on full migration effect, not just climate
+# inflows (i -> j)
+inflows = response_df.groupby(["dest_id", "year"])["effect_total_tt"].sum()
+# outflows (j -> k)
+outflows = response_df.groupby(["orig_id", "year"])["effect_total_tt"].sum()
+
+net = inflows.sub(outflows, fill_value=0).reset_index()
+net.columns = ["region", "year", "net_migration"]
+net['net_migration'].describe()
+# positive -> place gained people due to Brasília
+# negative -> place lost people
+
+# pop shares:
+
+stage_2_total = net.merge(
+    model_df[['CD_GEOCME', 'year_tt', 'pop', 'delta_gdppc_spread',
+              'log_gdppc_z', 'dlog_gdppc_ann', 'log_gdppc', f'{climate_index}',
+              'dlog_pop_ann']],
+    how='left',
+    left_on=['region', 'year'],
+    right_on=['CD_GEOCME', 'year_tt']
+    )
+stage_2_total['net_migration_rate'] = stage_2_total['net_migration'] / stage_2_total['pop']
+stage_2_total['time_trend'] = stage_2_total['year'] - stage_2_total['year'].min()
+
+fml_s2_t = (
+    "Y ~ net_migration_rate + "
+    f"dlog_pop_ann + {climate_index} +"  # controls
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+reg_s2_lvl_t= pf.feols(
+    fml_s2_t.replace("Y", "log_gdppc_z"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+reg_s2_dlog_gdppc_t = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+reg_s2_gdppc_t = pf.feols(
+    fml_s2_t.replace("Y", "log_gdppc"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(reg_s2_lvl_t.summary())
+# nothing here
+print(reg_s2_dlog_gdppc_t.summary())
+# very good! 
+print(reg_s2_gdppc_t.summary())
+# not much
+
+# good too!
+
+# %% Next:
+    # On whats been done:
+        # other climate indexes, other forms of classifying
+        # Is the relationship assimetric? It should be!
+        # Issue: non-parametrics with fixed effects / curse of dim
+        # State level analysis - robustness, gain more data
+        # Acquire longer climate data (spei.csic.es goes to 1950s!)
+        # Develop the second stage more
+    # On the Pernambuco story:
+        # Analize micro migration data
+        # Test against wage data - might be avaiable
+        # Try to get something out of the population counts data
+        # Formalize a model
+        # Issue: Paywall
+    # Another avenue: [Blank] Access Motive Test Technology
+        # Compile what the theory says should drive migration
+        # Show how model implies that these also work through the "higher response to lower cost" channel
+        # See if there's data to test them from 1980's on
+        # Test them!
+        # Issue: F test
+        
+        
 
