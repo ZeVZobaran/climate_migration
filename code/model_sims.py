@@ -158,8 +158,8 @@ model_df = ai_df.merge(
 
 # transform exposure into amenity
 # lambda: how strongly exposure affects utility
-lam = 2
-model_df['u_i'] = np.exp(-lam * model_df['pca_exp'])
+lam = 1
+model_df['u_i'] = np.exp(-lam * model_df['mean_exp'])
 index = 'u_i'
 
 # %% computing equilibrium pop shares
