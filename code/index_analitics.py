@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import matplotlib.colors as colors
 plt.ion()
-path = r'D:/Users/c337191/Documents/EnvEcon'
+path = r'D:/Users/c337191/Documents/climate_migration'
 index_path = f'{path}/data/climate_indexes'
 # %% index downloads
 regions = gpd.read_file(f'{path}/data/br_mesorregioes/BRMEE250GC_SIR.shp')
@@ -104,13 +104,13 @@ def plot_climate_regions(climate_df, regions_df, var, year='all',
         cmap='seismic',
         norm=norm
     )
+    plt.show()
     return fig, ax
 #%%
 
 fig, fig_ax = plot_climate_regions(
     exposure_z_index, regions, 'pca_index', legend='Heat, floods and aridity\nexposure index'
     )
-exposure_z_index[['region', 'pca_index']].groupby('region').mean().min()
 
 fig_ax.set_title(
     'Extreme Climate Exposure \n1961-2024',
@@ -123,7 +123,6 @@ fig_ax.set_aspect("equal")
 # yticks = np.arange(0, 5, 0.5)
 # cbar.set_yticks(yticks)
 # =============================================================================
-plt.show()
 
 # preserve the simple mean index as a robustness check
 exposure_index = exposure_z_index.drop(
@@ -135,8 +134,6 @@ exposure_index.columns = ['CD_GEOCME', 'year', 'NM_MESO', 'mean_exp', 'pca_exp']
 exposure_index.to_parquet(
     f'{path}/data/climate_indexes/exposure_pca_mean.parquet', index=False
     )
-
-# ID polígono das secas region
 
 ord_drought = exposure_z_index[['region', 'NM_MESO', 'drought_absolute']].groupby(['region', 'NM_MESO']).mean().reset_index().sort_values('drought_absolute')
 
