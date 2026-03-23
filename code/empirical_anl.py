@@ -617,6 +617,15 @@ pop_years_tt["dlog_pop"] = (
       )
 pop_years_tt["year_lag"] = pop_years_tt.groupby("CD_GEOCME")["year"].shift(1)
 pop_years_tt["dlog_pop_ann"] = pop_years_tt["dlog_pop"] /(pop_years_tt["year"] - pop_years_tt["year_lag"])
+# Now raw GDP
+gdp['log_gdp'] = np.log(gdp['gdp'])
+gdp_years_tt = gdp[gdp['year'].isin(net_years)][['year', 'CD_GEOCME', 'log_gdp']]
+gdp_years_tt["dlog_gdp"] = (
+    gdp_years_tt.groupby("CD_GEOCME")["log_gdp"]
+      .diff()
+      )
+gdp_years_tt["year_lag"] = gdp_years_tt.groupby("CD_GEOCME")["year"].shift(1)
+gdp_years_tt["dlog_gdp_ann"] = gdp_years_tt["dlog_gdp"] /(gdp_years_tt["year"] - gdp_years_tt["year_lag"])
 
 
 # adding most data
@@ -638,45 +647,70 @@ stage_2_total = stage_2_total.merge(
 stage_2_total = stage_2_total.merge(
     pop_years_tt[['CD_GEOCME', 'year', 'dlog_pop_ann']],
     how='left',
-    left_on=['region', 'year'],
+    left_on=['CD_GEOCME', 'year'],
+    right_on=['CD_GEOCME', 'year']
+    )
+stage_2_total = stage_2_total.merge(
+    gdp_years_tt[['CD_GEOCME', 'year', 'dlog_gdp_ann']],
+    how='left',
+    left_on=['CD_GEOCME', 'year'],
     right_on=['CD_GEOCME', 'year']
     )
 
 stage_2_total['net_receival_rate_tt'] = stage_2_total['net_receival_due_tt'] / stage_2_total['pop']
 stage_2_total['time_trend'] = stage_2_total['year'] - stage_2_total['year'].min()
+stage_2_total['net_receival_rate_tt_pos'] = stage_2_total['net_receival_rate_tt'].apply(lambda x: x if x > 0 else 0)
+stage_2_total['net_receival_rate_tt_neg'] = stage_2_total['net_receival_rate_tt'].apply(lambda x: x if x < 0 else 0)
+
 
 fml_s2_t = (
     "Y ~ net_receival_rate_tt + "
     " | region + year + region[time_trend]" # controlling for convergence
     )
+fml_s2_posneg = (
+    "Y ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + "
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
 
-reg_s2_lvl_t = pf.feols(
-    fml_s2_t.replace("Y", "log_gdppc_z"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
 
-reg_s2_dlog_gdppc_t = pf.feols(
+reg_s2_dlog_gdppc = pf.feols(
     fml_s2_t.replace("Y", "dlog_gdppc_ann"),
     data=stage_2_total,
     vcov={"CRV1": "region"}
 )
-
-reg_s2_gdppc_t = pf.feols(
-    fml_s2_t.replace("Y", "log_gdppc"),
+reg_s2_dlog_gdp = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdp_ann"),
     data=stage_2_total,
     vcov={"CRV1": "region"}
 )
 
-print(reg_s2_lvl_t.summary())
-# nothing here
-print(reg_s2_dlog_gdppc_t.summary())
+reg_s2_posneg_gdppc = pf.feols(
+    fml_s2_posneg.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+reg_s2_posneg_gdp = pf.feols(
+    fml_s2_posneg.replace("Y", "dlog_gdp_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(reg_s2_dlog_gdppc.summary())
 # very good! 
-print(reg_s2_gdppc_t.summary())
-# not much
+print(reg_s2_posneg_gdppc.summary())
+# the negative effect is negligible; the positive is quite decent!
  
+# on dlog gdp (not per capita):
+print(reg_s2_dlog_gdp.summary())
+# PASS
+print(reg_s2_posneg_gdp.summary())
+# PASS! And partial negative effect appears, as we would expect
+# regions are, after all, loosing people
+
 # Decent evidence in favor of the "higher migration --> higher gdp per capita" story!
 # Selection vs agglomeration!
+# The negative effect being null points towards agglomeration!
 
 # %%
 
@@ -728,7 +762,7 @@ def plot_regions(data_df, regions_df, var, year='all',
     return fig, ax
 
 
-stage_2_total['gdp_change_due_mig'] = reg_s2_dlog_gdppc_t.coef()['net_receival_rate_tt']*\
+stage_2_total['gdp_change_due_mig'] = reg_s2_dlog_gdppc.coef()['net_receival_rate_tt']*\
     stage_2_total['net_receival_rate_tt']
 
 interest_outcomes = ['CD_GEOCME', 'gdp_change_due_mig', 'net_receival_rate_tt', 'dlog_gdppc_ann', 'pop']
@@ -769,10 +803,11 @@ fig_gdp_share, _ = plot_regions(df_agg_results, regions, 'growth_share_att_mig',
     # On climate:
         # I'm mostly satisfied with the null
     # On GDPPC:
-        # Robustness: state level, more controls, drop best fits, reg on dlogGDP
+        # Robustness: state level, more controls, drop best fits
+        # Robustness: reg on level GDP --> pass! For both agg, pos and neg effects
         # Interpretation: Selection of Migrants vs Agglomeration in Cities
         # Analize micro migration data, wage if avaiable
-        # Bilateral effect? If selection yes, if agg no!
+        # Bilateral effect? If selection yes, if agg no! --> no!
         # Formalize a model explaining findings
     # Another avenue: [Blank] Access Motive Test Technology
         # Compile what the theory says should drive migration
