@@ -228,16 +228,14 @@ scatter_plot(
 # Also little to no impact overall
 scatter_plot(
     model_df_mean,
-    x=climate_index,
+    x="mean_exp",
     y="dlog_gdppc_ann",
     xlabel="Climate Exposure",
     ylabel="GDP per Capita Growth",
     title="Does Climate Affect Growth?"
 )
 
-
 # Partial zobaran victory!
-
 # some checks
 
 # Is there gdp per capita convergence going on?
@@ -263,7 +261,7 @@ scatter_plot(
 # Further evidence of sharp inequality decrease in sample:
 # Veeeeery much driven by 1990-200 and 2005-2010
 model_df[['year', 'log_gdppc']].groupby('year').var().plot()
-
+plt.show()
 # Richer places experience higher pop growth (or vice versa!)
 scatter_plot(
     model_df_mean,
@@ -627,10 +625,9 @@ gdp_years_tt["dlog_gdp"] = (
 gdp_years_tt["year_lag"] = gdp_years_tt.groupby("CD_GEOCME")["year"].shift(1)
 gdp_years_tt["dlog_gdp_ann"] = gdp_years_tt["dlog_gdp"] /(gdp_years_tt["year"] - gdp_years_tt["year_lag"])
 
-
 # adding most data
 stage_2_total = total_net.merge(
-    model_df[['CD_GEOCME', 'year_tt', 'pop', 'delta_gdppc_spread',
+    model_df[['CD_GEOCME', 'Sigla', 'year_tt', 'pop', 'delta_gdppc_spread',
               'log_gdppc_z', 'log_gdppc', f'{climate_index}']],
     how='left',
     left_on=['region', 'year'],
@@ -647,7 +644,7 @@ stage_2_total = stage_2_total.merge(
 stage_2_total = stage_2_total.merge(
     pop_years_tt[['CD_GEOCME', 'year', 'dlog_pop_ann']],
     how='left',
-    left_on=['CD_GEOCME', 'year'],
+    left_on=['region', 'year'],
     right_on=['CD_GEOCME', 'year']
     )
 stage_2_total = stage_2_total.merge(
@@ -667,19 +664,14 @@ fml_s2_t = (
     "Y ~ net_receival_rate_tt + "
     " | region + year + region[time_trend]" # controlling for convergence
     )
+
 fml_s2_posneg = (
     "Y ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + "
     " | region + year + region[time_trend]" # controlling for convergence
     )
 
-
 reg_s2_dlog_gdppc = pf.feols(
     fml_s2_t.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-reg_s2_dlog_gdp = pf.feols(
-    fml_s2_t.replace("Y", "dlog_gdp_ann"),
     data=stage_2_total,
     vcov={"CRV1": "region"}
 )
@@ -690,27 +682,123 @@ reg_s2_posneg_gdppc = pf.feols(
     vcov={"CRV1": "region"}
 )
 
-reg_s2_posneg_gdp = pf.feols(
-    fml_s2_posneg.replace("Y", "dlog_gdp_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
 print(reg_s2_dlog_gdppc.summary())
 # very good! 
 print(reg_s2_posneg_gdppc.summary())
 # the negative effect is negligible; the positive is quite decent!
- 
-# on dlog gdp (not per capita):
-print(reg_s2_dlog_gdp.summary())
-# PASS
-print(reg_s2_posneg_gdp.summary())
-# PASS! And partial negative effect appears, as we would expect
-# regions are, after all, loosing people
 
 # Decent evidence in favor of the "higher migration --> higher gdp per capita" story!
 # Selection vs agglomeration!
-# The negative effect being null points towards agglomeration!
+# The negative effect being null points towards agglomeration or lower S curve!
+
+# %% initial rob checks
+
+rob_dlog_gdp = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdp_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+rob_posneg_gdp = pf.feols(
+    fml_s2_posneg.replace("Y", "dlog_gdp_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+# on dlog gdp (not per capita):
+print(rob_dlog_gdp.summary())
+# PASS
+print(rob_posneg_gdp.summary())
+# PASS! And partial negative effect appears, as we would expect
+# regions are, after all, loosing people
+
+
+# weights:
+stage_2_total['abs_receival_rate_tt'] = abs(stage_2_total['net_receival_rate_tt'])
+stage_2_total['log_pop'] = np.log(stage_2_total['pop'])
+
+rob_weights_mig = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    weights='abs_receival_rate_tt',
+    vcov={"CRV1": "region"}
+)
+rob_weights_pop = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    weights='log_pop',
+    vcov={"CRV1": "region"}
+)
+print(rob_weights_pop.summary())
+print(rob_weights_mig.summary())
+# neat, that works
+
+# excluding agri fontier states
+# Take a "greedy" definition of agri frontier as NO + CO ex Goias (Brasília)
+agri_frontier = ['RO', 'PA', 'MT', 'MS', 'AP', 'RR', 'AM', 'AC', 'TO']
+# Gotta be careful, otherwise may loose to much data
+stage_2_total['agri'] = stage_2_total['Sigla'].isin(agri_frontier)
+stage_2_total['non_agri'] = ~stage_2_total['agri']
+
+fml_rob_agri = (
+    "Y ~ net_receival_rate_tt:agri + net_receival_rate_tt:non_agri + "
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+rob_agri = pf.feols(
+    fml_rob_agri.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(rob_agri.summary())
+# We find NO EFFECT for the non agri frontier regions and strong one for agri
+# Issue: low nordeste may be confounding things?
+
+# now looking solely at urban attractors
+# Keeping solely centro-sul states + BSB Goiás
+stage_2_total['urban'] = stage_2_total['pop'] > 5e5  # IBGE for large city
+stage_2_total['non_urban'] = ~stage_2_total['urban']
+
+fml_rob_urban = (
+    "Y ~ net_receival_rate_tt:urban + net_receival_rate_tt:non_urban + "
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+rob_urban = pf.feols(
+    fml_rob_urban.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(rob_urban.summary())
+
+# Again, non-urban finds effect, urban finds no!
+# to agri and isolating urban clusters will not save the result for cities!
+
+# A last one: lets separate out urban, agr, and rest (basically NE)
+stage_2_total['non_urban_agri'] = ~(stage_2_total['urban'] | stage_2_total['agri'])
+
+fml_rob_all_sep = (
+    "Y ~ net_receival_rate_tt:urban + net_receival_rate_tt:agri + net_receival_rate_tt:non_urban_agri"
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+rob_all_sep = pf.feols(
+    fml_rob_all_sep.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(rob_all_sep.summary())
+# Tada! Effect is:
+    # POSITIVE for both agri regions and non urban nor agri regions
+    # NULL for urban regions
+    # Effect for gdp non per capita is, ofc, positive throughout
+# Very unepected!
+# Evidence: Non urban nor agri frontier places lost out indeed
+# and urban centers are indifferent to receiving migrants 
+# But lets keep in mind this goes somewhat against the pos_neg finding that
+# losing people had no effect
 
 # %%
 
@@ -805,9 +893,12 @@ fig_gdp_share, _ = plot_regions(df_agg_results, regions, 'growth_share_att_mig',
     # On GDPPC:
         # Robustness: state level, more controls, drop best fits
         # Robustness: reg on level GDP --> pass! For both agg, pos and neg effects
+        # Robustness: compare OLS to IV migration
         # Interpretation: Selection of Migrants vs Agglomeration in Cities
         # Analize micro migration data, wage if avaiable
         # Bilateral effect? If selection yes, if agg no! --> no!
+        # Data seems (seeeeeeems) to point to little/null gains in cities, and large
+        # ones in the agri frontier. 
         # Formalize a model explaining findings
     # Another avenue: [Blank] Access Motive Test Technology
         # Compile what the theory says should drive migration
