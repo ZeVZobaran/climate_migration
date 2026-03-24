@@ -780,7 +780,7 @@ stage_2_total['non_urban_agri'] = ~(stage_2_total['urban'] | stage_2_total['agri
 
 fml_rob_all_sep = (
     "Y ~ net_receival_rate_tt:urban + net_receival_rate_tt:agri + net_receival_rate_tt:non_urban_agri"
-    " | region + year + region[time_trend]" # controlling for convergence
+    " | region + year " # controlling for convergence
     )
 
 rob_all_sep = pf.feols(
@@ -799,6 +799,69 @@ print(rob_all_sep.summary())
 # and urban centers are indifferent to receiving migrants 
 # But lets keep in mind this goes somewhat against the pos_neg finding that
 # losing people had no effect
+
+
+# %%  redoing the entire thing under RE
+ 
+import statsmodels.formula.api as smf
+
+mod = smf.mixedlm(
+    "log_gdppc~ net_receival_rate_tt + C(year)",
+    data=stage_2_total,
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res = mod.fit()
+print(res.summary())
+# Doing fine
+
+mod_gdp = smf.mixedlm(
+    "dlog_gdp_ann ~ net_receival_rate_tt + C(year)",
+    data=stage_2_total,
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res_gdp = mod_gdp.fit()
+print(res_gdp.summary())
+# Fiiiine
+
+mod_posneg = smf.mixedlm(
+    "dlog_gdppc_ann ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + C(year)",
+    data=stage_2_total,
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res_pn = mod_posneg.fit()
+print(res_pn.summary())
+# Negative effect now significant!!! Selection back in the game!
+
+stage_2_total["region_type"] = np.select(
+    [
+        stage_2_total["urban"] == 1,
+        stage_2_total["agri"] == 1,
+        stage_2_total["non_urban_agri"] == 1
+    ],
+    [
+        "urban",
+        "agri",
+        "other"
+    ]
+)
+
+mod_agri_urban = smf.mixedlm(
+    "log_gdppc ~ 0 + net_receival_rate_tt:C(region_type) + C(year)",
+    data=stage_2_total,
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res_agri_urban = mod_agri_urban.fit()
+print(res_agri_urban.summary())
+# Result of irrelevance of non-agri regions remains...
+
 
 # %%
 
@@ -892,14 +955,14 @@ fig_gdp_share, _ = plot_regions(df_agg_results, regions, 'growth_share_att_mig',
         # I'm mostly satisfied with the null
     # On GDPPC:
         # Robustness: state level, more controls, drop best fits
-        # Robustness: reg on level GDP --> pass! For both agg, pos and neg effects
+        # Robustness: reg on dlog GDP --> pass! For both agg, pos and neg effects
+        # Doesnt pass for agri/urban/other
         # Robustness: compare OLS to IV migration
+        # Robustness: FE vs RE --> pass!
         # Interpretation: Selection of Migrants vs Agglomeration in Cities
         # Analize micro migration data, wage if avaiable
-        # Bilateral effect? If selection yes, if agg no! --> no!
-        # Data seems (seeeeeeems) to point to little/null gains in cities, and large
-        # ones in the agri frontier. 
-        # Formalize a model explaining findings
+        # Bilateral effect? If selection yes, if agg no! --> tentative no!
+        # Agri vs Urban vs Other --> All have the effect!
     # Another avenue: [Blank] Access Motive Test Technology
         # Compile what the theory says should drive migration
         # Show how model implies that these also work through the "higher response to lower cost" channel
