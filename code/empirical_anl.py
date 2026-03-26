@@ -8,6 +8,7 @@ Created on Tue Mar 17 12:52:17 2026
 import pandas as pd
 import numpy as np
 import geopandas as gpd
+import statsmodels.formula.api as smf
 import pyfixest as pf
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -64,6 +65,7 @@ gdp_per_capita = make_ipea_tidy(gdp_per_capita, 'gdp_capita')
 population = make_ipea_tidy(population, 'pop')
 gdp = make_ipea_tidy(gdp, 'gdp')
 
+# %%
 gdp_per_capita['log_gdppc'] = np.log(gdp_per_capita['gdp_capita'])
 gdp_per_capita["dlog_gdppc"] = (
     gdp_per_capita.groupby("CD_GEOCME")["log_gdppc"]
@@ -71,17 +73,6 @@ gdp_per_capita["dlog_gdppc"] = (
       )
 gdp_per_capita["year_lag"] = gdp_per_capita.groupby("CD_GEOCME")["year"].shift(1)
 gdp_per_capita["dlog_gdppc_ann"] = gdp_per_capita["dlog_gdppc"] /(gdp_per_capita["year"] - gdp_per_capita["year_lag"])
-
-# add spread
-# normalize by year!
-gdp_per_capita["log_gdppc_z"] = (
-    gdp_per_capita.groupby("year")["log_gdppc"]
-    .transform(lambda x: (x - x.mean()) / x.std())
-)
-gdp_per_capita["delta_gdppc_spread"] = (
-    gdp_per_capita.groupby("CD_GEOCME")["log_gdppc_z"]
-      .diff()
-      )
 
 population["log_pop"] = np.log(population["pop"])
 population["dlog_pop"] = (
@@ -126,16 +117,17 @@ model_df =  model_df.merge(
     exposure_matched,
     on=["CD_GEOCME", "year"],
     how="left"
-    ).dropna().reset_index(drop=True)
+    )
 
 model_df =  model_df.merge(
     climate_subindex_matched,
     on=["CD_GEOCME", "year"],
     how="left"
-    ).dropna().reset_index(drop=True)
+    )
 
 model_df = model_df.drop(['year_lag_x', 'year_lag_y', 'dlog_gdppc', 'dlog_pop'],
                          axis=1)
+
 
 # %% Summary statistics
 # key data
@@ -202,28 +194,6 @@ scatter_plot(
     title="GDP per Capita Growth vs Population Change"
 )
 
-# Population change impacts releative inequality?
-# Places with higher growth become relatively _much_ richer!
-scatter_plot(
-    model_df_mean,
-    y="dlog_pop_ann",
-    x="delta_gdppc_spread",
-    ylabel="Population Growth (log, annualized)",
-    xlabel="Relative GDP per Capita Change",
-    title="Inequality vs Population Change"
-)
-
-# Bad climate drives relative inequality change?
-# Zero relation at first glance
-scatter_plot(
-    model_df_mean,
-    x=climate_index,
-    y="delta_gdppc_spread",
-    xlabel="Climate Exposure",
-    ylabel="Relative Inequality",
-    title="Inequality vs Climate Exposure"
-)
-
 # Bad climate drives gdppc growth?
 # Also little to no impact overall
 scatter_plot(
@@ -263,23 +233,12 @@ scatter_plot(
 model_df[['year', 'log_gdppc']].groupby('year').var().plot()
 plt.show()
 # Richer places experience higher pop growth (or vice versa!)
-scatter_plot(
-    model_df_mean,
-    x="log_gdppc_z",
-    y="dlog_pop_ann",
-    xlabel="Relative Income (Z-score)",
-    ylabel="Population Growth",
-    title="Do People Move Toward Richer Regions?"
-)
 
-#%% Regs on mesorregions
-# Advantage: more region
-# Disadvantage: less data (i think climate nullifies that tho)
+
+#%% Recovering the Morten-Oliveira instrument
 # relevant cols:
     # 'N_od_flow_wm' (working males), 'N_od_flow_all'
     # orig_id_meso, dest_id_meso
-
-# First re estimate their instrument
     # log_fm_empty - fast marching empty map; log_fm_mst_pie - fast marching post brasilia
     # log_fm_road - fm through existing roads -- dependent
     # Event study IV: log_fm_road ~ a_t(log_fm_empty-log_fm_mst_pie) FE_ot FE_dt FE_od
@@ -304,6 +263,7 @@ print(res.summary())
 # good news! got exact replication! Alas, variation ceases by 1980s...
 # the Brasilia shock lasts from 1950 to 1980, normalizes afterward
 
+# %% Now calculating the effect of roads on travel time (Morten-Oliveira eq 1)
 # set up two matrixes
 # one mapping log fm road for each origin / destination
 # and one mapping log instrumented travel time reduciton
@@ -323,17 +283,7 @@ df_tt = df_tt.merge(
     )
 df_tt['IV_tt'] = res.predict()
 
-# We now create two indexes: market desirability and bad climate 
-# mkt desirabilty: highest GDPs in t-1
-# bad climate: mean_exp > 1 (meaning original index > 1)
-# lets see 10% best regions each year
-
-top_regions = (
-    gdp.sort_values(['year', 'gdp'], ascending=[True, False])
-       .groupby('year')
-       .head(14)[['year', 'CD_GEOCME']]
-       .rename(columns={'CD_GEOCME': 'dest_id'}))
-
+# 1939 to 1940 and 1991 to 1990 on migration data
 years_map = {
     1920: 1920,
     1939: 1940,
@@ -346,83 +296,15 @@ years_map = {
     2000: 2000,
     2010: 2010
     }
-top_regions['year'] = top_regions['year'].map(years_map)
-top_regions = top_regions[top_regions['year'].isin(years_iv)]
-top_regions['is_good_mkt'] = 1
-# Index for top econ regions is very stable!
 
-df_tt = df_tt.merge(
-    top_regions,
-    on=['year', 'dest_id'],
-    how='left'
-)
-df_tt['is_good_mkt'] = df_tt['is_good_mkt'].fillna(0)
-
-# now making index: minimum travel time to any good market
-# FIXME this is an obvious point to make progress
-df_tt['ivtt_good_mkt'] = df_tt['is_good_mkt']*df_tt['IV_tt']
-mkt_access_iv_tt = df_tt.groupby(['orig_id', 'year'])['ivtt_good_mkt'].min().reset_index()
-mean_ivtt = df_tt.groupby(['orig_id', 'year'])['IV_tt'].mean().reset_index()
-
+# bad climate: mean_exp > 1 (meaning original index > 1)
 # climate dummy: bad if index higher than 1
 model_df['bad_climate'] = 1*(model_df[climate_index]>=1)
-
-
 # passing travel time data years to the model
 model_df['year_tt'] = model_df['year'].map(years_map)
 
-# merging
-reg_df = model_df.merge(
-    mkt_access_iv_tt,
-    how='left',
-    left_on=['CD_GEOCME', 'year_tt'],
-    right_on=['orig_id', 'year']
-    )
-
-reg_df = reg_df.merge(
-    mean_ivtt,
-    how='left',
-    left_on=['CD_GEOCME', 'year_tt'],
-    right_on=['orig_id', 'year']
-    ).dropna()
-
-# climate data begins at 1961. We miss out on 1940, 1950 and 1970 as datapoints
-reg_df['year'] = reg_df['year_y']
-reg_df = reg_df.drop([
-    'year_x', 'year_y', 'year_tt', 'orig_id_x', 'orig_id_y'
-    ], axis=1)
-
-# %% Regressions
-# reg 1: dlog_pop_i,t ~ IV_tt_i,t ivtt_goodmkt_it
-                      # bad_climate_i,t bad_climate_i,t*IV_tt_it bad_climate_i,t*mkt_access  
-                      # gdppc_it-1 gdppc_z_it-1 FE_i FE_t
-
-reg_df = reg_df.sort_values(['CD_GEOCME', 'year'])
-# lag within region
-reg_df['log_gdppc_lag']   = reg_df.groupby('CD_GEOCME')['log_gdppc'].shift(1)
-reg_df['log_gdppc_z_lag'] = reg_df.groupby('CD_GEOCME')['log_gdppc_z'].shift(1)
-
-reg1 = pf.feols(
-    "dlog_pop_ann ~ IV_tt + ivtt_good_mkt + "  # movement + mkt access
-    "bad_climate + bad_climate:IV_tt + bad_climate:ivtt_good_mkt + " # climate responses
-    "log_gdppc_lag + log_gdppc_z_lag | " # controls
-    "CD_GEOCME + year", # fixed effects
-    data=reg_df,
-    vcov={"CRV1": "CD_GEOCME"}   # cluster by region
-)
-reg1 = pf.feols(
-    "dlog_pop_ann ~ IV_tt + ivtt_good_mkt + "  # movement + mkt access
-    "bad_climate:IV_tt + log_gdppc_lag +  log_gdppc_z_lag |" # climate responses
-    "CD_GEOCME + year", # fixed effects
-    data=reg_df,
-    vcov={"CRV1": "CD_GEOCME"}   # cluster by region
-)
-
-print(reg1.summary())
-
-# this sucks. Lets try with migration data
-
-# %% Reg 2: 
+# %% Regression on instrumented migration flows:
+    # looking at possible climate effect
     # mig_ijt ~ IV_tt_ijt diff_climate_ijt badclimate_it badclimate_it*IV_tt
     # diff_log_gdppc_ijt FE_it FE_jt FE_ij
 
@@ -510,7 +392,7 @@ print(reg_wm_w.summary())
 
 
 fml_index = (
-    f"Y ~ IV_tt + orig_{climate_index}:IV_tt"
+    f"Y ~ IV_tt + orig_{climate_index}:IV_tt +"
     " | orig_id^year + dest_id^year"
     )
 
@@ -529,7 +411,7 @@ print(reg_all_index.summary())
 # %% PPML version
 
 reg_ppml = pf.fepois(
-    "N_od_flow_all ~ IV_tt + orig_bad_climate:IV_tt | "
+    f"N_od_flow_all ~ IV_tt + orig_{climate_index}:IV_tt + | "
     "orig_year + dest_year",
     data=reg_df_2,
     vcov={"CRV1": "pair_id"}
@@ -537,7 +419,10 @@ reg_ppml = pf.fepois(
 
 print(reg_ppml.summary())
 
+# PPML yields a result! But I dont buy it given no result in normal reg
+
 # %% No climate regression for next blocks:
+
 fml_noclimate = (
     "Y ~ IV_tt + "
     " | orig_id^year + dest_id^year"
@@ -550,9 +435,13 @@ reg_no_climate = pf.feols(
     vcov={"CRV1": "pair_id"}
 )
 reg_no_climate.summary()
+t_iv = reg_no_climate.tidy().loc["IV_tt", "t value"]
+f_iv = t_iv ** 2
 
-# %% Now we use the estimated migration losses
-# to estimate GDP per capita differential!
+print("First-stage F-stat:", f_iv)
+# Very strong instrument for full migration, as MO had shown 
+
+# %% Now we recover the instrumented migration flow
 
 response_df = reg_df_2_nonzero.copy()
 # Recovering absolute predicted flows
@@ -581,11 +470,7 @@ response_df["flow_cf_full"] = np.exp(xb_cf_full)
 response_df["effect_total_tt"] = (
     response_df["flow_full"] - response_df["flow_cf_full"]
 )
-print(response_df[[
-    "effect_total_tt"
-]].describe())
 
-# %% regs on full migration effect, not just climate
 # inflows (i -> j)
 total_inflows = response_df.groupby(["dest_id", "year"])["effect_total_tt"].sum()
 # outflows (j -> k)
@@ -593,11 +478,22 @@ total_outflows = response_df.groupby(["orig_id", "year"])["effect_total_tt"].sum
 
 total_net = total_inflows.sub(total_outflows, fill_value=0).reset_index()
 total_net.columns = ["region", "year", "net_receival_due_tt"]
-total_net['net_receival_due_tt'].describe()
 # positive -> place gained people due to Brasília
 # negative -> place lost people
 
-# rebuilidng growth and population change data on new year indexes
+# This is an obvious one to improve on. Market access gained by TT reduction
+# for now, simple mean in overall reduction and in instrumented reduction
+response_df['ivtt_red'] = response_df['log_fm_empty'] - response_df['IV_tt']
+response_df['distance_to_gdp'] = response_df['dest_log_gdppc'] / response_df['ivtt_red']
+
+total_net['mean_ivtt_red'] = response_df.groupby(["orig_id", "year"])['ivtt_red'].mean().values
+# mean time travel reduction weighted by gdp of destionation
+total_net['mkt_access_gained'] = response_df.groupby(["orig_id", "year"])['distance_to_gdp'].mean().values
+
+
+# %% Building the data for the GDP change analysis
+
+# Building growth data for the avaiable migration timeframes
 net_years = [1970, 1980, 1990, 2000, 2010]  # get 1970 for variation calculation
 # want to better control columns
 gdppc_years_tt = gdp_per_capita[gdp_per_capita['year'].isin(net_years)][['year', 'CD_GEOCME', 'log_gdppc']]
@@ -627,8 +523,8 @@ gdp_years_tt["dlog_gdp_ann"] = gdp_years_tt["dlog_gdp"] /(gdp_years_tt["year"] -
 
 # adding most data
 stage_2_total = total_net.merge(
-    model_df[['CD_GEOCME', 'Sigla', 'year_tt', 'pop', 'delta_gdppc_spread',
-              'log_gdppc_z', 'log_gdppc', f'{climate_index}']],
+    model_df[['CD_GEOCME', 'Sigla', 'year_tt', 'pop','log_gdppc',
+              f'{climate_index}']],
     how='left',
     left_on=['region', 'year'],
     right_on=['CD_GEOCME', 'year_tt']
@@ -641,14 +537,16 @@ stage_2_total = stage_2_total.merge(
     left_on=['region', 'year'],
     right_on=['CD_GEOCME', 'year']
     )
+
 stage_2_total = stage_2_total.merge(
     pop_years_tt[['CD_GEOCME', 'year', 'dlog_pop_ann']],
     how='left',
     left_on=['region', 'year'],
     right_on=['CD_GEOCME', 'year']
     )
+
 stage_2_total = stage_2_total.merge(
-    gdp_years_tt[['CD_GEOCME', 'year', 'dlog_gdp_ann']],
+    gdp_years_tt[['CD_GEOCME', 'year', 'dlog_gdp_ann', 'log_gdp']],
     how='left',
     left_on=['CD_GEOCME', 'year'],
     right_on=['CD_GEOCME', 'year']
@@ -660,183 +558,64 @@ stage_2_total['net_receival_rate_tt_pos'] = stage_2_total['net_receival_rate_tt'
 stage_2_total['net_receival_rate_tt_neg'] = stage_2_total['net_receival_rate_tt'].apply(lambda x: x if x < 0 else 0)
 
 
-fml_s2_t = (
-    "Y ~ net_receival_rate_tt + "
-    " | region + year + region[time_trend]" # controlling for convergence
-    )
-
-fml_s2_posneg = (
-    "Y ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + "
-    " | region + year + region[time_trend]" # controlling for convergence
-    )
-
-reg_s2_dlog_gdppc = pf.feols(
-    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-reg_s2_posneg_gdppc = pf.feols(
-    fml_s2_posneg.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-print(reg_s2_dlog_gdppc.summary())
-# very good! 
-print(reg_s2_posneg_gdppc.summary())
-# the negative effect is negligible; the positive is quite decent!
-
-# Decent evidence in favor of the "higher migration --> higher gdp per capita" story!
-# Selection vs agglomeration!
-# The negative effect being null points towards agglomeration or lower S curve!
-
-# %% initial rob checks
-
-rob_dlog_gdp = pf.feols(
-    fml_s2_t.replace("Y", "dlog_gdp_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-rob_posneg_gdp = pf.feols(
-    fml_s2_posneg.replace("Y", "dlog_gdp_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-# on dlog gdp (not per capita):
-print(rob_dlog_gdp.summary())
-# PASS
-print(rob_posneg_gdp.summary())
-# PASS! And partial negative effect appears, as we would expect
-# regions are, after all, loosing people
-
-
-# weights:
-stage_2_total['abs_receival_rate_tt'] = abs(stage_2_total['net_receival_rate_tt'])
-stage_2_total['log_pop'] = np.log(stage_2_total['pop'])
-
-rob_weights_mig = pf.feols(
-    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    weights='abs_receival_rate_tt',
-    vcov={"CRV1": "region"}
-)
-rob_weights_pop = pf.feols(
-    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    weights='log_pop',
-    vcov={"CRV1": "region"}
-)
-print(rob_weights_pop.summary())
-print(rob_weights_mig.summary())
-# neat, that works
-
-# excluding agri fontier states
-# Take a "greedy" definition of agri frontier as NO + CO ex Goias (Brasília)
-agri_frontier = ['RO', 'PA', 'MT', 'MS', 'AP', 'RR', 'AM', 'AC', 'TO']
-# Gotta be careful, otherwise may loose to much data
-stage_2_total['agri'] = stage_2_total['Sigla'].isin(agri_frontier)
-stage_2_total['non_agri'] = ~stage_2_total['agri']
-
-fml_rob_agri = (
-    "Y ~ net_receival_rate_tt:agri + net_receival_rate_tt:non_agri + "
-    " | region + year + region[time_trend]" # controlling for convergence
-    )
-
-rob_agri = pf.feols(
-    fml_rob_agri.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-print(rob_agri.summary())
-# We find NO EFFECT for the non agri frontier regions and strong one for agri
-# Issue: low nordeste may be confounding things?
-
-# now looking solely at urban attractors
-# Keeping solely centro-sul states + BSB Goiás
-stage_2_total['urban'] = stage_2_total['pop'] > 5e5  # IBGE for large city
-stage_2_total['non_urban'] = ~stage_2_total['urban']
-
-fml_rob_urban = (
-    "Y ~ net_receival_rate_tt:urban + net_receival_rate_tt:non_urban + "
-    " | region + year + region[time_trend]" # controlling for convergence
-    )
-
-rob_urban = pf.feols(
-    fml_rob_urban.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-print(rob_urban.summary())
-
-# Again, non-urban finds effect, urban finds no!
-# to agri and isolating urban clusters will not save the result for cities!
-
-# A last one: lets separate out urban, agr, and rest (basically NE)
-stage_2_total['non_urban_agri'] = ~(stage_2_total['urban'] | stage_2_total['agri'])
-
-fml_rob_all_sep = (
-    "Y ~ net_receival_rate_tt:urban + net_receival_rate_tt:agri + net_receival_rate_tt:non_urban_agri"
-    " | region + year " # controlling for convergence
-    )
-
-rob_all_sep = pf.feols(
-    fml_rob_all_sep.replace("Y", "dlog_gdppc_ann"),
-    data=stage_2_total,
-    vcov={"CRV1": "region"}
-)
-
-print(rob_all_sep.summary())
-# Tada! Effect is:
-    # POSITIVE for both agri regions and non urban nor agri regions
-    # NULL for urban regions
-    # Effect for gdp non per capita is, ofc, positive throughout
-# Very unepected!
-# Evidence: Non urban nor agri frontier places lost out indeed
-# and urban centers are indifferent to receiving migrants 
-# But lets keep in mind this goes somewhat against the pos_neg finding that
-# losing people had no effect
-
-
-# %%  redoing the entire thing under RE
- 
-import statsmodels.formula.api as smf
+# %%  Design: impacts of instrumented receival rate on log gdppc
+# with random effects for region and trends, and fixed effects for years
 
 mod = smf.mixedlm(
-    "log_gdppc~ net_receival_rate_tt + C(year)",
-    data=stage_2_total,
+    "dlog_gdp_ann ~ net_receival_rate_tt + mkt_access_gained + C(year)",
+    data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
 )
 
 res = mod.fit()
 print(res.summary())
-# Doing fine
+# We find a positive and significant effect, as expected!
+# Moreover, we see no effect from market acces gain once the migration is accounted for
+# Which is interesting. 
+# Rate of growth was that much larger due to migration
 
-mod_gdp = smf.mixedlm(
-    "dlog_gdp_ann ~ net_receival_rate_tt + C(year)",
+mod_log = smf.mixedlm(
+    "log_gdppc~ net_receival_rate_tt + mkt_access_gained + C(year)",
     data=stage_2_total,
     groups="region",
     re_formula="~time_trend"
 )
 
-res_gdp = mod_gdp.fit()
-print(res_gdp.summary())
-# Fiiiine
+res_log = mod_log.fit()
+print(res_log.summary())
+# works on levels also
+
+mod_gdp_lvl = smf.mixedlm(
+    "log_gdp ~ net_receival_rate_tt + C(year)",
+    data=stage_2_total.dropna(),
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res_gdp_lvl = mod_gdp_lvl.fit()
+print(res_gdp_lvl.summary())
+# Neat evidence for lvl gdp effect!
 
 mod_posneg = smf.mixedlm(
-    "dlog_gdppc_ann ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + C(year)",
-    data=stage_2_total,
+    "dlog_gdp_ann ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + C(year)",
+    data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
 )
 
 res_pn = mod_posneg.fit()
 print(res_pn.summary())
-# Negative effect now significant!!! Selection back in the game!
+# Both gaining and loosing people are significant and have the right signal
+# Interestingly, loosing people seems to be much worse!
+
+# Lets look at "types of attractors"
+# Idea: agri regions benfit from migration due to S curve / abundant resources
+# Cities benfit due to agglomerative effects
+agri_frontier = ['RO', 'PA', 'MT', 'MS', 'AP', 'RR', 'AM', 'AC', 'TO']
+stage_2_total['agri'] = stage_2_total['Sigla'].isin(agri_frontier)
+stage_2_total['urban'] = stage_2_total['pop'] > 5e5  # IBGE for large city
+stage_2_total['non_urban_agri'] = ~(stage_2_total['urban'] | stage_2_total['agri'])
 
 stage_2_total["region_type"] = np.select(
     [
@@ -852,16 +631,47 @@ stage_2_total["region_type"] = np.select(
 )
 
 mod_agri_urban = smf.mixedlm(
-    "log_gdppc ~ 0 + net_receival_rate_tt:C(region_type) + C(year)",
-    data=stage_2_total,
+    "dlog_gdp_ann ~ 0 + net_receival_rate_tt:C(region_type) + C(year)",
+    data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
 )
 
 res_agri_urban = mod_agri_urban.fit()
 print(res_agri_urban.summary())
-# Result of irrelevance of non-agri regions remains...
+# All are positive! Agri gains are smaller, and "other" and "urban" have similar
+# coefficients. This, to me, points towards selection in migrants being the
+# driver!
 
+# %% initial rob checks: trying to implement the same ideas under all fixed effects
+
+# Fixed effects
+fml_s2_t = (
+    "Y ~ net_receival_rate_tt + "
+    " | region + year + region[time_trend]" # controlling for convergence
+    )
+
+robFE_dlog_gdppc = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdppc_ann"),
+    data=stage_2_total.dropna(),
+    vcov={"CRV1": "region"}
+)
+robFE_log_gdppc = pf.feols(
+    fml_s2_t.replace("Y", "log_gdppc"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+robFE_log_gdp = pf.feols(
+    fml_s2_t.replace("Y", "log_gdp"),
+    data=stage_2_total,
+    vcov={"CRV1": "region"}
+)
+
+print(robFE_dlog_gdppc.summary())
+print(robFE_log_gdppc.summary())
+print(robFE_log_gdp.summary())  # wtf?
+# PASS
 
 # %%
 
@@ -912,27 +722,34 @@ def plot_regions(data_df, regions_df, var, year='all',
     plt.show()
     return fig, ax
 
-
-stage_2_total['gdp_change_due_mig'] = reg_s2_dlog_gdppc.coef()['net_receival_rate_tt']*\
+# Effect going by agg gain/loss
+stage_2_total['dlog_gdppc_due_mig'] = res.params['net_receival_rate_tt']*\
     stage_2_total['net_receival_rate_tt']
 
-interest_outcomes = ['CD_GEOCME', 'gdp_change_due_mig', 'net_receival_rate_tt', 'dlog_gdppc_ann', 'pop']
+# Going by region types
+coefs_types_map = {'agri': res_agri_urban.params['net_receival_rate_tt:C(region_type)[agri]'],
+                   'other': res_agri_urban.params['net_receival_rate_tt:C(region_type)[other]'],
+                   'urban': res_agri_urban.params['net_receival_rate_tt:C(region_type)[urban]']}
+stage_2_total['coef_region_type'] = stage_2_total['region_type'].map(coefs_types_map)
 
+stage_2_total['dlog_gdppc_due_mig_types'] = stage_2_total['coef_region_type']*\
+    stage_2_total['net_receival_rate_tt']
+
+interest_outcomes = [
+    'CD_GEOCME', 'dlog_gdppc_due_mig', 'dlog_gdppc_due_mig_types',
+    'net_receival_rate_tt'
+                     ]
+
+total_gdp_change = stage_2_total[stage_2_total['year']==2010]['log_gdppc'].reset_index() - \
+    stage_2_total[stage_2_total['year']==1980]['log_gdppc'].reset_index()
+# Lots of places lost GDP per capita. WTF
+
+# mean annualized gain due migration and mean net receival rate by region over the period
 df_agg_results = stage_2_total[interest_outcomes].groupby('CD_GEOCME').mean().reset_index()
 
 df_agg_results = df_agg_results.merge(
     regions[['CD_GEOCME', 'NM_MESO']], on='CD_GEOCME', how='left'
     )
-
-df_agg_results['growth_share_att_mig'] = df_agg_results['gdp_change_due_mig'] / df_agg_results['dlog_gdppc_ann']
-
-# Winner regions
-df_agg_results[df_agg_results['growth_share_att_mig'] > 0].sort_values('growth_share_att_mig')['NM_MESO']
-
-# back of envelope gain of welfare in 2010 reais:
-    # using mean population from sample
-gdp_gain_ann = ((1+df_agg_results['gdp_change_due_mig']) * df_agg_results['pop']).sum()/df_agg_results['pop'].sum()
-(gdp_gain_ann**40 - 1)*100
 
 fig_gdp_pre, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_ann',
                       title='Δlog GDP per capita \n1970-2010',
@@ -942,13 +759,13 @@ fig_mig, _ = plot_regions(df_agg_results, regions, 'net_receival_rate_tt',
                       title='Net Road Induced Migrant Receival Rate\n1980-2010',
                       legend='as share of local pop.', center=0)
 
-fig_gdp, _ = plot_regions(df_agg_results, regions, 'gdp_change_due_mig',
-                      title='Δlog GDP per Capita due Migration \n1970-2010',
+fig_gdp, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_due_mig_types',
+                      title='GDP per Capita  Growth due Migration \n1970-2010',
+                      legend='', center=0)
+fig_gdp, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_due_mig',
+                      title='GDP per Capita Growth due Migration \n1970-2010',
                       legend='', center=0)
 
-fig_gdp_share, _ = plot_regions(df_agg_results, regions, 'growth_share_att_mig',
-                      title='Migration Induced Growth Relative to Total\n1970-2010',
-                      legend='', center=0)
 
 # %% Next:
     # On climate:
