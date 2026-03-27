@@ -83,6 +83,16 @@ population["year_lag"] = population.groupby("CD_GEOCME")["year"].shift(1)
 population["dlog_pop_ann"] = population["dlog_pop"] /(population["year"] - population["year_lag"])
 
 
+gdp["log_gdp"] = np.log(gdp["gdp"])
+gdp["dlog_gdp"] = (
+    gdp.groupby("CD_GEOCME")["log_gdp"]
+      .diff()
+      )
+gdp["year_lag"] = gdp.groupby("CD_GEOCME")["year"].shift(1)
+gdp["dlog_gdp_ann"] = gdp["dlog_gdp"] /(gdp["year"] - gdp["year_lag"])
+
+
+
 gdp_cap_years = gdp_per_capita['year'].unique()
 exposure_matched = (
     exposure_index[exposure_index["year"].isin(gdp_cap_years)]
@@ -114,6 +124,12 @@ model_df =  gdp_per_capita.merge(
     )
 
 model_df =  model_df.merge(
+    gdp[['Sigla', 'NM_MESO', "CD_GEOCME", "year", 'log_gdp', 'dlog_gdp_ann']],
+    on=['Sigla', 'NM_MESO', "CD_GEOCME", "year"],
+    how="left"
+    )
+
+model_df =  model_df.merge(
     exposure_matched,
     on=["CD_GEOCME", "year"],
     how="left"
@@ -127,7 +143,6 @@ model_df =  model_df.merge(
 
 model_df = model_df.drop(['year_lag_x', 'year_lag_y', 'dlog_gdppc', 'dlog_pop'],
                          axis=1)
-
 
 # %% Summary statistics
 # key data
@@ -359,6 +374,9 @@ reg_df_2["pair_id"] = reg_df_2["orig_id"].astype(str) + "_" + reg_df_2["dest_id"
 reg_df_2["orig_year"]  = reg_df_2["orig_id"].astype(str) + "_" + reg_df_2["year"].astype(str)
 reg_df_2["dest_year"]  = reg_df_2["dest_id"].astype(str) + "_" + reg_df_2["year"].astype(str)
 
+# Creating market access index
+reg_df_2['mkt_access'] = reg_df_2['dest_log_gdppc'] / reg_df_2['IV_tt']
+
 # kill zero flows
 reg_df_2_nonzero = reg_df_2[reg_df_2['N_od_flow_wm']>0]
 reg_df_2_nonzero['log_migration'] = np.log(reg_df_2_nonzero['N_od_flow_all'])
@@ -411,12 +429,11 @@ print(reg_all_index.summary())
 # %% PPML version
 
 reg_ppml = pf.fepois(
-    f"N_od_flow_all ~ IV_tt + orig_{climate_index}:IV_tt + | "
+    f"N_od_flow_all ~ IV_tt + orig_bad_climate:IV_tt +  | "
     "orig_year + dest_year",
     data=reg_df_2,
     vcov={"CRV1": "pair_id"}
 )
-
 print(reg_ppml.summary())
 
 # PPML yields a result! But I dont buy it given no result in normal reg
@@ -472,11 +489,11 @@ response_df["effect_total_tt"] = (
 )
 
 # inflows (i -> j)
-total_inflows = response_df.groupby(["dest_id", "year"])["effect_total_tt"].sum()
+tt_inflows = response_df.groupby(["dest_id", "year"])["effect_total_tt"].sum()
 # outflows (j -> k)
-total_outflows = response_df.groupby(["orig_id", "year"])["effect_total_tt"].sum()
+tt_outflows = response_df.groupby(["orig_id", "year"])["effect_total_tt"].sum()
 
-total_net = total_inflows.sub(total_outflows, fill_value=0).reset_index()
+total_net = tt_inflows.sub(tt_outflows, fill_value=0).reset_index()
 total_net.columns = ["region", "year", "net_receival_due_tt"]
 # positive -> place gained people due to Brasília
 # negative -> place lost people
@@ -490,6 +507,14 @@ total_net['mean_ivtt_red'] = response_df.groupby(["orig_id", "year"])['ivtt_red'
 # mean time travel reduction weighted by gdp of destionation
 total_net['mkt_access_gained'] = response_df.groupby(["orig_id", "year"])['distance_to_gdp'].mean().values
 
+# getting real migration flows
+real_inflows = response_df.groupby(["dest_id", "year"])["N_od_flow_all"].sum()
+# outflows (j -> k)
+real_outflows  = response_df.groupby(["orig_id", "year"])["N_od_flow_all"].sum()
+
+real_net = real_inflows.sub(real_outflows, fill_value=0).reset_index()
+
+total_net['net_receival_real'] = real_net.groupby(["dest_id", "year"])['N_od_flow_all'].sum().values
 
 # %% Building the data for the GDP change analysis
 
@@ -556,24 +581,47 @@ stage_2_total['net_receival_rate_tt'] = stage_2_total['net_receival_due_tt'] / s
 stage_2_total['time_trend'] = stage_2_total['year'] - stage_2_total['year'].min()
 stage_2_total['net_receival_rate_tt_pos'] = stage_2_total['net_receival_rate_tt'].apply(lambda x: x if x > 0 else 0)
 stage_2_total['net_receival_rate_tt_neg'] = stage_2_total['net_receival_rate_tt'].apply(lambda x: x if x < 0 else 0)
-
+stage_2_total['net_receival_rate_real'] = stage_2_total['net_receival_real'] / stage_2_total['pop']
 
 # %%  Design: impacts of instrumented receival rate on log gdppc
 # with random effects for region and trends, and fixed effects for years
 
-mod = smf.mixedlm(
+mod_gdppc = smf.mixedlm(
+    "dlog_gdppc_ann ~ net_receival_rate_tt + mkt_access_gained + C(year)",
+    data=stage_2_total.dropna(),
+    groups="region",
+    re_formula="~time_trend"
+)
+# And against real receival rate, not instrumented
+mod_gdppc_real = smf.mixedlm(
+    "dlog_gdp_ann ~ net_receival_rate_real + mkt_access_gained + C(year)",
+    data=stage_2_total.dropna(),
+    groups="region",
+    re_formula="~time_trend"
+)
+
+res_gdppc = mod_gdppc.fit()
+print(res_gdppc.summary())
+# We find a positive and significant effect, as expected!
+# Moreover, we see no effect from market acces gain once the migration is accounted for
+# Which is interesting. 
+# Rate of growth was that much larger due to migration
+
+res_gdppc_real = mod_gdppc_real.fit()
+print(res_gdppc_real.summary())
+# We find a larger value when going by simple, non-instrumented receival rates
+# indicating endogeneity is real
+
+mod_dlog_gdp = smf.mixedlm(
     "dlog_gdp_ann ~ net_receival_rate_tt + mkt_access_gained + C(year)",
     data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
 )
 
-res = mod.fit()
-print(res.summary())
-# We find a positive and significant effect, as expected!
-# Moreover, we see no effect from market acces gain once the migration is accounted for
-# Which is interesting. 
-# Rate of growth was that much larger due to migration
+res_dlog_gdp = mod_dlog_gdp.fit()
+print(res_dlog_gdp.summary())
+# neat positive effect on full gdp also
 
 mod_log = smf.mixedlm(
     "log_gdppc~ net_receival_rate_tt + mkt_access_gained + C(year)",
@@ -598,7 +646,7 @@ print(res_gdp_lvl.summary())
 # Neat evidence for lvl gdp effect!
 
 mod_posneg = smf.mixedlm(
-    "dlog_gdp_ann ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + C(year)",
+    "dlog_gdppc_ann ~ net_receival_rate_tt_pos + net_receival_rate_tt_neg + C(year)",
     data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
@@ -631,7 +679,7 @@ stage_2_total["region_type"] = np.select(
 )
 
 mod_agri_urban = smf.mixedlm(
-    "dlog_gdp_ann ~ 0 + net_receival_rate_tt:C(region_type) + C(year)",
+    "dlog_gdppc_ann ~ 0 + net_receival_rate_tt:C(region_type) + C(year)",
     data=stage_2_total.dropna(),
     groups="region",
     re_formula="~time_trend"
@@ -639,9 +687,7 @@ mod_agri_urban = smf.mixedlm(
 
 res_agri_urban = mod_agri_urban.fit()
 print(res_agri_urban.summary())
-# All are positive! Agri gains are smaller, and "other" and "urban" have similar
-# coefficients. This, to me, points towards selection in migrants being the
-# driver!
+# Significant only for agri. However, few datapoints
 
 # %% initial rob checks: trying to implement the same ideas under all fixed effects
 
@@ -662,16 +708,16 @@ robFE_log_gdppc = pf.feols(
     vcov={"CRV1": "region"}
 )
 
-robFE_log_gdp = pf.feols(
-    fml_s2_t.replace("Y", "log_gdp"),
-    data=stage_2_total,
+robFE_dlog_gdp = pf.feols(
+    fml_s2_t.replace("Y", "dlog_gdp_ann"),
+    data=stage_2_total.dropna(),
     vcov={"CRV1": "region"}
 )
 
-print(robFE_dlog_gdppc.summary())
 print(robFE_log_gdppc.summary())
-print(robFE_log_gdp.summary())  # wtf?
-# PASS
+print(robFE_dlog_gdppc.summary())
+print(robFE_dlog_gdp.summary()) 
+# PASS, with values on the same order of magnitude
 
 # %%
 
@@ -723,21 +769,14 @@ def plot_regions(data_df, regions_df, var, year='all',
     return fig, ax
 
 # Effect going by agg gain/loss
-stage_2_total['dlog_gdppc_due_mig'] = res.params['net_receival_rate_tt']*\
+stage_2_total['dlog_gdppc_due_mig'] = res_gdppc.params['net_receival_rate_tt']*\
     stage_2_total['net_receival_rate_tt']
-
-# Going by region types
-coefs_types_map = {'agri': res_agri_urban.params['net_receival_rate_tt:C(region_type)[agri]'],
-                   'other': res_agri_urban.params['net_receival_rate_tt:C(region_type)[other]'],
-                   'urban': res_agri_urban.params['net_receival_rate_tt:C(region_type)[urban]']}
-stage_2_total['coef_region_type'] = stage_2_total['region_type'].map(coefs_types_map)
-
-stage_2_total['dlog_gdppc_due_mig_types'] = stage_2_total['coef_region_type']*\
+stage_2_total['dlog_gdp_due_mig'] = res_dlog_gdp.params['net_receival_rate_tt']*\
     stage_2_total['net_receival_rate_tt']
 
 interest_outcomes = [
-    'CD_GEOCME', 'dlog_gdppc_due_mig', 'dlog_gdppc_due_mig_types',
-    'net_receival_rate_tt'
+    'CD_GEOCME', 'dlog_gdppc_due_mig', 'dlog_gdp_due_mig',
+    'net_receival_rate_tt', 'dlog_gdppc_ann', 'mean_exp', 'net_receival_rate_real'
                      ]
 
 total_gdp_change = stage_2_total[stage_2_total['year']==2010]['log_gdppc'].reset_index() - \
@@ -745,40 +784,125 @@ total_gdp_change = stage_2_total[stage_2_total['year']==2010]['log_gdppc'].reset
 # Lots of places lost GDP per capita. WTF
 
 # mean annualized gain due migration and mean net receival rate by region over the period
-df_agg_results = stage_2_total[interest_outcomes].groupby('CD_GEOCME').mean().reset_index()
+df_agg_results = stage_2_total[interest_outcomes].groupby('CD_GEOCME').agg(
+    {
+    'dlog_gdppc_due_mig': 'mean',
+    'dlog_gdp_due_mig': 'mean',
+    'dlog_gdppc_ann': 'mean',
+    'net_receival_rate_tt': 'mean',
+    'net_receival_rate_real': 'mean',
+    'mean_exp': 'mean'
+    }
+    ).reset_index()
 
 df_agg_results = df_agg_results.merge(
     regions[['CD_GEOCME', 'NM_MESO']], on='CD_GEOCME', how='left'
     )
 
-fig_gdp_pre, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_ann',
-                      title='Δlog GDP per capita \n1970-2010',
+fig_gdppc, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_ann',
+                      title='Annualized GDP per capita Growth Rate \n1970-2010',
                       legend='')
+fig_gdppc.savefig(f'{path}/figs/dlog_gdppc.png', transparent=True)
+
+fig_clima, _ = plot_regions(df_agg_results, regions, 'mean_exp',
+                      title='Mean Extreme Climate Exposure \n1970-2010',
+                      legend='')
+fig_clima.savefig(f'{path}/figs/climate_exp.png', transparent=True)
+
+fig_mig_real, _ = plot_regions(df_agg_results, regions, 'net_receival_rate_real',
+                      title='Net Migrant Receival Rate\n1980-2010, share of population',
+                      legend='', center=0)
+fig_mig_real.savefig(f'{path}/figs/fig_mig_real.png', transparent=True)
 
 fig_mig, _ = plot_regions(df_agg_results, regions, 'net_receival_rate_tt',
                       title='Net Road Induced Migrant Receival Rate\n1980-2010',
                       legend='as share of local pop.', center=0)
 
-fig_gdp, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_due_mig_types',
-                      title='GDP per Capita  Growth due Migration \n1970-2010',
+fig_gdp_mig, _ = plot_regions(df_agg_results, regions, 'dlog_gdp_due_mig',
+                      title='GDP Growth due Migration \n1970-2010',
                       legend='', center=0)
-fig_gdp, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_due_mig',
+fig_gdp_mig.savefig(f'{path}/figs/main_result_gdp.png', transparent=True)
+
+fig_gdppc_mig, _ = plot_regions(df_agg_results, regions, 'dlog_gdppc_due_mig',
                       title='GDP per Capita Growth due Migration \n1970-2010',
                       legend='', center=0)
+fig_gdppc_mig.savefig(f'{path}/figs/main_result_gdppc.png', transparent=True)
 
+
+# Growth accounting
+gdp_1970 = gdp[gdp['year']==1970][['CD_GEOCME', 'gdp']]
+pop_2010 = population[population['year']==2010][['CD_GEOCME', 'pop']]
+gdp_2010 = gdp[gdp['year']==2010][['CD_GEOCME', 'gdp']]
+gdp_2010.columns = ['CD_GEOCME', 'gdp_2010']
+
+df_accounting = df_agg_results.merge(
+    gdp_1970,
+    how='left',
+    on='CD_GEOCME'
+    )
+df_accounting = df_accounting.merge(
+    gdp_2010,
+    how='left',
+    on='CD_GEOCME'
+    )
+
+df_accounting = df_accounting.merge(
+    pop_2010,
+    how='left',
+    on='CD_GEOCME'
+    )
+
+df_accounting['gdp_gain'] = df_accounting['gdp'] * df_agg_results['dlog_gdp_due_mig'] * 40
+tot_gdp_gain = (df_accounting['gdp_gain'].sum() /  df_accounting['gdp'].sum())
+# We find a high effect in overall GDP. Something like growth of 9.35% from 1970 to 2010
+
+gdppc_ex_mig = (df_accounting['gdp_2010'] - df_accounting['gdp_gain']).sum()/df_accounting['pop'].sum()
+
+gdppc_2010 = df_accounting['gdp_2010'].sum()/df_accounting['pop'].sum()
+1-gdppc_ex_mig / gdppc_2010
+
+# Something like 2.1% GDP per capita can be attributed to internal migration reshufling
+# Morten-Oliveira find 0.67% gain in aggregate welfare. Mine are significantly higher!
+# Note, they find 2.8% gains from migration + trade. My estimation may be "polluted"
+
+# %% Offloading tables 
+
+
+print(res.summary()) # instrument replication
+print(reg_all_index.summary()) # instrument works, climate doesnt
+print(reg_all_w.summary())
+print(reg_no_climate.summary()) # reg without climate for future work
+print(res_gdppc_real.summary()) # effect is higher under true migration,
+
+print(res_gdppc.summary()) # positive effect on gdp per capita; no market acess motive shows up
+print(res_dlog_gdp.summary()) # positive effect under gdp level
+print(robFE_dlog_gdppc.summary()) # it works under fixed effects also
+print(robFE_dlog_gdp.summary()) 
+
+
+
+# 1920 to 2010, for 137 mesorregions (less for years 1920 - 1960)
+macro_summary = model_df[['dlog_gdppc_ann', 'dlog_pop_ann', 'dlog_gdp_ann']].describe()
+
+# Original data: 1961 to 2024, daily for 0.1x0.1 degrees data on rain, max min temp, relative humidity and evapotranspiration
+# Formatted data: ten-year average of exposure indexes
+climate_summary = model_df[['mean_exp', 'drought_anomaly', 'drought_absolute', 'heat', 'flood']].describe()
+
+# 1980 to 2010, decennial for meso origin-destination pair
+mo_summary = mo_meso[['N_od_flow_all', 'log_fm_empty', 'log_fm_road']].describe()
 
 # %% Next:
     # On climate:
         # I'm mostly satisfied with the null
     # On GDPPC:
         # Robustness: state level, more controls, drop best fits
-        # Robustness: reg on dlog GDP --> pass! For both agg, pos and neg effects
+        # Robustness: reg on log GDP --> pass! For both agg, pos and neg effects
         # Doesnt pass for agri/urban/other
         # Robustness: compare OLS to IV migration
         # Robustness: FE vs RE --> pass!
         # Interpretation: Selection of Migrants vs Agglomeration in Cities
         # Analize micro migration data, wage if avaiable
-        # Bilateral effect? If selection yes, if agg no! --> tentative no!
+        # Bilateral effect? If selection yes, if agg no!
         # Agri vs Urban vs Other --> All have the effect!
     # Another avenue: [Blank] Access Motive Test Technology
         # Compile what the theory says should drive migration
