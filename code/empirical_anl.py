@@ -185,7 +185,7 @@ scatter_plot(
 # are fine. Lets go with mean.
 climate_index = 'mean_exp'
 model_df_mean = model_df[['year', 'CD_GEOCME', 'dlog_pop_ann', climate_index,
-                          'dlog_gdppc_ann', 'log_gdppc_z', 'delta_gdppc_spread']].groupby('CD_GEOCME').mean()
+                          'dlog_gdppc_ann']].groupby('CD_GEOCME').mean()
 
 # Climate drives smaller pop growth?
 # Seems so!
