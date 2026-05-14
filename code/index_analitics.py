@@ -25,7 +25,7 @@ exposure_z_index = pd.read_parquet(f'{index_path}/exposure_z_scores.parquet')
 livability_index = pd.read_parquet(f'{index_path}/livability.parquet')
 stability_index = pd.read_parquet(f'{index_path}/stability.parquet')
 
-# %%
+# %%  older indexes analysis
 
 corr = exposure_z_index[["heat", "flood", 'drought_anomaly', 'drought_absolute', 'exposure_index']].corr()
 
@@ -49,8 +49,6 @@ exposure_z_index[['year', "exposure_index", 'ex_abs', 'pca_index', 'pca_ex_abs']
 plt.show()
 
 # averaging and taking PCs seems similar
-
-
 # final exposure index: distance from 0 squared
 # idea: big exposure much worse than small exposure
 exposure_z_index[["exposure_index", 'ex_abs', 'pca_index', 'pca_ex_abs']] = \
