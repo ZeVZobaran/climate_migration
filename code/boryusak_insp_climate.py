@@ -15,7 +15,7 @@ import seaborn as sns
 import matplotlib.colors as colors
 from scipy.optimize import minimize_scalar
 from scipy.optimize._numdiff import approx_derivative
-from numpy.linalg import solve
+from numpy.linalg import solve, inv
 
 sns.set(style="whitegrid")
 
@@ -26,14 +26,14 @@ regions = gpd.read_file(f'{path}/data/br_mesorregioes/BRMEE250GC_SIR.shp')
 regions = regions.to_crs("EPSG:5880").copy()
 regions['CD_GEOCME'] = pd.to_numeric(regions['CD_GEOCME'])
 
+# old. We keep for comparison only
 exposure_index = pd.read_parquet(f'{path}//data/climate_indexes/exposure_pca_mean.parquet')
-exposure_subindex = pd.read_parquet(f'{path}//data/climate_indexes//exposure_z_scores.parquet')
+
 mo_meso = pd.read_stata(
     f'{path}/data/morten_oliveira_final_tables/N_od_meso.dta'
     )
 
 relative_index = pd.read_parquet(f'{path}//data/climate_indexes//relative_exposure_index.parquet')
-rel_comp_index = relative_index[['year', 'region', 'composite_within_exposure', 'composite_between_exposure']]
 
 # %% Take averages in terms of available census data
 
@@ -48,21 +48,25 @@ def decade_averager(df):
     df_decade.drop(columns=['year'])
     return df_decade
 
-exposure_subindex_drop = exposure_subindex[['region', 'year', 'NM_MESO', 'heat',
-       'drought_anomaly', 'flood', 'drought_absolute']]
-exposure_subindex_drop = exposure_subindex_drop.rename(columns={'region':'CD_GEOCME'})
+# Old indexes that do not interest us anymore. We prefer the within and between definitions
+# Keep the composite mean and PCA index for comparison
 
-exp_overall = exposure_index.merge(
-    exposure_subindex_drop, on=['CD_GEOCME', 'year', 'NM_MESO']
-    )
+df_climate_decade = decade_averager(exposure_index)
+relative_index['NM_MESO'] = 0
+relative_index = relative_index.rename(columns={'region':'CD_GEOCME'})
+rel_index_decade = decade_averager(relative_index).drop(columns=['NM_MESO'])
+# Renaming indexes
+df_climate_decade['comp_rel_within'] = rel_index_decade['composite_within_exposure']
+df_climate_decade['hot_within'] = rel_index_decade['Tmax_hot_exposure']
+df_climate_decade['dry_within'] = rel_index_decade['wb_dry_90d_exposure']
+df_climate_decade['flood_within'] = rel_index_decade['pr_extreme_7d_exposure']
+df_climate_decade['cold_within'] = rel_index_decade['Tmin_cold_exposure']
 
-df_climate_decade = decade_averager(exp_overall)
-rel_comp_index['NM_MESO'] = 0
-rel_comp_index = rel_comp_index.rename(columns={'region':'CD_GEOCME'})
-rel_comp_index_decade = decade_averager(rel_comp_index).drop(columns=['NM_MESO'])
-df_climate_decade['comp_rel_within'] = rel_comp_index_decade['composite_within_exposure']
-df_climate_decade['comp_rel_between'] = rel_comp_index_decade['composite_between_exposure']
-
+df_climate_decade['comp_rel_between'] = rel_index_decade['composite_between_exposure']
+df_climate_decade['hot_between'] = rel_index_decade['Tmax_hot_between_exposure']
+df_climate_decade['dry_between'] = rel_index_decade['wb_dry_90d_between_exposure']
+df_climate_decade['flood_between'] = rel_index_decade['pr_extreme_7d_between_exposure']
+df_climate_decade['cold_between'] = rel_index_decade['Tmin_cold_between_exposure']
 
 # %% Migration data format
 df_migration_short = mo_meso[['orig_id', 'dest_id', 'year', 'N_od_flow_wm', 'N_od_flow_all']]
@@ -77,38 +81,30 @@ years_map = {
 df_migration_short['decade'] = df_migration_short['year'].map(years_map)
 
 # merging origin and destination climate indexes
+orig_columns_names = {
+    df_climate_decade.columns[i]: f'orig_{df_climate_decade.columns[i]}' for i in range(df_climate_decade.shape[1])
+    }
+orig_columns_names['CD_GEOCME'] = 'orig_id'
+orig_columns_names['decade'] = 'decade'
+orig_columns_names['year'] = 'year'
+
 df_climate_decade_orig = df_climate_decade.rename(
-    columns = {
-        'CD_GEOCME': 'orig_id',
-        'mean_exp': 'orig_mean_exp',
-        'pca_exp': 'orig_pca_exp',
-        'heat': 'orig_heat',
-       'drought_anomaly': 'orig_drought_anomaly',
-       'flood': 'orig_flood',
-       'drought_absolute': 'orig_drought_absolute',
-       'comp_rel_within': 'orig_comp_rel_within',
-       'comp_rel_between': 'orig_comp_rel_between'
-        }
+    columns = orig_columns_names
     )
 
 df_migration_short = df_migration_short.merge(
     df_climate_decade_orig,
     on = ['orig_id', 'decade']
     )
+dest_columns_names = {
+    df_climate_decade.columns[i]: f'dest_{df_climate_decade.columns[i]}' for i in range(df_climate_decade.shape[1])
+    }
+dest_columns_names['CD_GEOCME'] = 'dest_id'
+dest_columns_names['decade'] = 'decade'
+dest_columns_names['year'] = 'year'
 
 df_climate_decade_dest = df_climate_decade.rename(
-    columns = {
-        'CD_GEOCME': 'dest_id',
-        'mean_exp': 'dest_mean_exp',
-        'pca_exp': 'dest_pca_exp',
-        'heat': 'dest_heat',
-       'drought_anomaly': 'dest_drought_anomaly',
-       'flood': 'dest_flood',
-       'drought_absolute': 'dest_drought_absolute',
-       'comp_rel_within': 'dest_comp_rel_within',
-       'comp_rel_between': 'dest_comp_rel_between'
-
-        }
+    columns = dest_columns_names
     )
 
 df_migration_short = df_migration_short.merge(
@@ -139,9 +135,9 @@ df_model_nonzero['log_flow'] = np.log(df_model_nonzero['N_od_flow_all'])
 def run_reg_fe(df, climate_index):
     fml = (
         f"log_flow ~ orig_{climate_index} + dest_{climate_index}"
-        " | orig_id + dest_id + year"
+        " | year"
         )
-    
+
     reg_w = pf.feols(
         fml,
         data=df,
@@ -151,10 +147,9 @@ def run_reg_fe(df, climate_index):
     return reg_w
 
 rows = []
-for climate_index in [
-        'mean_exp', 'pca_exp',
-        'comp_rel_within', 'comp_rel_between'
-        ]:
+climate_indexes = df_climate_decade.columns[4:]
+
+for climate_index in climate_indexes:
     reg = run_reg_fe(df_model_nonzero, climate_index)
     # Extract coefficient table
     # Origin variable name
@@ -164,11 +159,11 @@ for climate_index in [
     row = {
         "index": climate_index,
         "origin_coef": reg.coef().loc[orig_var],
-        "origin_se": reg.se().loc[orig_var],
+#        "origin_se": reg.se().loc[orig_var],
         "origin_p": reg.pvalue().loc[orig_var],
 
         "dest_coef": reg.coef().loc[dest_var],
-        "dest_se": reg.se().loc[dest_var],
+#        "dest_se": reg.se().loc[dest_var],
         "dest_p": reg.pvalue().loc[dest_var],
         'reg': reg
     }
@@ -176,25 +171,57 @@ for climate_index in [
 
 
 fe_ols_results = pd.DataFrame(rows)
-latex_out = fe_ols_results.drop(columns=['reg']).set_index('index').apply(lambda x: np.round(x, 3))
+latex_out_ols = fe_ols_results.drop(columns=['reg']).set_index('index').apply(lambda x: np.round(x, 3))
+# The old indexes have the expected behavior
+# The new ones are more muddled. The between indexes are much too erratic
+# in particular, they always display the wrong sign for origins
+# The whithin indexes are more interesting. P values are much too close to 5
+# for my taste, but still. I'd venture to say that:
+    # aridity events drive people out of origins
+    # and flooding drive people out of destinations
+    # I do think this is somewhat aligned with Sophie's findings?
 
-# Although at each climate index the result isnt too great,
-# in aggregate we do capture the expected effect!
-# That is, bad climate drives people out of origins (positive sign)
-# and bad climate reduces flows into destinations (negative sign)
-# with destination effects being both weaker and less precisely identified
-# neat!
+# %% PPML version
 
-# ADD: composite indexed made
-# The between indexes are not significant for origins! 
-# A given region being on the extreme of the national
-# average doesnt drive migration. They ARE significant for destinations,
-# so that a destination being extreme drives people... towards? it?
-# Local adaptation!
-# The composite within index is significant on both counts
-# but has the wrong? sign?
-# I hate it here
+def run_reg_ppml(df, climate_index):
+    reg_ppml = pf.fepois(
+        f'N_od_flow_all ~ orig_{climate_index} + dest_{climate_index}'
+        " | year",
+    data=df,
+    vcov={"CRV1": "pair_id"}
+    )
+    return reg_ppml
 
+rows_ppml = []
+
+for climate_index in climate_indexes:
+    reg = run_reg_ppml(df_model, climate_index)
+    # Extract coefficient table
+    # Origin variable name
+    orig_var = f"orig_{climate_index}"
+    dest_var = f"dest_{climate_index}"
+
+    row = {
+        "index": climate_index,
+        "origin_coef": reg.coef().loc[orig_var],
+#        "origin_se": reg.se().loc[orig_var],
+        "origin_p": reg.pvalue().loc[orig_var],
+
+        "dest_coef": reg.coef().loc[dest_var],
+#        "dest_se": reg.se().loc[dest_var],
+        "dest_p": reg.pvalue().loc[dest_var],
+        'reg': reg
+    }
+    rows_ppml.append(row)
+fe_ppml_results = pd.DataFrame(rows_ppml)
+latex_out_ppml = fe_ppml_results.drop(columns=['reg']).set_index('index').apply(lambda x: np.round(x, 3))
+
+# PPML version
+# Lend credence to the OG indexes for origin push factor
+# Between indexes remain an utter mess
+# story gets weirder for within indexes also
+# will ignore this for now...
+    
 # %% Implementing the NLSS estimator from Boryusak
 # Getting raw population data
 population = pd.read_excel(
@@ -284,10 +311,13 @@ gamma_matrix = (
 )
 
 # %% Implementing Boryusak's estimator
-
 def omega_matrix(lam, PI, GAMMA):
     """
     Ω(λ) = I - [I + λ(I - Γ'Π)]^{-1}
+
+    PI    : out-migration matrix Π
+    GAMMA : in-migration matrix Γ
+    lam   : theta / sigma
     """
     PI = np.asarray(PI, dtype=float)
     GAMMA = np.asarray(GAMMA, dtype=float)
@@ -300,31 +330,35 @@ def omega_matrix(lam, PI, GAMMA):
     return I - solve(A, I)
 
 
-def fitted_values(lam, PI, GAMMA, Z, L, intercept=True):
+def nlls_prediction(params, PI, GAMMA, Z):
+    """
+    Model prediction:
+        L_hat = c + Ω(λ) Z
+
+    params = [lambda, intercept]
+    """
+    lam, intercept = params
+
     Z = np.asarray(Z, dtype=float).reshape(-1)
 
-    fitted = omega_matrix(lam, PI, GAMMA) @ Z
-
-    if intercept:
-        c = np.mean(L - fitted)
-        fitted = fitted + c
-
-    return fitted
+    return intercept + omega_matrix(lam, PI, GAMMA) @ Z
 
 
-def ssr_objective(lam, PI, GAMMA, L, Z, intercept=True):
+def nlls_objective_with_intercept(lam, PI, GAMMA, L, Z):
+    """
+    SSR objective where intercept is profiled out.
+
+    For each λ:
+        c(λ) = mean[L - Ω(λ)Z]
+    """
     L = np.asarray(L, dtype=float).reshape(-1)
     Z = np.asarray(Z, dtype=float).reshape(-1)
-    
-    OMEGA = omega_matrix(lam, PI, GAMMA)
 
-    fitted = OMEGA @ Z
+    fitted_no_intercept = omega_matrix(lam, PI, GAMMA) @ Z
 
-    if intercept:
-        c = np.mean(L - fitted)
-        fitted = fitted + c
+    intercept = np.mean(L - fitted_no_intercept)
 
-    resid = L - fitted
+    resid = L - intercept - fitted_no_intercept
 
     return resid @ resid
 
@@ -335,98 +369,102 @@ def estimate_theta_over_sigma(
     L,
     Z,
     bounds=(1e-8, 100),
-    intercept=True
+    xatol=1e-10
 ):
+    """
+    Estimate:
 
+        L = c + Ω(λ)Z + error
+
+    by NLLS, with λ = theta / sigma.
+
+    Returns λ_hat, intercept_hat, standard errors, fitted values,
+    residuals, and variance-covariance matrix.
+    """
+
+    PI = np.asarray(PI, dtype=float)
+    GAMMA = np.asarray(GAMMA, dtype=float)
     L = np.asarray(L, dtype=float).reshape(-1)
     Z = np.asarray(Z, dtype=float).reshape(-1)
 
     n = len(L)
-    k = 2 if intercept else 1
+    k = 2  # lambda + intercept
 
-    # -----------------------------------
-    # Estimate lambda
-    # -----------------------------------
+    # -------------------------------
+    # 1. Estimate lambda
+    # -------------------------------
 
-    result = minimize_scalar(
-        ssr_objective,
+    opt = minimize_scalar(
+        nlls_objective_with_intercept,
         bounds=bounds,
         method="bounded",
-        args=(PI, GAMMA, L, Z, intercept),
-        options={"xatol": 1e-10}
+        args=(PI, GAMMA, L, Z),
+        options={"xatol": xatol}
     )
 
-    lam_hat = result.x
+    lam_hat = opt.x
 
-    # -----------------------------------
-    # Fitted values
-    # -----------------------------------
+    # -------------------------------
+    # 2. Estimate intercept conditional on lambda_hat
+    # -------------------------------
 
     fitted_no_intercept = omega_matrix(lam_hat, PI, GAMMA) @ Z
 
-    if intercept:
-        c_hat = np.mean(L - fitted_no_intercept)
-    else:
-        c_hat = 0.0
+    intercept_hat = np.mean(L - fitted_no_intercept)
 
-    fitted = fitted_no_intercept + c_hat
+    fitted = intercept_hat + fitted_no_intercept
     resid = L - fitted
 
     ssr = resid @ resid
-
-    # -----------------------------------
-    # Estimate residual variance
-    # -----------------------------------
-
     sigma2_hat = ssr / (n - k)
 
-    # -----------------------------------
-    # Numerical Jacobian wrt lambda
-    # -----------------------------------
+    # -------------------------------
+    # 3. Standard errors
+    # -------------------------------
 
-    def model_prediction(lam):
-        pred = omega_matrix(lam[0], PI, GAMMA) @ Z
+    params_hat = np.array([lam_hat, intercept_hat])
 
-        if intercept:
-            c = np.mean(L - pred)
-            pred = pred + c
-
-        return pred
+    def pred_func(params):
+        return nlls_prediction(params, PI, GAMMA, Z)
 
     J = approx_derivative(
-        model_prediction,
-        x0=np.array([lam_hat]),
-        method='3-point'
+        pred_func,
+        x0=params_hat,
+        method="3-point"
     )
 
-    # J shape: (n, 1)
-    JTJ = J.T @ J
+    # J is n x 2:
+    # column 0 = derivative wrt lambda
+    # column 1 = derivative wrt intercept
 
-    # -----------------------------------
-    # Asymptotic variance
-    # Var(beta) = sigma² (J'J)^(-1)
-    # -----------------------------------
-
-    vcov = sigma2_hat * np.linalg.inv(JTJ)
+    vcov = sigma2_hat * inv(J.T @ J)
 
     se_lambda = np.sqrt(vcov[0, 0])
+    se_intercept = np.sqrt(vcov[1, 1])
 
-    t_stat = lam_hat / se_lambda
+    t_lambda = lam_hat / se_lambda
+    t_intercept = intercept_hat / se_intercept
 
     return {
         "theta_over_sigma": lam_hat,
-        "std_error": se_lambda,
-        "t_stat": t_stat,
-        "intercept": c_hat,
+        "intercept": intercept_hat,
+
+        "std_error_lambda": se_lambda,
+        "std_error_intercept": se_intercept,
+
+        "t_lambda": t_lambda,
+        "t_intercept": t_intercept,
+
         "sigma2_hat": sigma2_hat,
         "ssr": ssr,
-        "success": result.success,
-        "message": result.message,
+
+        "success": opt.success,
+        "message": opt.message,
+
         "fitted": fitted,
         "residuals": resid,
         "vcov": vcov,
     }
-
 
 ids = pi_matrix.index.intersection(gamma_matrix.index)
 PI = pi_matrix.loc[ids, ids].values
@@ -438,7 +476,7 @@ df_climate_80_2010 = df_climate_decade[df_climate_decade['decade'].isin([1980, 1
 nlls_rows = []
 
 for climate_index in [
-        'mean_exp', 'pca_exp', 'heat', 'flood', 'drought_anomaly', 'drought_absolute'
+        'mean_exp', 'pca_exp', 'comp_rel_within'
         ]:
    
     # Method 1: average out shocks and population changes to capture the overall effect of climate
@@ -449,9 +487,9 @@ for climate_index in [
     
     
     # Method 2: lets check what happens if we use only data from a single decade
-    climate_90 = df_climate_80_2010[df_climate_80_2010['decade']==1990]
+    climate_90 = df_climate_80_2010[df_climate_80_2010['decade']==1980]
     Z = climate_90.set_index('CD_GEOCME').loc[ids, climate_index].values
-    pop_change_90 = pop_changes[pop_changes['decade']==1990]
+    pop_change_90 = pop_changes[pop_changes['decade']==1980]
     L = pop_change_90.set_index('orig_id').loc[ids, 'change_pct'].values
 
     res = estimate_theta_over_sigma(
@@ -464,7 +502,7 @@ for climate_index in [
     row = {
         'index': climate_index,
         'lam': res['theta_over_sigma'],
-        'se': res['std_error'],
+        'se': res['std_error_lambda'],
         'const': res['intercept'],
         'success': res['success']
         }
