@@ -10,6 +10,8 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import matplotlib.colors as colors
+import statsmodels.api as sm
+
 plt.ion()
 path = r'D:/Users/c337191/Documents/climate_migration'
 index_path = f'{path}/data/climate_indexes'
@@ -24,6 +26,8 @@ exposure_z_index = pd.read_parquet(f'{index_path}/exposure_z_scores.parquet')
 # these ended up being a dead end - just map distance to equator
 livability_index = pd.read_parquet(f'{index_path}/livability.parquet')
 stability_index = pd.read_parquet(f'{index_path}/stability.parquet')
+relative_index = pd.read_parquet(f'{index_path }/relative_exposure_index.parquet')
+
 
 # %%  older indexes analysis
 
@@ -54,10 +58,63 @@ plt.show()
 exposure_z_index[["exposure_index", 'ex_abs', 'pca_index', 'pca_ex_abs']] = \
     exposure_z_index[["exposure_index", 'ex_abs', 'pca_index', 'pca_ex_abs']]**2
 
+# %% new index analyses
+new_idx = ['Tmax_hot_exposure', 'Tmin_cold_exposure',
+       'pr_extreme_7d_exposure', 'wb_dry_90d_exposure',
+       'composite_within_exposure', 'Tmax_hot_between_exposure',
+       'Tmin_cold_between_exposure', 'pr_extreme_7d_between_exposure',
+       'wb_dry_90d_between_exposure', 'composite_between_exposure']
+
+corr = relative_index[new_idx].corr()
+# how much info does the composite index add to the individual indexes?
+reg_within = sm.OLS(
+    relative_index[['composite_within_exposure']],
+    sm.add_constant(relative_index[['Tmax_hot_exposure', 'Tmin_cold_exposure',
+           'pr_extreme_7d_exposure', 'wb_dry_90d_exposure']])
+    )
+res_within = reg_within.fit()
+res_within.summary()  # not a lot. It captures mostof the info
+
+# What of between indexes?
+reg_bt = sm.OLS(
+    relative_index[['composite_between_exposure']],
+    sm.add_constant(relative_index[['Tmax_hot_between_exposure',
+    'Tmin_cold_between_exposure', 'pr_extreme_7d_between_exposure',
+    'wb_dry_90d_between_exposure']])
+    )
+res_bt = reg_bt.fit()
+res_bt.summary()  # same
+
+# PCA for within and between indexes
+pca_wt = PCA(n_components=4)
+pc_within = pca_wt.fit_transform(relative_index[['Tmax_hot_exposure', 'Tmin_cold_exposure',
+       'pr_extreme_7d_exposure', 'wb_dry_90d_exposure']].values)
+relative_index.loc[:, "pca_within"] = pc_within.T[0]
+pca_wt.explained_variance_ratio_
+
+pca_bt = PCA(n_components=4)
+pc_bt = pca_bt.fit_transform(relative_index[['Tmax_hot_between_exposure',
+'Tmin_cold_between_exposure', 'pr_extreme_7d_between_exposure',
+'wb_dry_90d_between_exposure']].values)
+relative_index.loc[:, "pca_between"] = pc_bt.T[0]
+pca_bt.explained_variance_ratio_
+
+corr = relative_index.corr()
+# Woah! PCA from within shows that the most prevalent factor is the one associated
+# with aridity, adding almost all variability. Association is of 99%!
+# 73% of variablility comes indeed from a single factor, which we may call
+# a "climate anomaly factor" I suppose
+# For the between index the figure is muddier.
+# The 1st factor captures only 47% of variability, 31 for the second and 14 for 
+# the third. Each index is much more likely to be "seeing" a different object
+
+# The 1st PCA factor kinda "radicalizes" the 1st index if I'm not mistaken
+# The risk is that I'm failing to account for confounders and 
+
 # %% full time-sample vizualization
 
 def plot_climate_regions(climate_df, regions_df, var, year='all',
-                         legend='Exposure Index (z-score)', center='infer'):
+                         legend='Exposure Index', center='infer'):
     if year == 'all':
         df_use = climate_df[['region', var]].groupby('region').mean().reset_index()
     else:
@@ -107,7 +164,7 @@ def plot_climate_regions(climate_df, regions_df, var, year='all',
 #%%
 
 fig, fig_ax = plot_climate_regions(
-    exposure_z_index, regions, 'pca_index', legend='Heat, floods and aridity\nexposure index'
+    relative_index, regions, 'composite_within_exposure', legend='Heat, floods and aridity\nexposure index'
     )
 
 fig_ax.set_title(
@@ -116,6 +173,7 @@ fig_ax.set_title(
     )
 fig_ax.set_axis_off()
 fig_ax.set_aspect("equal")
+
 # =============================================================================
 # cbar = fig_ax.axes[1]
 # yticks = np.arange(0, 5, 0.5)

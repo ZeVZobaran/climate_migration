@@ -35,6 +35,39 @@ mo_meso = pd.read_stata(
 
 relative_index = pd.read_parquet(f'{path}//data/climate_indexes//relative_exposure_index.parquet')
 
+population = pd.read_excel(
+    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='pop_mesorreg_interpol'
+    )
+gdp_per_capita = pd.read_excel(
+    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='gdp_capita_mesorreg'
+    )
+
+# %%
+
+def make_ipea_tidy(df, var):
+    df['CD_GEOCME'] = pd.to_numeric(df['CD_GEOCME'])
+    id_cols = ['Sigla', 'CD_GEOCME', 'NM_MESO']
+    year_cols = [c for c in df.columns if c not in id_cols]
+    df_tidy = (
+    df.melt(
+        id_vars=id_cols,
+        value_vars=year_cols,
+        var_name="year",
+        value_name=var
+        )
+    )
+    df_tidy["year"] = df_tidy["year"].astype(int)
+    df_tidy = df_tidy.sort_values(["CD_GEOCME", "year"]).reset_index(drop=True)
+    df_tidy = df_tidy.rename(columns={
+        'CD_GEOCME': 'id',
+        'NM_MESO': 'name',
+        'Sigla': 'abbrv'
+        })
+    return df_tidy
+
+tidy_gdppc = make_ipea_tidy(gdp_per_capita, 'gdp_capita')
+tidy_pop = make_ipea_tidy(population, 'pop')
+
 # %% Take averages in terms of available census data
 
 def decade_averager(df):
@@ -122,6 +155,41 @@ df_model['pair_id'] = df_model['orig_id'].astype(str) + "_" + df_model['dest_id'
 
 df_model_nonzero = df_model[df_model['N_od_flow_all']>0]
 df_model_nonzero['log_flow'] = np.log(df_model_nonzero['N_od_flow_all'])
+df_model = df_model.drop(columns=['year_x', 'year_y'])
+
+# %% Adding IPEA data
+
+
+def merge_model_ipea(df_model, df_ipea):
+    
+    orig_ipea = df_ipea.rename(columns={
+        x: f'orig_{x}' for x in df_ipea.columns
+        })
+    dest_ipea = df_ipea.rename(columns={
+        x: f'dest_{x}' for x in df_ipea.columns
+        })
+    df_merged = df_model.merge(
+        orig_ipea,
+        left_on = ['orig_id', 'decade'],
+        right_on = ['orig_id', 'orig_year']
+        )
+    df_merged = df_merged.merge(
+        dest_ipea,
+        left_on = ['dest_id', 'decade'],
+        right_on = ['dest_id', 'dest_year']
+        )
+    return df_merged
+
+df_model = merge_model_ipea(df_model, tidy_gdppc)
+df_model = merge_model_ipea(df_model, tidy_pop[['id', 'year', 'pop']])
+
+df_model = df_model.drop(columns=['orig_year_x', 'dest_year_x', 'orig_year_y', 'dest_year_y'])
+
+df_model['emigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['orig_pop']
+df_model['immigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['dest_pop']
+
+df_model.to_parquet(
+    f'{path}/data/formatted_composit/climate_mig_meso.parquet', index=False)
 
 # %% Climate will be taken as origin_climate and dest_climate
 # Across climate "types"
@@ -217,299 +285,22 @@ fe_ppml_results = pd.DataFrame(rows_ppml)
 latex_out_ppml = fe_ppml_results.drop(columns=['reg']).set_index('index').apply(lambda x: np.round(x, 3))
 
 # PPML version
-# Lend credence to the OG indexes for origin push factor
-# Between indexes remain an utter mess
-# story gets weirder for within indexes also
-# will ignore this for now...
-    
-# %% Implementing the NLSS estimator from Boryusak
-# Getting raw population data
-population = pd.read_excel(
-    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='pop_mesorreg_interpol'
-    )
-def make_ipea_tidy(df, var):
-    df['CD_GEOCME'] = pd.to_numeric(df['CD_GEOCME'])
-    id_cols = ['Sigla', 'CD_GEOCME', 'NM_MESO']
-    year_cols = [c for c in df.columns if c not in id_cols]
-    df_tidy = (
-    df.melt(
-        id_vars=id_cols,
-        value_vars=year_cols,
-        var_name="year",
-        value_name=var
-        )
-    )
-    df_tidy["year"] = df_tidy["year"].astype(int)
-    df_tidy = df_tidy.sort_values(["CD_GEOCME", "year"]).reset_index(drop=True)
-    return df_tidy
-population = make_ipea_tidy(population, 'pop')
-population = population[population['year'].isin([1970, 1980, 1990, 2000, 2010])]
-population = population.fillna(method='bfill')  # for leste rondoniense migué
+# This points towards a "stickiness". People are less likely to 
+# leave places with bad climate, even as they are more likely to go to places
+# with good climate
+# This could be due to poverty in origins making migration less likely in general,
+# or due to adaptation
 
-population['decade'] = population['year'] + 10
-population['orig_id'] = population['CD_GEOCME']
+# How do I test adaptation?
 
-# %%  Getting population change percentage
 
-pop_changes = df_model[
-    ['orig_id', 'N_od_flow_all', 'decade']
-    ].groupby(['orig_id', 'decade']).sum().reset_index()
 
-pop_changes = pop_changes.merge(
-    population[['orig_id', 'decade', 'pop']],
-    on=['orig_id', 'decade']
-    )
 
-pop_changes['change_pct'] = pop_changes['N_od_flow_all'] / pop_changes['pop']
 
-# %% Getting pi and gamma
 
-population_orig = population.rename(columns={'pop':'orig_pop'})
 
-df_migration_short = df_migration_short.merge(
-    population_orig[['orig_id', 'decade', 'orig_pop']],
-    on=['orig_id', 'decade']
-    )
 
 
-
-df_migration_short['pi_od'] = df_migration_short['N_od_flow_all']/df_migration_short['orig_pop']
-# values may be larger than one for same-same region!
-
-population_dest = population[['CD_GEOCME', 'year', 'pop']].rename(columns={
-    'CD_GEOCME': 'dest_id',
-    'year': 'decade',  # now we work with contemporaneous data according to the model!
-    'pop': 'dest_pop'
-    })
-
-df_migration_short = df_migration_short.merge(
-    population_dest[['dest_id', 'decade', 'dest_pop']],
-    on=['dest_id', 'decade']
-    )
-df_migration_short['gamma_od'] = df_migration_short['N_od_flow_all']/df_migration_short['dest_pop']
-
-# %% averaging out and getting PI and GAMMA
-
-df_pi_gamma = df_migration_short[['orig_id', 'dest_id', 'decade', 'pi_od', 'gamma_od']].groupby(
-    ['orig_id', 'dest_id']).mean().drop(columns=['decade']).reset_index()
-
-pi_matrix = (
-    df_pi_gamma.pivot_table(
-        index="orig_id",
-        columns="dest_id",
-        values="pi_od"
-    )
-)
-
-# Matrix for gamma_od
-gamma_matrix = (
-    df_pi_gamma.pivot_table(
-        index="orig_id",
-        columns="dest_id",
-        values="gamma_od"
-    )
-)
-
-# %% Implementing Boryusak's estimator
-def omega_matrix(lam, PI, GAMMA):
-    """
-    Ω(λ) = I - [I + λ(I - Γ'Π)]^{-1}
-
-    PI    : out-migration matrix Π
-    GAMMA : in-migration matrix Γ
-    lam   : theta / sigma
-    """
-    PI = np.asarray(PI, dtype=float)
-    GAMMA = np.asarray(GAMMA, dtype=float)
-
-    n = PI.shape[0]
-    I = np.eye(n)
-
-    A = I + lam * (I - GAMMA.T @ PI)
-
-    return I - solve(A, I)
-
-
-def nlls_prediction(params, PI, GAMMA, Z):
-    """
-    Model prediction:
-        L_hat = c + Ω(λ) Z
-
-    params = [lambda, intercept]
-    """
-    lam, intercept = params
-
-    Z = np.asarray(Z, dtype=float).reshape(-1)
-
-    return intercept + omega_matrix(lam, PI, GAMMA) @ Z
-
-
-def nlls_objective_with_intercept(lam, PI, GAMMA, L, Z):
-    """
-    SSR objective where intercept is profiled out.
-
-    For each λ:
-        c(λ) = mean[L - Ω(λ)Z]
-    """
-    L = np.asarray(L, dtype=float).reshape(-1)
-    Z = np.asarray(Z, dtype=float).reshape(-1)
-
-    fitted_no_intercept = omega_matrix(lam, PI, GAMMA) @ Z
-
-    intercept = np.mean(L - fitted_no_intercept)
-
-    resid = L - intercept - fitted_no_intercept
-
-    return resid @ resid
-
-
-def estimate_theta_over_sigma(
-    PI,
-    GAMMA,
-    L,
-    Z,
-    bounds=(1e-8, 100),
-    xatol=1e-10
-):
-    """
-    Estimate:
-
-        L = c + Ω(λ)Z + error
-
-    by NLLS, with λ = theta / sigma.
-
-    Returns λ_hat, intercept_hat, standard errors, fitted values,
-    residuals, and variance-covariance matrix.
-    """
-
-    PI = np.asarray(PI, dtype=float)
-    GAMMA = np.asarray(GAMMA, dtype=float)
-    L = np.asarray(L, dtype=float).reshape(-1)
-    Z = np.asarray(Z, dtype=float).reshape(-1)
-
-    n = len(L)
-    k = 2  # lambda + intercept
-
-    # -------------------------------
-    # 1. Estimate lambda
-    # -------------------------------
-
-    opt = minimize_scalar(
-        nlls_objective_with_intercept,
-        bounds=bounds,
-        method="bounded",
-        args=(PI, GAMMA, L, Z),
-        options={"xatol": xatol}
-    )
-
-    lam_hat = opt.x
-
-    # -------------------------------
-    # 2. Estimate intercept conditional on lambda_hat
-    # -------------------------------
-
-    fitted_no_intercept = omega_matrix(lam_hat, PI, GAMMA) @ Z
-
-    intercept_hat = np.mean(L - fitted_no_intercept)
-
-    fitted = intercept_hat + fitted_no_intercept
-    resid = L - fitted
-
-    ssr = resid @ resid
-    sigma2_hat = ssr / (n - k)
-
-    # -------------------------------
-    # 3. Standard errors
-    # -------------------------------
-
-    params_hat = np.array([lam_hat, intercept_hat])
-
-    def pred_func(params):
-        return nlls_prediction(params, PI, GAMMA, Z)
-
-    J = approx_derivative(
-        pred_func,
-        x0=params_hat,
-        method="3-point"
-    )
-
-    # J is n x 2:
-    # column 0 = derivative wrt lambda
-    # column 1 = derivative wrt intercept
-
-    vcov = sigma2_hat * inv(J.T @ J)
-
-    se_lambda = np.sqrt(vcov[0, 0])
-    se_intercept = np.sqrt(vcov[1, 1])
-
-    t_lambda = lam_hat / se_lambda
-    t_intercept = intercept_hat / se_intercept
-
-    return {
-        "theta_over_sigma": lam_hat,
-        "intercept": intercept_hat,
-
-        "std_error_lambda": se_lambda,
-        "std_error_intercept": se_intercept,
-
-        "t_lambda": t_lambda,
-        "t_intercept": t_intercept,
-
-        "sigma2_hat": sigma2_hat,
-        "ssr": ssr,
-
-        "success": opt.success,
-        "message": opt.message,
-
-        "fitted": fitted,
-        "residuals": resid,
-        "vcov": vcov,
-    }
-
-ids = pi_matrix.index.intersection(gamma_matrix.index)
-PI = pi_matrix.loc[ids, ids].values
-GAMMA = gamma_matrix.loc[ids, ids].values
-L = pop_changes.set_index('orig_id').loc[ids, 'change_pct'].values
-
-df_climate_80_2010 = df_climate_decade[df_climate_decade['decade'].isin([1980, 1990, 2000, 2010])]
-
-nlls_rows = []
-
-for climate_index in [
-        'mean_exp', 'pca_exp', 'comp_rel_within'
-        ]:
-   
-    # Method 1: average out shocks and population changes to capture the overall effect of climate
-    decade_climate = df_climate_80_2010[['CD_GEOCME', 'decade', climate_index]].groupby('CD_GEOCME').mean()
-    Z = decade_climate.loc[ids, climate_index]
-    decade_pop_changes = pop_changes[['orig_id', 'decade', 'change_pct']].groupby('orig_id').mean()
-    L = decade_pop_changes.loc[ids, 'change_pct'].values
-    
-    
-    # Method 2: lets check what happens if we use only data from a single decade
-    climate_90 = df_climate_80_2010[df_climate_80_2010['decade']==1980]
-    Z = climate_90.set_index('CD_GEOCME').loc[ids, climate_index].values
-    pop_change_90 = pop_changes[pop_changes['decade']==1980]
-    L = pop_change_90.set_index('orig_id').loc[ids, 'change_pct'].values
-
-    res = estimate_theta_over_sigma(
-        PI=PI,
-        GAMMA=GAMMA,
-        L=L,
-        Z=Z,
-        bounds=(1e-8, 50)
-    )
-    row = {
-        'index': climate_index,
-        'lam': res['theta_over_sigma'],
-        'se': res['std_error_lambda'],
-        'const': res['intercept'],
-        'success': res['success']
-        }
-    nlls_rows.append(row)
-
-nlls_results = pd.DataFrame(nlls_rows)
-# noncredible results. Gotta go back to the model and understand it properly
 
 
 
