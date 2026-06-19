@@ -1,0 +1,48 @@
+Matrizes 3x3 Análise
+População:
+ - Predomina High-High, naturalmente
+ - saída de high para low e de high para médio é menor do que entrada sempre
+ - med-low é mais recíproco
+
+Clima Agregado:
+ - a diagonal principal é toda alta, prob a ver com migração local
+ - high-low é baixo...
+ - menos consistência no tempo
+
+Calor:
+ - Diagonal principal carregada
+ - High-low, high-med e med-high, low-hidh são pequenas
+ - Pessoas não saem de high pra outros, e não vão de outros pra high
+ - "ilhas de calor"?
+
+Enchente / Aridez
+ - Parecido com o de Calor
+ - Talvez o que eu esteja detectando como "fator climático" seja só distância
+ - E conforme a distância aumenta o clima muda, então eu pego distância como se fosse
+clima?
+ - Talvez a literatura em geral faça isso...?
+
+Frio
+ - Super carregado na última coluna
+ - E na ultima linha
+ - Suspeita: população maior no Sudeste confundindo a anl
+
+GDP capita
+ - high-high domina
+ - x-high cai no tempo, mas não muito
+ - low-med e low-low parecidos; resto "esperado
+
+GDP agr share
+ - Low-high dobra no período! "Desexodo rural"?
+ - med-low cai pela metade! os outros são +- cte
+
+GDP ind share
+ - low-high alto sempre
+
+GDP serv share
+ - high-med e até high-low bem altos! 
+ - x-high também sempre altos
+
+
+
+

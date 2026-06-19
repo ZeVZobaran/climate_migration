@@ -1,0 +1,60 @@
+Fundamentals
+Clima:
+	Frio - as áreas mais afetadas são equatorianas! Curioso
+	Aridez - 1990 tem um mega choque no NE. 2000 um choque "reverso"!
+	Enchente - Aqui a região desfavorecida do Sul aparece mais claramente
+	Composto - 1990 marca um momento HORRIVEl no NE; y2k marca um momento "bom" no NO. Sul sempre ruim!
+
+
+GDP:
+	"desagriculturização" do país inteiro super clara, mesmo na "fronteira agro". Onde será mais marcada?
+	Processo de industrialização não aparece! Se qualquer coisa, vemos uma desindustrialização mesmo no sudeste e na NFM. vale do SF tem um "surto industrial" of sorts!
+	Serviços crescem grande no país inteiro, naturalmente. Hoje é mais forte em regiões que me parecem mais pobres (oeste do RS/SC/PA, secas, norte do norte). Interessante
+	População é hiiiiiper concentrada, claro. PIB per capita é menos! Destaque pra BSB, claro, pro sudeste. Mas o mais chamativo é o aumento do PIB per capita de toda a região "fronteira agro" ao longo do período. Continua menor do que os "líderes", mas o crescimento é impressionante e acontece enquanto uma região grande que engloba o NE e o norte de MG ficaram estagnados
+
+
+Migração:
+	Em absolutos suuuuuuuuuuper concentrado em SP e macrorregião, mais do que RJ e qqlr outra coisa
+	Em %s, a fronteira agro domina em imigração. Em 1980 entra 50% da população de imigrante no MT! Depois alivia, mas a cor do mapa é clara. Nunca entra quase ngn no NE. Não parece ter mta migração de retorno
+	Migração líquida é sempre negativa nessa região NE expandida, e no oeste do Sul.  
+	Mapa de emigração é interessante. Tem uma saída MONSTRA, 35%, no oeste paraense e sudoeste paulista e todo o MS. É a colonização da fronteira agro, "novas bandeiras" da vida. Depis aquieta a parada, mas essa região continua emitindo gente
+
+
+
+Links:
+	Além das bacias migratórias: regiões menores (pop wise) tem mais links efetivos! Acho. Acho que a quantidade de links efetivos aumenta no tempo também. Muita gente concentradassa no sub5!
+	Receivers: Brasília, RJ e SP recebem gente do país inteiro. Fronteira agro recebe de mais lugares. As "bordas" do país e o RS (!) de menos lugares
+
+Outside Op:
+	Pessoas do polígono das secas em 90 especialmente saíram para lugares com clima melhor. Em geral, pessoas do NE expandido e do SO saem para lugares com clima pior! Chocante! Esses lugares também tem bastante emigração!
+	PIB per capita segue  esperado mesmo, sem gracinha.  
+
+
+Top Receivers:
+	Abs: Fortaleza, BH, Campinas, MacroSP, Curitiba recebem de suas imediações. 
+	POA recebe do RS inteiro; centro goiano do oeste, DF de todo o sertão do NE
+	Metro Rio recebe de cidades e zonas costeiras nordestinas; SP recebe de todo o NE
+	Pop Pct: Regiões nortenhas e goias em geral recebem de arredores; DF igual; MT recebe daquele corredor ocidental
+
+Top Senders:
+	Abs: BH e RJ "exilam" pessoas pros seus arredores. Salvador tb, mas tb manda mta gente pra SP. SP demonstra perfil de return migration pro NE! Oeste do PR manda lote pro norte; e oeste RS manda lote pra POA
+	Pop Pct: êxodo do norte de MG para BH, e colonização do MT pelo Paraná
+
+
+
+Histórias que eu vejo:
+ Três tipos de migração: local, êxodo rural e retorno limitado, e novas bandeiras
+ Desruralização do país veio com aumento de serviços; PIB per capita da fronteira agro subiu muito, e do NE expandido caiu
+ Clima ruim não é um driver óbvio de migração
+ A história mais interessante parece ser a bandeira paranaense rumo ao Madeira. O que já sabemos sobre esse episódio? 
+	Uma boa quantidade de coisas, e leitura pela frente. Mais marcadamente, podemos ter uma história de
+		1- seleção e redes nos migrantes. Porque essas pessoas específicas? Carregaram alguma tecnologia ou habilidade consigo?
+		2- seleção no lugar de origem. Pq oeste paranaense? O que essa região tinha demais?
+		3 - efeitos sobre quem fica. O que acontece com a região de lá
+		4 - criação de fronteira; migrantes foram para o lugar Bom ou criaram o lugar Bom? E o que fez dele Bom?
+		5- migração em cadeia. Claramente nego sai do paraná pro leste rondonia e depois vai pro oeste. Como é isso?
+
+
+
+
+

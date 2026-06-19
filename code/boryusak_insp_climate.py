@@ -41,6 +41,15 @@ population = pd.read_excel(
 gdp_per_capita = pd.read_excel(
     f'{path}/data/ipea/ipea_format.xlsx', sheet_name='gdp_capita_mesorreg'
     )
+gdp_ind_share = pd.read_excel(
+    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='gdp_ind_share'
+    )
+gdp_serv_share = pd.read_excel(
+    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='gdp_serv_share'
+    )
+gdp_agr_share = pd.read_excel(
+    f'{path}/data/ipea/ipea_format.xlsx', sheet_name='gdp_agr_share'
+    )
 
 # %%
 
@@ -67,6 +76,9 @@ def make_ipea_tidy(df, var):
 
 tidy_gdppc = make_ipea_tidy(gdp_per_capita, 'gdp_capita')
 tidy_pop = make_ipea_tidy(population, 'pop')
+tidy_gdp_ind = make_ipea_tidy(gdp_ind_share, 'gdp_ind_share')
+tidy_gdp_agr = make_ipea_tidy(gdp_agr_share, 'gdp_agr_share')
+tidy_gdp_serv = make_ipea_tidy(gdp_serv_share, 'gdp_serv_share')
 
 # %% Take averages in terms of available census data
 
@@ -157,8 +169,8 @@ df_model_nonzero = df_model[df_model['N_od_flow_all']>0]
 df_model_nonzero['log_flow'] = np.log(df_model_nonzero['N_od_flow_all'])
 df_model = df_model.drop(columns=['year_x', 'year_y'])
 
-# %% Adding IPEA data
 
+# %% Adding IPEA data
 
 def merge_model_ipea(df_model, df_ipea):
     
@@ -178,16 +190,23 @@ def merge_model_ipea(df_model, df_ipea):
         left_on = ['dest_id', 'decade'],
         right_on = ['dest_id', 'dest_year']
         )
+    columns_drop = [col for col in df_merged.columns if '_x' in col[-2:] or '_y' in col[-2:]]
+    df_merged = df_merged.drop(columns_drop, axis=1)
     return df_merged
 
 df_model = merge_model_ipea(df_model, tidy_gdppc)
 df_model = merge_model_ipea(df_model, tidy_pop[['id', 'year', 'pop']])
 
-df_model = df_model.drop(columns=['orig_year_x', 'dest_year_x', 'orig_year_y', 'dest_year_y'])
+df_model = merge_model_ipea(df_model, tidy_gdp_ind[['id', 'year', 'gdp_ind_share']])
+df_model = merge_model_ipea(df_model, tidy_gdp_agr[['id', 'year', 'gdp_agr_share']])
+df_model = merge_model_ipea(df_model, tidy_gdp_serv[['id', 'year', 'gdp_serv_share']])
+
+
+df_model = df_model.drop(columns=['orig_year', 'dest_year'])
 
 df_model['emigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['orig_pop']
 df_model['immigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['dest_pop']
-
+df_model.columns
 df_model.to_parquet(
     f'{path}/data/formatted_composit/climate_mig_meso.parquet', index=False)
 
