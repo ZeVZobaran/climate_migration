@@ -1,0 +1,41 @@
+census_year,migration_type,label,weighted_migrants,share_percent,period_definition
+1970,local,Local / within-state,18711717.0,66.35852444383289,Previous-state/municipality lifetime proxy
+1970,neighboring_state,Neighboring-state circulation,5148165.0,18.25725736410961,Previous-state/municipality lifetime proxy
+1970,northeast_to_southeast,Northeast -> Southeast,1812354.0,6.427263580882413,Previous-state/municipality lifetime proxy
+1970,south_to_agri_frontier,South -> agricultural frontier,56036.0,0.19872394798054183,Previous-state/municipality lifetime proxy
+1970,return_agri_frontier_to_south,Return: agricultural frontier -> South,11815.0,0.04190026849507641,Previous-state/municipality lifetime proxy
+1970,return_southeast_to_northeast,Return: Southeast -> Northeast,157008.0,0.55680722436521,Previous-state/municipality lifetime proxy
+1970,brasilia_go_inflow,Long-distance inflow to DF/GO,499435.0,1.7711773674006337,Previous-state/municipality lifetime proxy
+1970,other,Other,1801380.0,6.388345802933622,Previous-state/municipality lifetime proxy
+1980,local,Local / within-state,25763516.0,59.39212434202115,Birth-state/municipality lifetime proxy
+1980,neighboring_state,Neighboring-state circulation,8572322.0,19.76160451561982,Birth-state/municipality lifetime proxy
+1980,northeast_to_southeast,Northeast -> Southeast,4267759.0,9.838380490837503,Birth-state/municipality lifetime proxy
+1980,south_to_agri_frontier,South -> agricultural frontier,330706.0,0.762370006976239,Birth-state/municipality lifetime proxy
+1980,return_agri_frontier_to_south,Return: agricultural frontier -> South,20556.0,0.04738734060888998,Birth-state/municipality lifetime proxy
+1980,return_southeast_to_northeast,Return: Southeast -> Northeast,267908.0,0.6176030184786192,Birth-state/municipality lifetime proxy
+1980,brasilia_go_inflow,Long-distance inflow to DF/GO,1001053.0,2.3077076998711394,Birth-state/municipality lifetime proxy
+1980,other,Other,3154854.0,7.272822585586641,Birth-state/municipality lifetime proxy
+1991,local,Local / within-state,8891400.13360321,63.950568632960206,Five-year internal migration
+1991,neighboring_state,Neighboring-state circulation,2337797.4827480023,16.814390998490804,Five-year internal migration
+1991,northeast_to_southeast,Northeast -> Southeast,917458.7026201986,6.598736402389643,Five-year internal migration
+1991,south_to_agri_frontier,South -> agricultural frontier,157112.32596070034,1.1300157943023648,Five-year internal migration
+1991,return_agri_frontier_to_south,Return: agricultural frontier -> South,82495.7664428999,0.5933431287044536,Five-year internal migration
+1991,return_southeast_to_northeast,Return: Southeast -> Northeast,334428.7951091999,2.4053480096617923,Five-year internal migration
+1991,brasilia_go_inflow,Long-distance inflow to DF/GO,260270.89564760044,1.8719742138664477,Five-year internal migration
+1991,other,Other,922587.2245730003,6.635622819624292,Five-year internal migration
+2000,local,Local / within-state,10059954.248405976,65.94233030804381,Five-year internal migration
+2000,neighboring_state,Neighboring-state circulation,2346663.894135222,15.38222558552339,Five-year internal migration
+2000,northeast_to_southeast,Northeast -> Southeast,969333.129249528,6.353914124175106,Five-year internal migration
+2000,south_to_agri_frontier,South -> agricultural frontier,95847.70026315015,0.6282752936993237,Five-year internal migration
+2000,return_agri_frontier_to_south,Return: agricultural frontier -> South,73072.29597883989,0.47898403499869924,Five-year internal migration
+2000,return_southeast_to_northeast,Return: Southeast -> Northeast,462623.38547798974,3.032465490412036,Five-year internal migration
+2000,brasilia_go_inflow,Long-distance inflow to DF/GO,322480.93695034913,2.113841070976728,Five-year internal migration
+2000,other,Other,925709.4928712801,6.067964092170911,Five-year internal migration
+2010,local,Local / within-state,12760847.328806682,73.31886455362014,Five-year internal migration
+2010,neighboring_state,Neighboring-state circulation,2103443.753789879,12.085569532058681,Five-year internal migration
+2010,northeast_to_southeast,Northeast -> Southeast,828159.4594297669,4.758282085050891,Five-year internal migration
+2010,south_to_agri_frontier,South -> agricultural frontier,70413.92358652526,0.40457101265329426,Five-year internal migration
+2010,return_agri_frontier_to_south,Return: agricultural frontier -> South,69813.40282606083,0.40112065397697544,Five-year internal migration
+2010,return_southeast_to_northeast,Return: Southeast -> Northeast,386721.3020937632,2.2219501603318483,Five-year internal migration
+2010,brasilia_go_inflow,Long-distance inflow to DF/GO,309245.57881920395,1.7768047938374145,Five-year internal migration
+2010,other,Other,875944.6513395536,5.032837208470743,Five-year internal migration

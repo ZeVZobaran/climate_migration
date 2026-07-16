@@ -1,0 +1,104 @@
+{
+  "analysis_universe": "Internal migrants age 5+ with positive person weight",
+  "type_order": [
+    "local",
+    "neighboring_state",
+    "northeast_to_southeast",
+    "south_to_agri_frontier",
+    "return_agri_frontier_to_south",
+    "return_southeast_to_northeast",
+    "brasilia_go_inflow",
+    "other"
+  ],
+  "type_labels": {
+    "local": "Local / within-state",
+    "neighboring_state": "Neighboring-state circulation",
+    "northeast_to_southeast": "Northeast -> Southeast",
+    "south_to_agri_frontier": "South -> agricultural frontier",
+    "return_agri_frontier_to_south": "Return: agricultural frontier -> South",
+    "return_southeast_to_northeast": "Return: Southeast -> Northeast",
+    "brasilia_go_inflow": "Long-distance inflow to DF/GO",
+    "other": "Other"
+  },
+  "regions": {
+    "northeast": [
+      "AL",
+      "BA",
+      "CE",
+      "MA",
+      "PB",
+      "PE",
+      "PI",
+      "RN",
+      "SE"
+    ],
+    "southeast": [
+      "ES",
+      "MG",
+      "RJ",
+      "SP"
+    ],
+    "south": [
+      "PR",
+      "RS",
+      "SC"
+    ],
+    "agricultural_frontier": [
+      "AC",
+      "AM",
+      "AP",
+      "MS",
+      "MT",
+      "PA",
+      "RO",
+      "RR",
+      "TO"
+    ]
+  },
+  "definitions": {
+    "local": "Origin and destination UF are the same",
+    "neighboring_state": "Origin and destination UFs share a land border, after assigning the four named long-distance/reverse directional flows",
+    "northeast_to_southeast": "Northeast origin and Southeast destination",
+    "south_to_agri_frontier": "PR/SC/RS origin and agricultural-frontier destination",
+    "return_agri_frontier_to_south": "Agricultural-frontier origin and PR/SC/RS destination",
+    "return_southeast_to_northeast": "Southeast origin and Northeast destination",
+    "brasilia_go_inflow": "Destination is DF or GO and the origin UF is not adjacent to the destination; neighboring DF/GO flows remain neighboring-state circulation",
+    "other": "Every other identified internal origin-destination combination"
+  },
+  "period_definitions": {
+    "1970": "Previous-state/municipality lifetime proxy",
+    "1980": "Birth-state/municipality lifetime proxy",
+    "1991": "Five-year internal migration",
+    "2000": "Five-year internal migration",
+    "2010": "Five-year internal migration"
+  },
+  "comparability_note": "1970 and 1980 are lifetime/previous-residence proxies. 1991-2010 are comparable five-year migration flows.",
+  "geography_note": "The agricultural frontier follows the existing project definition: RO, PA, MT, MS, AP, RR, AM, AC, TO. In 1970 Guanabara is merged into RJ and Fernando de Noronha into PE; MT and GO retain historical boundaries.",
+  "diagnostics": {
+    "1970": {
+      "rows_scanned": 24449849,
+      "migrant_sample_rows": 7351083,
+      "weighted_migrants": 28197910.0
+    },
+    "1980": {
+      "rows_scanned": 29378455,
+      "migrant_sample_rows": 10752857,
+      "weighted_migrants": 43378674.0
+    },
+    "1991": {
+      "rows_scanned": 17045712,
+      "migrant_sample_rows": 1600750,
+      "weighted_migrants": 13903551.3267048
+    },
+    "2000": {
+      "rows_scanned": 20274413,
+      "migrant_sample_rows": 1826422,
+      "weighted_migrants": 15255685.083332328
+    },
+    "2010": {
+      "rows_scanned": 20635472,
+      "migrant_sample_rows": 1984265,
+      "weighted_migrants": 17404589.400691435
+    }
+  }
+}

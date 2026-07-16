@@ -1,0 +1,487 @@
+state,period,group,population,population_thousands,proxy
+AC,1970,immigrant,23652.0,23.652,Proxy: previous state of residence
+AC,1970,emigrant,26944.0,26.944,Proxy: previous state of residence
+AC,1970,stayer,149978.0,149.978,Proxy: previous state of residence
+AL,1970,immigrant,97018.0,97.018,Proxy: previous state of residence
+AL,1970,emigrant,281536.0,281.536,Proxy: previous state of residence
+AL,1970,stayer,1213875.0,1213.875,Proxy: previous state of residence
+AM,1970,immigrant,56770.0,56.77,Proxy: previous state of residence
+AM,1970,emigrant,66657.0,66.657,Proxy: previous state of residence
+AM,1970,stayer,720754.0,720.754,Proxy: previous state of residence
+AP,1970,immigrant,34635.0,34.635,Proxy: previous state of residence
+AP,1970,emigrant,6569.0,6.569,Proxy: previous state of residence
+AP,1970,stayer,56933.0,56.933,Proxy: previous state of residence
+BA,1970,immigrant,250079.0,250.079,Proxy: previous state of residence
+BA,1970,emigrant,836384.0,836.384,Proxy: previous state of residence
+BA,1970,stayer,5960549.0,5960.549,Proxy: previous state of residence
+CE,1970,immigrant,140562.0,140.562,Proxy: previous state of residence
+CE,1970,emigrant,500959.0,500.959,Proxy: previous state of residence
+CE,1970,stayer,3462075.0,3462.075,Proxy: previous state of residence
+DF,1970,immigrant,398544.0,398.544,Proxy: previous state of residence
+DF,1970,emigrant,24360.0,24.36,Proxy: previous state of residence
+DF,1970,stayer,45940.0,45.94,Proxy: previous state of residence
+ES,1970,immigrant,181751.0,181.751,Proxy: previous state of residence
+ES,1970,emigrant,323265.0,323.265,Proxy: previous state of residence
+ES,1970,stayer,1167607.0,1167.607,Proxy: previous state of residence
+GO,1970,immigrant,509526.0,509.526,Proxy: previous state of residence
+GO,1970,emigrant,206229.0,206.229,Proxy: previous state of residence
+GO,1970,stayer,1931388.0,1931.388,Proxy: previous state of residence
+MA,1970,immigrant,288129.0,288.129,Proxy: previous state of residence
+MA,1970,emigrant,213522.0,213.522,Proxy: previous state of residence
+MA,1970,stayer,2190157.0,2190.157,Proxy: previous state of residence
+MG,1970,immigrant,361709.0,361.709,Proxy: previous state of residence
+MG,1970,emigrant,2228435.0,2228.435,Proxy: previous state of residence
+MG,1970,stayer,9389024.0,9389.024,Proxy: previous state of residence
+MS,1970,immigrant,0.0,0.0,Proxy: previous state of residence
+MS,1970,emigrant,0.0,0.0,Proxy: previous state of residence
+MS,1970,stayer,0.0,0.0,Proxy: previous state of residence
+MT,1970,immigrant,407901.0,407.901,Proxy: previous state of residence
+MT,1970,emigrant,115232.0,115.232,Proxy: previous state of residence
+MT,1970,stayer,905615.0,905.615,Proxy: previous state of residence
+PA,1970,immigrant,145720.0,145.72,Proxy: previous state of residence
+PA,1970,emigrant,118011.0,118.011,Proxy: previous state of residence
+PA,1970,stayer,1632107.0,1632.107,Proxy: previous state of residence
+PB,1970,immigrant,107806.0,107.806,Proxy: previous state of residence
+PB,1970,emigrant,484105.0,484.105,Proxy: previous state of residence
+PB,1970,stayer,1869742.0,1869.742,Proxy: previous state of residence
+PE,1970,immigrant,265698.0,265.698,Proxy: previous state of residence
+PE,1970,emigrant,672329.0,672.329,Proxy: previous state of residence
+PE,1970,stayer,4048901.0,4048.901,Proxy: previous state of residence
+PI,1970,immigrant,104535.0,104.535,Proxy: previous state of residence
+PI,1970,emigrant,259164.0,259.164,Proxy: previous state of residence
+PI,1970,stayer,1270982.0,1270.982,Proxy: previous state of residence
+PR,1970,immigrant,1432863.0,1432.863,Proxy: previous state of residence
+PR,1970,emigrant,417748.0,417.748,Proxy: previous state of residence
+PR,1970,stayer,4290521.0,4290.521,Proxy: previous state of residence
+RJ,1970,immigrant,1686948.0,1686.948,Proxy: previous state of residence
+RJ,1970,emigrant,351389.0,351.389,Proxy: previous state of residence
+RJ,1970,stayer,5989469.0,5989.469,Proxy: previous state of residence
+RN,1970,immigrant,83750.0,83.75,Proxy: previous state of residence
+RN,1970,emigrant,220355.0,220.355,Proxy: previous state of residence
+RN,1970,stayer,1201459.0,1201.459,Proxy: previous state of residence
+RO,1970,immigrant,42882.0,42.882,Proxy: previous state of residence
+RO,1970,emigrant,6609.0,6.609,Proxy: previous state of residence
+RO,1970,stayer,46265.0,46.265,Proxy: previous state of residence
+RR,1970,immigrant,7280.0,7.28,Proxy: previous state of residence
+RR,1970,emigrant,4269.0,4.269,Proxy: previous state of residence
+RR,1970,stayer,26099.0,26.099,Proxy: previous state of residence
+RS,1970,immigrant,100301.0,100.301,Proxy: previous state of residence
+RS,1970,emigrant,548075.0,548.075,Proxy: previous state of residence
+RS,1970,stayer,5660526.0,5660.526,Proxy: previous state of residence
+SC,1970,immigrant,265419.0,265.419,Proxy: previous state of residence
+SC,1970,emigrant,372430.0,372.43,Proxy: previous state of residence
+SC,1970,stayer,2172611.0,2172.611,Proxy: previous state of residence
+SE,1970,immigrant,44100.0,44.1,Proxy: previous state of residence
+SE,1970,emigrant,187260.0,187.26,Proxy: previous state of residence
+SE,1970,stayer,700771.0,700.771,Proxy: previous state of residence
+SP,1970,immigrant,2448615.0,2448.615,Proxy: previous state of residence
+SP,1970,emigrant,1014357.0,1014.357,Proxy: previous state of residence
+SP,1970,stayer,12606976.0,12606.976,Proxy: previous state of residence
+TO,1970,immigrant,0.0,0.0,Proxy: previous state of residence
+TO,1970,emigrant,0.0,0.0,Proxy: previous state of residence
+TO,1970,stayer,0.0,0.0,Proxy: previous state of residence
+AC,1980,immigrant,33395.0,33.395,Proxy: state of birth
+AC,1980,emigrant,39903.0,39.903,Proxy: state of birth
+AC,1980,stayer,211154.0,211.154,Proxy: state of birth
+AL,1980,immigrant,141404.0,141.404,Proxy: state of birth
+AL,1980,emigrant,568629.0,568.629,Proxy: state of birth
+AL,1980,stayer,1509597.0,1509.597,Proxy: state of birth
+AM,1980,immigrant,111752.0,111.752,Proxy: state of birth
+AM,1980,emigrant,97067.0,97.067,Proxy: state of birth
+AM,1980,stayer,1044187.0,1044.187,Proxy: state of birth
+AP,1980,immigrant,46509.0,46.509,Proxy: state of birth
+AP,1980,emigrant,13533.0,13.533,Proxy: state of birth
+AP,1980,stayer,94447.0,94.447,Proxy: state of birth
+BA,1980,immigrant,439561.0,439.561,Proxy: state of birth
+BA,1980,emigrant,1870621.0,1870.621,Proxy: state of birth
+BA,1980,stayer,7442923.0,7442.923,Proxy: state of birth
+CE,1980,immigrant,195153.0,195.153,Proxy: state of birth
+CE,1980,emigrant,1078899.0,1078.899,Proxy: state of birth
+CE,1980,stayer,4282301.0,4282.301,Proxy: state of birth
+DF,1980,immigrant,770549.0,770.549,Proxy: state of birth
+DF,1980,emigrant,44615.0,44.615,Proxy: state of birth
+DF,1980,stayer,219543.0,219.543,Proxy: state of birth
+ES,1980,immigrant,317304.0,317.304,Proxy: state of birth
+ES,1980,emigrant,512588.0,512.588,Proxy: state of birth
+ES,1980,stayer,1415315.0,1415.315,Proxy: state of birth
+GO,1980,immigrant,866949.0,866.949,Proxy: state of birth
+GO,1980,emigrant,385402.0,385.402,Proxy: state of birth
+GO,1980,stayer,2409458.0,2409.458,Proxy: state of birth
+MA,1980,immigrant,441890.0,441.89,Proxy: state of birth
+MA,1980,emigrant,484907.0,484.907,Proxy: state of birth
+MA,1980,stayer,2842932.0,2842.932,Proxy: state of birth
+MG,1980,immigrant,624729.0,624.729,Proxy: state of birth
+MG,1980,emigrant,3946599.0,3946.599,Proxy: state of birth
+MG,1980,stayer,10923304.0,10923.304,Proxy: state of birth
+MS,1980,immigrant,475697.0,475.697,Proxy: state of birth
+MS,1980,emigrant,103985.0,103.985,Proxy: state of birth
+MS,1980,stayer,678684.0,678.684,Proxy: state of birth
+MT,1980,immigrant,448718.0,448.718,Proxy: state of birth
+MT,1980,emigrant,137906.0,137.906,Proxy: state of birth
+MT,1980,stayer,502276.0,502.276,Proxy: state of birth
+PA,1980,immigrant,491433.0,491.433,Proxy: state of birth
+PA,1980,emigrant,190116.0,190.116,Proxy: state of birth
+PA,1980,stayer,2304617.0,2304.617,Proxy: state of birth
+PB,1980,immigrant,161178.0,161.178,Proxy: state of birth
+PB,1980,emigrant,939257.0,939.257,Proxy: state of birth
+PB,1980,stayer,2181883.0,2181.883,Proxy: state of birth
+PE,1980,immigrant,391546.0,391.546,Proxy: state of birth
+PE,1980,emigrant,1458239.0,1458.239,Proxy: state of birth
+PE,1980,stayer,4821779.0,4821.779,Proxy: state of birth
+PI,1980,immigrant,147235.0,147.235,Proxy: state of birth
+PI,1980,emigrant,512453.0,512.453,Proxy: state of birth
+PI,1980,stayer,1631669.0,1631.669,Proxy: state of birth
+PR,1980,immigrant,2037704.0,2037.704,Proxy: state of birth
+PR,1980,emigrant,1156066.0,1156.066,Proxy: state of birth
+PR,1980,stayer,4488985.0,4488.985,Proxy: state of birth
+RJ,1980,immigrant,2493331.0,2493.331,Proxy: state of birth
+RJ,1980,emigrant,475913.0,475.913,Proxy: state of birth
+RJ,1980,stayer,7271096.0,7271.096,Proxy: state of birth
+RN,1980,immigrant,134505.0,134.505,Proxy: state of birth
+RN,1980,emigrant,420760.0,420.76,Proxy: state of birth
+RN,1980,stayer,1482596.0,1482.596,Proxy: state of birth
+RO,1980,immigrant,305072.0,305.072,Proxy: state of birth
+RO,1980,emigrant,15244.0,15.244,Proxy: state of birth
+RO,1980,stayer,95837.0,95.837,Proxy: state of birth
+RR,1980,immigrant,22569.0,22.569,Proxy: state of birth
+RR,1980,emigrant,4972.0,4.972,Proxy: state of birth
+RR,1980,stayer,41709.0,41.709,Proxy: state of birth
+RS,1980,immigrant,176695.0,176.695,Proxy: state of birth
+RS,1980,emigrant,878798.0,878.798,Proxy: state of birth
+RS,1980,stayer,6659842.0,6659.842,Proxy: state of birth
+SC,1980,immigrant,406235.0,406.235,Proxy: state of birth
+SC,1980,emigrant,571489.0,571.489,Proxy: state of birth
+SC,1980,stayer,2738180.0,2738.18,Proxy: state of birth
+SE,1980,immigrant,89192.0,89.192,Proxy: state of birth
+SE,1980,emigrant,333133.0,333.133,Proxy: state of birth
+SE,1980,stayer,865312.0,865.312,Proxy: state of birth
+SP,1980,immigrant,5844853.0,5844.853,Proxy: state of birth
+SP,1980,emigrant,1374064.0,1374.064,Proxy: state of birth
+SP,1980,stayer,15464001.0,15464.001,Proxy: state of birth
+TO,1980,immigrant,0.0,0.0,Proxy: state of birth
+TO,1980,emigrant,0.0,0.0,Proxy: state of birth
+TO,1980,stayer,0.0,0.0,Proxy: state of birth
+AC,1991,immigrant,12979.498864300005,12.979498864300005,Five-year state of residence
+AC,1991,emigrant,14343.131646900008,14.343131646900009,Five-year state of residence
+AC,1991,stayer,325418.0502576967,325.41805025769673,Five-year state of residence
+AL,1991,immigrant,60881.451872099846,60.881451872099845,Five-year state of residence
+AL,1991,emigrant,112622.67077679993,112.62267077679994,Five-year state of residence
+AL,1991,stayer,1969040.8989513805,1969.0408989513805,Five-year state of residence
+AM,1991,immigrant,59365.720906000344,59.36572090600034,Five-year state of residence
+AM,1991,emigrant,44279.35234700002,44.27935234700002,Five-year state of residence
+AM,1991,stayer,1679520.4055053487,1679.5204055053487,Five-year state of residence
+AP,1991,immigrant,23641.015678300166,23.641015678300167,Five-year state of residence
+AP,1991,emigrant,7147.393049899994,7.1473930498999945,Five-year state of residence
+AP,1991,stayer,213545.2292354952,213.5452292354952,Five-year state of residence
+BA,1991,immigrant,186614.36436710032,186.61436436710034,Five-year state of residence
+BA,1991,emigrant,469076.44472919946,469.07644472919947,Five-year state of residence
+BA,1991,stayer,9626280.802944653,9626.280802944653,Five-year state of residence
+CE,1991,immigrant,121652.28913589989,121.65228913589989,Five-year state of residence
+CE,1991,emigrant,245164.48198509996,245.16448198509997,Five-year state of residence
+CE,1991,stayer,5036966.087199202,5036.966087199202,Five-year state of residence
+DF,1991,immigrant,195220.0511297016,195.2200511297016,Five-year state of residence
+DF,1991,emigrant,143673.5921346998,143.67359213469982,Five-year state of residence
+DF,1991,stayer,1230802.4391329107,1230.8024391329106,Five-year state of residence
+ES,1991,immigrant,135415.48993660035,135.41548993660035,Five-year state of residence
+ES,1991,emigrant,90909.34460540007,90.90934460540007,Five-year state of residence
+ES,1991,stayer,1982979.3015061643,1982.9793015061643,Five-year state of residence
+GO,1991,immigrant,268060.84190279973,268.0608419027997,Five-year state of residence
+GO,1991,emigrant,156664.7403594001,156.6647403594001,Five-year state of residence
+GO,1991,stayer,2970949.1166634276,2970.9491166634275,Five-year state of residence
+MA,1991,immigrant,103448.15711290005,103.44815711290005,Five-year state of residence
+MA,1991,emigrant,237920.98637260063,237.92098637260062,Five-year state of residence
+MA,1991,stayer,3770961.653310773,3770.961653310773,Five-year state of residence
+MG,1991,immigrant,371885.78457089985,371.88578457089983,Five-year state of residence
+MG,1991,emigrant,479374.75732349965,479.37475732349964,Five-year state of residence
+MG,1991,stayer,12701414.45184054,12701.414451840541,Five-year state of residence
+MS,1991,immigrant,124046.03718419895,124.04603718419895,Five-year state of residence
+MS,1991,emigrant,105023.05509350005,105.02305509350005,Five-year state of residence
+MS,1991,stayer,1307854.8259585104,1307.8548259585104,Five-year state of residence
+MT,1991,immigrant,226897.38421479953,226.89738421479953,Five-year state of residence
+MT,1991,emigrant,118323.67963950003,118.32367963950003,Five-year state of residence
+MT,1991,stayer,1379393.161086223,1379.393161086223,Five-year state of residence
+PA,1991,immigrant,212429.2962065,212.4292962065,Five-year state of residence
+PA,1991,emigrant,183195.3416501,183.19534165009998,Five-year state of residence
+PA,1991,stayer,3692943.0237660464,3692.9430237660463,Five-year state of residence
+PB,1991,immigrant,88897.41094249954,88.89741094249953,Five-year state of residence
+PB,1991,emigrant,174057.83232230006,174.05783232230007,Five-year state of residence
+PB,1991,stayer,2564502.050538463,2564.502050538463,Five-year state of residence
+PE,1991,immigrant,171671.17706659995,171.67117706659994,Five-year state of residence
+PE,1991,emigrant,317231.50874149986,317.23150874149985,Five-year state of residence
+PE,1991,stayer,5689588.974733546,5689.588974733547,Five-year state of residence
+PI,1991,immigrant,72949.67564409957,72.94967564409957,Five-year state of residence
+PI,1991,emigrant,139447.34375030012,139.44734375030012,Five-year state of residence
+PI,1991,stayer,2060367.9020930717,2060.3679020930717,Five-year state of residence
+PR,1991,immigrant,269069.49937130034,269.0694993713003,Five-year state of residence
+PR,1991,emigrant,475171.11631050124,475.17111631050125,Five-year state of residence
+PR,1991,stayer,6484376.124071532,6484.376124071532,Five-year state of residence
+RJ,1991,immigrant,253397.07776840084,253.39707776840083,Five-year state of residence
+RJ,1991,emigrant,295066.384371,295.06638437099997,Five-year state of residence
+RJ,1991,stayer,10967932.110021893,10967.932110021893,Five-year state of residence
+RN,1991,immigrant,75570.01876739986,75.57001876739986,Five-year state of residence
+RN,1991,emigrant,76443.72027579999,76.44372027579999,Five-year state of residence
+RN,1991,stayer,1873113.474572625,1873.113474572625,Five-year state of residence
+RO,1991,immigrant,127061.32328429974,127.06132328429973,Five-year state of residence
+RO,1991,emigrant,94453.75795760009,94.45375795760009,Five-year state of residence
+RO,1991,stayer,761912.5487885214,761.9125487885215,Five-year state of residence
+RR,1991,immigrant,35346.929701400164,35.346929701400164,Five-year state of residence
+RR,1991,emigrant,6693.609453800002,6.6936094538000015,Five-year state of residence
+RR,1991,stayer,148852.42151230088,148.85242151230088,Five-year state of residence
+RS,1991,immigrant,114295.32936400046,114.29532936400045,Five-year state of residence
+RS,1991,emigrant,138854.48697569993,138.85448697569993,Five-year state of residence
+RS,1991,stayer,7411916.608039305,7411.916608039304,Five-year state of residence
+SC,1991,immigrant,170292.9369818004,170.29293698180038,Five-year state of residence
+SC,1991,emigrant,125002.08704189997,125.00208704189997,Five-year state of residence
+SC,1991,stayer,3542838.2622634806,3542.8382622634804,Five-year state of residence
+SE,1991,immigrant,55977.83282409993,55.977832824099934,Five-year state of residence
+SE,1991,emigrant,42212.70798719999,42.21270798719999,Five-year state of residence
+SE,1991,stayer,1150003.1128464015,1150.0031128464016,Five-year state of residence
+SP,1991,immigrant,1392758.6151738996,1392.7586151738997,Five-year state of residence
+SP,1991,emigrant,647993.0041598998,647.9930041598998,Five-year state of residence
+SP,1991,stayer,25171830.99743555,25171.83099743555,Five-year state of residence
+TO,1991,immigrant,82325.98312969982,82.32598312969982,Five-year state of residence
+TO,1991,emigrant,71804.66204049985,71.80466204049985,Five-year state of residence
+TO,1991,stayer,649940.8776731077,649.9408776731077,Five-year state of residence
+AC,2000,immigrant,13634.149201760023,13.634149201760023,Five-year state of residence
+AC,2000,emigrant,16070.032605730006,16.070032605730006,Five-year state of residence
+AC,2000,stayer,439039.84163394803,439.039841633948,Five-year state of residence
+AL,2000,immigrant,55965.709166549925,55.96570916654993,Five-year state of residence
+AL,2000,emigrant,127948.44265758008,127.94844265758007,Five-year state of residence
+AL,2000,stayer,2287187.383870432,2287.1873838704323,Five-year state of residence
+AM,2000,immigrant,89601.0152079997,89.60101520799971,Five-year state of residence
+AM,2000,emigrant,58657.414640669966,58.65741464066996,Five-year state of residence
+AM,2000,stayer,2238389.1138353297,2238.3891138353297,Five-year state of residence
+AP,2000,immigrant,44582.001979539586,44.582001979539584,Five-year state of residence
+AP,2000,emigrant,15112.858716890005,15.112858716890004,Five-year state of residence
+AP,2000,stayer,350537.4808387975,350.53748083879753,Five-year state of residence
+BA,2000,immigrant,250566.36624736962,250.56636624736961,Five-year state of residence
+BA,2000,emigrant,517999.13088801014,517.9991308880101,Five-year state of residence
+BA,2000,stayer,10859957.243786914,10859.957243786914,Five-year state of residence
+CE,2000,immigrant,162907.13934078097,162.90713934078096,Five-year state of residence
+CE,2000,emigrant,186689.71373122,186.68971373122,Five-year state of residence
+CE,2000,stayer,6115706.034936506,6115.7060349365065,Five-year state of residence
+DF,2000,immigrant,216200.26196652706,216.20026196652705,Five-year state of residence
+DF,2000,emigrant,188555.67087435,188.55567087435,Five-year state of residence
+DF,2000,stayer,1632511.2859783855,1632.5112859783856,Five-year state of residence
+ES,2000,immigrant,129168.55575477125,129.16855575477126,Five-year state of residence
+ES,2000,emigrant,95163.45217692002,95.16345217692002,Five-year state of residence
+ES,2000,stayer,2483901.2899158606,2483.9012899158606,Five-year state of residence
+GO,2000,immigrant,372652.31649873656,372.6523164987366,Five-year state of residence
+GO,2000,emigrant,169894.92443435988,169.8949244343599,Five-year state of residence
+GO,2000,stayer,3754999.7338980427,3754.999733898043,Five-year state of residence
+MA,2000,immigrant,100810.84101981981,100.8108410198198,Five-year state of residence
+MA,2000,emigrant,274454.02115469985,274.45402115469983,Five-year state of residence
+MA,2000,stayer,4529416.161127465,4529.416161127465,Five-year state of residence
+MG,2000,immigrant,447737.0509707415,447.7370509707415,Five-year state of residence
+MG,2000,emigrant,408636.36492469005,408.63636492469004,Five-year state of residence
+MG,2000,stayer,14740683.43249033,14740.68343249033,Five-year state of residence
+MS,2000,immigrant,97709.18885777082,97.70918885777081,Five-year state of residence
+MS,2000,emigrant,108713.31008165996,108.71331008165996,Five-year state of residence
+MS,2000,stayer,1621216.2254727702,1621.2162254727702,Five-year state of residence
+MT,2000,immigrant,166293.6973847302,166.29369738473022,Five-year state of residence
+MT,2000,emigrant,123723.92133784005,123.72392133784004,Five-year state of residence
+MT,2000,stayer,1829887.239633577,1829.8872396335769,Five-year state of residence
+PA,2000,immigrant,182032.18071989046,182.03218071989045,Five-year state of residence
+PA,2000,emigrant,234213.12535571004,234.21312535571005,Five-year state of residence
+PA,2000,stayer,4810852.767432785,4810.852767432784,Five-year state of residence
+PB,2000,immigrant,102005.1745930493,102.0051745930493,Five-year state of residence
+PB,2000,emigrant,163476.60080059,163.47660080059,Five-year state of residence
+PB,2000,stayer,2849629.174656764,2849.629174656764,Five-year state of residence
+PE,2000,immigrant,164861.96758473088,164.86196758473088,Five-year state of residence
+PE,2000,emigrant,280266.8427697198,280.2668427697198,Five-year state of residence
+PE,2000,stayer,6565245.890012395,6565.245890012395,Five-year state of residence
+PI,2000,immigrant,88739.70962850968,88.73970962850967,Five-year state of residence
+PI,2000,emigrant,140772.86872543005,140.77286872543004,Five-year state of residence
+PI,2000,stayer,2350788.628830714,2350.788628830714,Five-year state of residence
+PR,2000,immigrant,297311.4859190802,297.3114859190802,Five-year state of residence
+PR,2000,emigrant,336965.65057595004,336.96565057595006,Five-year state of residence
+PR,2000,stayer,7594699.406684281,7594.699406684282,Five-year state of residence
+RJ,2000,immigrant,319720.99489568983,319.72099489568984,Five-year state of residence
+RJ,2000,emigrant,274199.4337702401,274.1994337702401,Five-year state of residence
+RJ,2000,stayer,12253636.257719463,12253.636257719463,Five-year state of residence
+RN,2000,immigrant,77916.18813259948,77.91618813259947,Five-year state of residence
+RN,2000,emigrant,71286.61859326003,71.28661859326003,Five-year state of residence
+RN,2000,stayer,2248536.2409057682,2248.5362409057684,Five-year state of residence
+RO,2000,immigrant,83324.82848873989,83.3248284887399,Five-year state of residence
+RO,2000,emigrant,72722.01575401996,72.72201575401996,Five-year state of residence
+RO,2000,stayer,1013327.3625875785,1013.3273625875785,Five-year state of residence
+RR,2000,immigrant,47751.95431600026,47.75195431600026,Five-year state of residence
+RR,2000,emigrant,14379.04968379,14.379049683789999,Five-year state of residence
+RR,2000,stayer,219448.95020296975,219.44895020296974,Five-year state of residence
+RS,2000,immigrant,113378.62587309038,113.37862587309039,Five-year state of residence
+RS,2000,emigrant,152879.15534721012,152.87915534721012,Five-year state of residence
+RS,2000,stayer,8472177.44029465,8472.17744029465,Five-year state of residence
+SC,2000,immigrant,199634.10211681988,199.6341021168199,Five-year state of residence
+SC,2000,emigrant,139666.68797630013,139.66668797630012,Five-year state of residence
+SC,2000,stayer,4285827.511817583,4285.8275118175825,Five-year state of residence
+SE,2000,immigrant,52111.45243702009,52.11145243702009,Five-year state of residence
+SE,2000,emigrant,56913.16086995997,56.91316086995997,Five-year state of residence
+SE,2000,stayer,1434728.4664380152,1434.7284664380152,Five-year state of residence
+SP,2000,immigrant,1223684.1131693553,1223.6841131693552,Five-year state of residence
+SP,2000,emigrant,883865.9704269895,883.8659704269895,Five-year state of residence
+SP,2000,stayer,30357481.156777896,30357.481156777896,Five-year state of residence
+TO,2000,immigrant,95429.7634546806,95.4297634546806,Five-year state of residence
+TO,2000,emigrant,82504.39605257016,82.50439605257016,Five-year state of residence
+TO,2000,stayer,825434.5124020241,825.4345124020241,Five-year state of residence
+AC,2010,immigrant,13881.51609487929,13.881516094879292,Five-year state of residence
+AC,2010,emigrant,14746.392950863143,14.746392950863143,Five-year state of residence
+AC,2010,stayer,597581.589736587,597.581589736587,Five-year state of residence
+AL,2010,immigrant,53589.09152138892,53.589091521388916,Five-year state of residence
+AL,2010,emigrant,130306.16112199788,130.3061611219979,Five-year state of residence
+AL,2010,stayer,2604506.4474147693,2604.5064474147694,Five-year state of residence
+AM,2010,immigrant,71451.2926007577,71.45129260075771,Five-year state of residence
+AM,2010,emigrant,51301.16358564662,51.30116358564662,Five-year state of residence
+AM,2010,stayer,2856235.4185174233,2856.235418517423,Five-year state of residence
+AP,2010,immigrant,37028.10710986116,37.02810710986116,Five-year state of residence
+AP,2010,emigrant,15228.252795857848,15.228252795857848,Five-year state of residence
+AP,2010,stayer,524382.945217877,524.382945217877,Five-year state of residence
+BA,2010,immigrant,229224.29464422032,229.22429464422032,Five-year state of residence
+BA,2010,emigrant,466359.7279095638,466.3597279095638,Five-year state of residence
+BA,2010,stayer,11830118.378260793,11830.118378260793,Five-year state of residence
+CE,2010,immigrant,112372.44493822579,112.37244493822578,Five-year state of residence
+CE,2010,emigrant,181221.29979406472,181.22129979406472,Five-year state of residence
+CE,2010,stayer,7206289.63568016,7206.289635680159,Five-year state of residence
+DF,2010,immigrant,190422.12577966042,190.4221257796604,Five-year state of residence
+DF,2010,emigrant,175870.2196051789,175.8702196051789,Five-year state of residence
+DF,2010,stayer,2063927.7063709607,2063.9277063709605,Five-year state of residence
+ES,2010,immigrant,130819.52762408755,130.81952762408756,Five-year state of residence
+ES,2010,emigrant,70119.58266116591,70.11958266116591,Five-year state of residence
+ES,2010,stayer,2861593.833915126,2861.593833915126,Five-year state of residence
+GO,2010,immigrant,363933.42971655837,363.93342971655835,Five-year state of residence
+GO,2010,emigrant,156106.9781050025,156.1069781050025,Five-year state of residence
+GO,2010,stayer,4646258.735956512,4646.258735956512,Five-year state of residence
+MA,2010,immigrant,105683.89751427743,105.68389751427743,Five-year state of residence
+MA,2010,emigrant,270663.6670159061,270.66366701590607,Five-year state of residence
+MA,2010,stayer,5419026.47223272,5419.02647223272,Five-year state of residence
+MG,2010,immigrant,376520.52540612273,376.5205254061227,Five-year state of residence
+MG,2010,emigrant,390614.19024418906,390.61419024418905,Five-year state of residence
+MG,2010,stayer,16526261.428665439,16526.26142866544,Five-year state of residence
+MS,2010,immigrant,98972.55990885032,98.97255990885033,Five-year state of residence
+MS,2010,emigrant,80907.58884617337,80.90758884617337,Five-year state of residence
+MS,2010,stayer,1931196.4268635944,1931.1964268635945,Five-year state of residence
+MT,2010,immigrant,143953.88130191743,143.95388130191742,Five-year state of residence
+MT,2010,emigrant,121589.37881780621,121.5893788178062,Five-year state of residence
+MT,2010,stayer,2307488.3514030417,2307.4883514030416,Five-year state of residence
+PA,2010,immigrant,162004.24250336652,162.00424250336653,Five-year state of residence
+PA,2010,emigrant,201833.92088124176,201.83392088124177,Five-year state of residence
+PA,2010,stayer,6081748.0643068515,6081.748064306851,Five-year state of residence
+PB,2010,immigrant,96027.73550403707,96.02773550403707,Five-year state of residence
+PB,2010,emigrant,125520.9229022836,125.52092290228359,Five-year state of residence
+PB,2010,stayer,3172238.6226274697,3172.23862262747,Five-year state of residence
+PE,2010,immigrant,148498.0405217553,148.49804052175529,Five-year state of residence
+PE,2010,emigrant,223584.0418985236,223.5840418985236,Five-year state of residence
+PE,2010,stayer,7409233.36223986,7409.23336223986,Five-year state of residence
+PI,2010,immigrant,73614.39609164797,73.61439609164798,Five-year state of residence
+PI,2010,emigrant,144037.14029210227,144.03714029210226,Five-year state of residence
+PI,2010,stayer,2651880.769655963,2651.880769655963,Five-year state of residence
+PR,2010,immigrant,272183.1500997062,272.1831500997062,Five-year state of residence
+PR,2010,emigrant,293692.6638456273,293.6926638456273,Five-year state of residence
+PR,2010,stayer,8565721.337627055,8565.721337627056,Five-year state of residence
+RJ,2010,immigrant,270401.6359807621,270.4016359807621,Five-year state of residence
+RJ,2010,emigrant,247308.50065554533,247.30850065554532,Five-year state of residence
+RJ,2010,stayer,13900386.461459747,13900.386461459746,Five-year state of residence
+RN,2010,immigrant,67728.02347265082,67.72802347265082,Five-year state of residence
+RN,2010,emigrant,54017.09869140416,54.01709869140416,Five-year state of residence
+RN,2010,stayer,2619924.3265517754,2619.9243265517753,Five-year state of residence
+RO,2010,immigrant,65863.62437069906,65.86362437069907,Five-year state of residence
+RO,2010,emigrant,53642.72394630056,53.64272394630056,Five-year state of residence
+RO,2010,stayer,1195640.698111642,1195.640698111642,Five-year state of residence
+RR,2010,immigrant,25555.839891621094,25.555839891621094,Five-year state of residence
+RR,2010,emigrant,11204.179771586443,11.204179771586443,Five-year state of residence
+RR,2010,stayer,347727.25606038293,347.72725606038296,Five-year state of residence
+RS,2010,immigrant,102613.02018827431,102.61302018827432,Five-year state of residence
+RS,2010,emigrant,177263.4170360996,177.26341703609958,Five-year state of residence
+RS,2010,stayer,9009698.810453916,9009.698810453916,Five-year state of residence
+SC,2010,immigrant,301340.6996764473,301.34069967644734,Five-year state of residence
+SC,2010,emigrant,128888.44711162412,128.88844711162412,Five-year state of residence
+SC,2010,stayer,4963846.267653376,4963.846267653375,Five-year state of residence
+SE,2010,immigrant,53038.89606592843,53.03889606592843,Five-year state of residence
+SE,2010,emigrant,45144.10671849499,45.144106718494996,Five-year state of residence
+SE,2010,stayer,1709673.4257732446,1709.6734257732446,Five-year state of residence
+SP,2010,immigrant,991314.5894304845,991.3145894304845,Five-year state of residence
+SP,2010,emigrant,735518.4255849246,735.5184255849247,Five-year state of residence
+SP,2010,stayer,34661929.91935759,34661.92991935759,Five-year state of residence
+TO,2010,immigrant,85705.48392656267,85.70548392656266,Five-year state of residence
+TO,2010,emigrant,77051.87909557865,77.05187909557866,Five-year state of residence
+TO,2010,stayer,1038853.1633568007,1038.8531633568007,Five-year state of residence
+AC,pooled,immigrant,97542.16416093933,97.54216416093932,Person-weighted census pool
+AC,pooled,emigrant,112006.55720349315,112.00655720349316,Person-weighted census pool
+AC,pooled,stayer,1723171.4816282317,1723.1714816282317,Person-weighted census pool
+AL,pooled,immigrant,408858.25256003864,408.85825256003864,Person-weighted census pool
+AL,pooled,emigrant,1221042.274556378,1221.0422745563778,Person-weighted census pool
+AL,pooled,stayer,9584206.730236582,9584.206730236583,Person-weighted census pool
+AM,pooled,immigrant,388940.02871475776,388.9400287147578,Person-weighted census pool
+AM,pooled,emigrant,317961.9305733166,317.9619305733166,Person-weighted census pool
+AM,pooled,stayer,8539085.937858103,8539.085937858103,Person-weighted census pool
+AP,pooled,immigrant,186395.1247677009,186.3951247677009,Person-weighted census pool
+AP,pooled,emigrant,57590.504562647846,57.590504562647844,Person-weighted census pool
+AP,pooled,stayer,1239845.6552921697,1239.8456552921696,Person-weighted census pool
+BA,pooled,immigrant,1356045.0252586901,1356.0450252586902,Person-weighted census pool
+BA,pooled,emigrant,4160440.303526774,4160.440303526774,Person-weighted census pool
+BA,pooled,stayer,45719828.42499236,45719.82842499236,Person-weighted census pool
+CE,pooled,immigrant,732646.8734149066,732.6468734149065,Person-weighted census pool
+CE,pooled,emigrant,2192933.495510385,2192.933495510385,Person-weighted census pool
+CE,pooled,stayer,26103337.757815868,26103.33775781587,Person-weighted census pool
+DF,pooled,immigrant,1770935.438875889,1770.9354388758888,Person-weighted census pool
+DF,pooled,emigrant,577074.4826142287,577.0744826142287,Person-weighted census pool
+DF,pooled,stayer,5192724.431482257,5192.724431482257,Person-weighted census pool
+ES,pooled,immigrant,894458.5733154591,894.458573315459,Person-weighted census pool
+ES,pooled,emigrant,1092045.379443486,1092.045379443486,Person-weighted census pool
+ES,pooled,stayer,9911396.42533715,9911.39642533715,Person-weighted census pool
+GO,pooled,immigrant,2381121.5881180945,2381.1215881180947,Person-weighted census pool
+GO,pooled,emigrant,1074297.6428987626,1074.2976428987627,Person-weighted census pool
+GO,pooled,stayer,15713053.586517982,15713.053586517983,Person-weighted census pool
+MA,pooled,immigrant,1039961.8956469973,1039.9618956469972,Person-weighted census pool
+MA,pooled,emigrant,1481467.6745432066,1481.4676745432066,Person-weighted census pool
+MA,pooled,stayer,18752493.286670957,18752.493286670957,Person-weighted census pool
+MG,pooled,immigrant,2182581.360947764,2182.581360947764,Person-weighted census pool
+MG,pooled,emigrant,7453659.312492379,7453.659312492379,Person-weighted census pool
+MG,pooled,stayer,64280687.312996306,64280.687312996306,Person-weighted census pool
+MS,pooled,immigrant,796424.7859508202,796.4247859508203,Person-weighted census pool
+MS,pooled,emigrant,398628.95402133337,398.62895402133336,Person-weighted census pool
+MS,pooled,stayer,5538951.4782948755,5538.951478294875,Person-weighted census pool
+MT,pooled,immigrant,1393763.9629014472,1393.7639629014473,Person-weighted census pool
+MT,pooled,emigrant,616774.9797951463,616.7749797951462,Person-weighted census pool
+MT,pooled,stayer,6924659.752122842,6924.659752122841,Person-weighted census pool
+PA,pooled,immigrant,1193618.719429757,1193.618719429757,Person-weighted census pool
+PA,pooled,emigrant,927369.3878870518,927.3693878870517,Person-weighted census pool
+PA,pooled,stayer,18522267.855505683,18522.26785550568,Person-weighted census pool
+PB,pooled,immigrant,555914.321039586,555.914321039586,Person-weighted census pool
+PB,pooled,emigrant,1886417.3560251736,1886.4173560251736,Person-weighted census pool
+PB,pooled,stayer,12637994.847822696,12637.994847822696,Person-weighted census pool
+PE,pooled,immigrant,1142275.1851730861,1142.2751851730861,Person-weighted census pool
+PE,pooled,emigrant,2951650.393409743,2951.650393409743,Person-weighted census pool
+PE,pooled,stayer,28534748.2269858,28534.7482269858,Person-weighted census pool
+PI,pooled,immigrant,487073.7813642573,487.0737813642573,Person-weighted census pool
+PI,pooled,emigrant,1195874.3527678323,1195.8743527678323,Person-weighted census pool
+PI,pooled,stayer,9965688.300579749,9965.68830057975,Person-weighted census pool
+PR,pooled,immigrant,4309131.135390087,4309.131135390087,Person-weighted census pool
+PR,pooled,emigrant,2679643.4307320784,2679.6434307320783,Person-weighted census pool
+PR,pooled,stayer,31424302.868382864,31424.302868382863,Person-weighted census pool
+RJ,pooled,immigrant,5023798.708644854,5023.798708644854,Person-weighted census pool
+RJ,pooled,emigrant,1643876.3187967853,1643.8763187967854,Person-weighted census pool
+RJ,pooled,stayer,50382519.8292011,50382.519829201105,Person-weighted census pool
+RN,pooled,immigrant,439469.2303726501,439.4692303726501,Person-weighted census pool
+RN,pooled,emigrant,842862.4375604643,842.8624375604643,Person-weighted census pool
+RN,pooled,stayer,9425629.042030169,9425.629042030168,Person-weighted census pool
+RO,pooled,immigrant,624203.7761437387,624.2037761437387,Person-weighted census pool
+RO,pooled,emigrant,242671.4976579206,242.6714976579206,Person-weighted census pool
+RO,pooled,stayer,3112982.609487742,3112.982609487742,Person-weighted census pool
+RR,pooled,immigrant,138503.7239090215,138.5037239090215,Person-weighted census pool
+RR,pooled,emigrant,41517.83890917645,41.51783890917645,Person-weighted census pool
+RR,pooled,stayer,783836.6277756535,783.8366277756535,Person-weighted census pool
+RS,pooled,immigrant,607282.9754253651,607.2829754253652,Person-weighted census pool
+RS,pooled,emigrant,1895870.0593590096,1895.8700593590097,Person-weighted census pool
+RS,pooled,stayer,37214160.85878787,37214.16085878787,Person-weighted census pool
+SC,pooled,immigrant,1342921.7387750675,1342.9217387750675,Person-weighted census pool
+SC,pooled,emigrant,1337476.2221298243,1337.4762221298242,Person-weighted census pool
+SC,pooled,stayer,17703303.04173444,17703.303041734438,Person-weighted census pool
+SE,pooled,immigrant,294420.18132704846,294.42018132704845,Person-weighted census pool
+SE,pooled,emigrant,664662.975575655,664.662975575655,Person-weighted census pool
+SE,pooled,stayer,5860488.005057661,5860.488005057661,Person-weighted census pool
+SP,pooled,immigrant,11901225.317773739,11901.225317773738,Person-weighted census pool
+SP,pooled,emigrant,4655798.400171814,4655.798400171813,Person-weighted census pool
+SP,pooled,stayer,118262219.07357106,118262.21907357106,Person-weighted census pool
+TO,pooled,immigrant,263461.23051094305,263.46123051094304,Person-weighted census pool
+TO,pooled,emigrant,231360.93718864865,231.36093718864865,Person-weighted census pool
+TO,pooled,stayer,2514228.5534319323,2514.228553431932,Person-weighted census pool
