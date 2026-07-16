@@ -1,0 +1,3465 @@
+census_year,origin_uf,destination_uf,migration_type,label,weighted_migrants
+1970,AC,AC,local,Local / within-state,7544.0
+1970,AC,AL,other,Other,8.0
+1970,AC,AM,neighboring_state,Neighboring-state circulation,12493.0
+1970,AC,AP,other,Other,114.0
+1970,AC,BA,other,Other,161.0
+1970,AC,CE,other,Other,1226.0
+1970,AC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,180.0
+1970,AC,ES,other,Other,18.0
+1970,AC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,83.0
+1970,AC,MA,other,Other,278.0
+1970,AC,MG,other,Other,183.0
+1970,AC,MT,other,Other,316.0
+1970,AC,PA,other,Other,3029.0
+1970,AC,PB,other,Other,102.0
+1970,AC,PE,other,Other,171.0
+1970,AC,PI,other,Other,433.0
+1970,AC,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,178.0
+1970,AC,RJ,other,Other,2910.0
+1970,AC,RN,other,Other,103.0
+1970,AC,RO,neighboring_state,Neighboring-state circulation,3961.0
+1970,AC,RR,other,Other,58.0
+1970,AC,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,23.0
+1970,AC,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,17.0
+1970,AC,SE,other,Other,4.0
+1970,AC,SP,other,Other,895.0
+1970,AL,AC,other,Other,77.0
+1970,AL,AL,local,Local / within-state,191749.0
+1970,AL,AM,other,Other,168.0
+1970,AL,AP,other,Other,12.0
+1970,AL,BA,neighboring_state,Neighboring-state circulation,13195.0
+1970,AL,CE,other,Other,10250.0
+1970,AL,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1537.0
+1970,AL,ES,northeast_to_southeast,Northeast -> Southeast,1154.0
+1970,AL,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,774.0
+1970,AL,MA,other,Other,812.0
+1970,AL,MG,northeast_to_southeast,Northeast -> Southeast,1697.0
+1970,AL,MT,other,Other,5330.0
+1970,AL,PA,other,Other,305.0
+1970,AL,PB,other,Other,1718.0
+1970,AL,PE,neighboring_state,Neighboring-state circulation,51627.0
+1970,AL,PI,other,Other,235.0
+1970,AL,PR,other,Other,15313.0
+1970,AL,RJ,northeast_to_southeast,Northeast -> Southeast,49155.0
+1970,AL,RN,other,Other,505.0
+1970,AL,RO,other,Other,210.0
+1970,AL,RR,other,Other,21.0
+1970,AL,RS,other,Other,217.0
+1970,AL,SC,other,Other,150.0
+1970,AL,SE,neighboring_state,Neighboring-state circulation,18654.0
+1970,AL,SP,northeast_to_southeast,Northeast -> Southeast,108420.0
+1970,AM,AC,neighboring_state,Neighboring-state circulation,8574.0
+1970,AM,AL,other,Other,41.0
+1970,AM,AM,local,Local / within-state,64707.0
+1970,AM,AP,other,Other,240.0
+1970,AM,BA,other,Other,372.0
+1970,AM,CE,other,Other,3119.0
+1970,AM,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,583.0
+1970,AM,ES,other,Other,77.0
+1970,AM,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,262.0
+1970,AM,MA,other,Other,659.0
+1970,AM,MG,other,Other,572.0
+1970,AM,MT,neighboring_state,Neighboring-state circulation,495.0
+1970,AM,PA,neighboring_state,Neighboring-state circulation,11850.0
+1970,AM,PB,other,Other,364.0
+1970,AM,PE,other,Other,960.0
+1970,AM,PI,other,Other,126.0
+1970,AM,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,217.0
+1970,AM,RJ,other,Other,15884.0
+1970,AM,RN,other,Other,319.0
+1970,AM,RO,neighboring_state,Neighboring-state circulation,14434.0
+1970,AM,RR,neighboring_state,Neighboring-state circulation,3471.0
+1970,AM,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,175.0
+1970,AM,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,79.0
+1970,AM,SE,other,Other,105.0
+1970,AM,SP,other,Other,3679.0
+1970,AP,AC,other,Other,11.0
+1970,AP,AL,other,Other,3.0
+1970,AP,AM,other,Other,105.0
+1970,AP,AP,local,Local / within-state,2437.0
+1970,AP,BA,other,Other,68.0
+1970,AP,CE,other,Other,327.0
+1970,AP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,279.0
+1970,AP,ES,other,Other,23.0
+1970,AP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,31.0
+1970,AP,MA,other,Other,123.0
+1970,AP,MG,other,Other,114.0
+1970,AP,MT,other,Other,116.0
+1970,AP,PA,neighboring_state,Neighboring-state circulation,3859.0
+1970,AP,PB,other,Other,59.0
+1970,AP,PE,other,Other,75.0
+1970,AP,PI,other,Other,78.0
+1970,AP,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,66.0
+1970,AP,RJ,other,Other,726.0
+1970,AP,RN,other,Other,62.0
+1970,AP,RO,other,Other,159.0
+1970,AP,RR,other,Other,19.0
+1970,AP,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,4.0
+1970,AP,SE,other,Other,7.0
+1970,AP,SP,other,Other,255.0
+1970,BA,AC,other,Other,110.0
+1970,BA,AL,neighboring_state,Neighboring-state circulation,2201.0
+1970,BA,AM,other,Other,253.0
+1970,BA,AP,other,Other,51.0
+1970,BA,BA,local,Local / within-state,1000907.0
+1970,BA,CE,other,Other,1829.0
+1970,BA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,26181.0
+1970,BA,ES,northeast_to_southeast,Northeast -> Southeast,26412.0
+1970,BA,GO,neighboring_state,Neighboring-state circulation,57073.0
+1970,BA,MA,other,Other,2449.0
+1970,BA,MG,northeast_to_southeast,Northeast -> Southeast,81521.0
+1970,BA,MT,other,Other,25947.0
+1970,BA,PA,other,Other,3769.0
+1970,BA,PB,other,Other,1082.0
+1970,BA,PE,neighboring_state,Neighboring-state circulation,13331.0
+1970,BA,PI,neighboring_state,Neighboring-state circulation,6307.0
+1970,BA,PR,other,Other,46692.0
+1970,BA,RJ,northeast_to_southeast,Northeast -> Southeast,122442.0
+1970,BA,RN,other,Other,635.0
+1970,BA,RO,other,Other,340.0
+1970,BA,RR,other,Other,26.0
+1970,BA,RS,other,Other,1006.0
+1970,BA,SC,other,Other,288.0
+1970,BA,SE,neighboring_state,Neighboring-state circulation,14545.0
+1970,BA,SP,northeast_to_southeast,Northeast -> Southeast,401894.0
+1970,CE,AC,other,Other,9361.0
+1970,CE,AL,other,Other,2087.0
+1970,CE,AM,other,Other,13451.0
+1970,CE,AP,other,Other,1036.0
+1970,CE,BA,other,Other,10088.0
+1970,CE,CE,local,Local / within-state,544124.0
+1970,CE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,24706.0
+1970,CE,ES,northeast_to_southeast,Northeast -> Southeast,854.0
+1970,CE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,12574.0
+1970,CE,MA,other,Other,101188.0
+1970,CE,MG,northeast_to_southeast,Northeast -> Southeast,3923.0
+1970,CE,MT,other,Other,10466.0
+1970,CE,PA,other,Other,39161.0
+1970,CE,PB,neighboring_state,Neighboring-state circulation,9270.0
+1970,CE,PE,neighboring_state,Neighboring-state circulation,33114.0
+1970,CE,PI,neighboring_state,Neighboring-state circulation,51413.0
+1970,CE,PR,other,Other,16931.0
+1970,CE,RJ,northeast_to_southeast,Northeast -> Southeast,68168.0
+1970,CE,RN,neighboring_state,Neighboring-state circulation,11531.0
+1970,CE,RO,other,Other,6488.0
+1970,CE,RR,other,Other,1106.0
+1970,CE,RS,other,Other,491.0
+1970,CE,SC,other,Other,119.0
+1970,CE,SE,other,Other,453.0
+1970,CE,SP,northeast_to_southeast,Northeast -> Southeast,72980.0
+1970,DF,AC,other,Other,7.0
+1970,DF,AL,other,Other,54.0
+1970,DF,AM,other,Other,154.0
+1970,DF,AP,other,Other,4.0
+1970,DF,BA,other,Other,534.0
+1970,DF,CE,other,Other,377.0
+1970,DF,DF,local,Local / within-state,138.0
+1970,DF,ES,other,Other,135.0
+1970,DF,GO,neighboring_state,Neighboring-state circulation,6657.0
+1970,DF,MA,other,Other,201.0
+1970,DF,MG,other,Other,2849.0
+1970,DF,MT,other,Other,561.0
+1970,DF,PA,other,Other,148.0
+1970,DF,PB,other,Other,188.0
+1970,DF,PE,other,Other,343.0
+1970,DF,PI,other,Other,299.0
+1970,DF,PR,other,Other,733.0
+1970,DF,RJ,other,Other,5475.0
+1970,DF,RN,other,Other,201.0
+1970,DF,RO,other,Other,54.0
+1970,DF,RR,other,Other,6.0
+1970,DF,RS,other,Other,290.0
+1970,DF,SC,other,Other,156.0
+1970,DF,SE,other,Other,49.0
+1970,DF,SP,other,Other,4885.0
+1970,ES,AC,other,Other,3.0
+1970,ES,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,138.0
+1970,ES,AM,other,Other,64.0
+1970,ES,AP,other,Other,4.0
+1970,ES,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,7493.0
+1970,ES,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,153.0
+1970,ES,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4261.0
+1970,ES,ES,local,Local / within-state,312036.0
+1970,ES,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,2199.0
+1970,ES,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,798.0
+1970,ES,MG,neighboring_state,Neighboring-state circulation,43074.0
+1970,ES,MT,other,Other,8165.0
+1970,ES,PA,other,Other,1436.0
+1970,ES,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,102.0
+1970,ES,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,267.0
+1970,ES,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,49.0
+1970,ES,PR,other,Other,20663.0
+1970,ES,RJ,neighboring_state,Neighboring-state circulation,215031.0
+1970,ES,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,73.0
+1970,ES,RO,other,Other,554.0
+1970,ES,RS,other,Other,360.0
+1970,ES,SC,other,Other,132.0
+1970,ES,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,234.0
+1970,ES,SP,other,Other,18012.0
+1970,GO,AC,other,Other,14.0
+1970,GO,AL,other,Other,42.0
+1970,GO,AM,other,Other,289.0
+1970,GO,AP,other,Other,4.0
+1970,GO,BA,neighboring_state,Neighboring-state circulation,1657.0
+1970,GO,CE,other,Other,225.0
+1970,GO,DF,neighboring_state,Neighboring-state circulation,90568.0
+1970,GO,ES,other,Other,145.0
+1970,GO,GO,local,Local / within-state,680993.0
+1970,GO,MA,other,Other,5284.0
+1970,GO,MG,neighboring_state,Neighboring-state circulation,24144.0
+1970,GO,MT,neighboring_state,Neighboring-state circulation,36758.0
+1970,GO,PA,other,Other,19513.0
+1970,GO,PB,other,Other,228.0
+1970,GO,PE,other,Other,355.0
+1970,GO,PI,other,Other,358.0
+1970,GO,PR,other,Other,2003.0
+1970,GO,RJ,other,Other,4820.0
+1970,GO,RN,other,Other,464.0
+1970,GO,RO,other,Other,396.0
+1970,GO,RR,other,Other,77.0
+1970,GO,RS,other,Other,229.0
+1970,GO,SC,other,Other,132.0
+1970,GO,SE,other,Other,3.0
+1970,GO,SP,other,Other,18521.0
+1970,MA,AC,other,Other,300.0
+1970,MA,AL,other,Other,79.0
+1970,MA,AM,other,Other,1201.0
+1970,MA,AP,other,Other,288.0
+1970,MA,BA,other,Other,1035.0
+1970,MA,CE,other,Other,7769.0
+1970,MA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,10696.0
+1970,MA,ES,northeast_to_southeast,Northeast -> Southeast,131.0
+1970,MA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,79837.0
+1970,MA,MA,local,Local / within-state,509714.0
+1970,MA,MG,northeast_to_southeast,Northeast -> Southeast,1057.0
+1970,MA,MT,other,Other,2245.0
+1970,MA,PA,neighboring_state,Neighboring-state circulation,37916.0
+1970,MA,PB,other,Other,535.0
+1970,MA,PE,other,Other,2091.0
+1970,MA,PI,neighboring_state,Neighboring-state circulation,32546.0
+1970,MA,PR,other,Other,393.0
+1970,MA,RJ,northeast_to_southeast,Northeast -> Southeast,26409.0
+1970,MA,RN,other,Other,491.0
+1970,MA,RO,other,Other,1701.0
+1970,MA,RR,other,Other,682.0
+1970,MA,RS,other,Other,118.0
+1970,MA,SC,other,Other,47.0
+1970,MA,SE,other,Other,126.0
+1970,MA,SP,northeast_to_southeast,Northeast -> Southeast,5829.0
+1970,MG,AC,other,Other,127.0
+1970,MG,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,668.0
+1970,MG,AM,other,Other,437.0
+1970,MG,AP,other,Other,117.0
+1970,MG,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,61183.0
+1970,MG,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,846.0
+1970,MG,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,88610.0
+1970,MG,ES,neighboring_state,Neighboring-state circulation,120457.0
+1970,MG,GO,neighboring_state,Neighboring-state circulation,240093.0
+1970,MG,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,1579.0
+1970,MG,MG,local,Local / within-state,2247350.0
+1970,MG,MT,other,Other,51583.0
+1970,MG,PA,other,Other,2759.0
+1970,MG,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,542.0
+1970,MG,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,1926.0
+1970,MG,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,251.0
+1970,MG,PR,other,Other,240356.0
+1970,MG,RJ,neighboring_state,Neighboring-state circulation,540360.0
+1970,MG,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,1083.0
+1970,MG,RO,other,Other,771.0
+1970,MG,RR,other,Other,54.0
+1970,MG,RS,other,Other,2251.0
+1970,MG,SC,other,Other,1233.0
+1970,MG,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,328.0
+1970,MG,SP,neighboring_state,Neighboring-state circulation,870821.0
+1970,MT,AC,other,Other,83.0
+1970,MT,AL,other,Other,200.0
+1970,MT,AM,neighboring_state,Neighboring-state circulation,468.0
+1970,MT,AP,other,Other,9.0
+1970,MT,BA,other,Other,794.0
+1970,MT,CE,other,Other,330.0
+1970,MT,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3250.0
+1970,MT,ES,other,Other,244.0
+1970,MT,GO,neighboring_state,Neighboring-state circulation,14244.0
+1970,MT,MA,other,Other,260.0
+1970,MT,MG,other,Other,3255.0
+1970,MT,MT,local,Local / within-state,233983.0
+1970,MT,PA,neighboring_state,Neighboring-state circulation,739.0
+1970,MT,PB,other,Other,84.0
+1970,MT,PE,other,Other,529.0
+1970,MT,PI,other,Other,88.0
+1970,MT,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,8527.0
+1970,MT,RJ,other,Other,14379.0
+1970,MT,RN,other,Other,43.0
+1970,MT,RO,neighboring_state,Neighboring-state circulation,3431.0
+1970,MT,RR,other,Other,27.0
+1970,MT,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,998.0
+1970,MT,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,546.0
+1970,MT,SE,other,Other,80.0
+1970,MT,SP,other,Other,62624.0
+1970,PA,AC,other,Other,1247.0
+1970,PA,AL,other,Other,103.0
+1970,PA,AM,neighboring_state,Neighboring-state circulation,17297.0
+1970,PA,AP,neighboring_state,Neighboring-state circulation,31555.0
+1970,PA,BA,other,Other,718.0
+1970,PA,CE,other,Other,4266.0
+1970,PA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2285.0
+1970,PA,ES,other,Other,195.0
+1970,PA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4450.0
+1970,PA,MA,neighboring_state,Neighboring-state circulation,4996.0
+1970,PA,MG,other,Other,1066.0
+1970,PA,MT,neighboring_state,Neighboring-state circulation,1141.0
+1970,PA,PA,local,Local / within-state,220698.0
+1970,PA,PB,other,Other,337.0
+1970,PA,PE,other,Other,2052.0
+1970,PA,PI,other,Other,876.0
+1970,PA,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,370.0
+1970,PA,RJ,other,Other,32208.0
+1970,PA,RN,other,Other,419.0
+1970,PA,RO,other,Other,3628.0
+1970,PA,RR,neighboring_state,Neighboring-state circulation,484.0
+1970,PA,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,366.0
+1970,PA,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,83.0
+1970,PA,SE,other,Other,47.0
+1970,PA,SP,other,Other,7822.0
+1970,PB,AC,other,Other,687.0
+1970,PB,AL,other,Other,6028.0
+1970,PB,AM,other,Other,1301.0
+1970,PB,AP,other,Other,201.0
+1970,PB,BA,other,Other,16632.0
+1970,PB,CE,neighboring_state,Neighboring-state circulation,36699.0
+1970,PB,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,19795.0
+1970,PB,ES,northeast_to_southeast,Northeast -> Southeast,839.0
+1970,PB,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7405.0
+1970,PB,MA,other,Other,6804.0
+1970,PB,MG,northeast_to_southeast,Northeast -> Southeast,6952.0
+1970,PB,MT,other,Other,3070.0
+1970,PB,PA,other,Other,2640.0
+1970,PB,PB,local,Local / within-state,276196.0
+1970,PB,PE,neighboring_state,Neighboring-state circulation,105069.0
+1970,PB,PI,other,Other,2417.0
+1970,PB,PR,other,Other,6435.0
+1970,PB,RJ,northeast_to_southeast,Northeast -> Southeast,148810.0
+1970,PB,RN,neighboring_state,Neighboring-state circulation,56057.0
+1970,PB,RO,other,Other,674.0
+1970,PB,RR,other,Other,253.0
+1970,PB,RS,other,Other,229.0
+1970,PB,SC,other,Other,79.0
+1970,PB,SE,other,Other,652.0
+1970,PB,SP,northeast_to_southeast,Northeast -> Southeast,54377.0
+1970,PE,AC,other,Other,340.0
+1970,PE,AL,neighboring_state,Neighboring-state circulation,69486.0
+1970,PE,AM,other,Other,936.0
+1970,PE,AP,other,Other,78.0
+1970,PE,BA,neighboring_state,Neighboring-state circulation,45621.0
+1970,PE,CE,neighboring_state,Neighboring-state circulation,22415.0
+1970,PE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,14822.0
+1970,PE,ES,northeast_to_southeast,Northeast -> Southeast,1300.0
+1970,PE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7403.0
+1970,PE,MA,other,Other,9597.0
+1970,PE,MG,northeast_to_southeast,Northeast -> Southeast,11370.0
+1970,PE,MT,other,Other,11778.0
+1970,PE,PA,other,Other,2122.0
+1970,PE,PB,neighboring_state,Neighboring-state circulation,52567.0
+1970,PE,PE,local,Local / within-state,846903.0
+1970,PE,PI,neighboring_state,Neighboring-state circulation,5793.0
+1970,PE,PR,other,Other,32440.0
+1970,PE,RJ,northeast_to_southeast,Northeast -> Southeast,149089.0
+1970,PE,RN,other,Other,6347.0
+1970,PE,RO,other,Other,599.0
+1970,PE,RR,other,Other,101.0
+1970,PE,RS,other,Other,945.0
+1970,PE,SC,other,Other,330.0
+1970,PE,SE,other,Other,3695.0
+1970,PE,SP,northeast_to_southeast,Northeast -> Southeast,223155.0
+1970,PI,AC,other,Other,247.0
+1970,PI,AL,other,Other,96.0
+1970,PI,AM,other,Other,502.0
+1970,PI,AP,other,Other,130.0
+1970,PI,BA,neighboring_state,Neighboring-state circulation,5646.0
+1970,PI,CE,neighboring_state,Neighboring-state circulation,15096.0
+1970,PI,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,22284.0
+1970,PI,ES,northeast_to_southeast,Northeast -> Southeast,73.0
+1970,PI,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,20733.0
+1970,PI,MA,neighboring_state,Neighboring-state circulation,145473.0
+1970,PI,MG,northeast_to_southeast,Northeast -> Southeast,1643.0
+1970,PI,MT,other,Other,1510.0
+1970,PI,PA,other,Other,5313.0
+1970,PI,PB,other,Other,533.0
+1970,PI,PE,neighboring_state,Neighboring-state circulation,6337.0
+1970,PI,PI,local,Local / within-state,160052.0
+1970,PI,PR,other,Other,1555.0
+1970,PI,RJ,northeast_to_southeast,Northeast -> Southeast,10681.0
+1970,PI,RN,other,Other,357.0
+1970,PI,RO,other,Other,456.0
+1970,PI,RR,other,Other,162.0
+1970,PI,RS,other,Other,133.0
+1970,PI,SC,other,Other,46.0
+1970,PI,SE,other,Other,118.0
+1970,PI,SP,northeast_to_southeast,Northeast -> Southeast,20040.0
+1970,PR,AC,south_to_agri_frontier,South -> agricultural frontier,33.0
+1970,PR,AL,other,Other,971.0
+1970,PR,AM,south_to_agri_frontier,South -> agricultural frontier,189.0
+1970,PR,AP,south_to_agri_frontier,South -> agricultural frontier,4.0
+1970,PR,BA,other,Other,3429.0
+1970,PR,CE,other,Other,1143.0
+1970,PR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3775.0
+1970,PR,ES,other,Other,955.0
+1970,PR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3055.0
+1970,PR,MA,other,Other,298.0
+1970,PR,MG,other,Other,8751.0
+1970,PR,MT,south_to_agri_frontier,South -> agricultural frontier,43944.0
+1970,PR,PA,south_to_agri_frontier,South -> agricultural frontier,731.0
+1970,PR,PB,other,Other,378.0
+1970,PR,PE,other,Other,2255.0
+1970,PR,PI,other,Other,139.0
+1970,PR,PR,local,Local / within-state,2224779.0
+1970,PR,RJ,other,Other,16037.0
+1970,PR,RN,other,Other,287.0
+1970,PR,RO,south_to_agri_frontier,South -> agricultural frontier,2177.0
+1970,PR,RR,south_to_agri_frontier,South -> agricultural frontier,16.0
+1970,PR,RS,other,Other,8768.0
+1970,PR,SC,neighboring_state,Neighboring-state circulation,36642.0
+1970,PR,SE,other,Other,337.0
+1970,PR,SP,neighboring_state,Neighboring-state circulation,283434.0
+1970,RJ,AC,other,Other,279.0
+1970,RJ,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,1906.0
+1970,RJ,AM,other,Other,2010.0
+1970,RJ,AP,other,Other,235.0
+1970,RJ,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,9466.0
+1970,RJ,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,3282.0
+1970,RJ,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,52696.0
+1970,RJ,ES,neighboring_state,Neighboring-state circulation,24400.0
+1970,RJ,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3638.0
+1970,RJ,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,905.0
+1970,RJ,MG,neighboring_state,Neighboring-state circulation,60082.0
+1970,RJ,MT,other,Other,3584.0
+1970,RJ,PA,other,Other,2945.0
+1970,RJ,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,3164.0
+1970,RJ,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,11357.0
+1970,RJ,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,449.0
+1970,RJ,PR,other,Other,17764.0
+1970,RJ,RJ,local,Local / within-state,1584362.0
+1970,RJ,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,3185.0
+1970,RJ,RO,other,Other,517.0
+1970,RJ,RR,other,Other,191.0
+1970,RJ,RS,other,Other,8598.0
+1970,RJ,SC,other,Other,3419.0
+1970,RJ,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,1485.0
+1970,RJ,SP,neighboring_state,Neighboring-state circulation,135832.0
+1970,RN,AC,other,Other,1281.0
+1970,RN,AL,other,Other,1017.0
+1970,RN,AM,other,Other,1450.0
+1970,RN,AP,other,Other,394.0
+1970,RN,BA,other,Other,3650.0
+1970,RN,CE,neighboring_state,Neighboring-state circulation,24493.0
+1970,RN,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,8245.0
+1970,RN,ES,northeast_to_southeast,Northeast -> Southeast,468.0
+1970,RN,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,13205.0
+1970,RN,MA,other,Other,4868.0
+1970,RN,MG,northeast_to_southeast,Northeast -> Southeast,12741.0
+1970,RN,MT,other,Other,1266.0
+1970,RN,PA,other,Other,4032.0
+1970,RN,PB,neighboring_state,Neighboring-state circulation,33982.0
+1970,RN,PE,other,Other,19188.0
+1970,RN,PI,other,Other,1259.0
+1970,RN,PR,other,Other,2116.0
+1970,RN,RJ,northeast_to_southeast,Northeast -> Southeast,58057.0
+1970,RN,RN,local,Local / within-state,245135.0
+1970,RN,RO,other,Other,933.0
+1970,RN,RR,other,Other,219.0
+1970,RN,RS,other,Other,401.0
+1970,RN,SC,other,Other,132.0
+1970,RN,SE,other,Other,299.0
+1970,RN,SP,northeast_to_southeast,Northeast -> Southeast,26659.0
+1970,RO,AC,neighboring_state,Neighboring-state circulation,564.0
+1970,RO,AL,other,Other,11.0
+1970,RO,AM,neighboring_state,Neighboring-state circulation,1348.0
+1970,RO,AP,other,Other,25.0
+1970,RO,BA,other,Other,61.0
+1970,RO,CE,other,Other,455.0
+1970,RO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,177.0
+1970,RO,ES,other,Other,18.0
+1970,RO,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,226.0
+1970,RO,MA,other,Other,286.0
+1970,RO,MG,other,Other,52.0
+1970,RO,MT,neighboring_state,Neighboring-state circulation,491.0
+1970,RO,PA,other,Other,942.0
+1970,RO,PB,other,Other,38.0
+1970,RO,PE,other,Other,80.0
+1970,RO,PI,other,Other,72.0
+1970,RO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,92.0
+1970,RO,RJ,other,Other,885.0
+1970,RO,RN,other,Other,21.0
+1970,RO,RO,local,Local / within-state,4000.0
+1970,RO,RR,other,Other,60.0
+1970,RO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,26.0
+1970,RO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,18.0
+1970,RO,SP,other,Other,661.0
+1970,RR,AC,other,Other,42.0
+1970,RR,AM,neighboring_state,Neighboring-state circulation,1259.0
+1970,RR,AP,other,Other,38.0
+1970,RR,BA,other,Other,7.0
+1970,RR,CE,other,Other,1247.0
+1970,RR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,40.0
+1970,RR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,21.0
+1970,RR,MA,other,Other,108.0
+1970,RR,MG,other,Other,16.0
+1970,RR,MT,other,Other,20.0
+1970,RR,PA,neighboring_state,Neighboring-state circulation,298.0
+1970,RR,PB,other,Other,114.0
+1970,RR,PE,other,Other,27.0
+1970,RR,PI,other,Other,220.0
+1970,RR,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,15.0
+1970,RR,RJ,other,Other,396.0
+1970,RR,RN,other,Other,40.0
+1970,RR,RO,other,Other,222.0
+1970,RR,RR,local,Local / within-state,817.0
+1970,RR,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,11.0
+1970,RR,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,4.0
+1970,RR,SP,other,Other,124.0
+1970,RS,AC,south_to_agri_frontier,South -> agricultural frontier,71.0
+1970,RS,AL,other,Other,113.0
+1970,RS,AM,south_to_agri_frontier,South -> agricultural frontier,231.0
+1970,RS,AP,south_to_agri_frontier,South -> agricultural frontier,27.0
+1970,RS,BA,other,Other,981.0
+1970,RS,CE,other,Other,426.0
+1970,RS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2646.0
+1970,RS,ES,other,Other,363.0
+1970,RS,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,612.0
+1970,RS,MA,other,Other,229.0
+1970,RS,MG,other,Other,2724.0
+1970,RS,MT,south_to_agri_frontier,South -> agricultural frontier,6000.0
+1970,RS,PA,south_to_agri_frontier,South -> agricultural frontier,364.0
+1970,RS,PB,other,Other,247.0
+1970,RS,PE,other,Other,1085.0
+1970,RS,PI,other,Other,24.0
+1970,RS,PR,other,Other,247853.0
+1970,RS,RJ,other,Other,34360.0
+1970,RS,RN,other,Other,221.0
+1970,RS,RO,south_to_agri_frontier,South -> agricultural frontier,242.0
+1970,RS,RR,south_to_agri_frontier,South -> agricultural frontier,130.0
+1970,RS,RS,local,Local / within-state,1535513.0
+1970,RS,SC,neighboring_state,Neighboring-state circulation,216372.0
+1970,RS,SE,other,Other,120.0
+1970,RS,SP,other,Other,32634.0
+1970,SC,AC,south_to_agri_frontier,South -> agricultural frontier,24.0
+1970,SC,AL,other,Other,59.0
+1970,SC,AM,south_to_agri_frontier,South -> agricultural frontier,128.0
+1970,SC,AP,south_to_agri_frontier,South -> agricultural frontier,8.0
+1970,SC,BA,other,Other,275.0
+1970,SC,CE,other,Other,131.0
+1970,SC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1332.0
+1970,SC,ES,other,Other,142.0
+1970,SC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,696.0
+1970,SC,MA,other,Other,47.0
+1970,SC,MG,other,Other,1619.0
+1970,SC,MT,south_to_agri_frontier,South -> agricultural frontier,1496.0
+1970,SC,PA,south_to_agri_frontier,South -> agricultural frontier,84.0
+1970,SC,PB,other,Other,25.0
+1970,SC,PE,other,Other,240.0
+1970,SC,PR,neighboring_state,Neighboring-state circulation,257547.0
+1970,SC,RJ,other,Other,14148.0
+1970,SC,RN,other,Other,42.0
+1970,SC,RO,south_to_agri_frontier,South -> agricultural frontier,87.0
+1970,SC,RR,south_to_agri_frontier,South -> agricultural frontier,50.0
+1970,SC,RS,neighboring_state,Neighboring-state circulation,63951.0
+1970,SC,SC,local,Local / within-state,507534.0
+1970,SC,SE,other,Other,86.0
+1970,SC,SP,other,Other,30213.0
+1970,SE,AC,other,Other,56.0
+1970,SE,AL,neighboring_state,Neighboring-state circulation,6490.0
+1970,SE,AM,other,Other,113.0
+1970,SE,BA,neighboring_state,Neighboring-state circulation,50747.0
+1970,SE,CE,other,Other,371.0
+1970,SE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1745.0
+1970,SE,ES,northeast_to_southeast,Northeast -> Southeast,1555.0
+1970,SE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,490.0
+1970,SE,MA,other,Other,250.0
+1970,SE,MG,northeast_to_southeast,Northeast -> Southeast,1941.0
+1970,SE,MT,other,Other,2301.0
+1970,SE,PA,other,Other,195.0
+1970,SE,PB,other,Other,338.0
+1970,SE,PE,other,Other,1948.0
+1970,SE,PI,other,Other,113.0
+1970,SE,PR,other,Other,7637.0
+1970,SE,RJ,northeast_to_southeast,Northeast -> Southeast,45709.0
+1970,SE,RN,other,Other,118.0
+1970,SE,RO,other,Other,121.0
+1970,SE,RR,other,Other,7.0
+1970,SE,RS,other,Other,115.0
+1970,SE,SC,other,Other,51.0
+1970,SE,SE,local,Local / within-state,107987.0
+1970,SE,SP,northeast_to_southeast,Northeast -> Southeast,64849.0
+1970,SP,AC,other,Other,114.0
+1970,SP,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,5217.0
+1970,SP,AM,other,Other,923.0
+1970,SP,AP,other,Other,61.0
+1970,SP,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,16266.0
+1970,SP,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,4087.0
+1970,SP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,17851.0
+1970,SP,ES,other,Other,1793.0
+1970,SP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,33765.0
+1970,SP,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,637.0
+1970,SP,MG,neighboring_state,Neighboring-state circulation,90363.0
+1970,SP,MT,other,Other,189318.0
+1970,SP,PA,other,Other,1570.0
+1970,SP,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,1809.0
+1970,SP,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,11271.0
+1970,SP,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,990.0
+1970,SP,PR,neighboring_state,Neighboring-state circulation,506967.0
+1970,SP,RJ,neighboring_state,Neighboring-state circulation,110809.0
+1970,SP,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,1146.0
+1970,SP,RO,other,Other,727.0
+1970,SP,RR,other,Other,60.0
+1970,SP,RS,other,Other,10596.0
+1970,SP,SC,other,Other,5344.0
+1970,SP,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,2673.0
+1970,SP,SP,local,Local / within-state,5202059.0
+1980,AC,AC,local,Local / within-state,28194.0
+1980,AC,AL,other,Other,30.0
+1980,AC,AM,neighboring_state,Neighboring-state circulation,16083.0
+1980,AC,AP,other,Other,101.0
+1980,AC,BA,other,Other,157.0
+1980,AC,CE,other,Other,1398.0
+1980,AC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,895.0
+1980,AC,ES,other,Other,34.0
+1980,AC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,417.0
+1980,AC,MA,other,Other,388.0
+1980,AC,MG,other,Other,284.0
+1980,AC,MS,other,Other,303.0
+1980,AC,MT,other,Other,465.0
+1980,AC,PA,other,Other,3740.0
+1980,AC,PB,other,Other,77.0
+1980,AC,PE,other,Other,272.0
+1980,AC,PI,other,Other,122.0
+1980,AC,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,365.0
+1980,AC,RJ,other,Other,4068.0
+1980,AC,RN,other,Other,101.0
+1980,AC,RO,neighboring_state,Neighboring-state circulation,7443.0
+1980,AC,RR,other,Other,343.0
+1980,AC,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,284.0
+1980,AC,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,372.0
+1980,AC,SE,other,Other,17.0
+1980,AC,SP,other,Other,2144.0
+1980,AL,AC,other,Other,150.0
+1980,AL,AL,local,Local / within-state,371599.0
+1980,AL,AM,other,Other,612.0
+1980,AL,AP,other,Other,37.0
+1980,AL,BA,neighboring_state,Neighboring-state circulation,25445.0
+1980,AL,CE,other,Other,10878.0
+1980,AL,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4937.0
+1980,AL,ES,northeast_to_southeast,Northeast -> Southeast,2253.0
+1980,AL,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3868.0
+1980,AL,MA,other,Other,1982.0
+1980,AL,MG,northeast_to_southeast,Northeast -> Southeast,4750.0
+1980,AL,MS,other,Other,14945.0
+1980,AL,MT,other,Other,4855.0
+1980,AL,PA,other,Other,2165.0
+1980,AL,PB,other,Other,3326.0
+1980,AL,PE,neighboring_state,Neighboring-state circulation,75207.0
+1980,AL,PI,other,Other,608.0
+1980,AL,PR,other,Other,35777.0
+1980,AL,RJ,northeast_to_southeast,Northeast -> Southeast,72254.0
+1980,AL,RN,other,Other,1020.0
+1980,AL,RO,other,Other,2967.0
+1980,AL,RR,other,Other,60.0
+1980,AL,RS,other,Other,744.0
+1980,AL,SC,other,Other,340.0
+1980,AL,SE,neighboring_state,Neighboring-state circulation,32216.0
+1980,AL,SP,northeast_to_southeast,Northeast -> Southeast,267233.0
+1980,AM,AC,neighboring_state,Neighboring-state circulation,11617.0
+1980,AM,AL,other,Other,210.0
+1980,AM,AM,local,Local / within-state,157676.0
+1980,AM,AP,other,Other,332.0
+1980,AM,BA,other,Other,960.0
+1980,AM,CE,other,Other,4082.0
+1980,AM,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2607.0
+1980,AM,ES,other,Other,277.0
+1980,AM,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,912.0
+1980,AM,MA,other,Other,932.0
+1980,AM,MG,other,Other,937.0
+1980,AM,MS,other,Other,347.0
+1980,AM,MT,neighboring_state,Neighboring-state circulation,997.0
+1980,AM,PA,neighboring_state,Neighboring-state circulation,15621.0
+1980,AM,PB,other,Other,387.0
+1980,AM,PE,other,Other,1498.0
+1980,AM,PI,other,Other,362.0
+1980,AM,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,661.0
+1980,AM,RJ,other,Other,18954.0
+1980,AM,RN,other,Other,634.0
+1980,AM,RO,neighboring_state,Neighboring-state circulation,21289.0
+1980,AM,RR,neighboring_state,Neighboring-state circulation,5598.0
+1980,AM,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,559.0
+1980,AM,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,206.0
+1980,AM,SE,other,Other,123.0
+1980,AM,SP,other,Other,6965.0
+1980,AP,AL,other,Other,8.0
+1980,AP,AM,other,Other,598.0
+1980,AP,AP,local,Local / within-state,8128.0
+1980,AP,BA,other,Other,113.0
+1980,AP,CE,other,Other,228.0
+1980,AP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,476.0
+1980,AP,ES,other,Other,19.0
+1980,AP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,147.0
+1980,AP,MA,other,Other,190.0
+1980,AP,MG,other,Other,235.0
+1980,AP,MS,other,Other,39.0
+1980,AP,MT,other,Other,52.0
+1980,AP,PA,neighboring_state,Neighboring-state circulation,9380.0
+1980,AP,PB,other,Other,59.0
+1980,AP,PE,other,Other,76.0
+1980,AP,PI,other,Other,39.0
+1980,AP,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,28.0
+1980,AP,RJ,other,Other,893.0
+1980,AP,RN,other,Other,52.0
+1980,AP,RO,other,Other,156.0
+1980,AP,RR,other,Other,32.0
+1980,AP,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,50.0
+1980,AP,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,8.0
+1980,AP,SE,other,Other,16.0
+1980,AP,SP,other,Other,639.0
+1980,BA,AC,other,Other,534.0
+1980,BA,AL,neighboring_state,Neighboring-state circulation,3945.0
+1980,BA,AM,other,Other,1244.0
+1980,BA,AP,other,Other,125.0
+1980,BA,BA,local,Local / within-state,1587869.0
+1980,BA,CE,other,Other,3482.0
+1980,BA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,65742.0
+1980,BA,ES,northeast_to_southeast,Northeast -> Southeast,43939.0
+1980,BA,GO,neighboring_state,Neighboring-state circulation,113877.0
+1980,BA,MA,other,Other,9024.0
+1980,BA,MG,northeast_to_southeast,Northeast -> Southeast,115085.0
+1980,BA,MS,other,Other,30941.0
+1980,BA,MT,other,Other,38931.0
+1980,BA,PA,other,Other,31440.0
+1980,BA,PB,other,Other,2595.0
+1980,BA,PE,neighboring_state,Neighboring-state circulation,24471.0
+1980,BA,PI,neighboring_state,Neighboring-state circulation,7849.0
+1980,BA,PR,other,Other,101605.0
+1980,BA,RJ,northeast_to_southeast,Northeast -> Southeast,181448.0
+1980,BA,RN,other,Other,1616.0
+1980,BA,RO,other,Other,13094.0
+1980,BA,RR,other,Other,153.0
+1980,BA,RS,other,Other,1770.0
+1980,BA,SC,other,Other,1450.0
+1980,BA,SE,neighboring_state,Neighboring-state circulation,26821.0
+1980,BA,SP,northeast_to_southeast,Northeast -> Southeast,1049440.0
+1980,CE,AC,other,Other,8296.0
+1980,CE,AL,other,Other,4130.0
+1980,CE,AM,other,Other,21625.0
+1980,CE,AP,other,Other,1610.0
+1980,CE,BA,other,Other,31066.0
+1980,CE,CE,local,Local / within-state,1077197.0
+1980,CE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,69858.0
+1980,CE,ES,northeast_to_southeast,Northeast -> Southeast,3452.0
+1980,CE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,38769.0
+1980,CE,MA,other,Other,144298.0
+1980,CE,MG,northeast_to_southeast,Northeast -> Southeast,12605.0
+1980,CE,MS,other,Other,20043.0
+1980,CE,MT,other,Other,11031.0
+1980,CE,PA,other,Other,79873.0
+1980,CE,PB,neighboring_state,Neighboring-state circulation,16054.0
+1980,CE,PE,neighboring_state,Neighboring-state circulation,45725.0
+1980,CE,PI,neighboring_state,Neighboring-state circulation,62933.0
+1980,CE,PR,other,Other,31001.0
+1980,CE,RJ,northeast_to_southeast,Northeast -> Southeast,144999.0
+1980,CE,RN,neighboring_state,Neighboring-state circulation,21578.0
+1980,CE,RO,other,Other,13807.0
+1980,CE,RR,other,Other,3280.0
+1980,CE,RS,other,Other,2317.0
+1980,CE,SC,other,Other,1105.0
+1980,CE,SE,other,Other,1983.0
+1980,CE,SP,northeast_to_southeast,Northeast -> Southeast,287461.0
+1980,DF,AC,other,Other,4.0
+1980,DF,AL,other,Other,154.0
+1980,DF,AM,other,Other,277.0
+1980,DF,AP,other,Other,49.0
+1980,DF,BA,other,Other,1550.0
+1980,DF,CE,other,Other,1043.0
+1980,DF,ES,other,Other,684.0
+1980,DF,GO,neighboring_state,Neighboring-state circulation,17299.0
+1980,DF,MA,other,Other,715.0
+1980,DF,MG,other,Other,4948.0
+1980,DF,MS,other,Other,366.0
+1980,DF,MT,other,Other,596.0
+1980,DF,PA,other,Other,991.0
+1980,DF,PB,other,Other,821.0
+1980,DF,PE,other,Other,1118.0
+1980,DF,PI,other,Other,1026.0
+1980,DF,PR,other,Other,640.0
+1980,DF,RJ,other,Other,5044.0
+1980,DF,RN,other,Other,496.0
+1980,DF,RO,other,Other,218.0
+1980,DF,RR,other,Other,21.0
+1980,DF,RS,other,Other,362.0
+1980,DF,SC,other,Other,231.0
+1980,DF,SE,other,Other,166.0
+1980,DF,SP,other,Other,5796.0
+1980,ES,AC,other,Other,439.0
+1980,ES,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,164.0
+1980,ES,AM,other,Other,428.0
+1980,ES,AP,other,Other,38.0
+1980,ES,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,16300.0
+1980,ES,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,286.0
+1980,ES,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,7644.0
+1980,ES,ES,local,Local / within-state,515852.0
+1980,ES,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3230.0
+1980,ES,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,1989.0
+1980,ES,MG,neighboring_state,Neighboring-state circulation,69528.0
+1980,ES,MS,other,Other,1916.0
+1980,ES,MT,other,Other,9975.0
+1980,ES,PA,other,Other,11320.0
+1980,ES,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,198.0
+1980,ES,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,581.0
+1980,ES,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,83.0
+1980,ES,PR,other,Other,22676.0
+1980,ES,RJ,neighboring_state,Neighboring-state circulation,284738.0
+1980,ES,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,225.0
+1980,ES,RO,other,Other,31586.0
+1980,ES,RR,other,Other,91.0
+1980,ES,RS,other,Other,786.0
+1980,ES,SC,other,Other,590.0
+1980,ES,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,263.0
+1980,ES,SP,other,Other,47514.0
+1980,GO,AC,other,Other,271.0
+1980,GO,AL,other,Other,102.0
+1980,GO,AM,other,Other,925.0
+1980,GO,AP,other,Other,97.0
+1980,GO,BA,neighboring_state,Neighboring-state circulation,3725.0
+1980,GO,CE,other,Other,745.0
+1980,GO,DF,neighboring_state,Neighboring-state circulation,116870.0
+1980,GO,ES,other,Other,628.0
+1980,GO,GO,local,Local / within-state,890600.0
+1980,GO,MA,other,Other,12237.0
+1980,GO,MG,neighboring_state,Neighboring-state circulation,55287.0
+1980,GO,MS,neighboring_state,Neighboring-state circulation,10100.0
+1980,GO,MT,neighboring_state,Neighboring-state circulation,59947.0
+1980,GO,PA,other,Other,62561.0
+1980,GO,PB,other,Other,580.0
+1980,GO,PE,other,Other,953.0
+1980,GO,PI,other,Other,1039.0
+1980,GO,PR,other,Other,3681.0
+1980,GO,RJ,other,Other,7870.0
+1980,GO,RN,other,Other,1035.0
+1980,GO,RO,other,Other,4964.0
+1980,GO,RR,other,Other,373.0
+1980,GO,RS,other,Other,752.0
+1980,GO,SC,other,Other,386.0
+1980,GO,SE,other,Other,170.0
+1980,GO,SP,other,Other,40104.0
+1980,MA,AC,other,Other,478.0
+1980,MA,AL,other,Other,263.0
+1980,MA,AM,other,Other,5182.0
+1980,MA,AP,other,Other,1794.0
+1980,MA,BA,other,Other,3117.0
+1980,MA,CE,other,Other,14779.0
+1980,MA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,45186.0
+1980,MA,ES,northeast_to_southeast,Northeast -> Southeast,705.0
+1980,MA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,104969.0
+1980,MA,MA,local,Local / within-state,752775.0
+1980,MA,MG,northeast_to_southeast,Northeast -> Southeast,4525.0
+1980,MA,MS,other,Other,737.0
+1980,MA,MT,other,Other,4663.0
+1980,MA,PA,neighboring_state,Neighboring-state circulation,140412.0
+1980,MA,PB,other,Other,964.0
+1980,MA,PE,other,Other,4019.0
+1980,MA,PI,neighboring_state,Neighboring-state circulation,51541.0
+1980,MA,PR,other,Other,1194.0
+1980,MA,RJ,northeast_to_southeast,Northeast -> Southeast,54201.0
+1980,MA,RN,other,Other,1331.0
+1980,MA,RO,other,Other,4238.0
+1980,MA,RR,other,Other,6101.0
+1980,MA,RS,other,Other,430.0
+1980,MA,SC,other,Other,240.0
+1980,MA,SE,other,Other,337.0
+1980,MA,SP,northeast_to_southeast,Northeast -> Southeast,33501.0
+1980,MG,AC,other,Other,1431.0
+1980,MG,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,886.0
+1980,MG,AM,other,Other,2578.0
+1980,MG,AP,other,Other,124.0
+1980,MG,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,80920.0
+1980,MG,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,1675.0
+1980,MG,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,167199.0
+1980,MG,ES,neighboring_state,Neighboring-state circulation,198517.0
+1980,MG,GO,neighboring_state,Neighboring-state circulation,366487.0
+1980,MG,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,8330.0
+1980,MG,MG,local,Local / within-state,3619423.0
+1980,MG,MS,neighboring_state,Neighboring-state circulation,45966.0
+1980,MG,MT,other,Other,83407.0
+1980,MG,PA,other,Other,35814.0
+1980,MG,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,1096.0
+1980,MG,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,3843.0
+1980,MG,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,448.0
+1980,MG,PR,other,Other,371719.0
+1980,MG,RJ,neighboring_state,Neighboring-state circulation,735145.0
+1980,MG,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,2011.0
+1980,MG,RO,other,Other,53108.0
+1980,MG,RR,other,Other,339.0
+1980,MG,RS,other,Other,4893.0
+1980,MG,SC,other,Other,4368.0
+1980,MG,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,980.0
+1980,MG,SP,neighboring_state,Neighboring-state circulation,1775315.0
+1980,MS,AC,other,Other,297.0
+1980,MS,AL,other,Other,188.0
+1980,MS,AM,other,Other,461.0
+1980,MS,AP,other,Other,38.0
+1980,MS,BA,other,Other,683.0
+1980,MS,CE,other,Other,249.0
+1980,MS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3030.0
+1980,MS,ES,other,Other,282.0
+1980,MS,GO,neighboring_state,Neighboring-state circulation,3796.0
+1980,MS,MA,other,Other,187.0
+1980,MS,MG,neighboring_state,Neighboring-state circulation,2503.0
+1980,MS,MS,local,Local / within-state,216680.0
+1980,MS,MT,neighboring_state,Neighboring-state circulation,21498.0
+1980,MS,PA,other,Other,792.0
+1980,MS,PB,other,Other,50.0
+1980,MS,PE,other,Other,482.0
+1980,MS,PI,other,Other,58.0
+1980,MS,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,5181.0
+1980,MS,RJ,other,Other,7593.0
+1980,MS,RN,other,Other,104.0
+1980,MS,RO,other,Other,8360.0
+1980,MS,RR,other,Other,112.0
+1980,MS,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1145.0
+1980,MS,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1492.0
+1980,MS,SE,other,Other,187.0
+1980,MS,SP,neighboring_state,Neighboring-state circulation,45217.0
+1980,MT,AC,other,Other,522.0
+1980,MT,AL,other,Other,294.0
+1980,MT,AM,neighboring_state,Neighboring-state circulation,872.0
+1980,MT,AP,other,Other,31.0
+1980,MT,BA,other,Other,1287.0
+1980,MT,CE,other,Other,648.0
+1980,MT,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3558.0
+1980,MT,ES,other,Other,406.0
+1980,MT,GO,neighboring_state,Neighboring-state circulation,18116.0
+1980,MT,MA,other,Other,518.0
+1980,MT,MG,other,Other,4592.0
+1980,MT,MS,neighboring_state,Neighboring-state circulation,14888.0
+1980,MT,MT,local,Local / within-state,141370.0
+1980,MT,PA,neighboring_state,Neighboring-state circulation,2900.0
+1980,MT,PB,other,Other,212.0
+1980,MT,PE,other,Other,620.0
+1980,MT,PI,other,Other,144.0
+1980,MT,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,5812.0
+1980,MT,RJ,other,Other,11078.0
+1980,MT,RN,other,Other,158.0
+1980,MT,RO,neighboring_state,Neighboring-state circulation,21558.0
+1980,MT,RR,other,Other,133.0
+1980,MT,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,881.0
+1980,MT,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,535.0
+1980,MT,SE,other,Other,188.0
+1980,MT,SP,other,Other,47955.0
+1980,PA,AC,other,Other,1542.0
+1980,PA,AL,other,Other,176.0
+1980,PA,AM,neighboring_state,Neighboring-state circulation,36560.0
+1980,PA,AP,neighboring_state,Neighboring-state circulation,40027.0
+1980,PA,BA,other,Other,2148.0
+1980,PA,CE,other,Other,5780.0
+1980,PA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,7548.0
+1980,PA,ES,other,Other,790.0
+1980,PA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5515.0
+1980,PA,MA,neighboring_state,Neighboring-state circulation,8483.0
+1980,PA,MG,other,Other,2415.0
+1980,PA,MS,other,Other,419.0
+1980,PA,MT,neighboring_state,Neighboring-state circulation,1701.0
+1980,PA,PA,local,Local / within-state,450288.0
+1980,PA,PB,other,Other,512.0
+1980,PA,PE,other,Other,2223.0
+1980,PA,PI,other,Other,898.0
+1980,PA,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,954.0
+1980,PA,RJ,other,Other,45504.0
+1980,PA,RN,other,Other,1280.0
+1980,PA,RO,other,Other,5147.0
+1980,PA,RR,neighboring_state,Neighboring-state circulation,1494.0
+1980,PA,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,902.0
+1980,PA,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,397.0
+1980,PA,SE,other,Other,233.0
+1980,PA,SP,other,Other,17468.0
+1980,PB,AC,other,Other,607.0
+1980,PB,AL,other,Other,7743.0
+1980,PB,AM,other,Other,2391.0
+1980,PB,AP,other,Other,263.0
+1980,PB,BA,other,Other,31824.0
+1980,PB,CE,neighboring_state,Neighboring-state circulation,44111.0
+1980,PB,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,47397.0
+1980,PB,ES,northeast_to_southeast,Northeast -> Southeast,2122.0
+1980,PB,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,21496.0
+1980,PB,MA,other,Other,12888.0
+1980,PB,MG,northeast_to_southeast,Northeast -> Southeast,13365.0
+1980,PB,MS,other,Other,5979.0
+1980,PB,MT,other,Other,3989.0
+1980,PB,PA,other,Other,7945.0
+1980,PB,PB,local,Local / within-state,525780.0
+1980,PB,PE,neighboring_state,Neighboring-state circulation,148975.0
+1980,PB,PI,other,Other,4006.0
+1980,PB,PR,other,Other,13644.0
+1980,PB,RJ,northeast_to_southeast,Northeast -> Southeast,290557.0
+1980,PB,RN,neighboring_state,Neighboring-state circulation,80865.0
+1980,PB,RO,other,Other,2733.0
+1980,PB,RR,other,Other,420.0
+1980,PB,RS,other,Other,897.0
+1980,PB,SC,other,Other,419.0
+1980,PB,SE,other,Other,1678.0
+1980,PB,SP,northeast_to_southeast,Northeast -> Southeast,192943.0
+1980,PE,AC,other,Other,475.0
+1980,PE,AL,neighboring_state,Neighboring-state circulation,98443.0
+1980,PE,AM,other,Other,2227.0
+1980,PE,AP,other,Other,189.0
+1980,PE,BA,neighboring_state,Neighboring-state circulation,89698.0
+1980,PE,CE,neighboring_state,Neighboring-state circulation,30878.0
+1980,PE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,32958.0
+1980,PE,ES,northeast_to_southeast,Northeast -> Southeast,3260.0
+1980,PE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,20224.0
+1980,PE,MA,other,Other,18343.0
+1980,PE,MG,northeast_to_southeast,Northeast -> Southeast,19121.0
+1980,PE,MS,other,Other,26390.0
+1980,PE,MT,other,Other,9112.0
+1980,PE,PA,other,Other,10244.0
+1980,PE,PB,neighboring_state,Neighboring-state circulation,72108.0
+1980,PE,PE,local,Local / within-state,1367575.0
+1980,PE,PI,neighboring_state,Neighboring-state circulation,9673.0
+1980,PE,PR,other,Other,60901.0
+1980,PE,RJ,northeast_to_southeast,Northeast -> Southeast,235261.0
+1980,PE,RN,other,Other,11429.0
+1980,PE,RO,other,Other,6173.0
+1980,PE,RR,other,Other,316.0
+1980,PE,RS,other,Other,2095.0
+1980,PE,SC,other,Other,1558.0
+1980,PE,SE,other,Other,10072.0
+1980,PE,SP,northeast_to_southeast,Northeast -> Southeast,687091.0
+1980,PI,AC,other,Other,281.0
+1980,PI,AL,other,Other,454.0
+1980,PI,AM,other,Other,1537.0
+1980,PI,AP,other,Other,240.0
+1980,PI,BA,neighboring_state,Neighboring-state circulation,11270.0
+1980,PI,CE,neighboring_state,Neighboring-state circulation,24681.0
+1980,PI,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,60202.0
+1980,PI,ES,northeast_to_southeast,Northeast -> Southeast,671.0
+1980,PI,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,41075.0
+1980,PI,MA,neighboring_state,Neighboring-state circulation,205560.0
+1980,PI,MG,northeast_to_southeast,Northeast -> Southeast,4698.0
+1980,PI,MS,other,Other,1929.0
+1980,PI,MT,other,Other,2417.0
+1980,PI,PA,other,Other,27065.0
+1980,PI,PB,other,Other,1111.0
+1980,PI,PE,neighboring_state,Neighboring-state circulation,10369.0
+1980,PI,PI,local,Local / within-state,286152.0
+1980,PI,PR,other,Other,3219.0
+1980,PI,RJ,northeast_to_southeast,Northeast -> Southeast,22297.0
+1980,PI,RN,other,Other,1150.0
+1980,PI,RO,other,Other,1427.0
+1980,PI,RR,other,Other,876.0
+1980,PI,RS,other,Other,497.0
+1980,PI,SC,other,Other,262.0
+1980,PI,SE,other,Other,476.0
+1980,PI,SP,northeast_to_southeast,Northeast -> Southeast,88689.0
+1980,PR,AC,south_to_agri_frontier,South -> agricultural frontier,1813.0
+1980,PR,AL,other,Other,2175.0
+1980,PR,AM,south_to_agri_frontier,South -> agricultural frontier,1654.0
+1980,PR,AP,south_to_agri_frontier,South -> agricultural frontier,62.0
+1980,PR,BA,other,Other,7982.0
+1980,PR,CE,other,Other,2355.0
+1980,PR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,5672.0
+1980,PR,ES,other,Other,3322.0
+1980,PR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7129.0
+1980,PR,MA,other,Other,1301.0
+1980,PR,MG,other,Other,36392.0
+1980,PR,MS,south_to_agri_frontier,South -> agricultural frontier,84042.0
+1980,PR,MT,south_to_agri_frontier,South -> agricultural frontier,72441.0
+1980,PR,PA,south_to_agri_frontier,South -> agricultural frontier,12873.0
+1980,PR,PB,other,Other,765.0
+1980,PR,PE,other,Other,4637.0
+1980,PR,PI,other,Other,317.0
+1980,PR,PR,local,Local / within-state,1894775.0
+1980,PR,RJ,other,Other,21009.0
+1980,PR,RN,other,Other,515.0
+1980,PR,RO,south_to_agri_frontier,South -> agricultural frontier,66840.0
+1980,PR,RR,south_to_agri_frontier,South -> agricultural frontier,394.0
+1980,PR,RS,other,Other,19609.0
+1980,PR,SC,neighboring_state,Neighboring-state circulation,79409.0
+1980,PR,SE,other,Other,1638.0
+1980,PR,SP,neighboring_state,Neighboring-state circulation,721720.0
+1980,RJ,AC,other,Other,508.0
+1980,RJ,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,2755.0
+1980,RJ,AM,other,Other,2981.0
+1980,RJ,AP,other,Other,254.0
+1980,RJ,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,16530.0
+1980,RJ,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,5717.0
+1980,RJ,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,59714.0
+1980,RJ,ES,neighboring_state,Neighboring-state circulation,43539.0
+1980,RJ,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5950.0
+1980,RJ,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,1884.0
+1980,RJ,MG,neighboring_state,Neighboring-state circulation,80122.0
+1980,RJ,MS,other,Other,5228.0
+1980,RJ,MT,other,Other,2939.0
+1980,RJ,PA,other,Other,5642.0
+1980,RJ,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,8033.0
+1980,RJ,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,13078.0
+1980,RJ,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,821.0
+1980,RJ,PR,other,Other,26441.0
+1980,RJ,RJ,local,Local / within-state,1602601.0
+1980,RJ,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,4887.0
+1980,RJ,RO,other,Other,2317.0
+1980,RJ,RR,other,Other,248.0
+1980,RJ,RS,other,Other,9496.0
+1980,RJ,SC,other,Other,6339.0
+1980,RJ,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,3246.0
+1980,RJ,SP,neighboring_state,Neighboring-state circulation,167244.0
+1980,RN,AC,other,Other,1347.0
+1980,RN,AL,other,Other,1734.0
+1980,RN,AM,other,Other,2653.0
+1980,RN,AP,other,Other,640.0
+1980,RN,BA,other,Other,7644.0
+1980,RN,CE,neighboring_state,Neighboring-state circulation,31730.0
+1980,RN,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,23151.0
+1980,RN,ES,northeast_to_southeast,Northeast -> Southeast,1296.0
+1980,RN,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,30089.0
+1980,RN,MA,other,Other,7460.0
+1980,RN,MG,northeast_to_southeast,Northeast -> Southeast,20758.0
+1980,RN,MS,other,Other,2668.0
+1980,RN,MT,other,Other,2943.0
+1980,RN,PA,other,Other,9400.0
+1980,RN,PB,neighboring_state,Neighboring-state circulation,46905.0
+1980,RN,PE,other,Other,26429.0
+1980,RN,PI,other,Other,2649.0
+1980,RN,PR,other,Other,4645.0
+1980,RN,RJ,northeast_to_southeast,Northeast -> Southeast,98334.0
+1980,RN,RN,local,Local / within-state,441420.0
+1980,RN,RO,other,Other,1996.0
+1980,RN,RR,other,Other,690.0
+1980,RN,RS,other,Other,737.0
+1980,RN,SC,other,Other,412.0
+1980,RN,SE,other,Other,997.0
+1980,RN,SP,northeast_to_southeast,Northeast -> Southeast,93453.0
+1980,RO,AC,neighboring_state,Neighboring-state circulation,895.0
+1980,RO,AL,other,Other,76.0
+1980,RO,AM,neighboring_state,Neighboring-state circulation,2861.0
+1980,RO,AP,other,Other,93.0
+1980,RO,BA,other,Other,345.0
+1980,RO,CE,other,Other,624.0
+1980,RO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,490.0
+1980,RO,ES,other,Other,176.0
+1980,RO,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,544.0
+1980,RO,MA,other,Other,624.0
+1980,RO,MG,other,Other,519.0
+1980,RO,MS,other,Other,379.0
+1980,RO,MT,neighboring_state,Neighboring-state circulation,1022.0
+1980,RO,PA,other,Other,1739.0
+1980,RO,PB,other,Other,142.0
+1980,RO,PE,other,Other,259.0
+1980,RO,PI,other,Other,376.0
+1980,RO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,336.0
+1980,RO,RJ,other,Other,1277.0
+1980,RO,RN,other,Other,141.0
+1980,RO,RO,local,Local / within-state,7187.0
+1980,RO,RR,other,Other,231.0
+1980,RO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,112.0
+1980,RO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,119.0
+1980,RO,SE,other,Other,40.0
+1980,RO,SP,other,Other,1824.0
+1980,RR,AC,other,Other,35.0
+1980,RR,AL,other,Other,8.0
+1980,RR,AM,neighboring_state,Neighboring-state circulation,1781.0
+1980,RR,AP,other,Other,25.0
+1980,RR,BA,other,Other,50.0
+1980,RR,CE,other,Other,380.0
+1980,RR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,306.0
+1980,RR,ES,other,Other,15.0
+1980,RR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,122.0
+1980,RR,MA,other,Other,156.0
+1980,RR,MG,other,Other,60.0
+1980,RR,MS,other,Other,114.0
+1980,RR,MT,other,Other,38.0
+1980,RR,PA,neighboring_state,Neighboring-state circulation,508.0
+1980,RR,PB,other,Other,37.0
+1980,RR,PE,other,Other,16.0
+1980,RR,PI,other,Other,36.0
+1980,RR,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,93.0
+1980,RR,RJ,other,Other,473.0
+1980,RR,RN,other,Other,30.0
+1980,RR,RO,other,Other,225.0
+1980,RR,RR,local,Local / within-state,396.0
+1980,RR,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,45.0
+1980,RR,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,19.0
+1980,RR,SE,other,Other,12.0
+1980,RR,SP,other,Other,388.0
+1980,RS,AC,south_to_agri_frontier,South -> agricultural frontier,367.0
+1980,RS,AL,other,Other,411.0
+1980,RS,AM,south_to_agri_frontier,South -> agricultural frontier,1750.0
+1980,RS,AP,south_to_agri_frontier,South -> agricultural frontier,135.0
+1980,RS,BA,other,Other,3370.0
+1980,RS,CE,other,Other,1086.0
+1980,RS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,10939.0
+1980,RS,ES,other,Other,1662.0
+1980,RS,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4418.0
+1980,RS,MA,other,Other,1105.0
+1980,RS,MG,other,Other,8212.0
+1980,RS,MS,south_to_agri_frontier,South -> agricultural frontier,25642.0
+1980,RS,MT,south_to_agri_frontier,South -> agricultural frontier,23938.0
+1980,RS,PA,south_to_agri_frontier,South -> agricultural frontier,4860.0
+1980,RS,PB,other,Other,477.0
+1980,RS,PE,other,Other,2064.0
+1980,RS,PI,other,Other,158.0
+1980,RS,PR,other,Other,380966.0
+1980,RS,RJ,other,Other,46848.0
+1980,RS,RN,other,Other,418.0
+1980,RS,RO,south_to_agri_frontier,South -> agricultural frontier,6003.0
+1980,RS,RR,south_to_agri_frontier,South -> agricultural frontier,636.0
+1980,RS,RS,local,Local / within-state,2448178.0
+1980,RS,SC,neighboring_state,Neighboring-state circulation,291676.0
+1980,RS,SE,other,Other,456.0
+1980,RS,SP,other,Other,61201.0
+1980,SC,AC,south_to_agri_frontier,South -> agricultural frontier,234.0
+1980,SC,AL,other,Other,131.0
+1980,SC,AM,south_to_agri_frontier,South -> agricultural frontier,450.0
+1980,SC,AP,south_to_agri_frontier,South -> agricultural frontier,9.0
+1980,SC,BA,other,Other,968.0
+1980,SC,CE,other,Other,221.0
+1980,SC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2695.0
+1980,SC,ES,other,Other,596.0
+1980,SC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1556.0
+1980,SC,MA,other,Other,214.0
+1980,SC,MG,other,Other,3745.0
+1980,SC,MS,south_to_agri_frontier,South -> agricultural frontier,8920.0
+1980,SC,MT,south_to_agri_frontier,South -> agricultural frontier,9985.0
+1980,SC,PA,south_to_agri_frontier,South -> agricultural frontier,2531.0
+1980,SC,PB,other,Other,184.0
+1980,SC,PE,other,Other,534.0
+1980,SC,PI,other,Other,74.0
+1980,SC,PR,neighboring_state,Neighboring-state circulation,345573.0
+1980,SC,RJ,other,Other,18838.0
+1980,SC,RN,other,Other,138.0
+1980,SC,RO,south_to_agri_frontier,South -> agricultural frontier,4914.0
+1980,SC,RR,south_to_agri_frontier,South -> agricultural frontier,213.0
+1980,SC,RS,neighboring_state,Neighboring-state circulation,113147.0
+1980,SC,SC,local,Local / within-state,891405.0
+1980,SC,SE,other,Other,237.0
+1980,SC,SP,other,Other,55382.0
+1980,SE,AC,other,Other,98.0
+1980,SE,AL,neighboring_state,Neighboring-state circulation,8128.0
+1980,SE,AM,other,Other,225.0
+1980,SE,AP,other,Other,8.0
+1980,SE,BA,neighboring_state,Neighboring-state circulation,66999.0
+1980,SE,CE,other,Other,581.0
+1980,SE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4168.0
+1980,SE,ES,northeast_to_southeast,Northeast -> Southeast,1892.0
+1980,SE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1469.0
+1980,SE,MA,other,Other,756.0
+1980,SE,MG,northeast_to_southeast,Northeast -> Southeast,4060.0
+1980,SE,MS,other,Other,7260.0
+1980,SE,MT,other,Other,2545.0
+1980,SE,PA,other,Other,949.0
+1980,SE,PB,other,Other,473.0
+1980,SE,PE,other,Other,2834.0
+1980,SE,PI,other,Other,139.0
+1980,SE,PR,other,Other,17692.0
+1980,SE,RJ,northeast_to_southeast,Northeast -> Southeast,61874.0
+1980,SE,RN,other,Other,411.0
+1980,SE,RO,other,Other,1814.0
+1980,SE,RR,other,Other,30.0
+1980,SE,RS,other,Other,312.0
+1980,SE,SC,other,Other,250.0
+1980,SE,SE,local,Local / within-state,195367.0
+1980,SE,SP,northeast_to_southeast,Northeast -> Southeast,148166.0
+1980,SP,AC,other,Other,1154.0
+1980,SP,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,8796.0
+1980,SP,AM,other,Other,3797.0
+1980,SP,AP,other,Other,188.0
+1980,SP,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,35410.0
+1980,SP,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,7516.0
+1980,SP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,27307.0
+1980,SP,ES,other,Other,6767.0
+1980,SP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,55475.0
+1980,SP,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,2326.0
+1980,SP,MG,neighboring_state,Neighboring-state circulation,155983.0
+1980,SP,MS,neighboring_state,Neighboring-state circulation,166136.0
+1980,SP,MT,other,Other,79231.0
+1980,SP,PA,other,Other,10668.0
+1980,SP,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,4012.0
+1980,SP,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,21263.0
+1980,SP,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,1836.0
+1980,SP,PR,neighboring_state,Neighboring-state circulation,602900.0
+1980,SP,RJ,neighboring_state,Neighboring-state circulation,122774.0
+1980,SP,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,2880.0
+1980,SP,RO,other,Other,22695.0
+1980,SP,RR,other,Other,385.0
+1980,SP,RS,other,Other,13873.0
+1980,SP,SC,other,Other,14052.0
+1980,SP,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,6640.0
+1980,SP,SP,local,Local / within-state,6285029.0
+1991,AC,AC,local,Local / within-state,16980.735371099992
+1991,AC,AM,neighboring_state,Neighboring-state circulation,3051.5172151
+1991,AC,AP,other,Other,14.786685
+1991,AC,BA,other,Other,57.7089352
+1991,AC,CE,other,Other,382.49207429999996
+1991,AC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,354.72250060000005
+1991,AC,ES,other,Other,139.37687029999998
+1991,AC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,259.6502699
+1991,AC,MA,other,Other,45.33089850000001
+1991,AC,MG,other,Other,423.43459350000006
+1991,AC,MS,other,Other,189.15141800000006
+1991,AC,MT,other,Other,792.3719833
+1991,AC,PA,other,Other,412.5936339000001
+1991,AC,PB,other,Other,123.63765260000001
+1991,AC,PE,other,Other,97.7756875
+1991,AC,PI,other,Other,43.3620632
+1991,AC,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,409.3900568
+1991,AC,RJ,other,Other,352.80521310000006
+1991,AC,RN,other,Other,175.9975573
+1991,AC,RO,neighboring_state,Neighboring-state circulation,5373.854166000009
+1991,AC,RR,other,Other,302.6543811
+1991,AC,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,321.1896307
+1991,AC,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,136.6276653
+1991,AC,SE,other,Other,50.70841120000001
+1991,AC,SP,other,Other,810.1143448
+1991,AC,TO,other,Other,21.877739700000003
+1991,AL,AC,other,Other,122.54575360000001
+1991,AL,AL,local,Local / within-state,147696.2119718012
+1991,AL,AM,other,Other,32.2411971
+1991,AL,AP,other,Other,23.1296645
+1991,AL,BA,neighboring_state,Neighboring-state circulation,8471.4129429
+1991,AL,CE,other,Other,1746.4884186000004
+1991,AL,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,927.813960200001
+1991,AL,ES,northeast_to_southeast,Northeast -> Southeast,898.3977981000012
+1991,AL,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,681.7185461000003
+1991,AL,MA,other,Other,586.4929445
+1991,AL,MG,northeast_to_southeast,Northeast -> Southeast,995.806096
+1991,AL,MS,other,Other,709.0422960000008
+1991,AL,MT,other,Other,1535.3696033000003
+1991,AL,PA,other,Other,755.7654091999999
+1991,AL,PB,other,Other,1666.509723099999
+1991,AL,PE,neighboring_state,Neighboring-state circulation,21267.40238819996
+1991,AL,PI,other,Other,181.8250835
+1991,AL,PR,other,Other,732.6965801000001
+1991,AL,RJ,northeast_to_southeast,Northeast -> Southeast,4249.8545027
+1991,AL,RN,other,Other,1029.0530439000004
+1991,AL,RO,other,Other,583.5531073000002
+1991,AL,RR,other,Other,93.6199697
+1991,AL,RS,other,Other,467.4005285
+1991,AL,SC,other,Other,161.57398760000004
+1991,AL,SE,neighboring_state,Neighboring-state circulation,11844.871218500006
+1991,AL,SP,northeast_to_southeast,Northeast -> Southeast,52316.58974519998
+1991,AL,TO,other,Other,541.4962684000002
+1991,AM,AC,neighboring_state,Neighboring-state circulation,3370.6235988000008
+1991,AM,AL,other,Other,126.4788133
+1991,AM,AM,local,Local / within-state,57227.6760758002
+1991,AM,AP,other,Other,275.6601584000002
+1991,AM,BA,other,Other,754.2494734999997
+1991,AM,CE,other,Other,2910.2744772999986
+1991,AM,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1118.1612116
+1991,AM,ES,other,Other,186.5648033
+1991,AM,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,737.5474857999999
+1991,AM,MA,other,Other,996.2237182000005
+1991,AM,MG,other,Other,2557.1084491
+1991,AM,MS,other,Other,659.0363564000003
+1991,AM,MT,neighboring_state,Neighboring-state circulation,611.2492919999996
+1991,AM,PA,neighboring_state,Neighboring-state circulation,7174.618942199999
+1991,AM,PB,other,Other,249.95653560000005
+1991,AM,PE,other,Other,966.6883460999998
+1991,AM,PI,other,Other,484.68411050000014
+1991,AM,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,1070.0159092000001
+1991,AM,RJ,other,Other,3037.0360643999993
+1991,AM,RN,other,Other,779.5694391999995
+1991,AM,RO,neighboring_state,Neighboring-state circulation,7660.458669100011
+1991,AM,RR,neighboring_state,Neighboring-state circulation,3425.9621693
+1991,AM,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,745.9157069000001
+1991,AM,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,282.0540877
+1991,AM,SE,other,Other,188.6094398000001
+1991,AM,SP,other,Other,3741.670838000001
+1991,AM,TO,other,Other,168.93425130000008
+1991,AP,AC,other,Other,13.5364058
+1991,AP,AM,other,Other,240.43941939999996
+1991,AP,AP,local,Local / within-state,6406.121912399997
+1991,AP,BA,other,Other,48.6247965
+1991,AP,CE,other,Other,615.2857726000001
+1991,AP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,190.91591310000004
+1991,AP,ES,other,Other,91.0596577
+1991,AP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,25.9968234
+1991,AP,MA,other,Other,475.87730150000027
+1991,AP,MG,other,Other,253.7216905
+1991,AP,MS,other,Other,17.7753319
+1991,AP,MT,other,Other,73.81295440000001
+1991,AP,PA,neighboring_state,Neighboring-state circulation,4069.689419599995
+1991,AP,PE,other,Other,100.6774529
+1991,AP,PI,other,Other,80.4108713
+1991,AP,RJ,other,Other,216.64405520000003
+1991,AP,RN,other,Other,81.2562159
+1991,AP,RO,other,Other,70.15993080000001
+1991,AP,RR,other,Other,61.8955332
+1991,AP,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,6.891407
+1991,AP,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,128.30121269999998
+1991,AP,SP,other,Other,225.66469340000006
+1991,AP,TO,other,Other,58.756191099999995
+1991,BA,AC,other,Other,166.61083469999997
+1991,BA,AL,neighboring_state,Neighboring-state circulation,6476.940981199998
+1991,BA,AM,other,Other,982.5943710999998
+1991,BA,AP,other,Other,164.14357870000003
+1991,BA,BA,local,Local / within-state,602095.8892048976
+1991,BA,CE,other,Other,5192.653530500007
+1991,BA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,22443.47034110003
+1991,BA,ES,northeast_to_southeast,Northeast -> Southeast,24085.863073999946
+1991,BA,GO,neighboring_state,Neighboring-state circulation,28191.255647000093
+1991,BA,MA,other,Other,2382.9768083000026
+1991,BA,MG,northeast_to_southeast,Northeast -> Southeast,28958.98909859997
+1991,BA,MS,other,Other,1692.3258562999977
+1991,BA,MT,other,Other,6591.461081700015
+1991,BA,PA,other,Other,13331.659678599957
+1991,BA,PB,other,Other,3468.923696899999
+1991,BA,PE,neighboring_state,Neighboring-state circulation,18543.465639700007
+1991,BA,PI,neighboring_state,Neighboring-state circulation,2985.641976900004
+1991,BA,PR,other,Other,3879.5760171999987
+1991,BA,RJ,northeast_to_southeast,Northeast -> Southeast,19026.286676099997
+1991,BA,RN,other,Other,2372.1910637
+1991,BA,RO,other,Other,5710.794560800003
+1991,BA,RR,other,Other,357.70270610000006
+1991,BA,RS,other,Other,2106.090345799999
+1991,BA,SC,other,Other,1096.1133366000004
+1991,BA,SE,neighboring_state,Neighboring-state circulation,18215.370657299965
+1991,BA,SP,northeast_to_southeast,Northeast -> Southeast,248590.95781029947
+1991,BA,TO,neighboring_state,Neighboring-state circulation,2062.3853599999948
+1991,CE,AC,other,Other,545.2110066999999
+1991,CE,AL,other,Other,997.1590327999996
+1991,CE,AM,other,Other,6523.685266499997
+1991,CE,AP,other,Other,652.3104033999999
+1991,CE,BA,other,Other,7476.610079699998
+1991,CE,CE,local,Local / within-state,374464.5572289945
+1991,CE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,16153.23484489995
+1991,CE,ES,northeast_to_southeast,Northeast -> Southeast,1728.0123438999997
+1991,CE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,8178.546476399989
+1991,CE,MA,other,Other,8928.782517700001
+1991,CE,MG,northeast_to_southeast,Northeast -> Southeast,5467.734507599999
+1991,CE,MS,other,Other,2132.1805724000023
+1991,CE,MT,other,Other,2314.9831937000013
+1991,CE,PA,other,Other,12784.43758289996
+1991,CE,PB,neighboring_state,Neighboring-state circulation,4552.066299600004
+1991,CE,PE,neighboring_state,Neighboring-state circulation,13042.843244900003
+1991,CE,PI,neighboring_state,Neighboring-state circulation,11492.70888250001
+1991,CE,PR,other,Other,1702.1847567999998
+1991,CE,RJ,northeast_to_southeast,Northeast -> Southeast,23345.626998200038
+1991,CE,RN,neighboring_state,Neighboring-state circulation,9701.008642599985
+1991,CE,RO,other,Other,4436.680050300001
+1991,CE,RR,other,Other,2598.118432499995
+1991,CE,RS,other,Other,1274.3473544999997
+1991,CE,SC,other,Other,770.8639309
+1991,CE,SE,other,Other,863.7219801999997
+1991,CE,SP,northeast_to_southeast,Northeast -> Southeast,94929.54514159993
+1991,CE,TO,other,Other,2571.878441900003
+1991,DF,AC,other,Other,279.3220458000001
+1991,DF,AL,other,Other,579.4658155000002
+1991,DF,AM,other,Other,534.4905179000002
+1991,DF,AP,other,Other,68.840946
+1991,DF,BA,other,Other,3582.346913699999
+1991,DF,CE,other,Other,5365.267225599998
+1991,DF,ES,other,Other,2651.1426501000014
+1991,DF,GO,neighboring_state,Neighboring-state circulation,66991.81400179981
+1991,DF,MA,other,Other,3596.023479999999
+1991,DF,MG,other,Other,13149.608289800024
+1991,DF,MS,other,Other,955.8236645000006
+1991,DF,MT,other,Other,2040.1917551
+1991,DF,PA,other,Other,2212.339563599996
+1991,DF,PB,other,Other,2520.884561499998
+1991,DF,PE,other,Other,2640.3544275
+1991,DF,PI,other,Other,4331.3063803999985
+1991,DF,PR,other,Other,2547.3993366999994
+1991,DF,RJ,other,Other,8825.379356800002
+1991,DF,RN,other,Other,2938.7010538
+1991,DF,RO,other,Other,842.6931280000002
+1991,DF,RR,other,Other,184.4617337
+1991,DF,RS,other,Other,2361.0590665000004
+1991,DF,SC,other,Other,1359.0153975999976
+1991,DF,SE,other,Other,1234.402001400002
+1991,DF,SP,other,Other,9547.492917099999
+1991,DF,TO,other,Other,2333.7659042999994
+1991,ES,AC,other,Other,125.13914710000002
+1991,ES,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,120.15073180000002
+1991,ES,AM,other,Other,214.76592269999998
+1991,ES,AP,other,Other,24.3977326
+1991,ES,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,9372.2684472
+1991,ES,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,601.9895728
+1991,ES,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1260.7337163000002
+1991,ES,ES,local,Local / within-state,191687.07117039934
+1991,ES,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1171.2574208999995
+1991,ES,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,311.45793110000005
+1991,ES,MG,neighboring_state,Neighboring-state circulation,27725.4782468
+1991,ES,MS,other,Other,277.6502404000001
+1991,ES,MT,other,Other,1152.967264200001
+1991,ES,PA,other,Other,3934.845130900005
+1991,ES,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,142.47627789999996
+1991,ES,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,564.6655217
+1991,ES,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,153.288898
+1991,ES,PR,other,Other,1291.9170814999998
+1991,ES,RJ,neighboring_state,Neighboring-state circulation,16979.798962400004
+1991,ES,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,355.1970297
+1991,ES,RO,other,Other,14695.241643600037
+1991,ES,RR,other,Other,57.432961
+1991,ES,RS,other,Other,550.9909457
+1991,ES,SC,other,Other,623.5353731000002
+1991,ES,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,194.82814609999994
+1991,ES,SP,other,Other,8864.2393499
+1991,ES,TO,other,Other,142.63091
+1991,GO,AC,other,Other,190.11875150000006
+1991,GO,AL,other,Other,253.3848162000001
+1991,GO,AM,other,Other,567.2797707000002
+1991,GO,AP,other,Other,80.12877990000001
+1991,GO,BA,neighboring_state,Neighboring-state circulation,4189.629778499994
+1991,GO,CE,other,Other,1274.9273232
+1991,GO,DF,neighboring_state,Neighboring-state circulation,26857.335911299957
+1991,GO,ES,other,Other,411.4246697000002
+1991,GO,GO,local,Local / within-state,335041.43679969857
+1991,GO,MA,other,Other,2792.790599899998
+1991,GO,MG,neighboring_state,Neighboring-state circulation,30345.83140450013
+1991,GO,MS,neighboring_state,Neighboring-state circulation,3346.508452600007
+1991,GO,MT,neighboring_state,Neighboring-state circulation,21901.213944700026
+1991,GO,PA,other,Other,11033.681562200007
+1991,GO,PB,other,Other,735.6848843
+1991,GO,PE,other,Other,1181.857353
+1991,GO,PI,other,Other,895.2974041000006
+1991,GO,PR,other,Other,2029.0375735999996
+1991,GO,RJ,other,Other,1804.2484383999997
+1991,GO,RN,other,Other,1171.9110514999998
+1991,GO,RO,other,Other,4143.873970399999
+1991,GO,RR,other,Other,609.1607947999996
+1991,GO,RS,other,Other,1824.6774352000004
+1991,GO,SC,other,Other,664.7565416999998
+1991,GO,SE,other,Other,187.3165641999999
+1991,GO,SP,other,Other,17330.725484100003
+1991,GO,TO,neighboring_state,Neighboring-state circulation,20841.93709919998
+1991,MA,AC,other,Other,159.70708889999997
+1991,MA,AL,other,Other,331.7432415000002
+1991,MA,AM,other,Other,4805.339650600009
+1991,MA,AP,other,Other,1610.8036809999992
+1991,MA,BA,other,Other,1783.8216643999995
+1991,MA,CE,other,Other,8841.090028299997
+1991,MA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,14430.754943899972
+1991,MA,ES,northeast_to_southeast,Northeast -> Southeast,799.7566359999996
+1991,MA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,9170.053091000016
+1991,MA,MA,local,Local / within-state,324057.39302099746
+1991,MA,MG,northeast_to_southeast,Northeast -> Southeast,3167.9620471000007
+1991,MA,MS,other,Other,509.36219359999996
+1991,MA,MT,other,Other,11946.771922299991
+1991,MA,PA,neighboring_state,Neighboring-state circulation,84538.09018480053
+1991,MA,PB,other,Other,1066.7155002999996
+1991,MA,PE,other,Other,2786.8933430000016
+1991,MA,PI,neighboring_state,Neighboring-state circulation,27830.51183970002
+1991,MA,PR,other,Other,783.8272478999997
+1991,MA,RJ,northeast_to_southeast,Northeast -> Southeast,7361.5741595
+1991,MA,RN,other,Other,868.9005151000006
+1991,MA,RO,other,Other,5307.224123600009
+1991,MA,RR,other,Other,12696.29888280002
+1991,MA,RS,other,Other,626.2330380000001
+1991,MA,SC,other,Other,188.96211230000003
+1991,MA,SE,other,Other,613.4557422000001
+1991,MA,SP,northeast_to_southeast,Northeast -> Southeast,18023.578449900004
+1991,MA,TO,neighboring_state,Neighboring-state circulation,17671.55504489996
+1991,MG,AC,other,Other,302.71733259999985
+1991,MG,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,566.4205556
+1991,MG,AM,other,Other,1046.0397145
+1991,MG,AP,other,Other,209.67833899999997
+1991,MG,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,18314.464310199975
+1991,MG,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,1857.6693871000002
+1991,MG,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,27341.44658740002
+1991,MG,ES,neighboring_state,Neighboring-state circulation,51396.418193999634
+1991,MG,GO,neighboring_state,Neighboring-state circulation,35795.380461300025
+1991,MG,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,2134.109481499998
+1991,MG,MG,local,Local / within-state,958936.3035389968
+1991,MG,MS,neighboring_state,Neighboring-state circulation,5063.834117799992
+1991,MG,MT,other,Other,10405.735514800013
+1991,MG,PA,other,Other,8003.945461399995
+1991,MG,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,734.5329345999999
+1991,MG,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,2658.3254875000016
+1991,MG,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,430.7982100000001
+1991,MG,PR,other,Other,9745.884588200008
+1991,MG,RJ,neighboring_state,Neighboring-state circulation,45551.460233800026
+1991,MG,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,1259.4436445000008
+1991,MG,RO,other,Other,11239.988370300018
+1991,MG,RR,other,Other,276.8567452
+1991,MG,RS,other,Other,2500.7990002000015
+1991,MG,SC,other,Other,2065.796810699998
+1991,MG,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,585.0052302
+1991,MG,SP,neighboring_state,Neighboring-state circulation,236085.67953389982
+1991,MG,TO,other,Other,3802.3270772000037
+1991,MS,AC,other,Other,284.0551883
+1991,MS,AL,other,Other,264.08222649999993
+1991,MS,AM,other,Other,289.0590769000001
+1991,MS,AP,other,Other,37.3545994
+1991,MS,BA,other,Other,498.94709420000004
+1991,MS,CE,other,Other,545.2761215
+1991,MS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,889.1494043999998
+1991,MS,ES,other,Other,349.6948061000002
+1991,MS,GO,neighboring_state,Neighboring-state circulation,3325.215688700003
+1991,MS,MA,other,Other,425.82535080000014
+1991,MS,MG,neighboring_state,Neighboring-state circulation,2994.5968123000007
+1991,MS,MS,local,Local / within-state,137939.8280753998
+1991,MS,MT,neighboring_state,Neighboring-state circulation,29037.42506700006
+1991,MS,PA,other,Other,961.3440449999997
+1991,MS,PB,other,Other,223.84910060000007
+1991,MS,PE,other,Other,645.3929023999999
+1991,MS,PI,other,Other,209.0335366
+1991,MS,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,14805.69292909999
+1991,MS,RJ,other,Other,1770.3018215
+1991,MS,RN,other,Other,292.0379908000001
+1991,MS,RO,other,Other,5539.189099199994
+1991,MS,RR,other,Other,159.0498571
+1991,MS,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,2963.4471386999994
+1991,MS,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1814.814134600002
+1991,MS,SE,other,Other,298.7361545
+1991,MS,SP,neighboring_state,Neighboring-state circulation,35854.3471579
+1991,MS,TO,other,Other,545.1377894000002
+1991,MT,AC,other,Other,651.7627525000007
+1991,MT,AL,other,Other,183.0917088
+1991,MT,AM,neighboring_state,Neighboring-state circulation,709.1781733000005
+1991,MT,AP,other,Other,46.2169082
+1991,MT,BA,other,Other,960.1741613999999
+1991,MT,CE,other,Other,831.8327329999997
+1991,MT,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2009.1452481999982
+1991,MT,ES,other,Other,571.8770009000002
+1991,MT,GO,neighboring_state,Neighboring-state circulation,15808.55419669998
+1991,MT,MA,other,Other,1126.3035097000006
+1991,MT,MG,other,Other,5935.1321174
+1991,MT,MS,neighboring_state,Neighboring-state circulation,13797.13626940002
+1991,MT,MT,local,Local / within-state,164655.66926850012
+1991,MT,PA,neighboring_state,Neighboring-state circulation,3691.8029952999987
+1991,MT,PB,other,Other,249.1462842
+1991,MT,PE,other,Other,439.9948981
+1991,MT,PI,other,Other,189.95688320000002
+1991,MT,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,25504.53944090001
+1991,MT,RJ,other,Other,1336.6332491
+1991,MT,RN,other,Other,406.9583392999998
+1991,MT,RO,neighboring_state,Neighboring-state circulation,11658.975097600012
+1991,MT,RR,other,Other,752.3145272999998
+1991,MT,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,4507.755989900001
+1991,MT,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,3717.0215952000026
+1991,MT,SE,other,Other,118.41200620000001
+1991,MT,SP,other,Other,21189.96905100001
+1991,MT,TO,neighboring_state,Neighboring-state circulation,1929.7945027000012
+1991,PA,AC,other,Other,377.1175479
+1991,PA,AL,other,Other,630.7974656
+1991,PA,AM,neighboring_state,Neighboring-state circulation,24187.926940700087
+1991,PA,AP,neighboring_state,Neighboring-state circulation,17823.599360000062
+1991,PA,BA,other,Other,2829.5638415000008
+1991,PA,CE,other,Other,8573.8368962
+1991,PA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4975.596840800005
+1991,PA,ES,other,Other,1825.3497801999997
+1991,PA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,12915.782391000002
+1991,PA,MA,neighboring_state,Neighboring-state circulation,28080.291185399783
+1991,PA,MG,other,Other,6052.792289000003
+1991,PA,MS,other,Other,1011.8664904000003
+1991,PA,MT,neighboring_state,Neighboring-state circulation,7826.974556099979
+1991,PA,PA,local,Local / within-state,329628.04919230164
+1991,PA,PB,other,Other,993.2580767000001
+1991,PA,PE,other,Other,2634.1017138999996
+1991,PA,PI,other,Other,4010.815250699999
+1991,PA,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,2853.6554577999987
+1991,PA,RJ,other,Other,6948.850734299999
+1991,PA,RN,other,Other,2399.027113699999
+1991,PA,RO,other,Other,5397.291009899996
+1991,PA,RR,neighboring_state,Neighboring-state circulation,7393.3816640000105
+1991,PA,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1229.4411234000006
+1991,PA,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1093.5153061000005
+1991,PA,SE,other,Other,315.1331395
+1991,PA,SP,other,Other,14654.618700600002
+1991,PA,TO,neighboring_state,Neighboring-state circulation,16160.75677470006
+1991,PB,AC,other,Other,122.08514469999997
+1991,PB,AL,other,Other,1400.8567389000002
+1991,PB,AM,other,Other,648.1215094000001
+1991,PB,AP,other,Other,278.7289997
+1991,PB,BA,other,Other,5199.996909299998
+1991,PB,CE,neighboring_state,Neighboring-state circulation,6729.168135000003
+1991,PB,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,10266.511288599999
+1991,PB,ES,northeast_to_southeast,Northeast -> Southeast,427.8579250000001
+1991,PB,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4379.125484100002
+1991,PB,MA,other,Other,1633.6355818999994
+1991,PB,MG,northeast_to_southeast,Northeast -> Southeast,2044.8976828999998
+1991,PB,MS,other,Other,555.1048762000001
+1991,PB,MT,other,Other,847.0076217
+1991,PB,PA,other,Other,1917.4669651999989
+1991,PB,PB,local,Local / within-state,154585.87967270042
+1991,PB,PE,neighboring_state,Neighboring-state circulation,24340.55165480001
+1991,PB,PI,other,Other,933.9962883999999
+1991,PB,PR,other,Other,927.2641964
+1991,PB,RJ,northeast_to_southeast,Northeast -> Southeast,30434.48347259999
+1991,PB,RN,neighboring_state,Neighboring-state circulation,18367.761896599997
+1991,PB,RO,other,Other,1664.2308926999997
+1991,PB,RR,other,Other,392.75954509999997
+1991,PB,RS,other,Other,411.43758539999993
+1991,PB,SC,other,Other,181.95702459999995
+1991,PB,SE,other,Other,576.0812785999999
+1991,PB,SP,northeast_to_southeast,Northeast -> Southeast,58742.86546330011
+1991,PB,TO,other,Other,633.8781612000005
+1991,PE,AC,other,Other,98.24164139999999
+1991,PE,AL,neighboring_state,Neighboring-state circulation,24861.51718029998
+1991,PE,AM,other,Other,995.8217545000002
+1991,PE,AP,other,Other,152.51876450000006
+1991,PE,BA,neighboring_state,Neighboring-state circulation,25477.162781799998
+1991,PE,CE,neighboring_state,Neighboring-state circulation,10888.995131500034
+1991,PE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,7085.617677500018
+1991,PE,ES,northeast_to_southeast,Northeast -> Southeast,975.1608224000004
+1991,PE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3424.430021900003
+1991,PE,MA,other,Other,4325.543498000004
+1991,PE,MG,northeast_to_southeast,Northeast -> Southeast,4050.2009408000013
+1991,PE,MS,other,Other,2027.587070700001
+1991,PE,MT,other,Other,1484.1087230999995
+1991,PE,PA,other,Other,3660.328549099999
+1991,PE,PB,neighboring_state,Neighboring-state circulation,21610.719483200042
+1991,PE,PE,local,Local / within-state,416823.59981800057
+1991,PE,PI,neighboring_state,Neighboring-state circulation,3571.3873537000054
+1991,PE,PR,other,Other,2264.2899414000008
+1991,PE,RJ,northeast_to_southeast,Northeast -> Southeast,19392.16296160002
+1991,PE,RN,other,Other,6554.877790599995
+1991,PE,RO,other,Other,1869.9330350000012
+1991,PE,RR,other,Other,378.88217419999995
+1991,PE,RS,other,Other,860.2585418000001
+1991,PE,SC,other,Other,372.1711739999998
+1991,PE,SE,other,Other,4467.277288900011
+1991,PE,SP,northeast_to_southeast,Northeast -> Southeast,164906.62312929973
+1991,PE,TO,other,Other,1475.6913103000018
+1991,PI,AC,other,Other,93.8868542
+1991,PI,AL,other,Other,174.36321039999999
+1991,PI,AM,other,Other,1697.8375320999994
+1991,PI,AP,other,Other,472.4282744999999
+1991,PI,BA,neighboring_state,Neighboring-state circulation,3143.203482799999
+1991,PI,CE,neighboring_state,Neighboring-state circulation,10497.406161399993
+1991,PI,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,21979.197707700034
+1991,PI,ES,northeast_to_southeast,Northeast -> Southeast,199.47818329999996
+1991,PI,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7665.008407600016
+1991,PI,MA,neighboring_state,Neighboring-state circulation,24228.462467200025
+1991,PI,MG,northeast_to_southeast,Northeast -> Southeast,1119.8162273999997
+1991,PI,MS,other,Other,264.8700954
+1991,PI,MT,other,Other,853.9110378
+1991,PI,PA,other,Other,8098.96668540001
+1991,PI,PB,other,Other,727.1300782
+1991,PI,PE,neighboring_state,Neighboring-state circulation,4442.920733400005
+1991,PI,PI,local,Local / within-state,107252.69410919934
+1991,PI,PR,other,Other,435.51266589999994
+1991,PI,RJ,northeast_to_southeast,Northeast -> Southeast,3393.9344602
+1991,PI,RN,other,Other,864.6674917999995
+1991,PI,RO,other,Other,711.7666186
+1991,PI,RR,other,Other,1104.4530102999986
+1991,PI,RS,other,Other,120.5118558
+1991,PI,SC,other,Other,222.0347370000001
+1991,PI,SE,other,Other,251.99242080000005
+1991,PI,SP,northeast_to_southeast,Northeast -> Southeast,43522.840412400015
+1991,PI,TO,neighboring_state,Neighboring-state circulation,3160.7429386999997
+1991,PR,AC,south_to_agri_frontier,South -> agricultural frontier,564.3909469000001
+1991,PR,AL,other,Other,730.5565750000004
+1991,PR,AM,south_to_agri_frontier,South -> agricultural frontier,1378.8862837999989
+1991,PR,AP,south_to_agri_frontier,South -> agricultural frontier,265.8879121
+1991,PR,BA,other,Other,2898.3376365
+1991,PR,CE,other,Other,937.5502259000002
+1991,PR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1894.4664038000003
+1991,PR,ES,other,Other,1588.6866310000003
+1991,PR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4553.838574300006
+1991,PR,MA,other,Other,406.8263089999999
+1991,PR,MG,other,Other,15308.621310000013
+1991,PR,MS,south_to_agri_frontier,South -> agricultural frontier,27412.059753100133
+1991,PR,MT,south_to_agri_frontier,South -> agricultural frontier,55217.75286090033
+1991,PR,PA,south_to_agri_frontier,South -> agricultural frontier,4380.750028800005
+1991,PR,PB,other,Other,330.93963610000003
+1991,PR,PE,other,Other,1071.1997092
+1991,PR,PI,other,Other,112.42226829999998
+1991,PR,PR,local,Local / within-state,769303.197641407
+1991,PR,RJ,other,Other,4880.521989700001
+1991,PR,RN,other,Other,287.3511361999999
+1991,PR,RO,south_to_agri_frontier,South -> agricultural frontier,23475.209099199994
+1991,PR,RR,south_to_agri_frontier,South -> agricultural frontier,254.43547320000002
+1991,PR,RS,other,Other,26638.955208699957
+1991,PR,SC,neighboring_state,Neighboring-state circulation,81674.53105440014
+1991,PR,SE,other,Other,390.98060580000003
+1991,PR,SP,neighboring_state,Neighboring-state circulation,217396.54793010058
+1991,PR,TO,south_to_agri_frontier,South -> agricultural frontier,1119.4107485000009
+1991,RJ,AC,other,Other,433.2614432
+1991,RJ,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,3751.464866600002
+1991,RJ,AM,other,Other,3032.807875800001
+1991,RJ,AP,other,Other,417.85031159999994
+1991,RJ,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,14676.611918500003
+1991,RJ,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,13417.486081400022
+1991,RJ,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,13329.88524760003
+1991,RJ,ES,neighboring_state,Neighboring-state circulation,29261.82098689995
+1991,RJ,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5709.671916400009
+1991,RJ,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,4510.177375800005
+1991,RJ,MG,neighboring_state,Neighboring-state circulation,58083.9387108
+1991,RJ,MS,other,Other,4019.0648275000026
+1991,RJ,MT,other,Other,2413.2901386000035
+1991,RJ,PA,other,Other,5853.018300100005
+1991,RJ,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,18130.41748649998
+1991,RJ,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,12044.978936300005
+1991,RJ,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,2048.349915999998
+1991,RJ,PR,other,Other,8772.571944299994
+1991,RJ,RJ,local,Local / within-state,433170.3979136987
+1991,RJ,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,9730.255610200005
+1991,RJ,RO,other,Other,2381.0007354000018
+1991,RJ,RR,other,Other,741.7047140000004
+1991,RJ,RS,other,Other,8433.872853500003
+1991,RJ,SC,other,Other,5656.129938600008
+1991,RJ,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,4348.110662299992
+1991,RJ,SP,neighboring_state,Neighboring-state circulation,63290.65762609998
+1991,RJ,TO,other,Other,577.9839470000003
+1991,RN,AC,other,Other,226.6889144
+1991,RN,AL,other,Other,795.0077806999998
+1991,RN,AM,other,Other,761.8320943000001
+1991,RN,AP,other,Other,323.91074269999996
+1991,RN,BA,other,Other,1645.2770623999993
+1991,RN,CE,neighboring_state,Neighboring-state circulation,7572.161933800002
+1991,RN,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4640.398926800002
+1991,RN,ES,northeast_to_southeast,Northeast -> Southeast,391.78008079999984
+1991,RN,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3136.6574335999953
+1991,RN,MA,other,Other,608.0728798000006
+1991,RN,MG,northeast_to_southeast,Northeast -> Southeast,2254.764086399999
+1991,RN,MS,other,Other,501.05385259999997
+1991,RN,MT,other,Other,419.3785113000002
+1991,RN,PA,other,Other,1570.8948325999997
+1991,RN,PB,neighboring_state,Neighboring-state circulation,10397.39813479999
+1991,RN,PE,other,Other,4976.853626600005
+1991,RN,PI,other,Other,587.1164528999997
+1991,RN,PR,other,Other,445.20856979999996
+1991,RN,RJ,northeast_to_southeast,Northeast -> Southeast,8675.670332399997
+1991,RN,RN,local,Local / within-state,165696.75017240038
+1991,RN,RO,other,Other,851.1010328000003
+1991,RN,RR,other,Other,600.1748186999996
+1991,RN,RS,other,Other,346.54545100000007
+1991,RN,SC,other,Other,304.3268169
+1991,RN,SE,other,Other,532.3999346
+1991,RN,SP,northeast_to_southeast,Northeast -> Southeast,23656.275565400007
+1991,RN,TO,other,Other,222.77040769999996
+1991,RO,AC,neighboring_state,Neighboring-state circulation,3728.114340400002
+1991,RO,AL,other,Other,239.20103559999998
+1991,RO,AM,neighboring_state,Neighboring-state circulation,2514.6304821000003
+1991,RO,AP,other,Other,74.4661421
+1991,RO,BA,other,Other,1464.4364790999998
+1991,RO,CE,other,Other,1750.4124586000016
+1991,RO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,997.2359106000006
+1991,RO,ES,other,Other,4793.941575599997
+1991,RO,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3461.7773977000065
+1991,RO,MA,other,Other,1166.6107610000006
+1991,RO,MG,other,Other,7711.898951199999
+1991,RO,MS,other,Other,6519.987300200002
+1991,RO,MT,neighboring_state,Neighboring-state circulation,18280.31224240006
+1991,RO,PA,other,Other,2520.0376916000023
+1991,RO,PB,other,Other,873.1258975000002
+1991,RO,PE,other,Other,987.2826153000003
+1991,RO,PI,other,Other,267.50965859999997
+1991,RO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,16320.921686800002
+1991,RO,RJ,other,Other,1697.2012088
+1991,RO,RN,other,Other,791.0925046000006
+1991,RO,RO,local,Local / within-state,88886.99678700017
+1991,RO,RR,other,Other,1504.2008291999987
+1991,RO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1244.6977562
+1991,RO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1618.9637135999994
+1991,RO,SE,other,Other,146.32080070000006
+1991,RO,SP,other,Other,12736.583000600007
+1991,RO,TO,other,Other,1042.7955175000009
+1991,RR,AC,other,Other,14.0413004
+1991,RR,AM,neighboring_state,Neighboring-state circulation,795.4337581000001
+1991,RR,AP,other,Other,70.8570134
+1991,RR,BA,other,Other,127.05701570000002
+1991,RR,CE,other,Other,498.19531650000005
+1991,RR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,350.367697
+1991,RR,ES,other,Other,85.67664500000001
+1991,RR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,376.52843909999984
+1991,RR,MA,other,Other,301.39192070000007
+1991,RR,MG,other,Other,220.7306087
+1991,RR,MS,other,Other,56.32790030000001
+1991,RR,MT,other,Other,114.9780154
+1991,RR,PA,neighboring_state,Neighboring-state circulation,867.8018607000006
+1991,RR,PB,other,Other,229.68811079999998
+1991,RR,PE,other,Other,208.486647
+1991,RR,PI,other,Other,44.68952530000001
+1991,RR,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,60.6083453
+1991,RR,RJ,other,Other,205.0320701
+1991,RR,RN,other,Other,295.67577339999997
+1991,RR,RO,other,Other,704.3888474000005
+1991,RR,RR,local,Local / within-state,3615.305296699996
+1991,RR,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,359.33544059999997
+1991,RR,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,92.329753
+1991,RR,SP,other,Other,418.45604430000003
+1991,RR,TO,other,Other,195.53140559999994
+1991,RS,AC,south_to_agri_frontier,South -> agricultural frontier,289.63040269999993
+1991,RS,AL,other,Other,830.7362881000006
+1991,RS,AM,south_to_agri_frontier,South -> agricultural frontier,1155.633426
+1991,RS,AP,south_to_agri_frontier,South -> agricultural frontier,127.0049212
+1991,RS,BA,other,Other,2812.537355999999
+1991,RS,CE,other,Other,883.2211477
+1991,RS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2543.143839899999
+1991,RS,ES,other,Other,1036.261028699999
+1991,RS,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3853.547187900006
+1991,RS,MA,other,Other,484.97466690000005
+1991,RS,MG,other,Other,3620.912903599998
+1991,RS,MS,south_to_agri_frontier,South -> agricultural frontier,7158.275265299996
+1991,RS,MT,south_to_agri_frontier,South -> agricultural frontier,11396.646104400004
+1991,RS,PA,south_to_agri_frontier,South -> agricultural frontier,1407.025106099999
+1991,RS,PB,other,Other,425.5264809999999
+1991,RS,PE,other,Other,1230.400683600001
+1991,RS,PI,other,Other,68.95172749999999
+1991,RS,PR,other,Other,26376.703832300023
+1991,RS,RJ,other,Other,6592.720967100002
+1991,RS,RN,other,Other,506.6639696999998
+1991,RS,RO,south_to_agri_frontier,South -> agricultural frontier,1652.2353937000016
+1991,RS,RR,south_to_agri_frontier,South -> agricultural frontier,253.94959129999998
+1991,RS,RS,local,Local / within-state,717373.1192288044
+1991,RS,SC,neighboring_state,Neighboring-state circulation,46342.16655469989
+1991,RS,SE,other,Other,275.77868019999994
+1991,RS,SP,other,Other,16222.598659000003
+1991,RS,TO,south_to_agri_frontier,South -> agricultural frontier,1307.2407911000014
+1991,SC,AC,south_to_agri_frontier,South -> agricultural frontier,39.1860421
+1991,SC,AL,other,Other,111.69005690000003
+1991,SC,AM,south_to_agri_frontier,South -> agricultural frontier,238.9766197
+1991,SC,AP,south_to_agri_frontier,South -> agricultural frontier,54.36478439999999
+1991,SC,BA,other,Other,761.5150478000002
+1991,SC,CE,other,Other,311.3993666
+1991,SC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,578.5282654
+1991,SC,ES,other,Other,233.99429590000003
+1991,SC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1356.9395245000003
+1991,SC,MA,other,Other,148.81491300000002
+1991,SC,MG,other,Other,1439.0533781
+1991,SC,MS,south_to_agri_frontier,South -> agricultural frontier,2902.264535200002
+1991,SC,MT,south_to_agri_frontier,South -> agricultural frontier,11604.027557799976
+1991,SC,PA,south_to_agri_frontier,South -> agricultural frontier,788.7710592999997
+1991,SC,PB,other,Other,65.37046670000001
+1991,SC,PE,other,Other,133.411462
+1991,SC,PI,other,Other,108.3043236
+1991,SC,PR,neighboring_state,Neighboring-state circulation,47327.80433559995
+1991,SC,RJ,other,Other,2146.5479589
+1991,SC,RN,other,Other,220.44063060000002
+1991,SC,RO,south_to_agri_frontier,South -> agricultural frontier,2256.911021099999
+1991,SC,RR,south_to_agri_frontier,South -> agricultural frontier,20.114389600000003
+1991,SC,RS,neighboring_state,Neighboring-state circulation,40035.72748930004
+1991,SC,SC,local,Local / within-state,326770.44925710256
+1991,SC,SE,other,Other,84.32608980000003
+1991,SC,SP,other,Other,11642.3175848
+1991,SC,TO,south_to_agri_frontier,South -> agricultural frontier,391.2858432000001
+1991,SE,AL,neighboring_state,Neighboring-state circulation,4084.9843439000006
+1991,SE,AM,other,Other,226.99081110000006
+1991,SE,BA,neighboring_state,Neighboring-state circulation,10947.415952399995
+1991,SE,CE,other,Other,537.7194274000001
+1991,SE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,571.4919673
+1991,SE,ES,northeast_to_southeast,Northeast -> Southeast,391.61322370000016
+1991,SE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,352.4497745999999
+1991,SE,MA,other,Other,354.2372952000001
+1991,SE,MG,northeast_to_southeast,Northeast -> Southeast,777.8103805000001
+1991,SE,MS,other,Other,233.06640150000004
+1991,SE,MT,other,Other,122.63960589999999
+1991,SE,PA,other,Other,284.5492536
+1991,SE,PB,other,Other,619.5741198000002
+1991,SE,PE,other,Other,2259.938835799999
+1991,SE,PI,other,Other,179.1946176
+1991,SE,PR,other,Other,357.5789639000001
+1991,SE,RJ,northeast_to_southeast,Northeast -> Southeast,2305.4890763
+1991,SE,RN,other,Other,782.9013722000001
+1991,SE,RO,other,Other,252.84601049999995
+1991,SE,RR,other,Other,143.85245800000004
+1991,SE,RS,other,Other,328.5443384
+1991,SE,SC,other,Other,194.4243588
+1991,SE,SE,local,Local / within-state,93594.35283619979
+1991,SE,SP,northeast_to_southeast,Northeast -> Southeast,15848.443108699994
+1991,SE,TO,other,Other,54.9522901
+1991,SP,AC,other,Other,781.5043797000004
+1991,SP,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,13359.595155099978
+1991,SP,AM,other,Other,2622.8859018
+1991,SP,AP,other,Other,322.6093142
+1991,SP,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,58544.33276560014
+1991,SP,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,28584.212263500005
+1991,SP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,7673.5683781000025
+1991,SP,ES,other,Other,10825.324661099987
+1991,SP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,20497.65376299998
+1991,SP,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,5760.02138240001
+1991,SP,MG,neighboring_state,Neighboring-state circulation,145822.66320799966
+1991,SP,MS,neighboring_state,Neighboring-state circulation,41887.91691670015
+1991,SP,MT,other,Other,25005.2423918001
+1991,SP,PA,other,Other,5656.082624000007
+1991,SP,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,18649.440782999973
+1991,SP,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,52321.94826880004
+1991,SP,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,10820.738057099969
+1991,SP,PR,neighboring_state,Neighboring-state circulation,97960.98877569991
+1991,SP,RJ,neighboring_state,Neighboring-state circulation,32658.959194200004
+1991,SP,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,13181.416983999969
+1991,SP,RO,other,Other,8178.6761389000085
+1991,SP,RR,other,Other,578.8689615
+1991,SP,RS,other,Other,13395.218973299992
+1991,SP,SC,other,Other,19420.52370580002
+1991,SP,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,10192.14479859999
+1991,SP,SP,local,Local / within-state,1906486.2625310079
+1991,SP,TO,other,Other,3290.4664139999977
+1991,TO,AL,other,Other,11.7632518
+1991,TO,AM,other,Other,111.30562080000001
+1991,TO,AP,other,Other,49.33766180000001
+1991,TO,BA,neighboring_state,Neighboring-state circulation,576.6575203000001
+1991,TO,CE,other,Other,305.2779256
+1991,TO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4357.156395600007
+1991,TO,ES,other,Other,68.9555929
+1991,TO,GO,neighboring_state,Neighboring-state circulation,26040.44147809989
+1991,TO,MA,neighboring_state,Neighboring-state circulation,7636.9023349000045
+1991,TO,MG,other,Other,1402.2805402999998
+1991,TO,MS,other,Other,146.76512980000004
+1991,TO,MT,neighboring_state,Neighboring-state circulation,2907.561271100002
+1991,TO,PA,neighboring_state,Neighboring-state circulation,22518.789640399962
+1991,TO,PB,other,Other,110.43873700000003
+1991,TO,PE,other,Other,82.7654874
+1991,TO,PI,neighboring_state,Neighboring-state circulation,887.3740644999997
+1991,TO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,464.2291381
+1991,TO,RJ,other,Other,207.853611
+1991,TO,RN,other,Other,155.6609065
+1991,TO,RO,other,Other,403.04753209999984
+1991,TO,RR,other,Other,404.6233784999998
+1991,TO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,633.985159
+1991,TO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,110.42665830000001
+1991,TO,SE,other,Other,1.8495725
+1991,TO,SP,other,Other,2209.2134322
+1991,TO,TO,local,Local / within-state,61024.18550769997
+2000,AC,AC,local,Local / within-state,28165.360231569954
+2000,AC,AL,other,Other,13.96356826
+2000,AC,AM,neighboring_state,Neighboring-state circulation,4293.350246130004
+2000,AC,AP,other,Other,52.96993507
+2000,AC,BA,other,Other,76.48037757
+2000,AC,CE,other,Other,569.40360378
+2000,AC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,424.44562282000004
+2000,AC,ES,other,Other,219.83689005
+2000,AC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,991.4816685300004
+2000,AC,MA,other,Other,51.825131029999994
+2000,AC,MG,other,Other,449.4532753399999
+2000,AC,MS,other,Other,183.48206810999997
+2000,AC,MT,other,Other,493.8649328900001
+2000,AC,PA,other,Other,236.30099873000006
+2000,AC,PB,other,Other,187.09899256000003
+2000,AC,PE,other,Other,37.65779694
+2000,AC,PI,other,Other,25.68164487
+2000,AC,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,615.3648102799999
+2000,AC,RJ,other,Other,290.80954925000003
+2000,AC,RN,other,Other,329.78082373999985
+2000,AC,RO,neighboring_state,Neighboring-state circulation,5069.504247259997
+2000,AC,RR,other,Other,330.8507196399999
+2000,AC,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,100.76937208000001
+2000,AC,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,140.95737986000003
+2000,AC,SE,other,Other,30.1947057
+2000,AC,SP,other,Other,774.68870128
+2000,AC,TO,other,Other,79.81554396
+2000,AL,AC,other,Other,31.01511044
+2000,AL,AL,local,Local / within-state,147719.28742685038
+2000,AL,AM,other,Other,196.19264362
+2000,AL,AP,other,Other,2.17306886
+2000,AL,BA,neighboring_state,Neighboring-state circulation,7831.530171369999
+2000,AL,CE,other,Other,2001.0912180399996
+2000,AL,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1082.5877707099996
+2000,AL,ES,northeast_to_southeast,Northeast -> Southeast,925.8490923800005
+2000,AL,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1839.7326849699996
+2000,AL,MA,other,Other,613.90180285
+2000,AL,MG,northeast_to_southeast,Northeast -> Southeast,3658.7791425400005
+2000,AL,MS,other,Other,1173.2277007600023
+2000,AL,MT,other,Other,3798.927255430001
+2000,AL,PA,other,Other,1099.6804834799996
+2000,AL,PB,other,Other,1403.4160524900008
+2000,AL,PE,neighboring_state,Neighboring-state circulation,18825.67426903002
+2000,AL,PI,other,Other,468.05588418999974
+2000,AL,PR,other,Other,1035.0768422399997
+2000,AL,RJ,northeast_to_southeast,Northeast -> Southeast,5409.44111411
+2000,AL,RN,other,Other,666.9990727600002
+2000,AL,RO,other,Other,352.13235779999997
+2000,AL,RR,other,Other,92.38650305999995
+2000,AL,RS,other,Other,381.20414973
+2000,AL,SC,other,Other,471.6126376499997
+2000,AL,SE,neighboring_state,Neighboring-state circulation,11317.544552150028
+2000,AL,SP,northeast_to_southeast,Northeast -> Southeast,62609.19205705001
+2000,AL,TO,other,Other,661.01901987
+2000,AM,AC,neighboring_state,Neighboring-state circulation,4749.580481319991
+2000,AM,AL,other,Other,191.87103311000004
+2000,AM,AM,local,Local / within-state,99544.03453025995
+2000,AM,AP,other,Other,487.2962239299998
+2000,AM,BA,other,Other,754.5359641
+2000,AM,CE,other,Other,3763.433182869999
+2000,AM,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1298.3806130699998
+2000,AM,ES,other,Other,350.35970252999994
+2000,AM,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1242.6893147400006
+2000,AM,MA,other,Other,1545.7407653599994
+2000,AM,MG,other,Other,1503.8338955000006
+2000,AM,MS,other,Other,721.2631375100003
+2000,AM,MT,neighboring_state,Neighboring-state circulation,550.4133087899999
+2000,AM,PA,neighboring_state,Neighboring-state circulation,11619.269025230009
+2000,AM,PB,other,Other,452.5220577700001
+2000,AM,PE,other,Other,1215.62332583
+2000,AM,PI,other,Other,787.6217798900007
+2000,AM,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,1503.77081349
+2000,AM,RJ,other,Other,3647.2982541599995
+2000,AM,RN,other,Other,801.6944547799999
+2000,AM,RO,neighboring_state,Neighboring-state circulation,7085.857875259995
+2000,AM,RR,neighboring_state,Neighboring-state circulation,8561.303274179987
+2000,AM,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1184.84337185
+2000,AM,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,532.2501070100002
+2000,AM,SE,other,Other,306.95435655000006
+2000,AM,SP,other,Other,3468.2400264899998
+2000,AM,TO,other,Other,330.7682953499999
+2000,AP,AC,other,Other,40.09987263
+2000,AP,AL,other,Other,15.0794615
+2000,AP,AM,other,Other,751.46644834
+2000,AP,AP,local,Local / within-state,14178.531119750043
+2000,AP,BA,other,Other,28.74689418
+2000,AP,CE,other,Other,890.72941618
+2000,AP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,170.73289094
+2000,AP,ES,other,Other,64.66721011
+2000,AP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,327.94016316
+2000,AP,MA,other,Other,1153.3147933299997
+2000,AP,MG,other,Other,288.7935913
+2000,AP,MS,other,Other,48.77320709
+2000,AP,MT,other,Other,167.01432211
+2000,AP,PA,neighboring_state,Neighboring-state circulation,8266.935012760005
+2000,AP,PB,other,Other,110.94575300000001
+2000,AP,PE,other,Other,266.29333491
+2000,AP,PI,other,Other,129.06422947000001
+2000,AP,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,184.42094488000004
+2000,AP,RJ,other,Other,290.51198735
+2000,AP,RN,other,Other,322.61673133999994
+2000,AP,RO,other,Other,178.85560269
+2000,AP,RR,other,Other,437.02262137000025
+2000,AP,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,267.08232813
+2000,AP,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,36.39235891
+2000,AP,SE,other,Other,42.1611138
+2000,AP,SP,other,Other,496.30097678000004
+2000,AP,TO,other,Other,136.89745063
+2000,BA,AC,other,Other,189.75428632999999
+2000,BA,AL,neighboring_state,Neighboring-state circulation,3884.9832640199998
+2000,BA,AM,other,Other,818.8902635000001
+2000,BA,AP,other,Other,169.59528705999998
+2000,BA,BA,local,Local / within-state,651892.7923889307
+2000,BA,CE,other,Other,7341.061846169998
+2000,BA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,25586.672914369938
+2000,BA,ES,northeast_to_southeast,Northeast -> Southeast,31743.224481620124
+2000,BA,GO,neighboring_state,Neighboring-state circulation,32066.95544575005
+2000,BA,MA,other,Other,1728.6013580000003
+2000,BA,MG,northeast_to_southeast,Northeast -> Southeast,36754.93420098994
+2000,BA,MS,other,Other,1620.5831315899986
+2000,BA,MT,other,Other,4478.567069369991
+2000,BA,PA,other,Other,4999.909517260012
+2000,BA,PB,other,Other,4698.373918170009
+2000,BA,PE,neighboring_state,Neighboring-state circulation,17695.882466290015
+2000,BA,PI,neighboring_state,Neighboring-state circulation,3736.138336239998
+2000,BA,PR,other,Other,5145.084889779999
+2000,BA,RJ,northeast_to_southeast,Northeast -> Southeast,29034.768855119975
+2000,BA,RN,other,Other,2962.839068799997
+2000,BA,RO,other,Other,2621.018527959996
+2000,BA,RR,other,Other,224.78433895000003
+2000,BA,RS,other,Other,2136.371975339999
+2000,BA,SC,other,Other,1904.33214098
+2000,BA,SE,neighboring_state,Neighboring-state circulation,17093.808174960028
+2000,BA,SP,northeast_to_southeast,Northeast -> Southeast,277291.04033357004
+2000,BA,TO,neighboring_state,Neighboring-state circulation,2070.954795820002
+2000,CE,AC,other,Other,361.27505896
+2000,CE,AL,other,Other,996.4445557299999
+2000,CE,AM,other,Other,3722.913187749999
+2000,CE,AP,other,Other,621.6180245600001
+2000,CE,BA,other,Other,6655.130910619998
+2000,CE,CE,local,Local / within-state,347535.86991575145
+2000,CE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,10314.724863039986
+2000,CE,ES,northeast_to_southeast,Northeast -> Southeast,958.0833357200007
+2000,CE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7890.9956160900065
+2000,CE,MA,other,Other,5346.043876950007
+2000,CE,MG,northeast_to_southeast,Northeast -> Southeast,5525.5351043
+2000,CE,MS,other,Other,1050.49568963
+2000,CE,MT,other,Other,1608.1887027299983
+2000,CE,PA,other,Other,7112.529061510018
+2000,CE,PB,neighboring_state,Neighboring-state circulation,5076.42077289
+2000,CE,PE,neighboring_state,Neighboring-state circulation,8734.224715000004
+2000,CE,PI,neighboring_state,Neighboring-state circulation,8335.487400039996
+2000,CE,PR,other,Other,1521.311339
+2000,CE,RJ,northeast_to_southeast,Northeast -> Southeast,27328.632986639965
+2000,CE,RN,neighboring_state,Neighboring-state circulation,7862.307837320003
+2000,CE,RO,other,Other,2123.715364590004
+2000,CE,RR,other,Other,1385.6631029299988
+2000,CE,RS,other,Other,1752.2644800199996
+2000,CE,SC,other,Other,1316.0792074700003
+2000,CE,SE,other,Other,842.9904373499999
+2000,CE,SP,northeast_to_southeast,Northeast -> Southeast,66384.10324436998
+2000,CE,TO,other,Other,1862.5348560100003
+2000,DF,AC,other,Other,61.323257979999994
+2000,DF,AL,other,Other,540.7547809900001
+2000,DF,AM,other,Other,1143.2198859599994
+2000,DF,AP,other,Other,166.83255531999998
+2000,DF,BA,other,Other,6917.219834419997
+2000,DF,CE,other,Other,7203.049121030006
+2000,DF,DF,local,Local / within-state,148.45186446
+2000,DF,ES,other,Other,1907.759632599997
+2000,DF,GO,neighboring_state,Neighboring-state circulation,104737.25369738994
+2000,DF,MA,other,Other,3905.78599038
+2000,DF,MG,other,Other,15199.073056350007
+2000,DF,MS,other,Other,819.1172100300006
+2000,DF,MT,other,Other,1505.78704561
+2000,DF,PA,other,Other,2057.417114759999
+2000,DF,PB,other,Other,3671.875247800007
+2000,DF,PE,other,Other,2432.6122136100003
+2000,DF,PI,other,Other,6769.76168906001
+2000,DF,PR,other,Other,1766.3928202999982
+2000,DF,RJ,other,Other,7432.325661739993
+2000,DF,RN,other,Other,2656.749190830001
+2000,DF,RO,other,Other,559.67980675
+2000,DF,RR,other,Other,237.04022792
+2000,DF,RS,other,Other,1835.7672373599987
+2000,DF,SC,other,Other,1548.2790842700008
+2000,DF,SE,other,Other,365.46429867
+2000,DF,SP,other,Other,9826.74409316
+2000,DF,TO,other,Other,3288.38612006
+2000,ES,AC,other,Other,116.86358513
+2000,ES,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,410.30412143
+2000,ES,AM,other,Other,264.5429977400001
+2000,ES,AP,other,Other,84.41861392999999
+2000,ES,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,14442.575244640004
+2000,ES,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,987.9732173600003
+2000,ES,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1777.8801907400004
+2000,ES,ES,local,Local / within-state,199015.8512848029
+2000,ES,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1225.56091731
+2000,ES,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,605.2966127199999
+2000,ES,MG,neighboring_state,Neighboring-state circulation,29529.194765020016
+2000,ES,MS,other,Other,173.35634675999992
+2000,ES,MT,other,Other,980.84487429
+2000,ES,PA,other,Other,1855.0850132100004
+2000,ES,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,407.0852826799999
+2000,ES,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,1195.5560447
+2000,ES,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,320.05497607000007
+2000,ES,PR,other,Other,1468.080849
+2000,ES,RJ,neighboring_state,Neighboring-state circulation,18250.085025390003
+2000,ES,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,360.2173436299999
+2000,ES,RO,other,Other,7754.432584139984
+2000,ES,RR,other,Other,98.93925626
+2000,ES,RS,other,Other,830.9830064500001
+2000,ES,SC,other,Other,727.2153723900002
+2000,ES,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,154.48602055
+2000,ES,SP,other,Other,10825.97670311
+2000,ES,TO,other,Other,316.4432122700002
+2000,GO,AC,other,Other,289.82724758999996
+2000,GO,AL,other,Other,302.46236657000003
+2000,GO,AM,other,Other,948.9133178899997
+2000,GO,AP,other,Other,342.20916804000007
+2000,GO,BA,neighboring_state,Neighboring-state circulation,7580.358907920001
+2000,GO,CE,other,Other,2347.70337051
+2000,GO,DF,neighboring_state,Neighboring-state circulation,35259.36009714977
+2000,GO,ES,other,Other,680.41539411
+2000,GO,GO,local,Local / within-state,391545.32665544056
+2000,GO,MA,other,Other,3209.7113772499997
+2000,GO,MG,neighboring_state,Neighboring-state circulation,30617.825643220003
+2000,GO,MS,neighboring_state,Neighboring-state circulation,3785.8907559400036
+2000,GO,MT,neighboring_state,Neighboring-state circulation,18303.87621320001
+2000,GO,PA,other,Other,7935.753129729985
+2000,GO,PB,other,Other,1656.3364086200004
+2000,GO,PE,other,Other,1479.71650949
+2000,GO,PI,other,Other,2171.3495990900014
+2000,GO,PR,other,Other,2608.417115499999
+2000,GO,RJ,other,Other,2709.53318685
+2000,GO,RN,other,Other,1648.1928128100024
+2000,GO,RO,other,Other,2225.3459496900005
+2000,GO,RR,other,Other,560.9197537099999
+2000,GO,RS,other,Other,1556.9965018699997
+2000,GO,SC,other,Other,2278.1326080300023
+2000,GO,SE,other,Other,296.22044955999985
+2000,GO,SP,other,Other,19563.974910309997
+2000,GO,TO,neighboring_state,Neighboring-state circulation,19535.4816397101
+2000,MA,AC,other,Other,111.159766
+2000,MA,AL,other,Other,579.7331249500002
+2000,MA,AM,other,Other,5911.8139488100005
+2000,MA,AP,other,Other,5219.724325379991
+2000,MA,BA,other,Other,1940.7111820200007
+2000,MA,CE,other,Other,8218.086158010006
+2000,MA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,23800.444942690054
+2000,MA,ES,northeast_to_southeast,Northeast -> Southeast,912.4893910100005
+2000,MA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,29165.70755392993
+2000,MA,MA,local,Local / within-state,332048.15447358135
+2000,MA,MG,northeast_to_southeast,Northeast -> Southeast,5074.289166330001
+2000,MA,MS,other,Other,537.3326232600004
+2000,MA,MT,other,Other,4823.24265818
+2000,MA,PA,neighboring_state,Neighboring-state circulation,70944.40595733975
+2000,MA,PB,other,Other,1080.9524658899995
+2000,MA,PE,other,Other,2067.867899500001
+2000,MA,PI,neighboring_state,Neighboring-state circulation,24533.49625157003
+2000,MA,PR,other,Other,1589.73965776
+2000,MA,RJ,northeast_to_southeast,Northeast -> Southeast,12441.743818129993
+2000,MA,RN,other,Other,1412.1024869400012
+2000,MA,RO,other,Other,2774.5869182799997
+2000,MA,RR,other,Other,13474.697787260036
+2000,MA,RS,other,Other,766.0228553200001
+2000,MA,SC,other,Other,487.8648308699999
+2000,MA,SE,other,Other,424.55069443
+2000,MA,SP,northeast_to_southeast,Northeast -> Southeast,32551.123805149986
+2000,MA,TO,neighboring_state,Neighboring-state circulation,23610.130885690047
+2000,MG,AC,other,Other,520.65232924
+2000,MG,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,1072.6748667500003
+2000,MG,AM,other,Other,1354.4623017399997
+2000,MG,AP,other,Other,355.7517200799998
+2000,MG,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,19858.84228402
+2000,MG,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,3385.460079440002
+2000,MG,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,25997.594733069996
+2000,MG,ES,neighboring_state,Neighboring-state circulation,38516.04695159988
+2000,MG,GO,neighboring_state,Neighboring-state circulation,34260.74689438997
+2000,MG,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,3236.14802017
+2000,MG,MG,local,Local / within-state,1097319.05539069
+2000,MG,MS,neighboring_state,Neighboring-state circulation,3357.012883270003
+2000,MG,MT,other,Other,6557.447022479998
+2000,MG,PA,other,Other,5781.964713390007
+2000,MG,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,1547.5214996
+2000,MG,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,3825.1614816599986
+2000,MG,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,1472.5623058400013
+2000,MG,PR,other,Other,9462.514343380004
+2000,MG,RJ,neighboring_state,Neighboring-state circulation,48323.75138912
+2000,MG,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,1950.183797599999
+2000,MG,RO,other,Other,6699.054091920023
+2000,MG,RR,other,Other,506.1663808899999
+2000,MG,RS,other,Other,3157.6728111599996
+2000,MG,SC,other,Other,3049.8713282499994
+2000,MG,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,807.1986813599997
+2000,MG,SP,neighboring_state,Neighboring-state circulation,178400.97242070024
+2000,MG,TO,other,Other,5178.929593570008
+2000,MS,AC,other,Other,276.89935862000004
+2000,MS,AL,other,Other,219.96330485999997
+2000,MS,AM,other,Other,562.6524337100001
+2000,MS,AP,other,Other,103.68590393
+2000,MS,BA,other,Other,1298.5996300700003
+2000,MS,CE,other,Other,1014.55300528
+2000,MS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1864.898038939999
+2000,MS,ES,other,Other,409.89134957999994
+2000,MS,GO,neighboring_state,Neighboring-state circulation,4778.559361980004
+2000,MS,MA,other,Other,442.50410422
+2000,MS,MG,neighboring_state,Neighboring-state circulation,4377.226420850001
+2000,MS,MS,local,Local / within-state,154724.58796609
+2000,MS,MT,neighboring_state,Neighboring-state circulation,21302.48800179998
+2000,MS,PA,other,Other,1126.4379089899999
+2000,MS,PB,other,Other,560.7831527200002
+2000,MS,PE,other,Other,948.2086302199996
+2000,MS,PI,other,Other,317.3576843199999
+2000,MS,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,18695.57043558002
+2000,MS,RJ,other,Other,3248.166932969999
+2000,MS,RN,other,Other,914.0369683499997
+2000,MS,RO,other,Other,3748.3061966100036
+2000,MS,RR,other,Other,204.43128800999992
+2000,MS,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,3341.7510832299995
+2000,MS,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,3301.788875119996
+2000,MS,SE,other,Other,151.15658045999996
+2000,MS,SP,neighboring_state,Neighboring-state circulation,34795.04924312998
+2000,MS,TO,other,Other,708.3441881099995
+2000,MT,AC,other,Other,514.9820565000002
+2000,MT,AL,other,Other,504.1980487599997
+2000,MT,AM,neighboring_state,Neighboring-state circulation,1380.8619629499983
+2000,MT,AP,other,Other,245.95079858999998
+2000,MT,BA,other,Other,1891.0163257200002
+2000,MT,CE,other,Other,1348.0568198499996
+2000,MT,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2639.6615302899972
+2000,MT,ES,other,Other,638.1667741000001
+2000,MT,GO,neighboring_state,Neighboring-state circulation,20354.11890045998
+2000,MT,MA,other,Other,2010.6087949600005
+2000,MT,MG,other,Other,6507.408869449999
+2000,MT,MS,neighboring_state,Neighboring-state circulation,12279.558326150003
+2000,MT,MT,local,Local / within-state,247964.34572668868
+2000,MT,PA,neighboring_state,Neighboring-state circulation,6784.716016650002
+2000,MT,PB,other,Other,551.5947434700001
+2000,MT,PE,other,Other,904.5978176100002
+2000,MT,PI,other,Other,883.4488005299999
+2000,MT,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,17593.492782589994
+2000,MT,RJ,other,Other,1891.52771983
+2000,MT,RN,other,Other,566.6491938600003
+2000,MT,RO,neighboring_state,Neighboring-state circulation,12364.967893620036
+2000,MT,RR,other,Other,854.6434091200002
+2000,MT,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,2958.1647121299993
+2000,MT,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,4230.985514330001
+2000,MT,SE,other,Other,329.2050506100001
+2000,MT,SP,other,Other,21453.590334829994
+2000,MT,TO,neighboring_state,Neighboring-state circulation,2041.7481408800002
+2000,PA,AC,other,Other,417.22907503000016
+2000,PA,AL,other,Other,272.46500318
+2000,PA,AM,neighboring_state,Neighboring-state circulation,42172.564703640055
+2000,PA,AP,neighboring_state,Neighboring-state circulation,33744.473408910024
+2000,PA,BA,other,Other,2943.70585703
+2000,PA,CE,other,Other,8545.835081420018
+2000,PA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,6569.640824249992
+2000,PA,ES,other,Other,2410.813587620002
+2000,PA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,21462.459327910008
+2000,PA,MA,neighboring_state,Neighboring-state circulation,28581.56266692001
+2000,PA,MG,other,Other,6680.938926520001
+2000,PA,MS,other,Other,1165.51861866
+2000,PA,MT,neighboring_state,Neighboring-state circulation,6046.871814070001
+2000,PA,PA,local,Local / within-state,421295.4803748488
+2000,PA,PB,other,Other,1007.3275014199999
+2000,PA,PE,other,Other,2217.0202797499996
+2000,PA,PI,other,Other,3988.432439199997
+2000,PA,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,3063.2833458399996
+2000,PA,RJ,other,Other,8227.324368560001
+2000,PA,RN,other,Other,1751.0522980899984
+2000,PA,RO,other,Other,2802.4841578699975
+2000,PA,RR,neighboring_state,Neighboring-state circulation,13982.47196238997
+2000,PA,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1341.9023921600005
+2000,PA,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1090.40726449
+2000,PA,SE,other,Other,247.27567910999997
+2000,PA,SP,other,Other,13911.353017870011
+2000,PA,TO,neighboring_state,Neighboring-state circulation,19568.711753799987
+2000,PB,AC,other,Other,103.68730212000001
+2000,PB,AL,other,Other,1124.0625320399988
+2000,PB,AM,other,Other,626.8528869700001
+2000,PB,AP,other,Other,200.82476423
+2000,PB,BA,other,Other,4423.30044381
+2000,PB,CE,neighboring_state,Neighboring-state circulation,5278.24383415
+2000,PB,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,6928.003171209991
+2000,PB,ES,northeast_to_southeast,Northeast -> Southeast,539.0732634999997
+2000,PB,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4877.6744326399985
+2000,PB,MA,other,Other,1471.6983933800002
+2000,PB,MG,northeast_to_southeast,Northeast -> Southeast,2625.1595185200003
+2000,PB,MS,other,Other,421.9257346599999
+2000,PB,MT,other,Other,884.691774219999
+2000,PB,PA,other,Other,1375.7854132799998
+2000,PB,PB,local,Local / within-state,153733.95170083878
+2000,PB,PE,neighboring_state,Neighboring-state circulation,18801.607807810004
+2000,PB,PI,other,Other,1016.1745603699999
+2000,PB,PR,other,Other,1224.5853453099996
+2000,PB,RJ,northeast_to_southeast,Northeast -> Southeast,44145.86037210003
+2000,PB,RN,neighboring_state,Neighboring-state circulation,13912.404088220004
+2000,PB,RO,other,Other,1006.8834950299998
+2000,PB,RR,other,Other,672.4758649099999
+2000,PB,RS,other,Other,645.3966370500001
+2000,PB,SC,other,Other,583.47438149
+2000,PB,SE,other,Other,1009.9562531300002
+2000,PB,SP,northeast_to_southeast,Northeast -> Southeast,48769.14029726999
+2000,PB,TO,other,Other,807.6582331699998
+2000,PE,AC,other,Other,84.74900933
+2000,PE,AL,neighboring_state,Neighboring-state circulation,17413.64071804
+2000,PE,AM,other,Other,1528.0952786799999
+2000,PE,AP,other,Other,255.30489113000004
+2000,PE,BA,neighboring_state,Neighboring-state circulation,23138.756476459974
+2000,PE,CE,neighboring_state,Neighboring-state circulation,11680.603022369996
+2000,PE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,5777.396061170003
+2000,PE,ES,northeast_to_southeast,Northeast -> Southeast,1320.6179468000005
+2000,PE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5900.071807159995
+2000,PE,MA,other,Other,2583.6125845100005
+2000,PE,MG,northeast_to_southeast,Northeast -> Southeast,5216.107398129998
+2000,PE,MS,other,Other,1861.963584089999
+2000,PE,MT,other,Other,2445.2113208799997
+2000,PE,PA,other,Other,3120.3939136500053
+2000,PE,PB,neighboring_state,Neighboring-state circulation,21043.253775829944
+2000,PE,PE,local,Local / within-state,397806.8401533725
+2000,PE,PI,neighboring_state,Neighboring-state circulation,3655.3028257700053
+2000,PE,PR,other,Other,2346.3802833700006
+2000,PE,RJ,northeast_to_southeast,Northeast -> Southeast,22595.471823920012
+2000,PE,RN,other,Other,7085.895477879976
+2000,PE,RO,other,Other,1512.5025034699984
+2000,PE,RR,other,Other,388.2719023500002
+2000,PE,RS,other,Other,1365.0258936600003
+2000,PE,SC,other,Other,1124.2693428799996
+2000,PE,SE,other,Other,3288.916844550001
+2000,PE,SP,northeast_to_southeast,Northeast -> Southeast,131464.65158373985
+2000,PE,TO,other,Other,2070.3764999000014
+2000,PI,AC,other,Other,30.969781439999995
+2000,PI,AL,other,Other,184.85038075000006
+2000,PI,AM,other,Other,1470.4312818500016
+2000,PI,AP,other,Other,308.1068294599999
+2000,PI,BA,neighboring_state,Neighboring-state circulation,2923.867222159999
+2000,PI,CE,neighboring_state,Neighboring-state circulation,11972.968348280003
+2000,PI,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,21476.793564659994
+2000,PI,ES,northeast_to_southeast,Northeast -> Southeast,256.75306994000005
+2000,PI,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,15059.705487610012
+2000,PI,MA,neighboring_state,Neighboring-state circulation,16862.52761280998
+2000,PI,MG,northeast_to_southeast,Northeast -> Southeast,1936.4482293600004
+2000,PI,MS,other,Other,449.89787343999996
+2000,PI,MT,other,Other,821.0329337900002
+2000,PI,PA,other,Other,5021.408056430004
+2000,PI,PB,other,Other,541.2141144699997
+2000,PI,PE,neighboring_state,Neighboring-state circulation,3346.1096027500007
+2000,PI,PI,local,Local / within-state,101249.39334295962
+2000,PI,PR,other,Other,612.1284337800003
+2000,PI,RJ,northeast_to_southeast,Northeast -> Southeast,5641.038505190003
+2000,PI,RN,other,Other,733.4158266600002
+2000,PI,RO,other,Other,683.3619474399994
+2000,PI,RR,other,Other,824.4084873200001
+2000,PI,RS,other,Other,510.2031169
+2000,PI,SC,other,Other,309.7320965799999
+2000,PI,SE,other,Other,388.8916903999999
+2000,PI,SP,northeast_to_southeast,Northeast -> Southeast,45576.73287941001
+2000,PI,TO,neighboring_state,Neighboring-state circulation,2829.8713525500007
+2000,PR,AC,south_to_agri_frontier,South -> agricultural frontier,497.5157234699998
+2000,PR,AL,other,Other,641.8510212100003
+2000,PR,AM,south_to_agri_frontier,South -> agricultural frontier,990.4039134700004
+2000,PR,AP,south_to_agri_frontier,South -> agricultural frontier,351.7794490200002
+2000,PR,BA,other,Other,4022.73636081
+2000,PR,CE,other,Other,1795.2054764299987
+2000,PR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3471.7150518799967
+2000,PR,ES,other,Other,1404.2621617500001
+2000,PR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5141.486062960005
+2000,PR,MA,other,Other,1322.76426498
+2000,PR,MG,other,Other,14054.120410900001
+2000,PR,MS,south_to_agri_frontier,South -> agricultural frontier,17186.16504202001
+2000,PR,MT,south_to_agri_frontier,South -> agricultural frontier,27942.324819799866
+2000,PR,PA,south_to_agri_frontier,South -> agricultural frontier,3505.127756509998
+2000,PR,PB,other,Other,653.7567609099999
+2000,PR,PE,other,Other,1467.9119611200008
+2000,PR,PI,other,Other,343.33075474
+2000,PR,PR,local,Local / within-state,783291.045913788
+2000,PR,RJ,other,Other,5792.87562267
+2000,PR,RN,other,Other,915.6939115499997
+2000,PR,RO,south_to_agri_frontier,South -> agricultural frontier,9007.877111080008
+2000,PR,RR,south_to_agri_frontier,South -> agricultural frontier,506.7801720500002
+2000,PR,RS,other,Other,22121.062818449966
+2000,PR,SC,neighboring_state,Neighboring-state circulation,80896.81614650009
+2000,PR,SE,other,Other,313.14351495000017
+2000,PR,SP,neighboring_state,Neighboring-state circulation,131280.8240686201
+2000,PR,TO,south_to_agri_frontier,South -> agricultural frontier,1338.1202181000006
+2000,RJ,AC,other,Other,558.4054217500001
+2000,RJ,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,2770.8500682900035
+2000,RJ,AM,other,Other,5279.722448999997
+2000,RJ,AP,other,Other,257.78494506
+2000,RJ,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,15280.439990809993
+2000,RJ,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,16014.293848080011
+2000,RJ,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,12448.38284531004
+2000,RJ,ES,neighboring_state,Neighboring-state circulation,28926.719626200094
+2000,RJ,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4549.763377970001
+2000,RJ,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,4179.1242628
+2000,RJ,MG,neighboring_state,Neighboring-state circulation,57049.055642619984
+2000,RJ,MS,other,Other,3848.8829057800003
+2000,RJ,MT,other,Other,1556.8222638400005
+2000,RJ,PA,other,Other,6586.676947440008
+2000,RJ,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,16761.281552370012
+2000,RJ,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,10865.897276119991
+2000,RJ,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,2231.382798649997
+2000,RJ,PR,other,Other,7842.4816719499995
+2000,RJ,RJ,local,Local / within-state,593528.0292699791
+2000,RJ,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,10062.276257570004
+2000,RJ,RO,other,Other,1571.2649681300004
+2000,RJ,RR,other,Other,612.11197424
+2000,RJ,RS,other,Other,8268.963233169998
+2000,RJ,SC,other,Other,6126.591775040003
+2000,RJ,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,3028.195340919998
+2000,RJ,SP,neighboring_state,Neighboring-state circulation,46945.39288337005
+2000,RJ,TO,other,Other,576.6694437599999
+2000,RN,AC,other,Other,41.28224352
+2000,RN,AL,other,Other,325.6165247100001
+2000,RN,AM,other,Other,869.9086986600005
+2000,RN,AP,other,Other,328.2225895600001
+2000,RN,BA,other,Other,1673.35228287
+2000,RN,CE,neighboring_state,Neighboring-state circulation,7611.16344293001
+2000,RN,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3625.37316218
+2000,RN,ES,northeast_to_southeast,Northeast -> Southeast,468.7941036000001
+2000,RN,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3112.0025429099987
+2000,RN,MA,other,Other,856.63852875
+2000,RN,MG,northeast_to_southeast,Northeast -> Southeast,2673.6709180299995
+2000,RN,MS,other,Other,307.72729909000003
+2000,RN,MT,other,Other,459.57263610999996
+2000,RN,PA,other,Other,1067.8760922600002
+2000,RN,PB,neighboring_state,Neighboring-state circulation,9044.487237390036
+2000,RN,PE,other,Other,4752.180809089996
+2000,RN,PI,other,Other,825.5735591399998
+2000,RN,PR,other,Other,743.86279647
+2000,RN,RJ,northeast_to_southeast,Northeast -> Southeast,9658.135188289993
+2000,RN,RN,local,Local / within-state,171975.36860631086
+2000,RN,RO,other,Other,552.0997439300002
+2000,RN,RR,other,Other,528.5795080999999
+2000,RN,RS,other,Other,789.1112576799998
+2000,RN,SC,other,Other,685.3647071700002
+2000,RN,SE,other,Other,595.40974349
+2000,RN,SP,northeast_to_southeast,Northeast -> Southeast,19450.448052670003
+2000,RN,TO,other,Other,240.16492466
+2000,RO,AC,neighboring_state,Neighboring-state circulation,3530.2104189399975
+2000,RO,AL,other,Other,72.63004784
+2000,RO,AM,neighboring_state,Neighboring-state circulation,6293.7562378300145
+2000,RO,AP,other,Other,108.92407738
+2000,RO,BA,other,Other,1133.73320088
+2000,RO,CE,other,Other,2055.5118520500005
+2000,RO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1168.9097703799998
+2000,RO,ES,other,Other,2116.1951545800016
+2000,RO,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3077.176881440002
+2000,RO,MA,other,Other,1191.91733235
+2000,RO,MG,other,Other,4035.95214395
+2000,RO,MS,other,Other,2629.2597329599967
+2000,RO,MT,neighboring_state,Neighboring-state circulation,20606.418301689977
+2000,RO,PA,other,Other,1526.52268711
+2000,RO,PB,other,Other,838.0857849900002
+2000,RO,PE,other,Other,585.9156966500001
+2000,RO,PI,other,Other,313.4220250199999
+2000,RO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,7970.36761874
+2000,RO,RJ,other,Other,1104.24844054
+2000,RO,RN,other,Other,627.57467695
+2000,RO,RO,local,Local / within-state,128505.48847080731
+2000,RO,RR,other,Other,1118.4592351899998
+2000,RO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1153.45764212
+2000,RO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1511.8996241799996
+2000,RO,SE,other,Other,118.19525730999999
+2000,RO,SP,other,Other,7235.311413349999
+2000,RO,TO,other,Other,597.9604995999997
+2000,RR,AC,other,Other,81.82243368
+2000,RR,AL,other,Other,39.65015811
+2000,RR,AM,neighboring_state,Neighboring-state circulation,2555.8037866399995
+2000,RR,AP,other,Other,95.10950080999999
+2000,RR,BA,other,Other,276.52338900000007
+2000,RR,CE,other,Other,1164.5602751899996
+2000,RR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,226.38863774
+2000,RR,ES,other,Other,183.58817851000003
+2000,RR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,818.4572008700001
+2000,RR,MA,other,Other,1456.0673031400006
+2000,RR,MG,other,Other,573.6811149900001
+2000,RR,MS,other,Other,329.10357046000007
+2000,RR,MT,other,Other,335.3961752600001
+2000,RR,PA,neighboring_state,Neighboring-state circulation,1760.5453181399994
+2000,RR,PB,other,Other,292.6579004199999
+2000,RR,PE,other,Other,216.38532820999998
+2000,RR,PI,other,Other,471.1654179699998
+2000,RR,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,387.21418103999997
+2000,RR,RJ,other,Other,970.6169455399998
+2000,RR,RN,other,Other,516.0608891499999
+2000,RR,RO,other,Other,650.1204613700002
+2000,RR,RR,local,Local / within-state,12636.82744362996
+2000,RR,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,231.74253870000007
+2000,RR,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,49.01539548
+2000,RR,SE,other,Other,32.12582624
+2000,RR,SP,other,Other,561.39038825
+2000,RR,TO,other,Other,103.85736888
+2000,RS,AC,south_to_agri_frontier,South -> agricultural frontier,223.05340010999996
+2000,RS,AL,other,Other,389.6635146800001
+2000,RS,AM,south_to_agri_frontier,South -> agricultural frontier,1276.7415604299993
+2000,RS,AP,south_to_agri_frontier,South -> agricultural frontier,209.94514870999998
+2000,RS,BA,other,Other,3599.5849197800003
+2000,RS,CE,other,Other,2664.6625528600002
+2000,RS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4049.8329526700018
+2000,RS,ES,other,Other,811.6837527900002
+2000,RS,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3779.598220190001
+2000,RS,MA,other,Other,1045.5653030699998
+2000,RS,MG,other,Other,3766.1088136
+2000,RS,MS,south_to_agri_frontier,South -> agricultural frontier,4258.260202200001
+2000,RS,MT,south_to_agri_frontier,South -> agricultural frontier,9271.305185449984
+2000,RS,PA,south_to_agri_frontier,South -> agricultural frontier,2171.68906408
+2000,RS,PB,other,Other,674.2989094799998
+2000,RS,PE,other,Other,1514.4663622
+2000,RS,PI,other,Other,815.2251366099998
+2000,RS,PR,other,Other,23668.906785780007
+2000,RS,RJ,other,Other,7755.045111370002
+2000,RS,RN,other,Other,879.1440745599995
+2000,RS,RO,south_to_agri_frontier,South -> agricultural frontier,1389.8166309200008
+2000,RS,RR,south_to_agri_frontier,South -> agricultural frontier,534.3089122399999
+2000,RS,RS,local,Local / within-state,746009.9871356591
+2000,RS,SC,neighboring_state,Neighboring-state circulation,58575.84156187015
+2000,RS,SE,other,Other,372.1185993399999
+2000,RS,SP,other,Other,18158.622881949996
+2000,RS,TO,south_to_agri_frontier,South -> agricultural frontier,1023.6657902700001
+2000,SC,AC,south_to_agri_frontier,South -> agricultural frontier,139.94329439
+2000,SC,AL,other,Other,116.79052636
+2000,SC,AM,south_to_agri_frontier,South -> agricultural frontier,511.23512736999993
+2000,SC,AP,south_to_agri_frontier,South -> agricultural frontier,38.40289435
+2000,SC,BA,other,Other,1215.4418614400001
+2000,SC,CE,other,Other,1087.9664230499998
+2000,SC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1655.3897378499998
+2000,SC,ES,other,Other,582.72665873
+2000,SC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1995.2446180899994
+2000,SC,MA,other,Other,434.90007085000013
+2000,SC,MG,other,Other,2850.8394925599996
+2000,SC,MS,south_to_agri_frontier,South -> agricultural frontier,2464.9272924200004
+2000,SC,MT,south_to_agri_frontier,South -> agricultural frontier,7735.629012239987
+2000,SC,PA,south_to_agri_frontier,South -> agricultural frontier,1294.7643655699994
+2000,SC,PB,other,Other,220.93602914000002
+2000,SC,PE,other,Other,571.7302818700001
+2000,SC,PI,other,Other,219.39877366999997
+2000,SC,PR,neighboring_state,Neighboring-state circulation,53293.381326450035
+2000,SC,RJ,other,Other,3370.335533049999
+2000,SC,RN,other,Other,437.78154433000014
+2000,SC,RO,south_to_agri_frontier,South -> agricultural frontier,1238.9523553600004
+2000,SC,RR,south_to_agri_frontier,South -> agricultural frontier,201.03963365999994
+2000,SC,RS,neighboring_state,Neighboring-state circulation,41155.1735382701
+2000,SC,SC,local,Local / within-state,395225.2323128499
+2000,SC,SE,other,Other,161.39093704
+2000,SC,SP,other,Other,16134.440460329997
+2000,SC,TO,south_to_agri_frontier,South -> agricultural frontier,537.92618786
+2000,SE,AC,other,Other,21.808972980000004
+2000,SE,AL,neighboring_state,Neighboring-state circulation,4614.9866943900015
+2000,SE,AM,other,Other,116.76705924999999
+2000,SE,AP,other,Other,39.5795655
+2000,SE,BA,neighboring_state,Neighboring-state circulation,13432.552126799976
+2000,SE,CE,other,Other,690.5335715699999
+2000,SE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,724.1268812999998
+2000,SE,ES,northeast_to_southeast,Northeast -> Southeast,852.8626717099999
+2000,SE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1106.1234122499998
+2000,SE,MA,other,Other,309.77071347
+2000,SE,MG,northeast_to_southeast,Northeast -> Southeast,1599.0355432899999
+2000,SE,MS,other,Other,469.57784659
+2000,SE,MT,other,Other,679.2127691599998
+2000,SE,PA,other,Other,271.89798162000005
+2000,SE,PB,other,Other,731.5135446699999
+2000,SE,PE,other,Other,2015.3654041899997
+2000,SE,PI,other,Other,355.19290630999996
+2000,SE,PR,other,Other,1066.2457170899997
+2000,SE,RJ,northeast_to_southeast,Northeast -> Southeast,4450.393470690002
+2000,SE,RN,other,Other,428.82200045
+2000,SE,RO,other,Other,237.59907230000002
+2000,SE,RR,other,Other,109.82618533
+2000,SE,RS,other,Other,258.54914401999997
+2000,SE,SC,other,Other,257.82114224
+2000,SE,SE,local,Local / within-state,100643.00228110001
+2000,SE,SP,northeast_to_southeast,Northeast -> Southeast,21489.50428434
+2000,SE,TO,other,Other,583.4921884500004
+2000,SP,AC,other,Other,626.3063267999999
+2000,SP,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,19105.13987478993
+2000,SP,AM,other,Other,4176.00070501
+2000,SP,AP,other,Other,630.8252129300002
+2000,SP,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,105691.32115534006
+2000,SP,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,52501.72952452977
+2000,SP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,12519.985095380014
+2000,SP,ES,other,Other,11850.441120600015
+2000,SP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,27976.163790240033
+2000,SP,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,9864.604748919995
+2000,SP,MG,neighboring_state,Neighboring-state circulation,201861.06061905983
+2000,SP,MS,neighboring_state,Neighboring-state circulation,36249.994494519946
+2000,SP,MT,other,Other,19793.315728039983
+2000,SP,PA,other,Other,9002.040699599995
+2000,SP,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,28348.75568273991
+2000,SP,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,58364.43960282998
+2000,SP,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,23366.582304220017
+2000,SP,PR,neighboring_state,Neighboring-state circulation,131094.42819861008
+2000,SP,RJ,neighboring_state,Neighboring-state circulation,45104.87893044995
+2000,SP,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,17855.053167320028
+2000,SP,RO,other,Other,8701.363221719994
+2000,SP,RR,other,Other,670.1563358699998
+2000,SP,RS,other,Other,14545.686947780005
+2000,SP,SC,other,Other,28343.145546470074
+2000,SP,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,10292.716141469999
+2000,SP,SP,local,Local / within-state,2240230.160997237
+2000,SP,TO,other,Other,5329.835251750011
+2000,TO,AC,other,Other,13.733387460000001
+2000,TO,AL,other,Other,161.07960522999994
+2000,TO,AM,other,Other,383.45188105999983
+2000,TO,AP,other,Other,160.49307774
+2000,TO,BA,neighboring_state,Neighboring-state circulation,1535.3032335300004
+2000,TO,CE,other,Other,773.2610493500002
+2000,TO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,5340.940002720004
+2000,TO,ES,other,Other,117.23425303
+2000,TO,GO,neighboring_state,Neighboring-state circulation,34914.64711780016
+2000,TO,MA,neighboring_state,Neighboring-state circulation,6800.604606650006
+2000,TO,MG,other,Other,3328.5250680200006
+2000,TO,MS,other,Other,315.8915807800002
+2000,TO,MT,neighboring_state,Neighboring-state circulation,3145.231243299998
+2000,TO,PA,neighboring_state,Neighboring-state circulation,15507.048471159975
+2000,TO,PB,other,Other,442.67945155999973
+2000,TO,PE,other,Other,513.8606673500001
+2000,TO,PI,neighboring_state,Neighboring-state circulation,1188.4455456600006
+2000,TO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,808.98257087
+2000,TO,RJ,other,Other,606.1741026599999
+2000,TO,RN,other,Other,256.6441371100001
+2000,TO,RO,other,Other,413.04540355000006
+2000,TO,RR,other,Other,634.21547905
+2000,TO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,722.45682846
+2000,TO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,53.96168729
+2000,TO,SE,other,Other,101.18149291999998
+2000,TO,SP,other,Other,4265.304108259998
+2000,TO,TO,local,Local / within-state,102021.7914277306
+2010,AC,AC,local,Local / within-state,42249.3007800996
+2010,AC,AL,other,Other,76.05159349241701
+2010,AC,AM,neighboring_state,Neighboring-state circulation,3514.475990989093
+2010,AC,AP,other,Other,8.9581790774728
+2010,AC,BA,other,Other,67.7342907581686
+2010,AC,CE,other,Other,336.11975807614584
+2010,AC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,486.9553094806218
+2010,AC,ES,other,Other,95.45855481113402
+2010,AC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,836.0122715580438
+2010,AC,MA,other,Other,65.3299328782513
+2010,AC,MG,other,Other,443.25708591077637
+2010,AC,MS,other,Other,220.81079285677583
+2010,AC,MT,other,Other,781.7983174930035
+2010,AC,PA,other,Other,279.8867000031954
+2010,AC,PB,other,Other,44.0008621752484
+2010,AC,PE,other,Other,148.6319782381286
+2010,AC,PI,other,Other,7.5217245766224
+2010,AC,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,348.4741763609826
+2010,AC,RJ,other,Other,471.88813555880836
+2010,AC,RN,other,Other,111.12267439469849
+2010,AC,RO,neighboring_state,Neighboring-state circulation,5016.564551119113
+2010,AC,RR,other,Other,173.65733783878915
+2010,AC,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,149.6869817529362
+2010,AC,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,253.31155320444208
+2010,AC,SE,other,Other,19.5124202196938
+2010,AC,SP,other,Other,702.0650013361137
+2010,AC,TO,other,Other,87.1067767024688
+2010,AL,AC,other,Other,54.8463204473359
+2010,AL,AL,local,Local / within-state,178802.37380779494
+2010,AL,AM,other,Other,359.52977792213716
+2010,AL,AP,other,Other,96.03415742163008
+2010,AL,BA,neighboring_state,Neighboring-state circulation,8141.286032776154
+2010,AL,CE,other,Other,1323.0743053610456
+2010,AL,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1174.3259536355713
+2010,AL,ES,northeast_to_southeast,Northeast -> Southeast,2708.994507936402
+2010,AL,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4080.820374677898
+2010,AL,MA,other,Other,793.4135787577716
+2010,AL,MG,northeast_to_southeast,Northeast -> Southeast,14428.060635071208
+2010,AL,MS,other,Other,2129.890004423582
+2010,AL,MT,other,Other,6501.171693525599
+2010,AL,PA,other,Other,412.5411701478813
+2010,AL,PB,other,Other,1242.3446011822234
+2010,AL,PE,neighboring_state,Neighboring-state circulation,15541.979236037801
+2010,AL,PI,other,Other,482.37043311698
+2010,AL,PR,other,Other,1788.6435598949856
+2010,AL,RJ,northeast_to_southeast,Northeast -> Southeast,3860.700194819953
+2010,AL,RN,other,Other,1082.7932320534987
+2010,AL,RO,other,Other,436.1048511174384
+2010,AL,RR,other,Other,101.50679540734428
+2010,AL,RS,other,Other,278.7574303580479
+2010,AL,SC,other,Other,1517.8156741769299
+2010,AL,SE,neighboring_state,Neighboring-state circulation,11237.19453899864
+2010,AL,SP,northeast_to_southeast,Northeast -> Southeast,49774.70853464032
+2010,AL,TO,other,Other,757.2535280895012
+2010,AM,AC,neighboring_state,Neighboring-state circulation,4079.141944825485
+2010,AM,AL,other,Other,376.78263918403843
+2010,AM,AM,local,Local / within-state,173574.84589031138
+2010,AM,AP,other,Other,532.8661694852651
+2010,AM,BA,other,Other,681.591770899267
+2010,AM,CE,other,Other,2063.015250400637
+2010,AM,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1614.653428131943
+2010,AM,ES,other,Other,334.1685718973031
+2010,AM,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1239.4864324974371
+2010,AM,MA,other,Other,1908.7743801279294
+2010,AM,MG,other,Other,1028.003614446043
+2010,AM,MS,other,Other,459.2535260465169
+2010,AM,MT,neighboring_state,Neighboring-state circulation,852.8578882776845
+2010,AM,PA,neighboring_state,Neighboring-state circulation,10614.887121784514
+2010,AM,PB,other,Other,507.42701132030817
+2010,AM,PE,other,Other,1309.03970032197
+2010,AM,PI,other,Other,454.53771761297253
+2010,AM,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,961.1044662386524
+2010,AM,RJ,other,Other,4096.919032057688
+2010,AM,RN,other,Other,851.050961764753
+2010,AM,RO,neighboring_state,Neighboring-state circulation,6145.206565580914
+2010,AM,RR,neighboring_state,Neighboring-state circulation,5370.434876091147
+2010,AM,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1051.6968958495177
+2010,AM,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,671.6788328409489
+2010,AM,SE,other,Other,92.76818991313111
+2010,AM,SP,other,Other,3765.8260798635974
+2010,AM,TO,other,Other,237.99051818696242
+2010,AP,AM,other,Other,679.4936604818157
+2010,AP,AP,local,Local / within-state,34899.3019416629
+2010,AP,BA,other,Other,54.738678381891404
+2010,AP,CE,other,Other,705.4107660652775
+2010,AP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,523.3797641711037
+2010,AP,ES,other,Other,86.89323530505128
+2010,AP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,285.315743815392
+2010,AP,MA,other,Other,1375.0486965624978
+2010,AP,MG,other,Other,422.3377068434921
+2010,AP,MS,other,Other,21.312876967177
+2010,AP,MT,other,Other,85.9206044486811
+2010,AP,PA,neighboring_state,Neighboring-state circulation,8397.753967754103
+2010,AP,PB,other,Other,187.90592526340072
+2010,AP,PE,other,Other,190.82629143426843
+2010,AP,PI,other,Other,239.18701497464338
+2010,AP,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,183.1227867385872
+2010,AP,RJ,other,Other,166.6473061515684
+2010,AP,RN,other,Other,394.7959134796349
+2010,AP,RO,other,Other,117.38162564725317
+2010,AP,RR,other,Other,120.87263299753482
+2010,AP,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,100.274077109465
+2010,AP,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,115.28840445261902
+2010,AP,SE,other,Other,46.9777986862524
+2010,AP,SP,other,Other,612.4210012301921
+2010,AP,TO,other,Other,114.94631689594371
+2010,BA,AC,other,Other,378.3473890068811
+2010,BA,AL,neighboring_state,Neighboring-state circulation,4351.433418886481
+2010,BA,AM,other,Other,840.5743175724906
+2010,BA,AP,other,Other,133.69117584559498
+2010,BA,BA,local,Local / within-state,847606.6282846249
+2010,BA,CE,other,Other,5180.943637063168
+2010,BA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,20845.184070370065
+2010,BA,ES,northeast_to_southeast,Northeast -> Southeast,39522.506487016486
+2010,BA,GO,neighboring_state,Neighboring-state circulation,37144.26912715014
+2010,BA,MA,other,Other,2554.9551067300717
+2010,BA,MG,northeast_to_southeast,Northeast -> Southeast,38100.57071129531
+2010,BA,MS,other,Other,2216.224200392198
+2010,BA,MT,other,Other,3537.75230729686
+2010,BA,PA,other,Other,3337.0946678221053
+2010,BA,PB,other,Other,3269.930678966726
+2010,BA,PE,neighboring_state,Neighboring-state circulation,18165.17480683334
+2010,BA,PI,neighboring_state,Neighboring-state circulation,2960.4948722507183
+2010,BA,PR,other,Other,6376.023174541922
+2010,BA,RJ,northeast_to_southeast,Northeast -> Southeast,27031.149335334634
+2010,BA,RN,other,Other,2383.198059367198
+2010,BA,RO,other,Other,1894.7046579500081
+2010,BA,RR,other,Other,361.0674871020872
+2010,BA,RS,other,Other,2889.348439247572
+2010,BA,SC,other,Other,7391.68494897642
+2010,BA,SE,neighboring_state,Neighboring-state circulation,17732.828975513945
+2010,BA,SP,northeast_to_southeast,Northeast -> Southeast,215004.74422465387
+2010,BA,TO,neighboring_state,Neighboring-state circulation,2755.8316323774498
+2010,CE,AC,other,Other,439.74324803087814
+2010,CE,AL,other,Other,1221.7562146730693
+2010,CE,AM,other,Other,2954.9722127220844
+2010,CE,AP,other,Other,667.8407251651997
+2010,CE,BA,other,Other,7509.410581698896
+2010,CE,CE,local,Local / within-state,465427.31881352095
+2010,CE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,8952.157399899377
+2010,CE,ES,northeast_to_southeast,Northeast -> Southeast,876.8191708751914
+2010,CE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,7017.842898903218
+2010,CE,MA,other,Other,4692.412118581058
+2010,CE,MG,northeast_to_southeast,Northeast -> Southeast,9320.849851094667
+2010,CE,MS,other,Other,1272.5306203319424
+2010,CE,MT,other,Other,1815.477815348046
+2010,CE,PA,other,Other,5514.727825064364
+2010,CE,PB,neighboring_state,Neighboring-state circulation,4837.767790861681
+2010,CE,PE,neighboring_state,Neighboring-state circulation,9368.418850597242
+2010,CE,PI,neighboring_state,Neighboring-state circulation,7790.394301675732
+2010,CE,PR,other,Other,2344.6839166152213
+2010,CE,RJ,northeast_to_southeast,Northeast -> Southeast,25818.84896252058
+2010,CE,RN,neighboring_state,Neighboring-state circulation,8376.817890074144
+2010,CE,RO,other,Other,1625.734609872437
+2010,CE,RR,other,Other,884.7169064911728
+2010,CE,RS,other,Other,2592.214075714072
+2010,CE,SC,other,Other,3281.5365197000056
+2010,CE,SE,other,Other,782.0824485961944
+2010,CE,SP,northeast_to_southeast,Northeast -> Southeast,60065.831065303755
+2010,CE,TO,other,Other,1195.7117736544221
+2010,DF,AC,other,Other,232.4108642257004
+2010,DF,AL,other,Other,620.8003413151641
+2010,DF,AM,other,Other,1191.3471650936858
+2010,DF,AP,other,Other,234.90665535271816
+2010,DF,BA,other,Other,8808.822143302836
+2010,DF,CE,other,Other,5245.516560885208
+2010,DF,DF,local,Local / within-state,119026.7313838613
+2010,DF,ES,other,Other,1868.729798602365
+2010,DF,GO,neighboring_state,Neighboring-state circulation,82564.25214982126
+2010,DF,MA,other,Other,6929.378425476168
+2010,DF,MG,other,Other,13771.803176879253
+2010,DF,MS,other,Other,765.8354423359452
+2010,DF,MT,other,Other,1420.8190467265972
+2010,DF,PA,other,Other,2221.7002028141965
+2010,DF,PB,other,Other,3720.1865644083073
+2010,DF,PE,other,Other,2876.3549202190366
+2010,DF,PI,other,Other,8481.512712365544
+2010,DF,PR,other,Other,2577.9199627690805
+2010,DF,RJ,other,Other,7830.568823324447
+2010,DF,RN,other,Other,2478.4625916994696
+2010,DF,RO,other,Other,408.8020331903131
+2010,DF,RR,other,Other,362.5004559964269
+2010,DF,RS,other,Other,2566.310049844939
+2010,DF,SC,other,Other,2269.573890327069
+2010,DF,SE,other,Other,1238.7487920831052
+2010,DF,SP,other,Other,10791.838009873116
+2010,DF,TO,other,Other,4391.118826246956
+2010,ES,AC,other,Other,40.3052448614773
+2010,ES,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,164.52201725577007
+2010,ES,AM,other,Other,244.02800777834284
+2010,ES,AP,other,Other,55.6155637427831
+2010,ES,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,11010.091129635359
+2010,ES,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,456.59997972206895
+2010,ES,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1167.4852984178513
+2010,ES,ES,local,Local / within-state,263146.07045927376
+2010,ES,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,1136.3971015066932
+2010,ES,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,428.078432304946
+2010,ES,MG,neighboring_state,Neighboring-state circulation,21604.956822894615
+2010,ES,MS,other,Other,462.53233353894467
+2010,ES,MT,other,Other,553.6988245589796
+2010,ES,PA,other,Other,751.8407751236075
+2010,ES,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,300.93061082903586
+2010,ES,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,621.1297015696944
+2010,ES,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,305.10678425511287
+2010,ES,PR,other,Other,1175.170182065097
+2010,ES,RJ,neighboring_state,Neighboring-state circulation,17788.166252707153
+2010,ES,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,261.1054646382399
+2010,ES,RO,other,Other,2231.102404062615
+2010,ES,RR,other,Other,63.564453064895396
+2010,ES,RS,other,Other,698.3602968964326
+2010,ES,SC,other,Other,909.0794135008566
+2010,ES,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,224.83291957804198
+2010,ES,SP,other,Other,7339.300606499422
+2010,ES,TO,other,Other,125.58204015787096
+2010,GO,AC,other,Other,208.48332990577703
+2010,GO,AL,other,Other,341.19197371599495
+2010,GO,AM,other,Other,819.6615769277902
+2010,GO,AP,other,Other,217.20638394493952
+2010,GO,BA,neighboring_state,Neighboring-state circulation,8336.320530910805
+2010,GO,CE,other,Other,2181.905200291438
+2010,GO,DF,neighboring_state,Neighboring-state circulation,32940.983503187184
+2010,GO,ES,other,Other,620.9631868884891
+2010,GO,GO,local,Local / within-state,518946.0180243293
+2010,GO,MA,other,Other,5429.76979657142
+2010,GO,MG,neighboring_state,Neighboring-state circulation,22402.330942396973
+2010,GO,MS,neighboring_state,Neighboring-state circulation,3794.385437085019
+2010,GO,MT,neighboring_state,Neighboring-state circulation,16086.51075336172
+2010,GO,PA,other,Other,9263.133682537651
+2010,GO,PB,other,Other,1381.8358371068005
+2010,GO,PE,other,Other,1393.8600514000082
+2010,GO,PI,other,Other,3311.2511442365994
+2010,GO,PR,other,Other,2716.4809386078105
+2010,GO,RJ,other,Other,2519.259871907182
+2010,GO,RN,other,Other,1380.2789897910445
+2010,GO,RO,other,Other,2552.7481964355316
+2010,GO,RR,other,Other,386.4472522202517
+2010,GO,RS,other,Other,1834.3611406431567
+2010,GO,SC,other,Other,2109.831671688445
+2010,GO,SE,other,Other,307.1475977256301
+2010,GO,SP,other,Other,14741.449190596444
+2010,GO,TO,neighboring_state,Neighboring-state circulation,18829.17992491836
+2010,MA,AC,other,Other,197.27785491856926
+2010,MA,AL,other,Other,383.38063883805347
+2010,MA,AM,other,Other,4029.5510671350526
+2010,MA,AP,other,Other,3295.2104185340913
+2010,MA,BA,other,Other,1934.5205284031283
+2010,MA,CE,other,Other,4999.913846298703
+2010,MA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,19984.29166482886
+2010,MA,ES,northeast_to_southeast,Northeast -> Southeast,1006.9899416638884
+2010,MA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,43845.9726247812
+2010,MA,MA,local,Local / within-state,387407.22903760377
+2010,MA,MG,northeast_to_southeast,Northeast -> Southeast,9730.14099535758
+2010,MA,MS,other,Other,873.7380867361765
+2010,MA,MT,other,Other,14454.479580875477
+2010,MA,PA,neighboring_state,Neighboring-state circulation,62638.088745701476
+2010,MA,PB,other,Other,1009.5393021856366
+2010,MA,PE,other,Other,2019.303770553799
+2010,MA,PI,neighboring_state,Neighboring-state circulation,17734.468767381553
+2010,MA,PR,other,Other,1576.8008759120173
+2010,MA,RJ,northeast_to_southeast,Northeast -> Southeast,10839.990046054067
+2010,MA,RN,other,Other,628.1298897580009
+2010,MA,RO,other,Other,2598.7274254192057
+2010,MA,RR,other,Other,4733.888464767747
+2010,MA,RS,other,Other,913.7933810741551
+2010,MA,SC,other,Other,2023.9607662641706
+2010,MA,SE,other,Other,131.25720726796808
+2010,MA,SP,northeast_to_southeast,Northeast -> Southeast,39322.78422043508
+2010,MA,TO,neighboring_state,Neighboring-state circulation,19757.466904760488
+2010,MG,AC,other,Other,598.2353515830755
+2010,MG,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,1255.8888293481748
+2010,MG,AM,other,Other,1494.4847897632092
+2010,MG,AP,other,Other,455.17911644765735
+2010,MG,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,20627.34137664752
+2010,MG,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,3058.2692584423703
+2010,MG,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,25310.81575962185
+2010,MG,ES,neighboring_state,Neighboring-state circulation,37533.78770497429
+2010,MG,GO,neighboring_state,Neighboring-state circulation,36017.01855358129
+2010,MG,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,2564.8623327333316
+2010,MG,MG,local,Local / within-state,1345321.2952211504
+2010,MG,MS,neighboring_state,Neighboring-state circulation,4761.352720608617
+2010,MG,MT,other,Other,5073.76644608324
+2010,MG,PA,other,Other,5767.986927355185
+2010,MG,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,1451.495189889203
+2010,MG,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,3557.4807104264246
+2010,MG,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,1163.72900656195
+2010,MG,PR,other,Other,11720.82381478915
+2010,MG,RJ,neighboring_state,Neighboring-state circulation,46853.92551192366
+2010,MG,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,1733.5365514000637
+2010,MG,RO,other,Other,3961.5463308135913
+2010,MG,RR,other,Other,314.3801098167069
+2010,MG,RS,other,Other,3884.148956191261
+2010,MG,SC,other,Other,4972.32384657555
+2010,MG,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,723.9525663339825
+2010,MG,SP,neighboring_state,Neighboring-state circulation,162112.26631634717
+2010,MG,TO,other,Other,3645.5921659304186
+2010,MS,AC,other,Other,350.02296897068595
+2010,MS,AL,other,Other,267.6106846231749
+2010,MS,AM,other,Other,302.5984710467568
+2010,MS,AP,other,Other,91.3957857013838
+2010,MS,BA,other,Other,1317.3096960111834
+2010,MS,CE,other,Other,382.364897248815
+2010,MS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1076.1448388784315
+2010,MS,ES,other,Other,565.7456385551366
+2010,MS,GO,neighboring_state,Neighboring-state circulation,4571.743850110297
+2010,MS,MA,other,Other,396.71817234769657
+2010,MS,MG,neighboring_state,Neighboring-state circulation,3528.4846630249476
+2010,MS,MS,local,Local / within-state,215628.23691971012
+2010,MS,MT,neighboring_state,Neighboring-state circulation,13410.175576110196
+2010,MS,PA,other,Other,854.7558190316291
+2010,MS,PB,other,Other,824.9958782922423
+2010,MS,PE,other,Other,489.7723573540901
+2010,MS,PI,other,Other,283.0866459992144
+2010,MS,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,14651.420385161322
+2010,MS,RJ,other,Other,3340.5109485603393
+2010,MS,RN,other,Other,640.1898907758053
+2010,MS,RO,other,Other,2209.524668197139
+2010,MS,RR,other,Other,358.31780367055853
+2010,MS,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,2886.5267421255685
+2010,MS,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,4093.188700364114
+2010,MS,SE,other,Other,215.16857041155149
+2010,MS,SP,neighboring_state,Neighboring-state circulation,23327.410712460955
+2010,MS,TO,other,Other,472.4044811401463
+2010,MT,AC,other,Other,756.1206728582607
+2010,MT,AL,other,Other,765.1028006978572
+2010,MT,AM,neighboring_state,Neighboring-state circulation,1608.4590615183051
+2010,MT,AP,other,Other,232.4095608541443
+2010,MT,BA,other,Other,2198.642490695232
+2010,MT,CE,other,Other,691.3644687584599
+2010,MT,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2131.509379382302
+2010,MT,ES,other,Other,840.070187157048
+2010,MT,GO,neighboring_state,Neighboring-state circulation,20695.513681917448
+2010,MT,MA,other,Other,2179.0309380765298
+2010,MT,MG,other,Other,4733.247225790212
+2010,MT,MS,neighboring_state,Neighboring-state circulation,13776.584676214025
+2010,MT,MT,local,Local / within-state,320253.2640317802
+2010,MT,PA,neighboring_state,Neighboring-state circulation,8294.733605229872
+2010,MT,PB,other,Other,321.4965906187966
+2010,MT,PE,other,Other,837.5337635750293
+2010,MT,PI,other,Other,835.1172703168573
+2010,MT,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,15956.687006245467
+2010,MT,RJ,other,Other,1728.20211672388
+2010,MT,RN,other,Other,421.871816650425
+2010,MT,RO,neighboring_state,Neighboring-state circulation,13876.34187826466
+2010,MT,RR,other,Other,323.91340942088857
+2010,MT,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,3779.9801036882773
+2010,MT,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,6170.751317533033
+2010,MT,SE,other,Other,379.2325888898221
+2010,MT,SP,other,Other,15133.99949901159
+2010,MT,TO,neighboring_state,Neighboring-state circulation,2921.462707717801
+2010,PA,AC,other,Other,440.02671926934755
+2010,PA,AL,other,Other,340.76866970874596
+2010,PA,AM,neighboring_state,Neighboring-state circulation,27503.77154697512
+2010,PA,AP,neighboring_state,Neighboring-state circulation,28449.96868217212
+2010,PA,BA,other,Other,4170.501226051121
+2010,PA,CE,other,Other,6478.344240371816
+2010,PA,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4401.445603681817
+2010,PA,ES,other,Other,1687.9517730223715
+2010,PA,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,21585.254986334654
+2010,PA,MA,neighboring_state,Neighboring-state circulation,29091.351128543258
+2010,PA,MG,other,Other,5142.705541083977
+2010,PA,MS,other,Other,1285.2475029969632
+2010,PA,MT,neighboring_state,Neighboring-state circulation,8737.501089786148
+2010,PA,PA,local,Local / within-state,565372.6777807102
+2010,PA,PB,other,Other,1105.3512517064682
+2010,PA,PE,other,Other,2322.792205463854
+2010,PA,PI,other,Other,3105.2705847211155
+2010,PA,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,3649.800520446268
+2010,PA,RJ,other,Other,7137.408003457432
+2010,PA,RN,other,Other,1055.5973253086704
+2010,PA,RO,other,Other,2869.4233042275123
+2010,PA,RR,neighboring_state,Neighboring-state circulation,6607.441691424083
+2010,PA,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,1659.8820314955474
+2010,PA,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,2577.1758700335567
+2010,PA,SE,other,Other,471.2673159364944
+2010,PA,SP,other,Other,12379.217086966406
+2010,PA,TO,neighboring_state,Neighboring-state circulation,17578.45498005691
+2010,PB,AC,other,Other,71.3260612578315
+2010,PB,AL,other,Other,912.6554574815284
+2010,PB,AM,other,Other,249.42060170847427
+2010,PB,AP,other,Other,144.3785343358519
+2010,PB,BA,other,Other,4081.136417753086
+2010,PB,CE,neighboring_state,Neighboring-state circulation,4533.611864752105
+2010,PB,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3355.6145750581195
+2010,PB,ES,northeast_to_southeast,Northeast -> Southeast,544.7150578818521
+2010,PB,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4590.925499644641
+2010,PB,MA,other,Other,1288.0320699636873
+2010,PB,MG,northeast_to_southeast,Northeast -> Southeast,3417.1271449159435
+2010,PB,MS,other,Other,566.13606780289
+2010,PB,MT,other,Other,1603.5111667632468
+2010,PB,PA,other,Other,965.1851815803032
+2010,PB,PB,local,Local / within-state,195662.02520467344
+2010,PB,PE,neighboring_state,Neighboring-state circulation,17483.284764242693
+2010,PB,PI,other,Other,646.3062540404864
+2010,PB,PR,other,Other,1452.7376517290459
+2010,PB,RJ,northeast_to_southeast,Northeast -> Southeast,24171.53936192825
+2010,PB,RN,neighboring_state,Neighboring-state circulation,12535.6982852133
+2010,PB,RO,other,Other,824.5314434996411
+2010,PB,RR,other,Other,368.08359232692595
+2010,PB,RS,other,Other,895.6256574644156
+2010,PB,SC,other,Other,1526.5851114941495
+2010,PB,SE,other,Other,776.5875744052313
+2010,PB,SP,northeast_to_southeast,Northeast -> Southeast,38130.31563733211
+2010,PB,TO,other,Other,385.8518677077542
+2010,PE,AC,other,Other,168.7253795887408
+2010,PE,AL,neighboring_state,Neighboring-state circulation,15777.058509901985
+2010,PE,AM,other,Other,1880.7937094225247
+2010,PE,AP,other,Other,181.5171607276238
+2010,PE,BA,neighboring_state,Neighboring-state circulation,17872.482053268774
+2010,PE,CE,neighboring_state,Neighboring-state circulation,10123.565969183828
+2010,PE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,3566.9304793041124
+2010,PE,ES,northeast_to_southeast,Northeast -> Southeast,1301.0364706362252
+2010,PE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,5718.864384987718
+2010,PE,MA,other,Other,2674.179267886906
+2010,PE,MG,northeast_to_southeast,Northeast -> Southeast,7754.955426195011
+2010,PE,MS,other,Other,2319.166931693067
+2010,PE,MT,other,Other,3767.0902533138046
+2010,PE,PA,other,Other,2799.7067378257384
+2010,PE,PB,neighboring_state,Neighboring-state circulation,22024.5085788294
+2010,PE,PE,local,Local / within-state,530205.9337737904
+2010,PE,PI,neighboring_state,Neighboring-state circulation,2971.5416506508855
+2010,PE,PR,other,Other,2945.1155179748957
+2010,PE,RJ,northeast_to_southeast,Northeast -> Southeast,14716.868185737974
+2010,PE,RN,other,Other,7024.045189407607
+2010,PE,RO,other,Other,804.6992311617979
+2010,PE,RR,other,Other,671.5216208693961
+2010,PE,RS,other,Other,1232.4175222720303
+2010,PE,SC,other,Other,3488.5440667827083
+2010,PE,SE,other,Other,3111.124532269385
+2010,PE,SP,northeast_to_southeast,Northeast -> Southeast,87462.3084362277
+2010,PE,TO,other,Other,1225.2746324036998
+2010,PI,AC,other,Other,96.49076353613158
+2010,PI,AL,other,Other,242.86250493435287
+2010,PI,AM,other,Other,1196.3063708040356
+2010,PI,AP,other,Other,337.283710209418
+2010,PI,BA,neighboring_state,Neighboring-state circulation,3468.1516549717517
+2010,PI,CE,neighboring_state,Neighboring-state circulation,7763.141088411605
+2010,PI,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,18316.642456394235
+2010,PI,ES,northeast_to_southeast,Northeast -> Southeast,574.644207359931
+2010,PI,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,14754.023841837497
+2010,PI,MA,neighboring_state,Neighboring-state circulation,16493.006796513542
+2010,PI,MG,northeast_to_southeast,Northeast -> Southeast,3882.1705821442006
+2010,PI,MS,other,Other,779.7321352556978
+2010,PI,MT,other,Other,2296.726783001304
+2010,PI,PA,other,Other,4225.269886809926
+2010,PI,PB,other,Other,752.1654640426543
+2010,PI,PE,neighboring_state,Neighboring-state circulation,4265.068384185423
+2010,PI,PI,local,Local / within-state,135600.59405670574
+2010,PI,PR,other,Other,960.3405750887196
+2010,PI,RJ,northeast_to_southeast,Northeast -> Southeast,4414.489881272092
+2010,PI,RN,other,Other,822.4232648583296
+2010,PI,RO,other,Other,357.1263863250495
+2010,PI,RR,other,Other,340.9876849082953
+2010,PI,RS,other,Other,707.8743102156684
+2010,PI,SC,other,Other,743.832390319755
+2010,PI,SE,other,Other,217.90028319272005
+2010,PI,SP,northeast_to_southeast,Northeast -> Southeast,53569.875784289994
+2010,PI,TO,neighboring_state,Neighboring-state circulation,2458.603101219887
+2010,PR,AC,south_to_agri_frontier,South -> agricultural frontier,438.7610410379338
+2010,PR,AL,other,Other,391.7039721089909
+2010,PR,AM,south_to_agri_frontier,South -> agricultural frontier,1528.810412970362
+2010,PR,AP,south_to_agri_frontier,South -> agricultural frontier,196.75603770219294
+2010,PR,BA,other,Other,4660.7554053861295
+2010,PR,CE,other,Other,1403.2870110584956
+2010,PR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2740.556854202157
+2010,PR,ES,other,Other,1299.1390601430949
+2010,PR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4753.371047599173
+2010,PR,MA,other,Other,1177.8646932560732
+2010,PR,MG,other,Other,9407.150327065212
+2010,PR,MS,south_to_agri_frontier,South -> agricultural frontier,14559.628833513158
+2010,PR,MT,south_to_agri_frontier,South -> agricultural frontier,17994.76059401975
+2010,PR,PA,south_to_agri_frontier,South -> agricultural frontier,2142.0326990664025
+2010,PR,PB,other,Other,741.6306025509892
+2010,PR,PE,other,Other,1141.5795467807002
+2010,PR,PI,other,Other,318.33815777246724
+2010,PR,PR,local,Local / within-state,844692.1931042087
+2010,PR,RJ,other,Other,5086.470905155985
+2010,PR,RN,other,Other,608.4672351151338
+2010,PR,RO,south_to_agri_frontier,South -> agricultural frontier,5121.008836944869
+2010,PR,RR,south_to_agri_frontier,South -> agricultural frontier,489.293432654545
+2010,PR,RS,other,Other,16996.513539769494
+2010,PR,SC,neighboring_state,Neighboring-state circulation,118199.60277523313
+2010,PR,SE,other,Other,396.6049849730791
+2010,PR,SP,neighboring_state,Neighboring-state circulation,80398.13916817734
+2010,PR,TO,south_to_agri_frontier,South -> agricultural frontier,1500.4366713704392
+2010,RJ,AC,other,Other,412.0378498073708
+2010,RJ,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,2329.168517596357
+2010,RJ,AM,other,Other,5490.665542401149
+2010,RJ,AP,other,Other,394.8204136629902
+2010,RJ,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,13890.968942290772
+2010,RJ,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,12264.297062979316
+2010,RJ,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,12251.598811677974
+2010,RJ,ES,neighboring_state,Neighboring-state circulation,22977.07936903003
+2010,RJ,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,4624.527330083113
+2010,RJ,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,3961.4431451785686
+2010,RJ,MG,neighboring_state,Neighboring-state circulation,45486.855634054366
+2010,RJ,MS,other,Other,4430.535074260997
+2010,RJ,MT,other,Other,1476.8901597343358
+2010,RJ,PA,other,Other,4526.831684290605
+2010,RJ,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,16538.20394213358
+2010,RJ,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,9802.153644368866
+2010,RJ,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,2057.2067413820046
+2010,RJ,PR,other,Other,7915.485179220541
+2010,RJ,RJ,local,Local / within-state,786940.1252825402
+2010,RJ,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,9118.157243840731
+2010,RJ,RO,other,Other,1093.7506854746935
+2010,RJ,RR,other,Other,568.2515028884727
+2010,RJ,RS,other,Other,8407.719366971882
+2010,RJ,SC,other,Other,6941.049097797983
+2010,RJ,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,3081.492770565771
+2010,RJ,SP,neighboring_state,Neighboring-state circulation,46378.92184934152
+2010,RJ,TO,other,Other,888.3890945112967
+2010,RN,AC,other,Other,57.4459219936826
+2010,RN,AL,other,Other,665.618137415398
+2010,RN,AM,other,Other,689.2244220818857
+2010,RN,AP,other,Other,249.38206031059158
+2010,RN,BA,other,Other,1714.6406330867358
+2010,RN,CE,neighboring_state,Neighboring-state circulation,5300.075052760454
+2010,RN,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2790.16704338226
+2010,RN,ES,northeast_to_southeast,Northeast -> Southeast,485.27529395364434
+2010,RN,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3131.858695388849
+2010,RN,MA,other,Other,390.9346962489648
+2010,RN,MG,northeast_to_southeast,Northeast -> Southeast,2371.4524467304454
+2010,RN,MS,other,Other,564.3256680717844
+2010,RN,MT,other,Other,335.0678572964298
+2010,RN,PA,other,Other,820.4511397383849
+2010,RN,PB,neighboring_state,Neighboring-state circulation,9330.729390523833
+2010,RN,PE,other,Other,3343.078947635813
+2010,RN,PI,other,Other,447.6709179606413
+2010,RN,PR,other,Other,519.2789427096886
+2010,RN,RJ,northeast_to_southeast,Northeast -> Southeast,5685.304658791876
+2010,RN,RN,local,Local / within-state,231991.1258348176
+2010,RN,RO,other,Other,447.90070299418306
+2010,RN,RR,other,Other,355.0789747036852
+2010,RN,RS,other,Other,904.0597461459104
+2010,RN,SC,other,Other,791.2631390708538
+2010,RN,SE,other,Other,307.4254620732266
+2010,RN,SP,northeast_to_southeast,Northeast -> Southeast,11927.077590879346
+2010,RN,TO,other,Other,392.3111494556162
+2010,RO,AC,neighboring_state,Neighboring-state circulation,3387.274181997159
+2010,RO,AL,other,Other,183.98177068200832
+2010,RO,AM,neighboring_state,Neighboring-state circulation,6685.892389276757
+2010,RO,AP,other,Other,73.4865673168162
+2010,RO,BA,other,Other,1014.0523489778078
+2010,RO,CE,other,Other,884.127266745
+2010,RO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,913.2042327379766
+2010,RO,ES,other,Other,2397.423287717162
+2010,RO,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,2401.0363737520543
+2010,RO,MA,other,Other,531.1812054867386
+2010,RO,MG,other,Other,1840.1677876060587
+2010,RO,MS,other,Other,2351.2075491247783
+2010,RO,MT,neighboring_state,Neighboring-state circulation,13785.86449089685
+2010,RO,PA,other,Other,1316.2491368680319
+2010,RO,PB,other,Other,431.6177497689564
+2010,RO,PE,other,Other,693.8528355553044
+2010,RO,PI,other,Other,177.60824256164057
+2010,RO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,6018.473629718874
+2010,RO,RJ,other,Other,841.3800956940697
+2010,RO,RN,other,Other,251.06857180338878
+2010,RO,RO,local,Local / within-state,164070.46281403338
+2010,RO,RR,other,Other,748.3284968965663
+2010,RO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,656.3846077121486
+2010,RO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,1371.7295662571207
+2010,RO,SE,other,Other,122.457882007988
+2010,RO,SP,other,Other,4189.3875825627065
+2010,RO,TO,other,Other,375.2860965766016
+2010,RR,AC,other,Other,28.0646496504062
+2010,RR,AL,other,Other,80.03352971360212
+2010,RR,AM,neighboring_state,Neighboring-state circulation,3012.2516072802564
+2010,RR,AP,other,Other,41.8534306271593
+2010,RR,BA,other,Other,130.0227634639855
+2010,RR,CE,other,Other,611.5887449121594
+2010,RR,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,285.0015631464155
+2010,RR,ES,other,Other,100.6494941256898
+2010,RR,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,399.5142511390641
+2010,RR,MA,other,Other,1476.4986439584802
+2010,RR,MG,other,Other,412.1618289577548
+2010,RR,MS,other,Other,171.21357699642712
+2010,RR,MT,other,Other,188.87245853784623
+2010,RR,PA,neighboring_state,Neighboring-state circulation,1110.2611656615793
+2010,RR,PB,other,Other,240.89460778086143
+2010,RR,PE,other,Other,270.5588184331499
+2010,RR,PI,other,Other,91.6806233127689
+2010,RR,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,187.95209512705262
+2010,RR,RJ,other,Other,350.50218591193845
+2010,RR,RN,other,Other,248.53381658878078
+2010,RR,RO,other,Other,685.3385959436449
+2010,RR,RR,local,Local / within-state,27504.767050529794
+2010,RR,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,303.6972548002251
+2010,RR,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,126.5695707455314
+2010,RR,SP,other,Other,512.6557470498069
+2010,RR,TO,other,Other,137.80874772185823
+2010,RS,AC,south_to_agri_frontier,South -> agricultural frontier,230.9440630085815
+2010,RS,AL,other,Other,466.8001061551752
+2010,RS,AM,south_to_agri_frontier,South -> agricultural frontier,1523.0703712311267
+2010,RS,AP,south_to_agri_frontier,South -> agricultural frontier,91.21339399559089
+2010,RS,BA,other,Other,3442.6854706901786
+2010,RS,CE,other,Other,1794.026329504986
+2010,RS,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4095.270168156409
+2010,RS,ES,other,Other,922.4063462263114
+2010,RS,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,3031.004541274903
+2010,RS,MA,other,Other,764.4332558166877
+2010,RS,MG,other,Other,3684.2418086104735
+2010,RS,MS,south_to_agri_frontier,South -> agricultural frontier,3842.7665778748606
+2010,RS,MT,south_to_agri_frontier,South -> agricultural frontier,5949.205785703889
+2010,RS,PA,south_to_agri_frontier,South -> agricultural frontier,1536.6231952094897
+2010,RS,PB,other,Other,887.7731833336882
+2010,RS,PE,other,Other,1750.7053977496716
+2010,RS,PI,other,Other,725.1091194388325
+2010,RS,PR,other,Other,21853.49105911882
+2010,RS,RJ,other,Other,7544.815433435836
+2010,RS,RN,other,Other,762.8665355951136
+2010,RS,RO,south_to_agri_frontier,South -> agricultural frontier,1446.0708393134184
+2010,RS,RR,south_to_agri_frontier,South -> agricultural frontier,373.1561479203222
+2010,RS,RS,local,Local / within-state,896148.2277355837
+2010,RS,SC,neighboring_state,Neighboring-state circulation,91953.32533143822
+2010,RS,SE,other,Other,521.1559150611745
+2010,RS,SP,other,Other,17425.3311103046
+2010,RS,TO,south_to_agri_frontier,South -> agricultural frontier,644.9255499312206
+2010,SC,AC,south_to_agri_frontier,South -> agricultural frontier,111.59683726437581
+2010,SC,AL,other,Other,394.75024543541554
+2010,SC,AM,south_to_agri_frontier,South -> agricultural frontier,480.13845532118216
+2010,SC,AP,south_to_agri_frontier,South -> agricultural frontier,105.10478919791892
+2010,SC,BA,other,Other,1541.041737054168
+2010,SC,CE,other,Other,725.8979956585922
+2010,SC,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,2525.5712949905214
+2010,SC,ES,other,Other,538.9969073059405
+2010,SC,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,2480.12173356131
+2010,SC,MA,other,Other,488.72611912927835
+2010,SC,MG,other,Other,3081.0402996518696
+2010,SC,MS,south_to_agri_frontier,South -> agricultural frontier,2881.259484037717
+2010,SC,MT,south_to_agri_frontier,South -> agricultural frontier,4078.989724526741
+2010,SC,PA,south_to_agri_frontier,South -> agricultural frontier,667.2532969444921
+2010,SC,PB,other,Other,514.5385109741251
+2010,SC,PE,other,Other,1053.0218507544946
+2010,SC,PI,other,Other,251.25180630724796
+2010,SC,PR,neighboring_state,Neighboring-state circulation,50047.45302327487
+2010,SC,RJ,other,Other,3703.462916021219
+2010,SC,RN,other,Other,599.010154885598
+2010,SC,RO,south_to_agri_frontier,South -> agricultural frontier,1878.1335516664074
+2010,SC,RR,south_to_agri_frontier,South -> agricultural frontier,226.22282414581886
+2010,SC,RS,neighboring_state,Neighboring-state circulation,31902.40025356704
+2010,SC,SC,local,Local / within-state,543454.832484896
+2010,SC,SE,other,Other,104.55960371815162
+2010,SC,SP,other,Other,18132.14355627704
+2010,SC,TO,south_to_agri_frontier,South -> agricultural frontier,375.7601399525936
+2010,SE,AC,other,Other,7.3198271877326
+2010,SE,AL,neighboring_state,Neighboring-state circulation,4574.825940033395
+2010,SE,AM,other,Other,129.1127338144267
+2010,SE,AP,other,Other,36.314753338810405
+2010,SE,BA,neighboring_state,Neighboring-state circulation,11525.556617533972
+2010,SE,CE,other,Other,471.4802704586575
+2010,SE,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,1162.6098471382816
+2010,SE,ES,northeast_to_southeast,Northeast -> Southeast,795.0122650992162
+2010,SE,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,816.8139605420522
+2010,SE,MA,other,Other,304.62633836251655
+2010,SE,MG,northeast_to_southeast,Northeast -> Southeast,2022.5248908590156
+2010,SE,MS,other,Other,256.23251320885254
+2010,SE,MT,other,Other,439.16153773808554
+2010,SE,PA,other,Other,483.40613780438855
+2010,SE,PB,other,Other,447.7433224388236
+2010,SE,PE,other,Other,1249.4333992289337
+2010,SE,PI,other,Other,230.90437795277757
+2010,SE,PR,other,Other,673.3033129553752
+2010,SE,RJ,northeast_to_southeast,Northeast -> Southeast,2754.132444650354
+2010,SE,RN,other,Other,413.31556810278346
+2010,SE,RO,other,Other,215.9455718375343
+2010,SE,RR,other,Other,42.166328660979
+2010,SE,RS,other,Other,320.8037610624908
+2010,SE,SC,other,Other,766.2947886955719
+2010,SE,SE,local,Local / within-state,129011.61233248183
+2010,SE,SP,northeast_to_southeast,Northeast -> Southeast,14764.94477880748
+2010,SE,TO,other,Other,240.12143098249092
+2010,SP,AC,other,Other,991.5218507799385
+2010,SP,AL,return_southeast_to_northeast,Return: Southeast -> Northeast,17266.444561279743
+2010,SP,AM,other,Other,2864.3781698221733
+2010,SP,AP,other,Other,563.2826017234429
+2010,SP,BA,return_southeast_to_northeast,Return: Southeast -> Northeast,89694.89663123403
+2010,SP,CE,return_southeast_to_northeast,Return: Southeast -> Northeast,32772.954642075245
+2010,SP,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,13245.340346673902
+2010,SP,ES,other,Other,10902.128991792586
+2010,SP,GO,brasilia_go_inflow,Long-distance inflow to DF/GO,25035.27244884776
+2010,SP,MA,return_southeast_to_northeast,Return: Southeast -> Northeast,10757.535886144651
+2010,SP,MG,neighboring_state,Neighboring-state circulation,145402.23750628825
+2010,SP,MS,neighboring_state,Neighboring-state circulation,33457.21000576253
+2010,SP,MT,other,Other,16261.094766004966
+2010,SP,PA,other,Other,7142.169855809085
+2010,SP,PB,return_southeast_to_northeast,Return: Southeast -> Northeast,23652.491919405405
+2010,SP,PE,return_southeast_to_northeast,Return: Southeast -> Northeast,47976.677627754856
+2010,SP,PI,return_southeast_to_northeast,Return: Southeast -> Northeast,17554.999799871737
+2010,SP,PR,neighboring_state,Neighboring-state circulation,112682.59736627794
+2010,SP,RJ,neighboring_state,Neighboring-state circulation,41101.18447913368
+2010,SP,RN,return_southeast_to_northeast,Return: Southeast -> Northeast,13420.78090064487
+2010,SP,RO,other,Other,5935.887504215941
+2010,SP,RR,other,Other,868.1428766974984
+2010,SP,RS,other,Other,14531.949257550918
+2010,SP,SC,other,Other,36554.15746779385
+2010,SP,SE,return_southeast_to_northeast,Return: Southeast -> Northeast,10672.475253445644
+2010,SP,SP,local,Local / within-state,2670247.0373733393
+2010,SP,TO,other,Other,4210.612867894075
+2010,TO,AC,other,Other,105.0457588659279
+2010,TO,AL,other,Other,137.8984469118817
+2010,TO,AM,other,Other,178.28016869734995
+2010,TO,AP,other,Other,141.4310829676948
+2010,TO,BA,neighboring_state,Neighboring-state circulation,1329.5934923377363
+2010,TO,CE,other,Other,621.5494707401676
+2010,TO,DF,brasilia_go_inflow,Long-distance inflow to DF/GO,4564.286133109897
+2010,TO,ES,other,Other,231.94211411050787
+2010,TO,GO,neighboring_state,Neighboring-state circulation,31176.1958112438
+2010,TO,MA,neighboring_state,Neighboring-state circulation,6966.312356640231
+2010,TO,MG,other,Other,3101.6907509555826
+2010,TO,MS,other,Other,753.4472707137181
+2010,TO,MT,neighboring_state,Neighboring-state circulation,2464.7157804874987
+2010,TO,PA,neighboring_state,Neighboring-state circulation,15919.671175387444
+2010,TO,PB,other,Other,260.23013744943427
+2010,TO,PE,other,Other,626.326961041423
+2010,TO,PI,neighboring_state,Neighboring-state circulation,987.7294203513146
+2010,TO,PR,return_agri_frontier_to_south,Return: agricultural frontier -> South,899.7659801259574
+2010,TO,RJ,other,Other,547.3008919275652
+2010,TO,RN,other,Other,124.70545543964377
+2010,TO,RO,other,Other,1109.317919424188
+2010,TO,RR,other,Other,341.8967326389056
+2010,TO,RS,return_agri_frontier_to_south,Return: agricultural frontier -> South,468.23430875119305
+2010,TO,SC,return_agri_frontier_to_south,Return: agricultural frontier -> South,520.5449611813245
+2010,TO,SE,other,Other,124.13987406162047
+2010,TO,SP,other,Other,3349.6266400166487
+2010,TO,TO,local,Local / within-state,127657.09938264634

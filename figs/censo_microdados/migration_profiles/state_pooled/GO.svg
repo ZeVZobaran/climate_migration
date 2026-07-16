@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1730" viewBox="0 0 1400 1730" role="img">
+<title>GO migration-group socioeconomic profile, Person-weighted pool, 1970-2010</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="54.0" y="54.0" text-anchor="start" font-family="Arial, sans-serif" font-size="29" font-weight="600" fill="#1F2937">GO: immigrants, emigrants, and stayers</text>
+<text x="54.0" y="84.0" text-anchor="start" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#374151">Person-weighted pool, 1970-2010</text>
+<text x="54.0" y="111.0" text-anchor="start" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280">Migration proxy varies by census; observations are weighted by person, not by year</text>
+<rect x="54" y="136" width="18" height="18" rx="2" fill="#0072B2"/>
+<text x="83.0" y="150.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#1F2937">Immigrants  |  Pooled N = 2,381.1k</text>
+<rect x="474" y="136" width="18" height="18" rx="2" fill="#D55E00"/>
+<text x="503.0" y="150.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#1F2937">Emigrants  |  Pooled N = 1,074.3k</text>
+<rect x="894" y="136" width="18" height="18" rx="2" fill="#6B7280"/>
+<text x="923.0" y="150.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#1F2937">Stayers  |  Pooled N = 15,713k</text>
+<text x="54.0" y="208.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Age</text>
+<line x1="108.0" y1="481.0" x2="690.0" y2="481.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="485.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="108.0" y1="417.8" x2="690.0" y2="417.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="421.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">7.5%</text>
+<line x1="108.0" y1="354.5" x2="690.0" y2="354.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="358.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">15%</text>
+<line x1="108.0" y1="291.2" x2="690.0" y2="291.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="295.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">22.5%</text>
+<line x1="108.0" y1="228.0" x2="690.0" y2="228.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="232.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="108.0" y1="228.0" x2="108.0" y2="481.0" stroke="#9CA3AF"/>
+<line x1="108.0" y1="481.0" x2="690.0" y2="481.0" stroke="#9CA3AF"/>
+<rect x="117.1" y="331.1" width="20.0" height="149.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 17.8%</title></rect>
+<rect x="139.6" y="277.2" width="20.0" height="203.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 24.2%</title></rect>
+<rect x="162.0" y="261.3" width="20.0" height="219.7" fill="#6B7280" opacity="0.92"><title>Stayers: 26.1%</title></rect>
+<text x="149.6" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="149.6" dy="0">5-14</tspan></text>
+<rect x="200.3" y="279.9" width="20.0" height="201.1" fill="#0072B2" opacity="0.92"><title>Immigrants: 23.8%</title></rect>
+<rect x="222.7" y="241.2" width="20.0" height="239.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 28.4%</title></rect>
+<rect x="245.2" y="293.6" width="20.0" height="187.4" fill="#6B7280" opacity="0.92"><title>Stayers: 22.2%</title></rect>
+<text x="232.7" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="232.7" dy="0">15-24</tspan></text>
+<rect x="283.4" y="293.1" width="20.0" height="187.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 22.3%</title></rect>
+<rect x="305.9" y="290.2" width="20.0" height="190.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 22.6%</title></rect>
+<rect x="328.3" y="334.3" width="20.0" height="146.7" fill="#6B7280" opacity="0.92"><title>Stayers: 17.4%</title></rect>
+<text x="315.9" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="315.9" dy="0">25-34</tspan></text>
+<rect x="366.6" y="347.5" width="20.0" height="133.5" fill="#0072B2" opacity="0.92"><title>Immigrants: 15.8%</title></rect>
+<rect x="389.0" y="371.4" width="20.0" height="109.6" fill="#D55E00" opacity="0.92"><title>Emigrants: 13.0%</title></rect>
+<rect x="411.5" y="364.9" width="20.0" height="116.1" fill="#6B7280" opacity="0.92"><title>Stayers: 13.8%</title></rect>
+<text x="399.0" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="399.0" dy="0">35-44</tspan></text>
+<rect x="449.7" y="395.6" width="20.0" height="85.4" fill="#0072B2" opacity="0.92"><title>Immigrants: 10.1%</title></rect>
+<rect x="472.2" y="425.6" width="20.0" height="55.4" fill="#D55E00" opacity="0.92"><title>Emigrants: 6.6%</title></rect>
+<rect x="494.6" y="400.4" width="20.0" height="80.6" fill="#6B7280" opacity="0.92"><title>Stayers: 9.6%</title></rect>
+<text x="482.1" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="482.1" dy="0">45-54</tspan></text>
+<rect x="532.9" y="431.3" width="20.0" height="49.7" fill="#0072B2" opacity="0.92"><title>Immigrants: 5.9%</title></rect>
+<rect x="555.3" y="454.2" width="20.0" height="26.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 3.2%</title></rect>
+<rect x="577.8" y="430.0" width="20.0" height="51.0" fill="#6B7280" opacity="0.92"><title>Stayers: 6.1%</title></rect>
+<text x="565.3" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="565.3" dy="0">55-64</tspan></text>
+<rect x="616.0" y="445.0" width="20.0" height="36.0" fill="#0072B2" opacity="0.92"><title>Immigrants: 4.3%</title></rect>
+<rect x="638.5" y="463.9" width="20.0" height="17.1" fill="#D55E00" opacity="0.92"><title>Emigrants: 2.0%</title></rect>
+<rect x="660.9" y="439.2" width="20.0" height="41.8" fill="#6B7280" opacity="0.92"><title>Stayers: 5.0%</title></rect>
+<text x="648.4" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="648.4" dy="0">65+</tspan></text>
+<text x="746.0" y="208.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Income rank</text>
+<line x1="800.0" y1="481.0" x2="1382.0" y2="481.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="485.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="800.0" y1="417.8" x2="1382.0" y2="417.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="421.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">10%</text>
+<line x1="800.0" y1="354.5" x2="1382.0" y2="354.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="358.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">20%</text>
+<line x1="800.0" y1="291.2" x2="1382.0" y2="291.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="295.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="800.0" y1="228.0" x2="1382.0" y2="228.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="232.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">40%</text>
+<line x1="800.0" y1="228.0" x2="800.0" y2="481.0" stroke="#9CA3AF"/>
+<line x1="800.0" y1="481.0" x2="1382.0" y2="481.0" stroke="#9CA3AF"/>
+<rect x="810.7" y="263.0" width="23.3" height="218.0" fill="#0072B2" opacity="0.92"><title>Immigrants: 34.5%</title></rect>
+<rect x="836.9" y="269.0" width="23.3" height="212.0" fill="#D55E00" opacity="0.92"><title>Emigrants: 33.5%</title></rect>
+<rect x="863.0" y="292.9" width="23.3" height="188.1" fill="#6B7280" opacity="0.92"><title>Stayers: 29.7%</title></rect>
+<text x="848.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="848.5" dy="0">No</tspan><tspan x="848.5" dy="13">income</tspan></text>
+<rect x="907.7" y="401.5" width="23.3" height="79.5" fill="#0072B2" opacity="0.92"><title>Immigrants: 12.6%</title></rect>
+<rect x="933.9" y="417.7" width="23.3" height="63.3" fill="#D55E00" opacity="0.92"><title>Emigrants: 10.0%</title></rect>
+<rect x="960.0" y="385.8" width="23.3" height="95.2" fill="#6B7280" opacity="0.92"><title>Stayers: 15.0%</title></rect>
+<text x="945.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="945.5" dy="0">Q1</tspan></text>
+<rect x="1004.7" y="395.2" width="23.3" height="85.8" fill="#0072B2" opacity="0.92"><title>Immigrants: 13.6%</title></rect>
+<rect x="1030.9" y="412.3" width="23.3" height="68.7" fill="#D55E00" opacity="0.92"><title>Emigrants: 10.9%</title></rect>
+<rect x="1057.0" y="386.3" width="23.3" height="94.7" fill="#6B7280" opacity="0.92"><title>Stayers: 15.0%</title></rect>
+<text x="1042.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1042.5" dy="0">Q2</tspan></text>
+<rect x="1101.7" y="374.4" width="23.3" height="106.6" fill="#0072B2" opacity="0.92"><title>Immigrants: 16.9%</title></rect>
+<rect x="1127.9" y="385.8" width="23.3" height="95.2" fill="#D55E00" opacity="0.92"><title>Emigrants: 15.0%</title></rect>
+<rect x="1154.1" y="383.4" width="23.3" height="97.6" fill="#6B7280" opacity="0.92"><title>Stayers: 15.4%</title></rect>
+<text x="1139.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1139.5" dy="0">Q3</tspan></text>
+<rect x="1198.7" y="407.1" width="23.3" height="73.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 11.7%</title></rect>
+<rect x="1224.9" y="390.7" width="23.3" height="90.3" fill="#D55E00" opacity="0.92"><title>Emigrants: 14.3%</title></rect>
+<rect x="1251.1" y="395.3" width="23.3" height="85.7" fill="#6B7280" opacity="0.92"><title>Stayers: 13.6%</title></rect>
+<text x="1236.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1236.5" dy="0">Q4</tspan></text>
+<rect x="1295.7" y="412.3" width="23.3" height="68.7" fill="#0072B2" opacity="0.92"><title>Immigrants: 10.9%</title></rect>
+<rect x="1321.9" y="378.0" width="23.3" height="103.0" fill="#D55E00" opacity="0.92"><title>Emigrants: 16.3%</title></rect>
+<rect x="1348.1" y="409.8" width="23.3" height="71.2" fill="#6B7280" opacity="0.92"><title>Stayers: 11.3%</title></rect>
+<text x="1333.5" y="499.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1333.5" dy="0">Q5</tspan></text>
+<text x="54.0" y="583.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Sex</text>
+<line x1="108.0" y1="856.0" x2="690.0" y2="856.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="860.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="108.0" y1="792.8" x2="690.0" y2="792.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="796.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">15%</text>
+<line x1="108.0" y1="729.5" x2="690.0" y2="729.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="733.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="108.0" y1="666.2" x2="690.0" y2="666.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="670.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">45%</text>
+<line x1="108.0" y1="603.0" x2="690.0" y2="603.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="607.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">60%</text>
+<line x1="108.0" y1="603.0" x2="108.0" y2="856.0" stroke="#9CA3AF"/>
+<line x1="108.0" y1="856.0" x2="690.0" y2="856.0" stroke="#9CA3AF"/>
+<rect x="140.0" y="652.6" width="69.8" height="203.4" fill="#0072B2" opacity="0.92"><title>Immigrants: 48.2%</title></rect>
+<rect x="218.6" y="641.4" width="69.8" height="214.6" fill="#D55E00" opacity="0.92"><title>Emigrants: 50.9%</title></rect>
+<rect x="297.1" y="644.8" width="69.8" height="211.2" fill="#6B7280" opacity="0.92"><title>Stayers: 50.1%</title></rect>
+<text x="253.5" y="874.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="253.5" dy="0">Women</tspan></text>
+<rect x="431.0" y="637.7" width="69.8" height="218.3" fill="#0072B2" opacity="0.92"><title>Immigrants: 51.8%</title></rect>
+<rect x="509.6" y="649.0" width="69.8" height="207.0" fill="#D55E00" opacity="0.92"><title>Emigrants: 49.1%</title></rect>
+<rect x="588.1" y="645.6" width="69.8" height="210.4" fill="#6B7280" opacity="0.92"><title>Stayers: 49.9%</title></rect>
+<text x="544.5" y="874.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="544.5" dy="0">Men</tspan></text>
+<text x="746.0" y="583.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Literacy (age 15+)</text>
+<line x1="800.0" y1="856.0" x2="1382.0" y2="856.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="860.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="800.0" y1="792.8" x2="1382.0" y2="792.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="796.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">22.5%</text>
+<line x1="800.0" y1="729.5" x2="1382.0" y2="729.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="733.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">45%</text>
+<line x1="800.0" y1="666.2" x2="1382.0" y2="666.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="670.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">67.5%</text>
+<line x1="800.0" y1="603.0" x2="1382.0" y2="603.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="607.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">90%</text>
+<line x1="800.0" y1="603.0" x2="800.0" y2="856.0" stroke="#9CA3AF"/>
+<line x1="800.0" y1="856.0" x2="1382.0" y2="856.0" stroke="#9CA3AF"/>
+<rect x="832.0" y="782.6" width="69.8" height="73.4" fill="#0072B2" opacity="0.92"><title>Immigrants: 26.1%</title></rect>
+<rect x="910.6" y="813.6" width="69.8" height="42.4" fill="#D55E00" opacity="0.92"><title>Emigrants: 15.1%</title></rect>
+<rect x="989.1" y="810.7" width="69.8" height="45.3" fill="#6B7280" opacity="0.92"><title>Stayers: 16.1%</title></rect>
+<text x="945.5" y="874.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="945.5" dy="0">Not</tspan><tspan x="945.5" dy="13">literate</tspan></text>
+<rect x="1123.0" y="648.3" width="69.8" height="207.7" fill="#0072B2" opacity="0.92"><title>Immigrants: 73.9%</title></rect>
+<rect x="1201.6" y="617.3" width="69.8" height="238.7" fill="#D55E00" opacity="0.92"><title>Emigrants: 84.9%</title></rect>
+<rect x="1280.2" y="620.2" width="69.8" height="235.8" fill="#6B7280" opacity="0.92"><title>Stayers: 83.9%</title></rect>
+<text x="1236.5" y="874.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1236.5" dy="0">Literate</tspan></text>
+<text x="54.0" y="958.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Years of schooling (age 15+)</text>
+<line x1="108.0" y1="1231.0" x2="690.0" y2="1231.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1235.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="108.0" y1="1167.8" x2="690.0" y2="1167.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1171.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">10%</text>
+<line x1="108.0" y1="1104.5" x2="690.0" y2="1104.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1108.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">20%</text>
+<line x1="108.0" y1="1041.2" x2="690.0" y2="1041.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1045.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="108.0" y1="978.0" x2="690.0" y2="978.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="982.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">40%</text>
+<line x1="108.0" y1="978.0" x2="108.0" y2="1231.0" stroke="#9CA3AF"/>
+<line x1="108.0" y1="1231.0" x2="690.0" y2="1231.0" stroke="#9CA3AF"/>
+<rect x="118.7" y="1160.8" width="23.3" height="70.2" fill="#0072B2" opacity="0.92"><title>Immigrants: 11.1%</title></rect>
+<rect x="144.9" y="1172.4" width="23.3" height="58.6" fill="#D55E00" opacity="0.92"><title>Emigrants: 9.3%</title></rect>
+<rect x="171.1" y="1140.1" width="23.3" height="90.9" fill="#6B7280" opacity="0.92"><title>Stayers: 14.4%</title></rect>
+<text x="156.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="156.5" dy="0">0</tspan></text>
+<rect x="215.7" y="1127.0" width="23.3" height="104.0" fill="#0072B2" opacity="0.92"><title>Immigrants: 16.4%</title></rect>
+<rect x="241.9" y="1137.9" width="23.3" height="93.1" fill="#D55E00" opacity="0.92"><title>Emigrants: 14.7%</title></rect>
+<rect x="268.1" y="1121.3" width="23.3" height="109.7" fill="#6B7280" opacity="0.92"><title>Stayers: 17.3%</title></rect>
+<text x="253.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="253.5" dy="0">1-3</tspan></text>
+<rect x="312.7" y="1002.8" width="23.3" height="228.2" fill="#0072B2" opacity="0.92"><title>Immigrants: 36.1%</title></rect>
+<rect x="338.9" y="1014.6" width="23.3" height="216.4" fill="#D55E00" opacity="0.92"><title>Emigrants: 34.2%</title></rect>
+<rect x="365.1" y="1012.4" width="23.3" height="218.6" fill="#6B7280" opacity="0.92"><title>Stayers: 34.6%</title></rect>
+<text x="350.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="350.5" dy="0">4-7</tspan></text>
+<rect x="409.7" y="1120.4" width="23.3" height="110.6" fill="#0072B2" opacity="0.92"><title>Immigrants: 17.5%</title></rect>
+<rect x="435.9" y="1120.2" width="23.3" height="110.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 17.5%</title></rect>
+<rect x="462.1" y="1134.2" width="23.3" height="96.8" fill="#6B7280" opacity="0.92"><title>Stayers: 15.3%</title></rect>
+<text x="447.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="447.5" dy="0">8-10</tspan></text>
+<rect x="506.7" y="1137.2" width="23.3" height="93.8" fill="#0072B2" opacity="0.92"><title>Immigrants: 14.8%</title></rect>
+<rect x="532.9" y="1114.7" width="23.3" height="116.3" fill="#D55E00" opacity="0.92"><title>Emigrants: 18.4%</title></rect>
+<rect x="559.1" y="1139.3" width="23.3" height="91.7" fill="#6B7280" opacity="0.92"><title>Stayers: 14.5%</title></rect>
+<text x="544.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="544.5" dy="0">11-14</tspan></text>
+<rect x="603.7" y="1205.3" width="23.3" height="25.7" fill="#0072B2" opacity="0.92"><title>Immigrants: 4.1%</title></rect>
+<rect x="629.9" y="1193.6" width="23.3" height="37.4" fill="#D55E00" opacity="0.92"><title>Emigrants: 5.9%</title></rect>
+<rect x="656.0" y="1206.2" width="23.3" height="24.8" fill="#6B7280" opacity="0.92"><title>Stayers: 3.9%</title></rect>
+<text x="641.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="641.5" dy="0">15+</tspan></text>
+<text x="746.0" y="958.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Household size</text>
+<line x1="800.0" y1="1231.0" x2="1382.0" y2="1231.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1235.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="800.0" y1="1167.8" x2="1382.0" y2="1167.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1171.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">10%</text>
+<line x1="800.0" y1="1104.5" x2="1382.0" y2="1104.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1108.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">20%</text>
+<line x1="800.0" y1="1041.2" x2="1382.0" y2="1041.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1045.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="800.0" y1="978.0" x2="1382.0" y2="978.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="982.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">40%</text>
+<line x1="800.0" y1="978.0" x2="800.0" y2="1231.0" stroke="#9CA3AF"/>
+<line x1="800.0" y1="1231.0" x2="1382.0" y2="1231.0" stroke="#9CA3AF"/>
+<rect x="810.7" y="1208.7" width="23.3" height="22.3" fill="#0072B2" opacity="0.92"><title>Immigrants: 3.5%</title></rect>
+<rect x="836.9" y="1200.1" width="23.3" height="30.9" fill="#D55E00" opacity="0.92"><title>Emigrants: 4.9%</title></rect>
+<rect x="863.0" y="1209.3" width="23.3" height="21.7" fill="#6B7280" opacity="0.92"><title>Stayers: 3.4%</title></rect>
+<text x="848.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="848.5" dy="0">1</tspan></text>
+<rect x="907.7" y="1162.0" width="23.3" height="69.0" fill="#0072B2" opacity="0.92"><title>Immigrants: 10.9%</title></rect>
+<rect x="933.9" y="1162.5" width="23.3" height="68.5" fill="#D55E00" opacity="0.92"><title>Emigrants: 10.8%</title></rect>
+<rect x="960.0" y="1157.0" width="23.3" height="74.0" fill="#6B7280" opacity="0.92"><title>Stayers: 11.7%</title></rect>
+<text x="945.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="945.5" dy="0">2</tspan></text>
+<rect x="1004.7" y="1133.1" width="23.3" height="97.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 15.5%</title></rect>
+<rect x="1030.9" y="1136.1" width="23.3" height="94.9" fill="#D55E00" opacity="0.92"><title>Emigrants: 15.0%</title></rect>
+<rect x="1057.0" y="1119.2" width="23.3" height="111.8" fill="#6B7280" opacity="0.92"><title>Stayers: 17.7%</title></rect>
+<text x="1042.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1042.5" dy="0">3</tspan></text>
+<rect x="1101.7" y="1116.1" width="23.3" height="114.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 18.2%</title></rect>
+<rect x="1127.9" y="1113.3" width="23.3" height="117.7" fill="#D55E00" opacity="0.92"><title>Emigrants: 18.6%</title></rect>
+<rect x="1154.1" y="1071.9" width="23.3" height="159.1" fill="#6B7280" opacity="0.92"><title>Stayers: 25.1%</title></rect>
+<text x="1139.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1139.5" dy="0">4</tspan></text>
+<rect x="1198.7" y="1135.4" width="23.3" height="95.6" fill="#0072B2" opacity="0.92"><title>Immigrants: 15.1%</title></rect>
+<rect x="1224.9" y="1134.8" width="23.3" height="96.2" fill="#D55E00" opacity="0.92"><title>Emigrants: 15.2%</title></rect>
+<rect x="1251.1" y="1126.4" width="23.3" height="104.6" fill="#6B7280" opacity="0.92"><title>Stayers: 16.5%</title></rect>
+<text x="1236.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1236.5" dy="0">5</tspan></text>
+<rect x="1295.7" y="998.2" width="23.3" height="232.8" fill="#0072B2" opacity="0.92"><title>Immigrants: 36.8%</title></rect>
+<rect x="1321.9" y="1006.7" width="23.3" height="224.3" fill="#D55E00" opacity="0.92"><title>Emigrants: 35.5%</title></rect>
+<rect x="1348.1" y="1069.7" width="23.3" height="161.3" fill="#6B7280" opacity="0.92"><title>Stayers: 25.5%</title></rect>
+<text x="1333.5" y="1249.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1333.5" dy="0">6+</tspan></text>
+<text x="54.0" y="1333.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Rooms in dwelling</text>
+<line x1="108.0" y1="1606.0" x2="690.0" y2="1606.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1610.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="108.0" y1="1542.8" x2="690.0" y2="1542.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1546.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">15%</text>
+<line x1="108.0" y1="1479.5" x2="690.0" y2="1479.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1483.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">30%</text>
+<line x1="108.0" y1="1416.2" x2="690.0" y2="1416.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1420.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">45%</text>
+<line x1="108.0" y1="1353.0" x2="690.0" y2="1353.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="100.0" y="1357.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">60%</text>
+<line x1="108.0" y1="1353.0" x2="108.0" y2="1606.0" stroke="#9CA3AF"/>
+<line x1="108.0" y1="1606.0" x2="690.0" y2="1606.0" stroke="#9CA3AF"/>
+<rect x="118.7" y="1598.8" width="23.3" height="7.2" fill="#0072B2" opacity="0.92"><title>Immigrants: 1.7%</title></rect>
+<rect x="144.9" y="1597.1" width="23.3" height="8.9" fill="#D55E00" opacity="0.92"><title>Emigrants: 2.1%</title></rect>
+<rect x="171.1" y="1603.2" width="23.3" height="2.8" fill="#6B7280" opacity="0.92"><title>Stayers: 0.7%</title></rect>
+<text x="156.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="156.5" dy="0">1</tspan></text>
+<rect x="215.7" y="1576.4" width="23.3" height="29.6" fill="#0072B2" opacity="0.92"><title>Immigrants: 7.0%</title></rect>
+<rect x="241.9" y="1575.2" width="23.3" height="30.8" fill="#D55E00" opacity="0.92"><title>Emigrants: 7.3%</title></rect>
+<rect x="268.1" y="1590.7" width="23.3" height="15.3" fill="#6B7280" opacity="0.92"><title>Stayers: 3.6%</title></rect>
+<text x="253.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="253.5" dy="0">2</tspan></text>
+<rect x="312.7" y="1548.1" width="23.3" height="57.9" fill="#0072B2" opacity="0.92"><title>Immigrants: 13.7%</title></rect>
+<rect x="338.9" y="1553.8" width="23.3" height="52.2" fill="#D55E00" opacity="0.92"><title>Emigrants: 12.4%</title></rect>
+<rect x="365.1" y="1571.5" width="23.3" height="34.5" fill="#6B7280" opacity="0.92"><title>Stayers: 8.2%</title></rect>
+<text x="350.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="350.5" dy="0">3</tspan></text>
+<rect x="409.7" y="1526.4" width="23.3" height="79.6" fill="#0072B2" opacity="0.92"><title>Immigrants: 18.9%</title></rect>
+<rect x="435.9" y="1527.0" width="23.3" height="79.0" fill="#D55E00" opacity="0.92"><title>Emigrants: 18.7%</title></rect>
+<rect x="462.1" y="1545.3" width="23.3" height="60.7" fill="#6B7280" opacity="0.92"><title>Stayers: 14.4%</title></rect>
+<text x="447.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="447.5" dy="0">4</tspan></text>
+<rect x="506.7" y="1522.5" width="23.3" height="83.5" fill="#0072B2" opacity="0.92"><title>Immigrants: 19.8%</title></rect>
+<rect x="532.9" y="1523.4" width="23.3" height="82.6" fill="#D55E00" opacity="0.92"><title>Emigrants: 19.6%</title></rect>
+<rect x="559.1" y="1519.1" width="23.3" height="86.9" fill="#6B7280" opacity="0.92"><title>Stayers: 20.6%</title></rect>
+<text x="544.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="544.5" dy="0">5</tspan></text>
+<rect x="603.7" y="1442.3" width="23.3" height="163.7" fill="#0072B2" opacity="0.92"><title>Immigrants: 38.8%</title></rect>
+<rect x="629.9" y="1437.8" width="23.3" height="168.2" fill="#D55E00" opacity="0.92"><title>Emigrants: 39.9%</title></rect>
+<rect x="656.0" y="1384.6" width="23.3" height="221.4" fill="#6B7280" opacity="0.92"><title>Stayers: 52.5%</title></rect>
+<text x="641.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="641.5" dy="0">6+</tspan></text>
+<text x="746.0" y="1333.0" text-anchor="start" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#1F2937">Refrigerator in dwelling</text>
+<line x1="800.0" y1="1606.0" x2="1382.0" y2="1606.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1610.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">0%</text>
+<line x1="800.0" y1="1542.8" x2="1382.0" y2="1542.8" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1546.8" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">17.5%</text>
+<line x1="800.0" y1="1479.5" x2="1382.0" y2="1479.5" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1483.5" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">35%</text>
+<line x1="800.0" y1="1416.2" x2="1382.0" y2="1416.2" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1420.2" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">52.5%</text>
+<line x1="800.0" y1="1353.0" x2="1382.0" y2="1353.0" stroke="#E5E7EB" stroke-width="1"/>
+<text x="792.0" y="1357.0" text-anchor="end" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#6B7280">70%</text>
+<line x1="800.0" y1="1353.0" x2="800.0" y2="1606.0" stroke="#9CA3AF"/>
+<line x1="800.0" y1="1606.0" x2="1382.0" y2="1606.0" stroke="#9CA3AF"/>
+<rect x="832.0" y="1413.9" width="69.8" height="192.1" fill="#0072B2" opacity="0.92"><title>Immigrants: 53.2%</title></rect>
+<rect x="910.6" y="1451.9" width="69.8" height="154.1" fill="#D55E00" opacity="0.92"><title>Emigrants: 42.6%</title></rect>
+<rect x="989.1" y="1486.9" width="69.8" height="119.1" fill="#6B7280" opacity="0.92"><title>Stayers: 32.9%</title></rect>
+<text x="945.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="945.5" dy="0">No</tspan></text>
+<rect x="1123.0" y="1436.7" width="69.8" height="169.3" fill="#0072B2" opacity="0.92"><title>Immigrants: 46.8%</title></rect>
+<rect x="1201.6" y="1398.7" width="69.8" height="207.3" fill="#D55E00" opacity="0.92"><title>Emigrants: 57.4%</title></rect>
+<rect x="1280.2" y="1363.6" width="69.8" height="242.4" fill="#6B7280" opacity="0.92"><title>Stayers: 67.1%</title></rect>
+<text x="1236.5" y="1624.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151"><tspan x="1236.5" dy="0">Yes</tspan></text>
+<text x="54.0" y="1692.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#4B5563">Bars are percentages within migration group and panel; legend sizes use census person weights.</text>
+<text x="54.0" y="1713.0" text-anchor="start" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="#4B5563">Income: no income plus national weighted quintiles among positive-income adults (1980 uses main-job income).</text>
+<text x="775.0" y="1713.0" text-anchor="start" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#6B7280">1970: Guanabara -&gt; RJ; Fernando de Noronha -&gt; PE; MT and GO retain historical boundaries.</text>
+</svg>

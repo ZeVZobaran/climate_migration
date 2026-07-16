@@ -1,3 +1,8 @@
 data/ETo_u2_RH_Rs_NetCDF_Files/
 data/morten_oliveira/
 data/BR-DWGD/
+data/censo_microdados/
+data/processed/censo_microdados/
+.venv/
+__pycache__/
+*.py[cod]

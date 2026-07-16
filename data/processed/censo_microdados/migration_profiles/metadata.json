@@ -1,0 +1,56 @@
+{
+  "years": [
+    1970,
+    1980,
+    1991,
+    2000,
+    2010
+  ],
+  "states": [
+    "AC",
+    "AL",
+    "AM",
+    "AP",
+    "BA",
+    "CE",
+    "DF",
+    "ES",
+    "GO",
+    "MA",
+    "MG",
+    "MS",
+    "MT",
+    "PA",
+    "PB",
+    "PE",
+    "PI",
+    "PR",
+    "RJ",
+    "RN",
+    "RO",
+    "RR",
+    "RS",
+    "SC",
+    "SE",
+    "SP",
+    "TO"
+  ],
+  "universe": "Age 5+, positive person weight, internally classifiable migration status",
+  "migration_proxies": {
+    "1970": "Proxy: previous state of residence",
+    "1980": "Proxy: state of birth",
+    "1991": "Five-year state of residence",
+    "2000": "Five-year state of residence",
+    "2010": "Five-year state of residence"
+  },
+  "pooled_definition": "Sum of person weights across censuses; not an equal-year average",
+  "income_definition": "No income plus national weighted quintiles among positive-income adults. 1980 uses main-job income; other years use total person income.",
+  "geography_note": "1970 Guanabara is merged into RJ and Fernando de Noronha into PE. 1970 MT and GO retain their historical boundaries.",
+  "diagnostics": {
+    "rows_scanned": 111783901,
+    "universe_rows": 98467097,
+    "stayer_rows": 85616970,
+    "mover_rows": 8447587,
+    "unclassified_rows": 4402540
+  }
+}
