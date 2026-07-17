@@ -1,0 +1,133 @@
+{
+  "artifact_type": "Person-level repeated census cross-sections (not a longitudinal panel)",
+  "census_years": [
+    1991
+  ],
+  "row_unit": "One sampled census person",
+  "migration_period": "Municipality of residence five years before each census",
+  "analysis_universe_note": "All sampled persons are retained. Five-year internal OD and migration-system variables are null for people under age five, foreign origins, and unidentified origins.",
+  "migration_system_precedence": [
+    "stayer",
+    "large_city",
+    "agricultural_frontier",
+    "other"
+  ],
+  "large_city_definitions": {
+    "500k": "Destination predecessor-census population >= 500,000",
+    "1m": "Destination predecessor-census population >= 1,000,000"
+  },
+  "frontier_definitions": {
+    "north_only": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "main_north_mt": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "51"
+    ],
+    "broad_north_mt_ms": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "50",
+      "51"
+    ]
+  },
+  "main_frontier_definition": "main_north_mt",
+  "main_large_city_definition": "500k",
+  "origin_regions": {
+    "northeast": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29"
+    ],
+    "south": [
+      "41",
+      "42",
+      "43"
+    ]
+  },
+  "education_attainment": {
+    "less_than_fundamental_complete": "0-7 years in 1991/2000; 2010 level 1",
+    "fundamental_complete_secondary_incomplete": "8-10 years; 2010 level 2",
+    "secondary_complete_tertiary_incomplete": "11-14 years; 2010 level 3",
+    "tertiary_complete": "15-19 years; 2010 level 4"
+  },
+  "origin_zone_availability": {
+    "1991": "MIMO86ZN: zone of residence in 1986",
+    "2000": "Derived from V4241/status_5yr: codes 1/3 urban, 2/4 rural",
+    "2010": "Not collected for the five-year residence; deliberately null"
+  },
+  "travel_time": {
+    "source": "Morten--Oliveira tt_mesospeed_10.dta",
+    "year_mapping": {
+      "1991": 1990
+    },
+    "retained_columns": [
+      "fm_road",
+      "fm_road_rad",
+      "dist_km"
+    ]
+  },
+  "migration_system_choice_set": {
+    "alternatives": [
+      "stayer",
+      "city",
+      "agri_frontier",
+      "other"
+    ],
+    "corridor_source": "Morten--Oliveira N_od_meso.dta:N_od_flow_all",
+    "prior_flow_year_mapping": {
+      "1991": 1980
+    },
+    "travel_source": "Morten--Oliveira tt_mesospeed_10.dta:fm_road",
+    "travel_year_mapping": {
+      "1991": 1990
+    },
+    "definition": "For each origin mesoregion, sum prior flows and calculate the unweighted minimum and median travel time over all destination mesoregions in each alternative. Stayer is the origin mesoregion; city means a mesoregion containing any >=500k lagged-population municipality; agricultural frontier is North plus Mato Grosso after city precedence; other is the remainder."
+  },
+  "excluded_post_decision_variables": [
+    "occupation",
+    "employment",
+    "income",
+    "industry",
+    "hours worked",
+    "workplace"
+  ],
+  "diagnostics": {
+    "1991": {
+      "rows": 120452,
+      "state_files": 1,
+      "five_year_internal_od_observed_rows": 79664,
+      "origin_urban_rural_nonmissing_rows": 22695,
+      "morten_oliveira_nonmissing_rows": 79664,
+      "invalid_nonperson_source_rows_excluded": 0,
+      "migration_system_500k_main_north_mt": {
+        "stayer": 57777,
+        "agricultural_frontier": 21887
+      },
+      "output": "tmp\\characteristics_accessibility_test\\persons_1991.parquet"
+    }
+  }
+}

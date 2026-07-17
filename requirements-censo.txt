@@ -1,2 +1,4 @@
 pandas>=2.2,<4
 pyarrow>=16,<22
+xlrd>=2.0,<3
+geopandas>=1,<2

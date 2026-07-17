@@ -1,0 +1,30 @@
+Question: Why did people originating in Southern and Northeastern Brazil systematically sort into different destinations?
+
+Data:
+Og: 5yr prior place of living
+Dest: current meso
+Stayed: same og-dest
+
+Large City: Mesorregions on the top quintile of population? Test
+
+Agri Frontier: Low population mesos in North region
+
+Brasília and environs --> let be incorporated by "large city"
+
+Skill: education years, for over 25s; age; sex; raça; zona moradia 86 (rural/urbana)
+
+Other: pre existing migration corridors; 
+
+Want:
+Frame indexing persons
+
+Estimation: LOGITÃO
+Sequentially estimate the logits so as to document the sorting diff and decompose it
+     - THINK ABOUT fixed effects, controls vs mechanisms
+If so, coef heterogeneity: Education*Frontier vs Education*Frontier*South for instance
+
+
+
+
+
+

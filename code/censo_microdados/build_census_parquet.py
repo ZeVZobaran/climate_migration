@@ -174,7 +174,8 @@ def common(df: pd.DataFrame, year: int, uf: str, source: Path) -> pd.DataFrame:
               "employment_position","hours","income_main","income_all_jobs","income_total",
               "income_total_sm","work_muni","nationality","born_muni","birth_uf","birth_country",
               "years_muni","years_uf","last_origin_uf","last_origin_muni","last_origin_country",
-              "last_origin_urban","origin_5yr_uf","origin_5yr_muni","origin_5yr_country"]:
+              "last_origin_urban","origin_5yr_uf","origin_5yr_muni","origin_5yr_country",
+              "origin_5yr_urban"]:
         out[c+"_code" if c not in {"age","age_months","education_years","hours","income_main","income_all_jobs","income_total","income_total_sm","years_muni","years_uf"} else c]=df.get(c)
     for c in ["person_weight","age","age_months","education_years","hours","income_main",
               "income_all_jobs","income_total","income_total_sm","years_muni","years_uf"]:
@@ -358,9 +359,10 @@ def dbf_transform(path,args,year,uf):
                  "OCUPACAO":"occupation","ATIVIDAD":"industry","POSOCUP":"employment_position",
                  "HORTRAB":"hours","RPRINCIV":"income_main","RTOTALPV":"income_total",
                  "MINACION":"nationality","MINASCMU":"born_muni","MIUFPAIS":"birth_uf",
-                 "MIANMOMU":"years_muni","MIANMOUF":"years_uf","MIANTEUF":"last_origin_uf",
-                 "MIANTEMU":"last_origin_muni","MIANTEZN":"last_origin_urban",
-                 "MIMO86UF":"origin_5yr_uf","MIMO86MU":"origin_5yr_muni"}
+                  "MIANMOMU":"years_muni","MIANMOUF":"years_uf","MIANTEUF":"last_origin_uf",
+                  "MIANTEMU":"last_origin_muni","MIANTEZN":"last_origin_urban",
+                  "MIMO86UF":"origin_5yr_uf","MIMO86MU":"origin_5yr_muni",
+                  "MIMO86ZN":"origin_5yr_urban"}
         for src,dst in ren.items(): d[dst]=source_code(r,src)
         for c in ["person_weight","age","age_months","education_years","hours","income_main","income_total","years_muni","years_uf"]:
             if c in d: d[c]=num(d[c])
@@ -399,6 +401,13 @@ def fixed_modern(path,args,year,uf,dompath=None):
     for r in fixed_chunks(path,pf,args.chunksize,args.sample_rows):
         for c,f in pf.items(): r[c]=num(r[c],f.decimals) if f.decimals else source_code(r,c)
         d=r.copy(); d["current_uf"]=d.uf; d["current_muni"]=(d.muni if year==2000 else d.uf+d.muni)
+        if year == 2000:
+            # V4241 combines whether the five-year residence was in this or
+            # another municipality with its urban/rural zone.  Preserve the
+            # zone separately: 1/3 are urban and 2/4 are rural; 5 is abroad.
+            d["origin_5yr_urban"] = d["status_5yr"].map(
+                {"1": "1", "2": "2", "3": "1", "4": "2"}
+            ).astype("string")
         d["household_id"]=d.control
         out=common(d,year,uf,path); out["status_5yr_code" if year==2000 else "origin_5yr_type_code"]=d["status_5yr" if year==2000 else "origin_5yr_type"]
         if hh is not None:

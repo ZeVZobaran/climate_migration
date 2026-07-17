@@ -1,0 +1,21 @@
+Econometric modeling:
+1st pass: multinomial logit, log(P(Yi = agri, frontier, other)/P(Yi=stays)) = aj + Xi'Bj
+Issues: IIA restriction, homogeneity of categories
+
+Four models, sequentially:
+1st - Baseline: census X outcome FE + weights + origin
+ - Establishes econometrically whether different origins produce diff cond. probs. of each system
+2nd - Predetermined individual characteristics: 1st + origin_type + sex + race + (age-5) + (age-5)^2 + birthplace + education
+ - Establishes if the differential sorting is an artifact of different populations
+ - If origin Bs go to zero, thats that!
+3rd - Migration specific factors: 2nd + travel time to each possible outcome + previously existing corridors
+ - Establishes if the differential sorting is an artifact of different ease of migration
+ - If origin Bs go to zero, thats that!
+4th - Interactions: Does coming from a given origin alter not only intercepts but also coefficients?
+ - Explores another channel by which sorting may happen. Origin_region X education, origin_type X origin_region
+
+Errors always clustered at munis or mesos
+
+Behavioral model:
+Estimate two part: migration decision and, conditional on migrating, location decision
+- Second stage. First, I'll perform and analyse the 1st pass multinomial logit
