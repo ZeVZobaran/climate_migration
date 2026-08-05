@@ -128,3 +128,18 @@ inflows, and other movements:
 
 Weighted census shares and the underlying state-to-state corridor table are
 written under `data/processed/censo_microdados/migration_types`.
+
+## Macro-region migration matrices
+
+Generate weighted 5x5 origin-destination matrices for North, Northeast,
+Center-West, Southeast, and South:
+
+```powershell
+.venv\Scripts\python.exe -u code\censo_microdados\regional_migration_matrices.py
+```
+
+For every census and for a person-weighted pool of all censuses, the script
+writes absolute weighted populations, origin-row emigrant shares, and
+destination-column immigrant shares under
+`data/processed/censo_microdados/regional_migration_matrices`. A readable copy
+of all matrices is written to `reports/regional_migration_matrices.md`.

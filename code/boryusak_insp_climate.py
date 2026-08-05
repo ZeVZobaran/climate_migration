@@ -4,22 +4,17 @@ Created on Mon May 11 14:31:17 2026
 
 @author: c337191
 """
-
-
 import pandas as pd
 import numpy as np
 import geopandas as gpd
 import pyfixest as pf
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
 import matplotlib.colors as colors
-from scipy.optimize import minimize_scalar
-from scipy.optimize._numdiff import approx_derivative
-from numpy.linalg import solve, inv
 
 sns.set(style="whitegrid")
 
-path = r'D:\Users\c337191\Documents\climate_migration'
+path = r'C:\Users\josez\OneDrive\Desktop\EPGE\climate_migration'
 # %% get data
 regions = gpd.read_file(f'{path}/data/br_mesorregioes/BRMEE250GC_SIR.shp')
 # Climate grids are in lon/lat, so polygons should also be in EPSG:4326
@@ -83,7 +78,9 @@ tidy_gdp_serv = make_ipea_tidy(gdp_serv_share, 'gdp_serv_share')
 # %% Take averages in terms of available census data
 
 def decade_averager(df):
-    df["decade"] = (df["year"] // 10) * 10
+    # We want the decade 1990 to incorporate shocks from 1981
+    # up to 1990. So
+    df["decade"] = (df["year"] // 10 + 1) * 10
 
     # Average all numeric columns within each mesoregion-decade
     df_decade = (
@@ -206,7 +203,7 @@ df_model = df_model.drop(columns=['orig_year', 'dest_year'])
 
 df_model['emigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['orig_pop']
 df_model['immigration_pct_flow_all'] = df_model['N_od_flow_all'] / df_model['dest_pop']
-df_model.columns
+
 df_model.to_parquet(
     f'{path}/data/formatted_composit/climate_mig_meso.parquet', index=False)
 
@@ -222,19 +219,17 @@ df_model.to_parquet(
 def run_reg_fe(df, climate_index):
     fml = (
         f"log_flow ~ orig_{climate_index} + dest_{climate_index}"
-        " | year"
+        " | year + pair_id"
         )
-
-    reg_w = pf.feols(
+    reg_w = pf.feols(  #Not taking zeros into acc
         fml,
         data=df,
-        weights="N_od_flow_all",
-        vcov={"CRV1": "pair_id"}
-    )
+        vcov={"CRV1": "orig_id + dest_id"}
+        )
     return reg_w
 
 rows = []
-climate_indexes = df_climate_decade.columns[4:]
+climate_indexes = df_climate_decade.columns[6:15]
 
 for climate_index in climate_indexes:
     reg = run_reg_fe(df_model_nonzero, climate_index)
@@ -256,7 +251,6 @@ for climate_index in climate_indexes:
     }
     rows.append(row)
 
-
 fe_ols_results = pd.DataFrame(rows)
 latex_out_ols = fe_ols_results.drop(columns=['reg']).set_index('index').apply(lambda x: np.round(x, 3))
 # The old indexes have the expected behavior
@@ -272,10 +266,10 @@ latex_out_ols = fe_ols_results.drop(columns=['reg']).set_index('index').apply(la
 
 def run_reg_ppml(df, climate_index):
     reg_ppml = pf.fepois(
-        f'N_od_flow_all ~ orig_{climate_index} + dest_{climate_index}'
-        " | year",
+        f'N_od_flow_wm ~ orig_{climate_index} + dest_{climate_index}'
+        " | year + pair_id",
     data=df,
-    vcov={"CRV1": "pair_id"}
+    vcov={"CRV1": "orig_id + dest_id"}
     )
     return reg_ppml
 

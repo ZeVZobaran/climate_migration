@@ -13,7 +13,7 @@ Brasília and environs --> let be incorporated by "large city"
 
 Skill: education years, for over 25s; age; sex; raça; zona moradia 86 (rural/urbana)
 
-Other: pre existing migration corridors; 
+Other: pre existing migration corridors; 	
 
 Want:
 Frame indexing persons

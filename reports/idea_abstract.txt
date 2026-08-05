@@ -1,6 +1,9 @@
-We document how climate shocks drove migration in Brazil through the 20th century and build a structural model accounting for migration and congestion costs and agglomeration gains to study different policy reactions to such shocks. Under the model, subsidizing migration from climate-disadvantaged regions is welfare increasing for migrants and for non migrant residentes of destination regions, but is welfare decreasing for non migrant residents of origin regions; small subsidies have positive aggregate welfare effect. Underlying these findings there are significant heterogeneities: residents of the worse-affected regions lose as much as B% welfare, while residents of most-benfitted regions gain as much as G%. The results shed light on the tradeoffs surrounding leveraing migration as a climate adaptation technology
+We document how climate shocks drove migration in Brazil through the 20th century and build a structural model accounting for migration and congestion costs and agglomeration gains to study different policy reactions to such shocks. Under the model, subsidizing migration from climate-disadvantaged regions is welfare increasing for migrants and for non migrant residentes of destination regions, but is welfare decreasing for non migrant residents of origin regions; small subsidies have positive aggregate welfare effect. Underlying these findings there are significant heterogeneities: residents of the worse-affected regions lose as much as B% welfare, while residents of most-benfitted regions gain as much as G%. The results shed light on the tradeoffs surrounding leveraging migration as a climate adaptation technology
 
 
+
+Want: climate elasticities, agglomeration gains
+Have (Morten Oliveira): Migration costs, congestion costs
 
 
 I have climate elasticities and agglomeration gains (from the IV work!), I think. I'd need congestion costs, which can't be too hard and ultimately can be taken from literature
