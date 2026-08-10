@@ -1,0 +1,370 @@
+% !TEX program = pdflatex
+% Editable Beamer source. 16:9, no external figures, no .bib dependency.
+% Replace \ShortSource footers or the final reference slides as you edit.
+\documentclass[aspectratio=169,10pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{Navy}{HTML}{17324D}
+\definecolor{Blue}{HTML}{2F6690}
+\definecolor{Teal}{HTML}{3A7D78}
+\definecolor{Sand}{HTML}{F1E9DA}
+\definecolor{Gold}{HTML}{D39B2A}
+\definecolor{Brick}{HTML}{A84A3F}
+\definecolor{Ink}{HTML}{20262E}
+\definecolor{Muted}{HTML}{68727D}
+\definecolor{Pale}{HTML}{F4F6F8}
+
+\setbeamercolor{normal text}{fg=Ink,bg=white}
+\setbeamercolor{structure}{fg=Navy}
+\setbeamercolor{frametitle}{fg=white,bg=Navy}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=Sand}
+\setbeamercolor{block title}{fg=white,bg=Blue}
+\setbeamercolor{block body}{fg=Ink,bg=Pale}
+\setbeamercolor{alerted text}{fg=Brick}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{Teal}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{Gold}$\bullet$}
+\setbeamertemplate{footline}{%
+  \hfill\usebeamerfont{page number in head/foot}\color{Muted}%
+  \insertframenumber\hspace{0.7em}\vspace{0.45em}}
+\setbeamersize{text margin left=0.62cm,text margin right=0.62cm}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcommand{\hi}{\textcolor{Teal}{\textbf{H}}}
+\newcommand{\med}{\textcolor{Gold}{\textbf{M}}}
+\newcommand{\low}{\textcolor{Brick}{\textbf{L}}}
+\newcommand{\ShortSource}[1]{%
+  \vfill\par\tiny\color{Muted}\textit{Sources:} #1}
+\newcommand{\PolicyTag}[1]{%
+  \colorbox{Sand}{\strut\textcolor{Navy}{\textbf{#1}}}}
+
+\title{Four Brazilian policy experiments and internal migration}
+\subtitle{Dams, FPM expansion, POLOCENTRO, and the BR-230/BR-163 frontier roads}
+\author{Working deck for discussion and heavy revision}
+\date{August 2026}
+
+\begin{document}
+
+{\setbeamercolor{background canvas}{bg=Navy}
+\begin{frame}[plain]
+  \vspace{1.15cm}
+  {\usebeamerfont{title}\fontsize{25}{29}\selectfont\inserttitle\par}
+  \vspace{0.35cm}
+  {\usebeamerfont{subtitle}\Large\insertsubtitle\par}
+  \vfill
+  {\color{white}\small\insertauthor\par}
+  {\color{Sand}\small\insertdate\par}
+  \vspace{0.65cm}
+\end{frame}}
+
+% -----------------------------------------------------------------------------
+% ONE-SLIDE CASE DESCRIPTIONS
+% -----------------------------------------------------------------------------
+
+\begin{frame}{1. Dam building: a staggered local boom plus forced displacement}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+  \PolicyTag{Policy shock}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item Site-specific hydro projects bundle construction, reservoir flooding, resettlement, transmission, royalties, and compensatory spending.
+    \item Treatment has several clocks: announcement/licensing, construction start, filling, operation, and royalty payments.
+    \item Relevant geographies differ: host municipality, reservoir footprint, downstream communities, labor-sending places, and electricity-consuming regions.
+  \end{itemize}
+  \vspace{0.2em}
+  \PolicyTag{Migration mechanisms}
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Forced exit from inundated or livelihood-damaged areas.
+    \item Temporary construction-worker inflow, followed by post-boom exit.
+    \item Royalties/services can retain or attract residents; disrupted fishing/agriculture can expel them.
+  \end{itemize}
+\end{column}
+\begin{column}{0.49\textwidth}
+  \PolicyTag{What we already know}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{de Faria et al. (2017):} 56 plants, 1991--2010; GDP and tax booms were short-lived, with no detectable long-run social gains.
+    \item \textbf{Costa, Szerman \& Assunção (2025):} 29 plants / 82 municipalities; average impacts trace an inverted U and show little sectoral transformation.
+    \item \textbf{Randell (2016, 2017):} Belo Monte panel/interviews document forced migration, damaged livelihoods, and heterogeneous welfare effects.
+  \end{itemize}
+  \vspace{0.2em}
+  \begin{block}{Research opening}
+    Estimate \emph{who leaves, who arrives, and where they go}; then decompose place-based GDP/employment estimates into genuine productivity versus population composition and displacement.
+  \end{block}
+\end{column}
+\end{columns}
+\ShortSource{\href{https://doi.org/10.1016/j.eneco.2017.08.025}{de Faria et al. (2017)}; \href{https://doi.org/10.31389/eco.466}{Costa et al. (2025)}; \href{https://doi.org/10.1016/j.worlddev.2016.01.012}{Randell (2016)}.}
+\end{frame}
+
+\begin{frame}{2. FPM expansion: a fiscal amenity shock with endogenous population}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+  \PolicyTag{Policy shock}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item The 1988 Constitution phased the municipal share of federal IR/IPI from \textbf{17\% to 22.5\%} by 1993, sharply expanding formula-based municipal revenue.
+    \item For non-capital municipalities, allocations follow population brackets and coefficients codified in Decree-Law 1,881/1981.
+    \item Two distinct experiments: \textbf{national expansion} (1988--93) versus \textbf{local bracket jumps} used in threshold RDD studies.
+  \end{itemize}
+  \vspace{0.2em}
+  \PolicyTag{Migration mechanisms}
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Public jobs, procurement, education/health, and local-demand multipliers may attract or retain residents.
+    \item Capture, corruption, or low-salience spending can mute amenities; housing/land prices may capitalize gains.
+  \end{itemize}
+\end{column}
+\begin{column}{0.49\textwidth}
+  \PolicyTag{What we already know}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{Litschig \& Morrison (2013):} extra transfers raised spending, schooling and literacy, and reduced poverty.
+    \item \textbf{Brollo et al. (2013):} more revenue increased observed corruption and reduced candidate education.
+    \item \textbf{Corbi et al. (2019):} sizable transfer-driven local employment/output multiplier.
+    \item Direct migration evidence is mainly conference/working-paper work and is mixed; one RDD study reports lower inflow and higher outflow.
+  \end{itemize}
+  \begin{block}{Research opening}
+    Treat migration as both an outcome and a threat: the running variable is population itself. Separate the 1988 reform from the modern threshold design.
+  \end{block}
+\end{column}
+\end{columns}
+\ShortSource{\href{https://doi.org/10.1257/app.5.4.206}{Litschig \& Morrison (2013)}; \href{https://doi.org/10.1257/aer.103.5.1759}{Brollo et al. (2013)}; \href{https://doi.org/10.1093/restud/rdy064}{Corbi et al. (2019)}; \href{https://www.anpec.org.br/encontro/2019/submissao/files_I/i12-c352774646be9eef49d2a1d4a639819a.pdf}{ANPEC migration paper}.}
+\end{frame}
+
+\begin{frame}{3. POLOCENTRO: subsidized frontier modernization, 1975--early 1980s}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+  \PolicyTag{Policy shock}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item Created by Decree 75,320/1975 to modernize agriculture in selected Cerrado poles in the Center-West and western Minas Gerais.
+    \item Intended to incorporate roughly \textbf{3.7 million hectares} during 1975--79; retrospective sources identify about \textbf{202 municipalities}.
+    \item A bundled treatment: subsidized rural credit, roads, electrification, storage, research, extension, and marketing support.
+  \end{itemize}
+  \vspace{0.2em}
+  \PolicyTag{Migration mechanisms}
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Attracted capitalized farmers and technicians, especially from the South/Southeast.
+    \item Mechanization, land appreciation, and consolidation reduced labor demand and displaced smallholders.
+    \item New farm/service towns absorbed some rural exit while other workers moved beyond the treated poles.
+  \end{itemize}
+\end{column}
+\begin{column}{0.49\textwidth}
+  \PolicyTag{What we already know}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{FJP (1984):} a nine-volume official evaluation documents implementation, production change, and strong concentration of credit/benefits.
+    \item \textbf{Mueller (1990), Salim (1986), later geography/political economy:} faster commercial farming and soy expansion, rising land concentration, weak employment intensity, and small-producer marginalization.
+    \item The literature is rich descriptively but contains little modern causal work and almost no direct migration evaluation.
+  \end{itemize}
+  \begin{block}{Research opening}
+    Reconstruct pole boundaries and annual program intensity; distinguish selected producer in-migration from incumbent displacement and rural-to-urban exit.
+  \end{block}
+\end{column}
+\end{columns}
+\ShortSource{\href{https://www2.camara.leg.br/legin/fed/decret/1970-1979/decreto-75320-29-janeiro-1975-423871-publicacaooriginal-1-pe.html}{Decree 75,320/1975}; \href{https://www.bibliotecadigital.mg.gov.br/consulta/consultaDetalheDocumento.php?iCodDocumento=55206}{FJP (1984)}; \href{https://repositorio.ipea.gov.br/bitstream/11058/14764/1/ppp_n3_completo.pdf}{Mueller (1990)}.}
+\end{frame}
+
+\begin{frame}{4. BR-230 and BR-163: roads plus state-directed frontier settlement}
+\small
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+  \PolicyTag{Policy shock}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{Transamazônica (BR-230):} construction began in 1970 under the PIN; a major segment opened in 1972 alongside INCRA colonization and planned agrovilas.
+    \item \textbf{Cuiabá--Santarém (BR-163):} constructed from 1971 and inaugurated in 1976; later evolved from colonization axis to logging/cattle/soy corridor.
+    \item Treatment is actual accessibility, not a line on a map: segment opening, paving, bridges, maintenance, feeder roads, and seasonal passability matter.
+  \end{itemize}
+  \vspace{0.2em}
+  \PolicyTag{Migration mechanisms}
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Lower moving/trade costs plus land grants directly recruited settlers.
+    \item Induced logging, cattle, farming, land speculation, and road towns attracted secondary flows.
+    \item Project failure and weak services generated turnover and onward/out-migration.
+  \end{itemize}
+\end{column}
+\begin{column}{0.49\textwidth}
+  \PolicyTag{What we already know}
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item Transamazon anthropology/geography documents low fulfillment of settlement targets, difficult soils/services, high turnover, and major social/environmental disruption.
+    \item BR-163 studies document evolving mobility, land conflict, deforestation, and a shift toward export-oriented agribusiness.
+    \item Causal economics for these two corridors is thin. Related Brazil evidence shows roads reduce both trade and migration costs and reshape population.
+  \end{itemize}
+  \begin{block}{Research opening}
+    Estimate segment-level event studies with actual passability and separate road access from INCRA settlement, credit, and subsequent feeder-road expansion.
+  \end{block}
+\end{column}
+\end{columns}
+\ShortSource{\href{https://doi.org/10.1590/1809-4422ASOC256V1922016}{Bratman (2016)}; \href{https://doi.org/10.1525/9780520314320}{Smith (1982)}; \href{https://docs.rwu.edu/fcas_fp/151/}{Campbell (2012/14)}; \href{https://doi.org/10.1257/app.20180487}{Morten \& Oliveira (2024)}.}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% COMPARISON TABLES
+% -----------------------------------------------------------------------------
+
+\begin{frame}{IPEA evaluability dimensions I: policy definition and exposure}
+\scriptsize
+\textit{Provisional mapping: the exact public ``Índice de Potencial Avaliativo'' scorecard was not located. Rows follow IPEA's public catalog/evaluability fields. H/M/L are this deck's qualitative ratings, not official IPEA scores.}
+\vspace{0.35em}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{L{2.35cm}YYYY}
+\toprule
+\textbf{Dimension} & \textbf{Dams} & \textbf{FPM expansion} & \textbf{POLOCENTRO} & \textbf{BR-230 / BR-163} \\
+\midrule
+\textbf{Objective / theory of change} & \hi\ Clear output objective; local-development claims secondary and heterogeneous. & \hi\ Fiscal decentralization/equalization; spending discretion makes downstream theory broad. & \med\ Modernize/occupy selected Cerrado poles through credit and infrastructure. & \med\ Integration, settlement, security, and frontier development were bundled goals. \\
+\textbf{Target population / eligibility} & \med\ Reservoir-affected people can be mapped, but ``affected'' extends downstream and through labor markets. & \hi\ Formula and bracket rules are explicit; capitals/reserve municipalities differ. & \med\ Pole/municipality lists exist; beneficiary rules and realized access were selective. & \med\ Corridor buffers and INCRA projects are recoverable; actual access varied by segment/season. \\
+\textbf{Implementation / rollout} & \hi\ Project milestones are dated, although announcement, works, filling, and operation differ. & \hi\ Constitutional phase-in and annual coefficients are observable. & \med\ 1975 start is clear; annual rollout and closure differ by component/place. & \low--\med\ Opening dates are broad; completion, paving, maintenance, and passability require reconstruction. \\
+\textbf{Exposure measurement} & \hi\ Coordinates, reservoir polygons, capacity, stage, royalties. & \hi\ Theoretical and actual transfers; pre-reform dependence. & \low--\med\ Treatment often binary in secondary sources; credit/infrastructure intensity fragmented. & \med\ Distance/network access feasible, but nominal road presence overstates usable access. \\
+\bottomrule
+\end{tabularx}
+\ShortSource{IPEA's catalog lists objectives, description, target public/criteria, budget, results, monitoring reports, and evaluations as core attributes: \href{https://catalogo.ipea.gov.br/arquivos/posts/4565-td2799web.pdf}{Brito, Mello \& Alencar (2022), pp. 7--8}.}
+\end{frame}
+
+\begin{frame}{IPEA evaluability dimensions II: resources, outcomes, and evidence}
+\scriptsize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{L{2.35cm}YYYY}
+\toprule
+\textbf{Dimension} & \textbf{Dams} & \textbf{FPM expansion} & \textbf{POLOCENTRO} & \textbf{BR-230 / BR-163} \\
+\midrule
+\textbf{Budget / treatment intensity} & \med--\hi\ Capex, capacity, inundation, and royalties exist but across agencies/projects. & \hi\ Treasury/TCU transfers and statutory formula are annual and municipal. & \low--\med\ Aggregate budgets known; municipal credit and component spending need archives. & \low--\med\ Construction/paving contracts are fragmented; physical accessibility may be the better dose. \\
+\textbf{Monitoring / output records} & \hi\ ANEEL/EPE, licensing/EIA, resettlement records, satellite reservoirs. & \hi\ Treasury, TCU coefficients, municipal accounts, public-sector employment. & \med\ FJP evaluation and agency archives; limited standardized annual monitoring. & \med\ DNER/DNIT/INCRA archives plus Landsat; road condition is poorly standardized historically. \\
+\textbf{Outcome data} & \hi\ Census migration, RAIS, GDP/taxes, royalties, health/violence, land use. & \hi\ Census migration, FINBRA/SICONFI, education/health, RAIS; population assignment needs care. & \med\ 1970/1980/1991 censuses and agricultural censuses; sparse annual pre-period. & \med--\hi\ Census/locality data, agricultural census, imagery, deforestation; exact historical access is the bottleneck. \\
+\textbf{Previous evaluation} & \hi\ Published causal econ plus displacement case studies. & \hi\ Extensive published RDD literature; little published migration work. & \med\ Large official/descriptive literature; almost no modern causal identification. & \med\ Rich qualitative/environmental evidence; thin causal work on these exact corridors. \\
+\textbf{Overall potential} & \hi\ Strong, especially with displacement microdata. & \hi\ Best clean first stage, but migration endogeneity is fundamental. & \med\ High novelty; data reconstruction is the project. & \med\ High substantive value; treatment reconstruction and bundling are difficult. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{What does the existing literature actually establish?}
+\scriptsize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{L{2.05cm}L{3.35cm}YL{3.25cm}}
+\toprule
+\textbf{Experiment} & \textbf{Dominant literature type} & \textbf{Main findings} & \textbf{Migration evidence} \\
+\midrule
+\textbf{Dams} & Published applied/environmental econ; demography; mixed-method displacement; EIA/NGO studies. & Short construction boom in GDP, employment, lights, and taxes; little average long-run transformation; large heterogeneity and livelihood losses among displaced groups. & Direct, credible forced-displacement studies for Belo Monte; multi-dam causal work rarely follows origin--destination flows or decomposes population composition. \\
+\textbf{FPM} & Published top-field/general-interest econ using RDD; public finance reports; recent working papers. & More spending and local activity; improved schooling/literacy and lower poverty in one historical design; more corruption/lower politician quality in another. & Thin and not settled: conference papers use census migration and thresholds, with some counterintuitive outflow results. \\
+\textbf{POLOCENTRO} & Official FJP/IPEA evaluation; economic history; rural sociology; geography/political ecology. & Commercial agriculture/soy expansion, infrastructure and land appreciation; credit and land concentration; mechanization and weak employment absorption; smallholder marginalization. & Mostly inferred from demographic change, rural exodus, and case narratives; little person-level or causal origin--destination evidence. \\
+\textbf{BR-230 / BR-163} & Anthropology/geography/history; World Bank/government reports; environmental science/remote sensing. Related causal transport econ. & Directed colonization underperformed official targets; high turnover and service failures; roads enabled settlement, deforestation, land conflict, cattle/soy/logging, and new towns. & Mobility central in qualitative work; little corridor-specific causal estimation. Brasília-road evidence validates trade- and migration-cost channels elsewhere in Brazil. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Proposed mechanisms: why should each policy change migration?}
+\scriptsize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{L{2.15cm}YYY}
+\toprule
+\textbf{Experiment} & \textbf{Pull / retention} & \textbf{Push / displacement} & \textbf{Empirical signature} \\
+\midrule
+\textbf{Dams} & Construction jobs; procurement; royalties; compensatory services; improved local access. & Inundation/resettlement; lost land/fisheries; congestion, prices, violence; post-construction job collapse. & Inflow rises near works, then reverses; forced movers cluster by resettlement policy; composition changes even if total population does not. \\
+\textbf{FPM} & Public employment, services, schooling/health, private multiplier, better amenities. & Capture/corruption; tax or effort substitution; housing-price capitalization; skilled exit if services disappoint. & Higher inflow/lower outflow if amenities dominate; sector/skill heterogeneity; potential feedback across population brackets. \\
+\textbf{POLOCENTRO} & Subsidized credit/infrastructure raises farm returns; attracts capitalized producers, technicians, traders, and urban services. & Mechanization lowers labor demand; land consolidation/appreciation displaces smallholders and tenants. & Simultaneous skilled/landed in-migration and incumbent rural out-migration; farm-size and occupation composition shift sharply. \\
+\textbf{BR-230 / BR-163} & Lower moving/trade costs; land grants; resource jobs; market access; agglomeration and road towns. & Indigenous/peasant displacement; conflict; failed crops/services; seasonal isolation; frontier boom-bust. & Distance-decay around newly usable segments; strong origin networks; turnover and onward migration; feeder-road spillovers. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Threats to causal identification}
+\scriptsize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{L{2.05cm}YY}
+\toprule
+\textbf{Experiment} & \textbf{Selection / confounding} & \textbf{Measurement / estimand problems} \\
+\midrule
+\textbf{Dams} & Endogenous siting in high-potential basins; concurrent roads/transmission; anticipation and litigation; project cancellation is non-random. & Multiple treatment dates; reservoir/downstream/grid spillovers; administrative boundaries; municipality averages omit displaced people and destination effects. \\
+\textbf{FPM} & 1988 reform coincides with democratization/decentralization; threshold-adjacent policies; manipulation of official population; endogenous municipal creation. & Population is both running variable and migration outcome; imperfect formula compliance; local RDD estimand; cross-border fiscal and labor spillovers. \\
+\textbf{POLOCENTRO} & Poles selected for infrastructure/agronomic potential; concurrent EMBRAPA technology, credit, prices, roads, and state programs; beneficiary selection. & Fuzzy/changing boundaries; little annual intensity data; few pre-periods; municipality splits; program spillovers and producer sorting. \\
+\textbf{BR-230 / BR-163} & Routes, sequencing, paving, and maintenance target strategic/economic places; INCRA land, credit, and services co-treated; endogenous feeder roads. & Nominal opening $\neq$ usable access; segment dates uncertain; wide spatial spillovers; anticipation/speculation; corridor outcomes mix road and colonization effects. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Design responses: feasible ways to reduce those threats}
+\scriptsize
+\renewcommand{\arraystretch}{1.19}
+\begin{tabularx}{\textwidth}{L{2.05cm}YL{4.0cm}}
+\toprule
+\textbf{Experiment} & \textbf{Core design} & \textbf{Diagnostics and extensions} \\
+\midrule
+\textbf{Dams} & Event study / synthetic control using planned-but-unbuilt or not-yet-built projects; date announcement, works, filling, operation separately; map reservoir/downstream rings. & Pre-trends and placebo dates; heterogeneity by inundation/royalties/capacity; track census microdata origins and destinations; aggregate origin + destination welfare; control co-built roads. \\
+\textbf{FPM} & Fuzzy RDD: theoretical coefficient instruments actual transfers. For 1988 expansion, interact predetermined municipal FPM dependence with the national phase-in schedule. & Density/donut tests; predetermined census population; omit overlapping thresholds and new municipalities; estimate inflow and outflow separately; assess neighbor spillovers and local nature of RDD. \\
+\textbf{POLOCENTRO} & Digitize official pole boundaries and annual credit/infrastructure; boundary DiD or matched/synthetic controls using 1970 baseline; dose-response by realized program intensity. & Build stable 1970 AMCs; document co-programs; test pre-treatment farm structure; heterogeneity by land size/soil suitability; use agricultural and population censuses jointly. \\
+\textbf{BR-230 / BR-163} & Segment-level staggered event study using actual opening/passability; planned-but-unbuilt segments or historical engineering cost as counterfactual; network market-access treatment. & Separate road buffers from INCRA projects; remote sensing/archival validation; ring and spillover estimates; stable AMCs/localities; placebo future segments; model origin networks and feeder-road growth. \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Research portfolio: identification, novelty, and migration payoff}
+\small
+\renewcommand{\arraystretch}{1.28}
+\begin{tabularx}{\textwidth}{L{2.5cm}L{2.2cm}L{2.2cm}L{2.2cm}Y}
+\toprule
+ & \textbf{First stage} & \textbf{Data burden} & \textbf{Novelty} & \textbf{Best contribution} \\
+\midrule
+\textbf{Dams} & Strong / staggered & Medium & High & Put out-migration and displaced people back into local-development estimates. \\
+\textbf{FPM} & Very strong at cutoffs; weaker for 1988 reform & Low--medium & Medium & Clean fiscal-amenity test, but migration feedback to population is the central design issue. \\
+\textbf{POLOCENTRO} & Medium / bundled & High & Very high & Causal account of agricultural modernization as simultaneous migrant selection and displacement. \\
+\textbf{BR-230 / BR-163} & Medium if segment timing is recovered & Very high & Very high & Quantify state-built migration corridors and distinguish access from colonization policy. \\
+\bottomrule
+\end{tabularx}
+\vspace{0.55em}
+\begin{block}{Suggested sequencing}
+\textbf{Fastest credible paper:} FPM threshold design. \quad
+\textbf{Best fit to the substantive question:} dams. \quad
+\textbf{Highest archival upside:} POLOCENTRO or the two Amazon corridors.
+\end{block}
+\begin{alertblock}{Common outcome architecture}
+Estimate in-migration, out-migration, net migration, migrant skill/occupation, and origin--destination flows separately. Net population change alone can hide large offsetting flows and selection.
+\end{alertblock}
+\end{frame}
+
+% -----------------------------------------------------------------------------
+% REFERENCES (kept inside the .tex for easy editing)
+% -----------------------------------------------------------------------------
+
+\begin{frame}{Selected references I: evaluability, dams, and FPM}
+\tiny
+\begin{itemize}\setlength\itemsep{0.35em}
+  \item Brito, A.; Mello, J.; Alencar, J. (2022). \href{https://catalogo.ipea.gov.br/arquivos/posts/4565-td2799web.pdf}{\textit{Catálogo de Políticas Públicas: primeiros resultados e hipóteses de pesquisa}. IPEA TD 2799.}
+  \item IPEA / Casa Civil (2018). \href{https://ipea.gov.br/portal/images/stories/PDFs/livros/livros/181218_avaliacao_de_politicas_publicas_vol2_guia_expost.pdf}{\textit{Avaliação de Políticas Públicas: Guia Prático de Análise Ex Post}, vol. 2.}
+  \item de Faria, F. A. M.; Davis, A.; Severnini, E.; Jaramillo, P. (2017). \href{https://doi.org/10.1016/j.eneco.2017.08.025}{The local socio-economic impacts of large hydropower plant development in a developing country. \textit{Energy Economics} 67: 533--544.}
+  \item Costa, F.; Szerman, D.; Assunção, J. (2025). \href{https://doi.org/10.31389/eco.466}{Local Economic Impacts of Hydroelectric Power Plants: Evidence from Brazil. \textit{Economía}.}
+  \item Randell, H. (2016). \href{https://doi.org/10.1016/j.worlddev.2016.01.012}{The short-term impacts of development-induced displacement on wealth and subjective well-being in the Brazilian Amazon. \textit{World Development} 87.}
+  \item Randell, H. (2017). \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC5347396/}{Structure and agency in development-induced forced migration: the case of Brazil's Belo Monte Dam. \textit{Population and Environment}.}
+  \item Litschig, S.; Morrison, K. (2013). \href{https://doi.org/10.1257/app.5.4.206}{The Impact of Intergovernmental Transfers on Education Outcomes and Poverty Reduction. \textit{AEJ: Applied Economics} 5(4): 206--240.}
+  \item Brollo, F.; Nannicini, T.; Perotti, R.; Tabellini, G. (2013). \href{https://doi.org/10.1257/aer.103.5.1759}{The Political Resource Curse. \textit{American Economic Review} 103(5): 1759--1796.}
+  \item Corbi, R.; Papaioannou, E.; Surico, P. (2019). \href{https://doi.org/10.1093/restud/rdy064}{Regional Transfer Multipliers. \textit{Review of Economic Studies} 86(5): 1901--1934.}
+  \item Monasterio, L. (2013). \href{https://doi.org/10.1016/j.jpubeco.2012.11.001}{Are rules-based government programs shielded from special-interest politics? \textit{Journal of Public Economics} 106.}
+  \item Mendes, M.; Miranda, R. B.; Cossio, F. B. (2008). \href{https://www12.senado.leg.br/publicacoes/estudos-legislativos/tipos-de-estudos/outras-publicacoes/volume-iv-constituicao-de-1988-o-brasil-20-anos-depois.-estado-e-economia-em-vinte-anos-de-mudancas/do-sistema-tributario-nacional-o-fundo-de-participacao-dos-municipios-precisa-mudar}{O Fundo de Participação dos Municípios precisa mudar. Senado Federal.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Selected references II: POLOCENTRO and frontier roads}
+\tiny
+\begin{itemize}\setlength\itemsep{0.35em}
+  \item Brasil (1975). \href{https://www2.camara.leg.br/legin/fed/decret/1970-1979/decreto-75320-29-janeiro-1975-423871-publicacaooriginal-1-pe.html}{Decreto 75.320, de 29 de janeiro de 1975 (POLOCENTRO).}
+  \item Fundação João Pinheiro (1984). \href{https://www.bibliotecadigital.mg.gov.br/consulta/consultaDetalheDocumento.php?iCodDocumento=55206}{\textit{Estudos para a redefinição do Programa de Desenvolvimento dos Cerrados -- POLOCENTRO}, 9 vols.}
+  \item Mueller, C. C. (1990). \href{https://repositorio.ipea.gov.br/bitstream/11058/14764/1/ppp_n3_completo.pdf}{Políticas governamentais e a expansão recente da agropecuária no Centro-Oeste. \textit{Planejamento e Políticas Públicas} 3: 45--74.}
+  \item Salim, C. A. (1986). \href{https://doi.org/10.35977/0104-1096.cct1986.v3.9213}{As políticas econômica e tecnológica para o desenvolvimento agrário das áreas de cerrados no Brasil. \textit{Cadernos de Ciência \& Tecnologia} 3.}
+  \item Smith, N. J. H. (1982). \href{https://doi.org/10.1525/9780520314320}{\textit{Rainforest Corridors: The Transamazon Colonization Scheme}. University of California Press.}
+  \item Bratman, E. (2016). \href{https://doi.org/10.1590/1809-4422ASOC256V1922016}{Roads and dams: infrastructure-driven transformations in the Brazilian Amazon. \textit{Ambiente \& Sociedade} 19(2).}
+  \item Campbell, J. M. (2012/2014). \href{https://docs.rwu.edu/fcas_fp/151/}{Brazil's Deferred Highway: Mobility, Development, and Anticipating the State in Amazonia. \textit{Boletín de Antropología} 27(44).}
+  \item Fearnside, P. M. (2007). \href{https://repositorio.inpa.gov.br/items/72737248-5a0c-42dd-adf3-82b4a9d622d6}{Brazil's Cuiabá--Santarém (BR-163) Highway: the environmental cost of paving a soybean corridor through the Amazon. \textit{Environmental Management}.}
+  \item Soares-Filho, B. et al. (2004). \href{https://ipam.org.br/bibliotecas/simulating-the-response-of-land-cover-changes-to-road-paving-and-governance-along-a-major-amazon-highway-the-santarem-cuiaba-corridor/}{Simulating land-cover changes to road paving and governance along the Santarém--Cuiabá corridor. \textit{Global Change Biology}.}
+  \item Morten, M.; Oliveira, J. (2024). \href{https://doi.org/10.1257/app.20180487}{The Effects of Roads on Trade and Migration: Evidence from a Planned Capital City. \textit{AEJ: Applied Economics} 16(2): 389--421.}
+  \item World Bank (various years). Project and environmental reviews of Amazon settlement and road programs; useful for implementation facts, not treated here as causal estimates.
+\end{itemize}
+\vfill
+\tiny\color{Muted}\textit{Editing note:} The deck intentionally keeps citations inline and uses no BibTeX file. Replace the provisional IPEA checklist with the exact IPA rubric if you have the internal scoring sheet.
+\end{frame}
+
+\end{document}

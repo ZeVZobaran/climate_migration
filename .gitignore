@@ -3,6 +3,11 @@ data/morten_oliveira/
 data/BR-DWGD/
 data/censo_microdados/
 data/processed/censo_microdados/
+data/ipea/PIB_Municipal/
+data/processed/amcs/
+data/processed/amcs_sample/
+.codex-spreadsheet-work/
+tmp/pdfs/
 .venv/
 __pycache__/
 *.py[cod]

@@ -319,3 +319,6 @@ latex_out_ppml = fe_ppml_results.drop(columns=['reg']).set_index('index').apply(
 
 
 
+
+
+

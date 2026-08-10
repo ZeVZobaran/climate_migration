@@ -1,10 +1,10 @@
-year-year 5 by 5 matrix os migrations levels and shares 
-	- What catches my eye is the heavy NE-SE migration and the occupation of the CO, done mostly by SE and NE 
+year-year 5 by 5 matrix os migrations levels and shares
+	- What catches my eye is the heavy NE-SE migration and the occupation of the CO, done mostly by SE and NE
 
 
 Shocks that may have affected migration? Bus liberalization, buying buses?
 	- PROTERRA, PIN e INCRA explicitamente pretendem redirecionar migração do NE para o CO e NO
-	- PROCENTRO explicitamente pretende colonizar o cerrado
+	- PROCENTRO explicitamente pretende colonizar o cerrado, e tem um design razoavelmente limpo. Mira uma região super específica do país, com começo e fim claros
 	- Dam building! Here we have two instruments: river gradient (which may correlate negatively with econ activity) and planned but unbuilt projects
 
 
@@ -16,7 +16,7 @@ What kind of info does the econ (ind and agri and servs) censuses give
 
 Intensiveness of agriculture in municipalities
 
-Policies that have impacted these regions? ICMS/tax changes, etc 
+Policies that have impacted these regions? ICMS/tax changes, etc
 
 Has the migration selection effect in brazil been documented at all?
 

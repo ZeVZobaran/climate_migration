@@ -40,6 +40,14 @@ dataset. A new base rebuild also preserves `origin_5yr_urban_code`, adding one
 physical column. The restricted characteristics builder reads that field
 directly from the raw source when it is absent from the older base build.
 
+## AMC analysis tables
+
+The harmonized AMC migration-flow, resident-characteristics, municipal GDP,
+and combined AMC-year tables are documented in
+[`AMC_PANELS.md`](AMC_PANELS.md). These outputs cover 1970--2010 AMCs,
+retain origin UF, and use the agreed 1970 and 1980 interstate-migration proxy
+definitions alongside exact fixed-date origins from 1991 onward.
+
 ## Analysis-ready characteristics datasets, 1991--2010
 
 The restricted analysis datasets requested for the migration-system exercise
