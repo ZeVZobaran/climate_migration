@@ -1,0 +1,360 @@
+% !TEX program = pdflatex
+\documentclass[aspectratio=169]{beamer}
+
+% -------------------------
+% Theme: Madrid (structure) but flat (no 3D)
+% -------------------------
+\usetheme{Madrid}
+\useinnertheme{rectangles}   % flatter than rounded
+\useoutertheme{miniframes}   % Madrid-style section navigation
+\setbeamertemplate{navigation symbols}{} % remove nav icons
+
+% Kill "3D-esque" effects
+\setbeamertemplate{blocks}[default]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+\setbeamertemplate{miniframes}[default] % avoid glossy variants
+
+% -------------------------
+% Typography (academic, clean)
+% -------------------------
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}         % clean academic sans/serif set
+\usefonttheme{professionalfonts}
+\renewcommand{\familydefault}{\sfdefault} % sans serif (comment out if you prefer serif)
+\usepackage{subcaption}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{threeparttable} % optional
+\usepackage{siunitx}
+% -------------------------
+% Color palette: dark blue -> gray ramp
+% -------------------------
+\usepackage{xcolor}
+\definecolor{ZDarkBlue}{HTML}{1E3A5F} % deep steel-ish blue
+\definecolor{ZBlue}{HTML}{2D5B8A}
+\definecolor{ZMidGray}{HTML}{6B7280}
+\definecolor{ZLightGray}{HTML}{E9EDF2}
+\definecolor{ZNearWhite}{HTML}{F7F8FA}
+
+% Backgrounds
+\setbeamercolor{background canvas}{bg=ZNearWhite}
+\setbeamercolor{normal text}{fg=black,bg=ZNearWhite}
+
+% Structural elements (titles, bars, section nav)
+\setbeamercolor{structure}{fg=ZDarkBlue}
+\setbeamercolor{frametitle}{fg=ZDarkBlue,bg=ZLightGray}
+\setbeamercolor{title}{fg=ZNearWhite}
+\setbeamercolor{subtitle}{fg=ZLightGray}
+
+% Top bars / header
+\setbeamercolor{palette primary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{palette secondary}{fg=white,bg=ZBlue}
+\setbeamercolor{palette tertiary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{palette quaternary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{section in head/foot}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=ZBlue}
+% --- Single-line headline (remove Madrid's second bar) ---
+\setbeamertemplate{headline}{
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.6ex,dp=1.2ex,leftskip=1em,rightskip=1em]{section in head/foot}
+    \usebeamerfont{section in head/foot}\insertsectionhead
+    \hfill
+    \usebeamerfont{section in head/foot}\insertsubsectionhead
+  \end{beamercolorbox}
+}
+
+% Footline: clean page indicator
+% --- Full-width, gapless footline ---
+
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.85\paperwidth,ht=2.8ex,dp=1.2ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\scriptsize\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.8ex,dp=1.2ex,center]{date in head/foot}%
+      \usebeamerfont{date in head/foot}\scriptsize\insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+}
+
+% Blocks (flat, academic)
+\setbeamercolor{block title}{fg=ZDarkBlue,bg=ZLightGray}
+\setbeamercolor{block body}{fg=black,bg=white}
+
+% Itemize hierarchy: blue -> gray
+\setbeamercolor{itemize item}{fg=ZDarkBlue}
+\setbeamercolor{itemize subitem}{fg=ZBlue}
+\setbeamercolor{itemize subsubitem}{fg=ZMidGray}
+
+% Slightly tighter look
+\setlength{\parskip}{0.25em}
+\setbeamersize{text margin left=10mm, text margin right=10mm}
+
+% -------------------------
+% Graphs path
+% -------------------------
+\graphicspath{{climate_migration_inequality/figs/}}
+
+% -------------------------
+% for pretty tables
+% -------------------------
+\sisetup{
+  detect-weight=true,
+  detect-family=true,
+  input-symbols = {()},
+  table-align-text-post = false
+}
+% -------------------------
+% for flowcharts
+% -------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+% ----------------------------
+% Metadata
+% ----------------------------
+\title[Research Proposal Env Econ]{Climate, Migration, and Regional Development}
+\author{José Vidal Zobaran}
+\institute{FGV-EPGE}
+\date{\today}
+
+% ----------------------------
+% Useful macros (optional)
+% ----------------------------
+\begin{document}
+
+% ----------------------------
+% Title
+% ----------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ----------------------------
+% Outline (optional)
+% ----------------------------
+\begin{frame}{Index}
+\tableofcontents
+\end{frame}
+
+% ============================================================
+\section{Introduction}
+% ============================================================
+\begin{frame}{Index}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Being born is the single most important lottery you play}
+\begin{itemize}
+    \item Location at birth is largely a roll of the dice
+    \item Rolling bad on climate yields a lifelong disamenity
+    \item Improving local climate is extremely costly
+    \item Migration is thus the main escape mechanism
+\end{itemize}
+\vspace{0.5em}
+\begin{block}{Key Question}
+Do climate disamenities make people respond more strongly to reductions in migration costs?
+\end{block}
+\vspace{0.3em}
+\begin{center}
+And if so, \textbf{does this drive regional economic development?}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Contribution}
+Climate migration events and their consequences have been studied far and wide
+\begin{itemize}
+    \item Disasters may lead to permanent migration (Belasen \& Polacheck 2013) or to temporary flows (Stanley 2010)
+    \item Plain bad climate may also drive moves (Saldana 2009; Halliday 2006)
+    \item Model implied welfare measures point to reasonable-to-large gains (Desmet \& Rossi-Hansberg 2020; Morten \& Oliveira 2025; Kennan \& Walker 2008)
+    \item As do measurements of individual level income gains (Bryan \& Mobarak 2014; Hornbeck 2002)
+\end{itemize}
+\textbf{This project:} Are migrations responses to costs also amplified? And, can we get a more direct aggregate welfare measure?
+\par
+Laterally, but important to me: better understanding regional development stories in Brazil
+\end{frame}
+
+
+\begin{frame}{Findings}
+The main preliminary results are that:
+\begin{itemize}
+    \item \textbf{Climate:} No robust effect on migration responses
+    \item \textbf{Welfare:} Migration leads to positive, sizable GDP per capita gains
+    \begin{itemize}
+        \item I find a 2.3\% increase in GDP per capita attributable to migration
+        \item The closest analogue, Morten-Oliveira, find a 0.6\% total welfare effect
+    \end{itemize}
+    \item Both results seem robust 
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Caveat:} Data limits the amount of controls available for the welfare result
+\end{frame}
+
+% ============================================================
+\section{Data}
+% ============================================================
+\begin{frame}{Index}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Data at a Glance}
+\begin{itemize}
+    \item \textbf{Migration:} 1980–2010 (mesorregions); 1940-2010 (state), decenially from censuses, via Morten Oliveira (2025)
+    \item \textbf{Climate conditions:} 1960s onward, daily from BR-DWGD
+    \item \textbf{Transport (travel time):} 1940–2010, decenially from Morten-Oliveira (2025)
+    \item \textbf{GDP \& Population:} 1940–2010, decenially (mostly) from IPEA
+    \begin{itemize}
+    \item GDP per capita: a model agnostic welfare measure
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Constraints:} State-level data has few regions; mesorregion has few years. Climate data is unavaible for pre Brasília periods
+\end{frame}
+
+\begin{frame}{GDP and Population Summary Data Summary}
+\input{climate_migration_inequality/figs/macro_summary}
+\end{frame}
+
+\begin{frame}{Migration and Travel Time Data Summary}
+\input{climate_migration_inequality/figs/migration_summary}
+\end{frame}
+
+\begin{frame}{Climate Data Summary}
+\input{climate_migration_inequality/figs/climate_summary}
+\end{frame}
+
+\begin{frame}{Spatial Patterns}
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{climate_exp.png}
+        \caption{Climate exposure}
+    \end{subfigure}
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{fig_mig_real.png}
+        \caption{Migration}
+    \end{subfigure}
+    \begin{subfigure}{0.32\linewidth}
+        \includegraphics[width=\linewidth]{dlog_gdppc.png}
+        \caption{GDP per capita growth}
+    \end{subfigure}
+\end{figure}
+\end{frame}
+
+% ============================================================
+\section{Identification}
+% ============================================================
+\begin{frame}{Index}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Central Identification Idea}
+I leverage the Morten-Oliveira instrument to obtain an exogenous shock to travel times
+\textbf{Climate:}
+\begin{itemize}
+    \item Use transport shocks to identify migration responses
+    \item Caveat: FEs capture region specific effects
+    \begin{itemize}
+        \item Test: do people in high-exposure regions respond more strongly to the opportunity to leave?
+    \end{itemize}
+\end{itemize}
+\textbf{Welfare:}
+\begin{itemize}
+    \item Recover migration induced by transport shocks
+    \item This should be exogenous to regional welfare outcomes
+    \begin{itemize}
+        \item Test: does net migration drive local welfare?
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The welfare channel}
+GDP per capita is a good measure of welfare, but is codetermined with migration flows \par 
+$\Rightarrow$  the Brasília instrument allows for exogenous variation of migration!
+
+\vspace{0.5em}
+\textbf{Key issue: controls}
+\begin{itemize}
+    \item Exogeneity does not mean absence of omitted variables
+    \item Road construction itself could drive GDP per capita outcomes
+    \item I implement a gravity theory inspired market access control
+\end{itemize}
+\end{frame}
+
+
+% ============================================================
+\section{Results}
+% ============================================================
+\begin{frame}{Index}
+\tableofcontents[currentsection]
+\end{frame}
+
+
+\begin{frame}{Replication of the Morten-Oliveira Instrument}
+\input{climate_migration_inequality/figs/mo_instrument}
+\end{frame}
+
+\begin{frame}{Climate interaction draws a null}
+\input{climate_migration_inequality/figs/no_cigar_climate}
+\textbf{Interpretation:}
+Climate may matter in levels, not in responses
+\end{frame}
+
+
+\begin{frame}{Migration drives GDP and GDP per capita}
+\input{climate_migration_inequality/figs/gdp_effects}
+\end{frame}
+
+
+\begin{frame}{The map tells a pretty clear story}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.60\textwidth}
+\includegraphics[width=\linewidth]{main_result_gdppc.png}
+\column{0.36\textwidth}
+Agricultural frontier and urbanized regions are winners, the Northeast is the big loser.
+What could be driving this?
+\begin{itemize}
+    \item Selection in migration?
+    \item Agglomeration effects? Which ones?
+    \item Non-linear (S-curve) regional dynamics?
+\end{itemize}
+In aggregate, internal migration increased GDP per capita by 2.1\% from 1970 to 2010 
+\end{columns}
+\end{frame}
+
+% ============================================================
+\section{Further Work}
+% ============================================================
+\begin{frame}{Index}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Robustness Checks}
+I'm satisfied with the climate null result. 
+A better defense of the GDP/Welfare result requires:
+\begin{itemize}
+    \item Replication entire pipeline at state level
+    \item Better controls for omitted variables
+\end{itemize}
+The current setup allows for exogenous migration, but roads impact GDP in many other ways
+\end{frame}
+
+
+\begin{frame}{Interpretation}
+Provided the GDP result is convincing, there are many ways to explore what drives it
+\begin{itemize}
+    \item Selection: census microdata comparison of types of migrants
+    \item Agglomeration: move away from the buzzword. Why do cities feature agglomeration and other places do not?
+    \item Human capital accumulation? Better matching?
+    \item What about the agricultural frontier? Resource abundance? A model could be useful here.
+\end{itemize}
+Figuring this out could go a long way towards building a better understanding of Brazilian mid-to-late 20th century development!
+\end{frame}
+
+\end{document}

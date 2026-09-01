@@ -1,13 +1,77 @@
-data/ETo_u2_RH_Rs_NetCDF_Files/
-data/morten_oliveira/
-data/BR-DWGD/
-data/censo_microdados/
-data/processed/censo_microdados/
-data/ipea/PIB_Municipal/
-data/processed/amcs/
-data/processed/amcs_sample/
-.codex-spreadsheet-work/
-tmp/pdfs/
+# Local environments, caches, and tool state
 .venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.analysis_logs/
+.codex-spreadsheet-work/
+
+# Scratch space and downloaded build tools
+/tmp/
+
+# Raw/source downloads (keep acquisition code and documentation in Git)
+/data/BR-DWGD/
+/data/ETo_u2_RH_Rs_NetCDF_Files/
+/data/censo_microdados/
+/data/climate_indexes/
+/data/formatted_composit/
+/data/gaez_v4/
+/data/ibge/
+/data/mapbiomas/
+/data/morten_oliveira/
+/data/ipea/PIB_Municipal/
+
+# Reproducible intermediate datasets
+/data/processed/**
+
+# Final analysis-ready outcome and control datasets
+!/data/processed/
+!/data/processed/polocentro_event_study/
+/data/processed/polocentro_event_study/*
+!/data/processed/polocentro_event_study/amc_year_outcomes.parquet
+!/data/processed/polocentro_event_study/amc_year_controls.parquet
+!/data/processed/polocentro_event_study/metadata.json
+
+# Duplicate and single-table exports (Parquet deliverables above are canonical)
+*.csv
+*.csv.gz
+**/tables/
+
+# Generated figures and rendered documents
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.tif
+*.tiff
+*.pdf
+
+# Document inspection sidecars
+*.inspect.ndjson
+
+# LaTeX compiler products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+
+# OS/editor clutter
+desktop.ini
+.DS_Store
+Thumbs.db
+*.swp
+*~

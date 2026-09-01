@@ -1,0 +1,310 @@
+% !TEX program = pdflatex
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\useinnertheme{rectangles}
+\useoutertheme{miniframes}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[default]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+\setbeamertemplate{miniframes}[default]
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usefonttheme{professionalfonts}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{ZDarkBlue}{HTML}{1E3A5F}
+\definecolor{ZBlue}{HTML}{2D5B8A}
+\definecolor{ZMidGray}{HTML}{6B7280}
+\definecolor{ZLightGray}{HTML}{E9EDF2}
+\definecolor{ZNearWhite}{HTML}{F7F8FA}
+\setbeamercolor{background canvas}{bg=ZNearWhite}
+\setbeamercolor{normal text}{fg=black,bg=ZNearWhite}
+\setbeamercolor{structure}{fg=ZDarkBlue}
+\setbeamercolor{frametitle}{fg=ZDarkBlue,bg=ZLightGray}
+\setbeamercolor{palette primary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{palette secondary}{fg=white,bg=ZBlue}
+\setbeamercolor{palette tertiary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{palette quaternary}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{section in head/foot}{fg=white,bg=ZDarkBlue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=ZBlue}
+\setbeamercolor{block title}{fg=ZDarkBlue,bg=ZLightGray}
+\setbeamercolor{block body}{fg=black,bg=white}
+\setbeamerfont{frametitle}{size=\normalsize}
+\setbeamertemplate{headline}{%
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.6ex,dp=1.2ex,leftskip=1em,rightskip=1em]{section in head/foot}
+    \usebeamerfont{section in head/foot}\insertsectionhead\hfill
+    \usebeamerfont{section in head/foot}\insertsubsectionhead
+  \end{beamercolorbox}%
+}
+\setlength{\parskip}{0.25em}
+\setbeamersize{text margin left=8mm,text margin right=8mm}
+
+\title[Polocentro Initial Event Study]{Polocentro Initial Event Study}
+\author{José Vidal Zobaran}
+\institute{FGV-EPGE}
+\date{\today}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Methodology}
+\textbf{Treatment assignment} done in three ways
+\begin{itemize}
+  \item Binary
+  \item Core: seat or 10\% of area inside the treated region
+  \item Rigid: majority area in the treated region
+  \item Lax: Any area in the treated region
+\end{itemize}
+
+\textbf{Three model specifications} for each outcome
+\begin{itemize}
+  \item Year only and two ways fixed effects
+  \item 2WFE + propensity score weighting on differentiated observables
+\end{itemize}
+
+For a total of \textbf{9 coefficient estimations} per outcome
+\end{frame}
+
+\section{Propensity-score overlap}
+\begin{frame}{Core: common support retains 78/81 treated AMCs}
+\centering
+\includegraphics[width=0.88\textwidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/ps_core.pdf}\par
+\vspace{-0.2em}
+{\tiny\color{ZMidGray} ATT weighting; empirical common support [0.015, 0.586]; effective $N=230.7$; maximum post-weighting $|$SMD$|=0.079$.}
+\end{frame}
+\begin{frame}{Any overlap: common support retains 110/110 treated AMCs}
+\centering
+\includegraphics[width=0.88\textwidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/ps_lax.pdf}\par
+\vspace{-0.2em}
+{\tiny\color{ZMidGray} ATT weighting; empirical common support [0.020, 0.596]; effective $N=303.7$; maximum post-weighting $|$SMD$|=0.110$.}
+\end{frame}
+\begin{frame}{Majority area: common support retains 34/38 treated AMCs}
+\centering
+\includegraphics[width=0.88\textwidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/ps_rigid.pdf}\par
+\vspace{-0.2em}
+{\tiny\color{ZMidGray} ATT weighting; empirical common support [0.010, 0.543]; effective $N=112.0$; maximum post-weighting $|$SMD$|=0.228$.}
+\end{frame}
+
+
+\section{Event-study estimates}
+
+% GDP outcomes
+\begin{frame}{Log GDP rises across assignments and specifications}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_log_gdp_total_2010_brl_thousand.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_log_gdp_total_2010_brl_thousand.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_log_gdp_total_2010_brl_thousand.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Log agricultural value added rises even more clearly}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_log_va_agriculture_2010_brl_thousand.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_log_va_agriculture_2010_brl_thousand.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_log_va_agriculture_2010_brl_thousand.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Annualized GDP growth rises, but the effect is inconsistent}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_gdp_total_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_gdp_total_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_gdp_total_annualized_log_growth_pct.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Agricultural value added growth is similar}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_va_agriculture_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_va_agriculture_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_va_agriculture_annualized_log_growth_pct.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Pasture area share effects are inconclusive}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_pasture_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_pasture_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_pasture_share_of_mapped.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1985.}
+\end{frame}
+
+\begin{frame}{Agriculture are share rises weakly. Program works on the intensive margin?}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_agriculture_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_agriculture_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_agriculture_share_of_mapped.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1985.}
+\end{frame}
+
+\begin{frame}{Soybean are share rises across specifications, but the effect takes a long time to appear}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_soybean_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_soybean_share_of_mapped.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_soybean_share_of_mapped.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1985.}
+\end{frame}
+
+\begin{frame}{Native-vegetation loss rises; outcome in which PSW makes the most difference}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_native_vegetation_net_loss_share_of_1985.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_native_vegetation_net_loss_share_of_1985.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_native_vegetation_net_loss_share_of_1985.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1985.}
+\end{frame}
+
+\begin{frame}{Interstate migrant count rises across assignments}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_weighted_interstate_migrants.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_weighted_interstate_migrants.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_weighted_interstate_migrants.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Interstate migrant share rises even more noticeably}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_interstate_migrant_share_of_destination_age5plus.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_interstate_migrant_share_of_destination_age5plus.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_interstate_migrant_share_of_destination_age5plus.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Log population rises and stays high}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_log_population.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_log_population.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_log_population.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1970.}
+\end{frame}
+
+\begin{frame}{Population growth falls. Predominantly single-male migration?}
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_core_population_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_lax_population_annualized_log_growth_pct.pdf}
+\column{0.325\textwidth}
+\centering\includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{polocentro_event_study_assets/coef_rigid_population_annualized_log_growth_pct.pdf}
+\end{columns}
+\vspace{-0.35em}
+{\tiny\color{ZMidGray} AMC-clustered 95\% confidence intervals. Reference year: 1980.}
+\end{frame}
+
+\section{Counterfactuals and effect decomposition}
+
+\begin{frame}{What do we want a model for?}
+There are three linked questions we cannot answer from the data and econometrics only:
+\begin{itemize}
+  \item Decomposition of gains: redistribution versus aggregate increases
+  \item From that, net program effect on production
+  \item Accurate cost benfit analysis under no-program counterfactual
+\end{itemize}
+\vspace{1em}
+A spatial equilibrium model could deliver these.
+\end{frame}
+
+\begin{frame}{Proposed Model}
+Environment:
+\begin{itemize}
+  \item Investors with farm projects originate from a nonproductive region O
+  \item They choose where to install their farm on any of N productive regions
+  \item Moving costs are increasing in the distance from the region to O 
+  \item Productivity is local and match specific
+  \item Farms rent land and capital
+  \item Land markets are locally determined; the capital market is nationally integrated  
+  \item The program acts by making local capital more available
+  \item Farms produce a single good at a fixed unit price
+  \item Investors choses where to form a farm (or not to invest) and how much to produce
+\end{itemize}
+\vspace{1em}
+
+So that the investor solves:
+\begin{align}
+\max_{K_i, L_{i,l}, l} \qquad A_l\eta_{i, l}K_i^\alpha L_{i, l}^\beta - r_l^k K_i - r_l^L L_{i, l} - m(d_l)
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Comments on this specification}
+Operationalization requires:
+\begin{itemize}
+  \item Moving costs; local productivity - timely proxies available
+  \item Capital and land shares - 2007 agricultural census; IDB est. of 0.7 and 0.1 (Labor: 0.2)
+  \item Capital supply elasticity - Harder; strong assumptions/parameter sweep may be needed
+  \item Program impact on capital - Difficult to estimate due to data; could make assumptions based on program size
+  \item Match specific productivity - extreme-value calibration
+\end{itemize}
+\vspace{1em}
+
+Main possible issues and reasons:
+\begin{itemize}
+  \item Firm-focused; no welfare outcome - beyond the scope
+  \item All land is productive; no role for extensive gains - weak evidence
+  \item No labor input - industrial farmwork is not labor intensive
+\end{itemize}
+Moreover, I wanted to restrict and reduce the model as much as possible 
+\end{frame}
+
+\end{document}

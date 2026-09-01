@@ -75,7 +75,7 @@ stds = uf_amc_flows[[
     ['census_year', 'polocentro_operational_core']).std()
         
 averages['interstate_migrant_share_of_destination_age5plus'].unstack().plot()
-# Good!
+# Good!z
 # Can look also at overall migration, not pair-wise, maybe
 #%% First pass regression
 

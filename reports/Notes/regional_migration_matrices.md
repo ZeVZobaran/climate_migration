@@ -1,4 +1,4 @@
-        # Brazilian macro-region migration matrices
+# Brazilian macro-region migration matrices
 
 Rows are origin regions and columns are census-residence destinations. The universe is people age 5--120 with positive person weight and a classifiable Brazilian origin. Counts are survey-weighted persons.
 

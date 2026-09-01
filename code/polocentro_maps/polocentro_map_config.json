@@ -1,0 +1,88 @@
+{
+  "figure": {
+    "width_inches": 13.333,
+    "height_inches": 7.5,
+    "dpi": 300,
+    "formats": ["png", "pdf"],
+    "background": "#FCFBF7",
+    "tight_bbox": false
+  },
+  "views": {
+    "brazil": {
+      "title": "POLOCENTRO operational areas in Brazil",
+      "subtitle": "Banco Central Circular 259/1975 operational geography over harmonized 1970–2010 AMCs",
+      "padding_fraction": 0.025,
+      "show_area_labels": false,
+      "show_north_arrow": false,
+      "show_scale_bar": true,
+      "scale_bar_km": 500,
+      "scale_bar_position_axes": [0.08, 0.06],
+      "amc_boundary_width": 0.12,
+      "operational_boundary_width": 1.55,
+      "area_label_size": 8.0,
+      "tight_bbox": true,
+      "legend_inside": true,
+      "legend_location": "lower left",
+      "legend_anchor_axes": [0.055, 0.17],
+      "legend_columns": 1,
+      "show_zoom_extent": true,
+      "zoom_extent_linewidth": 2.2
+    },
+    "zoom": {
+      "title": "POLOCENTRO operational areas and AMC exposure",
+      "subtitle": "Detailed view of the Banco Central operational geography",
+      "padding_fraction": 0.015,
+      "show_area_labels": true,
+      "show_north_arrow": true,
+      "show_scale_bar": true,
+      "scale_bar_km": 200,
+      "scale_bar_position_axes": [0.055, 0.93],
+      "amc_boundary_width": 0.38,
+      "operational_boundary_width": 1.9,
+      "area_label_size": 9.0,
+      "tight_bbox": true,
+      "legend_inside": true,
+      "legend_location": "lower right",
+      "legend_anchor_axes": [0.985, 0.025],
+      "legend_columns": 1
+    }
+  },
+  "presentation": {
+    "show_title": false,
+    "show_subtitle": false,
+    "show_source_note": false,
+    "show_counts": false,
+    "label_offsets_km": {
+      "Triângulo Mineiro": [20, -20],
+      "Vão do Paracatu": [5, 15],
+      "Campo Grande–Três Lagoas": [0, -20],
+      "Bodoquena": [20, 25],
+      "Gurupi": [0, 15],
+      "Paranã": [15, 5],
+      "Piranhas": [-10, 0],
+      "Parecis": [-5, 15],
+      "Alto-Médio São Francisco": [15, -10],
+      "Xavantina": [0, 0],
+      "Pirineus": [5, 0],
+      "Rio Verde": [10, -5]
+    }
+  },
+  "colors": {
+    "background": "#FCFBF7",
+    "amc_boundary": "#9C9B95",
+    "amc_context_fill": "#F0EFEA",
+    "amc_partial": "#9CCAD1",
+    "amc_full": "#247B8A",
+    "operational_fill": "#315C9A",
+    "operational_boundary": "#214A84",
+    "zoom_extent": "#D36B2D",
+    "text": "#202124",
+    "muted_text": "#5F6368",
+    "label_halo": "#FCFBF7"
+  },
+  "style": {
+    "program_fill_alpha": 0.09,
+    "amc_partial_alpha": 0.78,
+    "amc_full_alpha": 0.90
+  }
+}

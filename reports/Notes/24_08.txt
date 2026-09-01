@@ -1,0 +1,12 @@
+Add boxplots:
+	Log pop growth for municipalities lets see if there (if no diff growth rates, smaller effect on non treated)
+	Industrial and agri census
+
+Getting ATNT:
+	Censo
+
+Run the PS, find the match for each treated, look into it. Maybe good way to look into not treated? + some distance?
+
+Within the region (cerrado/states), can I predict treatement? What predicts treatement?
+		
+Look into enforcement of punishment
