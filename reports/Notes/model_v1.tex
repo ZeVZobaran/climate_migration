@@ -113,9 +113,70 @@ Environment:
 
 So that the investor solves:
 \begin{align}
-\max_{K_i, L_{i,l}, l} \qquad A_l\eta_{i, l}K_i^\alpha L_{i, l}^\beta - r_l^k K_i - r_l^L L_{i, l} - m(d_l)
+\max_{K_{i,n}, L_{i,n}, n} \qquad A_n\eta_{i, n}K_i^\alpha L_{i, n}^\beta - q_n K_i - r_n L_{i, l} - m(d_n)
 \end{align}
-Given a 
+Given a location choice, the firm choses L and K to maximize profits. This yields input demands:
+\begin{align}
+    \text{[K]} \qquad &  K_{i, n}^* = \alpha \frac{Y^*}{q_n}\\
+    \text{[L]} \qquad & L_{i, n}^* = \beta \frac{Y^*}{r_n}
+\end{align}
+Such that optimal output and profit before moving are
+\begin{align}
+    Y_{i,n}^* =& [A_n\eta_{i, n}\alpha^\alpha \beta^\beta q_n^\alpha r_{n}^\beta]^\frac{1}{1-\alpha-\beta}\\
+    \pi_{i, l} =& (1-\alpha-\beta)Y_{i,l}^*
+\end{align}
+Notice we get these due to decreasing returns to scale in factors.
+This can be ascribed to firm owners collecting profits from firm-owned inputs.
+
+Firm \(i\) location \(n_i\) is then decided by solving
+\begin{align}
+  n_i = max_{n \in N}{0, \pi{i, n} - m(d_n)}
+\end{align}
+Where the zero stands for not starting a firm at all.
+
+Land supply is fixed exogenously for every region. 
+Land markets are cleared by local land rents \(r_n\).
+
+The capital market is national, cleared by the rate \(q\). Capital supply is given by
+\begin{align}
+  S_K(q) = K_{ref} * (q / q_{ref})**\epsilon.
+\end{align}
+Where \(\epsilon\) is the national capital supply elasticity, and \(K_{ref}\) and \(q_{ref}\) are reference values.
+Setting it to zero yields a fixed capital supply; sufficiently high values yield a fixes interest rate.
+
+The policy works via a interest rate subsidy. Let \(T_n \in {0, 1}\) indicate treatement for region n.
+and \(s \in (0, 1)\) be the discount the program grants. Then,
+\begin{align}
+  q_n = q(1-sT_n)
+\end{align}
+Gives the interest rate faced by a firm locating in regin \(n\).
+
+Lastly, given a treatment vector \(\mathbb{T}\) and subsidy rate \(s\),
+an equilibrium is given by:
+\begin{itemize}
+  \item A national capital interest rate \(q\)
+  \item Local land rents \({r_1, ... r_n}\)
+  \item Firm location choice, factor demands and output \({n_i, K_{i, n_i}, L_{i, n_i}, Y_{i, n_i}}_{i \in (0, 1)}\)
+\end{itemize}
+Such that
+\begin{itemize}
+  \item Given \(q\) and land rents, firms maximize profits according to their problem;
+  \item Land and capital markets clear
+\end{itemize}
+
+Substituting prices into demands and output, this yields the \(N+1\) equations system:
+\begin{equation}
+\left\{
+\begin{aligned}
+  &D_K(q, r_1, ..., r_n; s, T) - S_K(q) =& 0 \\
+  &D_{L_{n=1}}(q, r_1, ..., r_n; s, T) - \bar L_1 =& 0 \\
+  .&&\\
+  .&&\\
+  .&&\\
+  &D_{L_{n=N}}(q, r_1, ..., r_n; s, T) - \bar L_N =& 0   
+\end{aligned}
+\right.
+\end{equation}
 
 
 Operationalization requires:
